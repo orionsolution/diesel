@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog catalog-id="diesel-master-catalog" xmlns="http://www.demandware.com/xml/impex/catalog/2006-10-31">
+<product product-id="8059132025018">
+    <ean>8059132025018</ean>
+    <online-flag>false</online-flag>
+    <custom-attributes>
+      <custom-attribute attribute-id="size">21</custom-attribute>
+      <custom-attribute attribute-id="internationalSize">21</custom-attribute>
+      <custom-attribute attribute-id="color">T6067</custom-attribute>
+      <custom-attribute attribute-id="microColor">ToBeDefined T6067</custom-attribute>
+      <custom-attribute attribute-id="macroColor">ToBeDefined</custom-attribute>
+    </custom-attributes>
+  </product>
+</catalog>

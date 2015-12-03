@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog catalog-id="diesel-master-catalog" xmlns="http://www.demandware.com/xml/impex/catalog/2006-10-31">
+<product product-id="000H34PR012">
+    <!--assetId: 826609-->
+    <ean />
+    <upc />
+    <unit />
+    <min-order-quantity>1</min-order-quantity>
+    <step-quantity>1</step-quantity>
+    <display-name xml:lang="x-default">EXPOSURE K LOW STRAP</display-name>
+    <short-description xml:lang="x-default"></short-description>
+    <long-description xml:lang="x-default"></long-description>
+    <online-flag>false</online-flag>
+    <available-flag>true</available-flag>
+    <searchable-flag>true</searchable-flag>
+    <images />
+    <tax-class-id>61025</tax-class-id>
+    <brand>KIDS</brand>
+    <page-attributes>
+      <page-title xml:lang="x-default">EXPOSURE K LOW STRAP</page-title>
+    </page-attributes>
+    <custom-attributes>
+      <custom-attribute attribute-id="hazmat"></custom-attribute>
+      <custom-attribute attribute-id="productMainGroup">Footwear</custom-attribute>
+      <custom-attribute attribute-id="productGroup">Footwear</custom-attribute>
+      <custom-attribute attribute-id="nameCode">000H34</custom-attribute>
+      <custom-attribute attribute-id="style"></custom-attribute>
+      <custom-attribute attribute-id="washCode">PR012</custom-attribute>
+      <custom-attribute attribute-id="fabric">PR012</custom-attribute>
+      <custom-attribute attribute-id="fit"></custom-attribute>
+      <custom-attribute attribute-id="fitCode"></custom-attribute>
+      <custom-attribute attribute-id="gender">Male</custom-attribute>
+      <custom-attribute attribute-id="genderCode">M</custom-attribute>
+      <custom-attribute attribute-id="season">FW 2015</custom-attribute>
+      <custom-attribute attribute-id="seasonCode">201502</custom-attribute>
+      <custom-attribute attribute-id="collection">0033</custom-attribute>
+      <custom-attribute attribute-id="theme">SPECIAL MAKE</custom-attribute>
+      <custom-attribute attribute-id="themeCode">00009</custom-attribute>
+      <custom-attribute attribute-id="madeInCode">VN</custom-attribute>
+      <custom-attribute attribute-id="sizeScaleCode">27</custom-attribute>
+      <custom-attribute attribute-id="ageRange">adult</custom-attribute>
+      <custom-attribute attribute-id="ageRangeCode">ADULT</custom-attribute>
+      <custom-attribute attribute-id="fittingInfo"></custom-attribute>
+      <custom-attribute attribute-id="fittingEditorial"></custom-attribute>
+      <custom-attribute attribute-id="attitudeStory"></custom-attribute>
+      <custom-attribute attribute-id="modelImageSize"></custom-attribute>
+      <custom-attribute attribute-id="macroColor"></custom-attribute>
+      <custom-attribute attribute-id="microColor"></custom-attribute>
+      <custom-attribute attribute-id="inspiration"></custom-attribute>
+      <custom-attribute attribute-id="modelFabricTag"></custom-attribute>
+      <custom-attribute attribute-id="modelFabricColourTag"></custom-attribute>
+      <custom-attribute attribute-id="reasonToWear"></custom-attribute>
+      <custom-attribute attribute-id="shortEditorialComposition"></custom-attribute>
+      <custom-attribute attribute-id="specificPDPBackground"></custom-attribute>
+      <custom-attribute attribute-id="storiesId"></custom-attribute>
+      <custom-attribute attribute-id="styleTips"></custom-attribute>
+      <custom-attribute attribute-id="productVideo"></custom-attribute>
+      <custom-attribute attribute-id="productConfessionHeader"></custom-attribute>
+      <custom-attribute attribute-id="productConfessionDescription"></custom-attribute>
+      <custom-attribute attribute-id="productConfessionImage"></custom-attribute>
+      <custom-attribute attribute-id="editorialComposition">100% cotton</custom-attribute>
+      <custom-attribute attribute-id="composition">[{"Descr":"Cotton","Perc":"100","materialCode":"CO"}]</custom-attribute>
+      <custom-attribute attribute-id="proposition65">no</custom-attribute>
+    </custom-attributes>
+    <variations>
+      <attributes>
+        <variation-attribute attribute-id="color" variation-attribute-id="color">
+          <variation-attribute-values>
+            <variation-attribute-value value="T6067">
+              <display-value xml:lang="x-default">ToBeDefined T6067</display-value>
+            </variation-attribute-value>
+          </variation-attribute-values>
+        </variation-attribute>
+        <variation-attribute attribute-id="size" variation-attribute-id="size">
+          <variation-attribute-values>
+            <variation-attribute-value value="21">
+              <display-value xml:lang="x-default">21</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="22">
+              <display-value xml:lang="x-default">22</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="225">
+              <display-value xml:lang="x-default">225</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="23">
+              <display-value xml:lang="x-default">23</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="235">
+              <display-value xml:lang="x-default">235</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="24">
+              <display-value xml:lang="x-default">24</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="25">
+              <display-value xml:lang="x-default">25</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="255">
+              <display-value xml:lang="x-default">255</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="26">
+              <display-value xml:lang="x-default">26</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="265">
+              <display-value xml:lang="x-default">265</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="27">
+              <display-value xml:lang="x-default">27</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="275">
+              <display-value xml:lang="x-default">275</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="28">
+              <display-value xml:lang="x-default">28</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="285">
+              <display-value xml:lang="x-default">285</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="29">
+              <display-value xml:lang="x-default">29</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="30">
+              <display-value xml:lang="x-default">30</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="31">
+              <display-value xml:lang="x-default">31</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="315">
+              <display-value xml:lang="x-default">315</display-value>
+            </variation-attribute-value>
+          </variation-attribute-values>
+        </variation-attribute>
+      </attributes>
+      <variants>
+        <variant product-id="8059132025018" />
+        <variant product-id="8059132025025" />
+        <variant product-id="8059132025032" />
+        <variant product-id="8059132025049" />
+        <variant product-id="8059132025056" />
+        <variant product-id="8059132025063" />
+        <variant product-id="8059132025070" />
+        <variant product-id="8059132025087" />
+        <variant product-id="8059132025094" />
+        <variant product-id="8059132025100" />
+        <variant product-id="8059132025117" />
+        <variant product-id="8059132025124" />
+        <variant product-id="8059132025131" />
+        <variant product-id="8059132025148" />
+        <variant product-id="8059132025155" />
+        <variant product-id="8059132025162" />
+        <variant product-id="8059132025179" />
+        <variant product-id="8059132025186" />
+      </variants>
+    </variations>
+</product>
+</catalog>

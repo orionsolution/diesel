@@ -1,0 +1,406 @@
+/* Stylesheet for Denim Guide */
+
+#container {-moz-box-sizing: border-box; width: 100%; position: relative;}
+#man, #woman {overflow: hidden; position: relative; width: 50%; float: left;}
+#man {overflow: visible;}
+#woman .main-image, #man .main-image {position: absolute; display: block; cursor: pointer;}
+#woman .main-image{right: 0;}
+#man.selected .main-image, #woman.selected .main-image{display: block; width: 100%;}
+#man.hidden .main-image, #woman.hidden .main-image{display: none;}
+#denim-guide.home-page .main-image.layout-1280{display: none;}
+#denim-guide.usertype-woman.no-mobile .main-image.layout-1024, #denim-guide.usertype-man.no-mobile .main-image.layout-1024{display: none;}
+
+#denim-guide.usertype-woman #woman, #denim-guide.usertype-man #man, #man.selected, #woman.selected{width: 100%; min-height: auto;}
+#denim-guide.usertype-man #woman, #denim-guide.usertype-woman #man,#man.hidden, #woman.hidden {width: 0%;}
+#denim-guide.usertype-woman  #woman .main-image, #denim-guide.usertype-man  #man .main-image{width: 100%; position: relative;}
+#denim-guide.usertype-woman .woman-guide, #denim-guide.usertype-man .man-guide{top: 0;} 
+
+#denim-guide .hide{display: none !important;}
+#denim-guide .show{display: block !important;}
+.denim-copy{right:-168px;position: absolute;top: 190px; z-index: 5; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box;}
+.denim-copy.is-desktop{display: block;}
+.denim-copy.is-mobile{display: none;width:60%;right:-31%;top:32%;}
+.usertype-man .denim-copy.is-desktop,.usertype-woman .denim-copy.is-desktop{display:none}
+.usertype-woman .denim-copy.is-mobile, .usertype-man .denim-copy.is-mobile{display: none;}
+#denim-guide.no-mobile.usertype-woman .overlay.is-main, #denim-guide.no-mobile.usertype-man .overlay.is-main{display: none;}
+#denim-guide.no-mobile.usertype-woman .main-image, #denim-guide.no-mobile.usertype-man .main-image {cursor: default;}
+#denim-guide.no-mobile.usertype-woman #woman, #denim-guide.no-mobile.usertype-man #man{z-index: 5;}
+.man-guide, .woman-guide{ color: #fff; float: left; padding: 10px 0; position: absolute; width: 50%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box;}
+.man-guide{z-index:0; right: 0;}
+.woman-guide{left: 0;}
+.servival-guide{color: #fff;}
+.no-mobile .servival-guide:hover{color: #eb0028;}
+.man-guide .content, .woman-guide .content{position: relative; z-index:1; width:100%;}
+.woman-guide .content{left: 65px;}
+.woman-guide .fits-type .description{margin-top:45px; height: 136px;}
+.content .col-1, .content .col-2{float:left;margin: 0;}
+
+
+/* Common style */
+
+.dg-choose-category{display: none;}
+#denim-guide a.entrypoint{text-indent: -999px;}
+#denim-guide .category-header{font-weight: bold; text-transform: uppercase; margin-bottom: 5px; font-size: 1.1em;}
+#denim-guide .category-header a{color: #fff; text-transform: uppercase;}
+#denim-guide .category-header span.not-clickable, .fits-sub-category li.active span{color: #eb0028 !important; text-transform: uppercase;}
+#denim-guide .category-header span, #denim-guide .category-header a{padding: 0 5px;}
+#denim-guide .category-header #first {padding-left: 0;}
+#denim-guide .category-header span:first-child{padding-left: 0;}
+/*#denim-guide .content h1 a{display: block;} */
+#denim-guide h1{font-size: 3em; font-family: oswald;}
+#denim-guide h2{font-size: 1.4em; font-family: oswald;}
+#denim-guide h3{font-size: 1.33em;}
+#denim-guide .content h1{line-height:40px; margin-bottom: 8px;}
+#denim-guide .content h1, .content h2, .content .col-2 h3{margin-top:0;text-transform: uppercase;}
+.content .col-2 h3{font-family: proximanova-semibold;}
+.wash-story, .fits{overflow: visible; margin-bottom: 10px; position: relative;}
+.wash-story > h2, .fits > h2 { margin-bottom: 0;}
+.content .col-1{width:162px;overflow:hidden;float: left;position: relative;}
+.content .col-2{padding-left:30px;width: 300px;float: left;}
+.content .col-1 img{max-width: 100%;float: left;}
+.content .col-1 .overlay a{text-indent: -100px;}
+.content .col-1 .overlay{display:block !important;}
+.content h4 {margin: .4em 0;}
+.wash-types, .fits-type {overflow: hidden;width: 100%;border-box;-webkit-box-sizing: border-box;box-sizing: border-box;-ms-box-sizing:border-box;}
+.wash-types .description{width:265px; overflow: hidden;padding-left:30px}
+.content .description h3{margin: 0; font-family: proximanova-semibold;}
+.description a {color: #fff;}
+.fits-type .description{margin-top: 35px; height: 150px; overflow: hidden;}
+#denim-guide ul.denim-carousel{padding: 0; margin: 0;}
+#denim-guide ul.denim-carousel li{height: 216px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;-ms-box-sizing:border-box;float:left;width:100%}
+.content .col-2 p{font-size: 1.17em;overflow: hidden;word-wrap: normal;margin-top:5px; line-height: 1.58em;}
+
+.fits-sub-category{padding:0; margin:0 0 10px;overflow: auto;position: absolute;left: 190px;width: 300px; z-index: 2;}
+.fits-sub-category li{float: left; text-transform: uppercase; font-family: oswald; display: block;}
+.fits-sub-category li a{display: block; float: left;}
+.fits-sub-category li:before{content: "|";float:left;}
+.fits-sub-category li:first-child:before{content:"";}
+.fits-sub-category li span {padding: 0 5px;color:#fff;}
+.fits-sub-category li:first-child span{padding-left:0;}
+#denim-guide .browse-all{bottom: 0; left: 272px; position: absolute; z-index: 3;background-color: #191B1F;color: #fff;line-height: 40px;width: 140px; text-transform: uppercase; text-align: center;}
+#denim-guide .jcarousel-next, #denim-guide .jcarousel-prev{cursor: pointer; height: 40px; width: 40px; float: left; bottom: 0; position: absolute; z-index: 4; background: url("../images/interface/pdp-controls.png") no-repeat 0 0;}
+#denim-guide .jcarousel-next {left: 231px;}
+#denim-guide .jcarousel-prev {left: 190px; background-position:0 -41px;}
+#denim-guide .jcarousel-next-disabled, #denim-guide .jcarousel-prev-disabled{opacity: 0.5; cursor: default; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"}
+
+.denim-guid-wrapper {color: #FFF; font: 1em/1.5em proximanova-semibold; background: #000;padding: 10px 15px;}
+.denim-guid-wrapper a {clear:both;color: #FFF;font: 1.167em/1.167em proximanova-semibold;border-bottom: 1px solid #FFF;text-transform: capitalize;}
+
+/* overlay styles */
+#denim-guide.no-mobile .overlay {height: 100%; position: absolute; width: 100%; z-index: 2; background-color: #F00; opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";}
+#denim-guide.no-mobile .overlay:hover{opacity: 0.6; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; /* IE8 */}
+#denim-guide .overlay > a {display: block; height: 100%; width: 100%;}
+#denim-guide > #container .man, #denim-guide > #container .woman { overflow: visible;}
+.js #denim-guide .jcarousel-control{display: none;}
+.fits-type{display: none;}
+.fits-type.active{display: block;}
+
+
+/* Denim guide  product listing */
+
+#denim-guide-product-listing{background-color: #fff; position: relative;}
+#denim-guide-product-listing > nav:after {clear: both;content: " ";display: block;}
+#denim-guide-product-listing > nav {clear: both;display: block;line-height: 35px;margin: 0 auto;}
+#denim-guide-product-listing ul.category-level1{margin:0 auto;display: block; float: left;}
+#denim-guide-product-listing > nav ul{padding: 0;}
+#denim-guide-product-listing > nav li {display: block;float: left;text-transform: uppercase;}
+#denim-guide-product-listing > nav  li > a {font-family: proximanova-semibold; display: block;height: 38px;margin-bottom: 15px; margin: 0 35px;}
+#denim-guide-product-listing > nav li.selected {background:url("../images/interface/select-arrow.png") no-repeat scroll center 27px #000;}
+#denim-guide-product-listing > nav  li.selected > a {color: #fff;}
+#denim-guide-product-listing ul.category-level1 li.current-denim-guide-category{display: none;}
+#denim-guide-product-listing .pipeline{float: left; display: block;}
+#denim-guide-product-listing .pipeline.first{color: #fff;}
+
+.category-level2{display:none;}
+#denim-guide-product-listing .category-images {background-color:#e6e6e6;padding:1px 0;overflow:hidden;position: relative; height: 188px;}
+#denim-guide-product-listing .category-images ul{padding: 0; margin:0;}
+#denim-guide-product-listing .category-images, #denim-guide-product-listing .category-images ul li{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;-ms-box-sizing:border-box;}
+#denim-guide-product-listing .category-images ul li{float:left; margin: 0; width: 128px;}
+#denim-guide-product-listing .category-images ul li .overlay{height: 100%; position: absolute; width: 126px; z-index:2; min-height: 184px; background: url('../images/space.gif') repeat 0 0 transparent;}
+#denim-guide-product-listing .category-images ul li a{display: block;}
+#denim-guide-product-listing .category-images ul li img{max-width: 100%; display:block;}
+#denim-guide-product-listing .category-images ul li span{display: block; font-family: proximanova-semibold;text-align: center;line-height:24px;}
+#denim-guide-product-listing .category-images ul li.active .overlay{border: 1px solid #000; cursor: default; }
+#denim-guide-product-listing .category-images .mouseover{border: 1px solid #000;cursor: pointer;}
+/*#denim-guide-product-listing .category-images .span-mouseover{background-color: #ccc;} */
+/*#denim-guide-product-listing .category-images ul li.active span,
+#denim-guide-product-listing .category-images li.active .span-mouseover{background-color: #000;} */
+#denim-guide-product-listing .category-images .jcarousel-prev, #denim-guide-product-listing .category-images .jcarousel-next {background: url("../images/interface/dg-carousel-arrow.png") no-repeat 0 0;cursor: pointer;height: 60px;overflow: hidden;padding: 0;position: absolute;top: 30%;width: 30px;z-index: 4;}
+#denim-guide-product-listing .category-images .jcarousel-next {background-position: right 0; right: 0;}
+#denim-guide-product-listing .category-images .jcarousel-prev {background-position: 0 0;left: 0;}
+#denim-guide-product-listing .category-images .jcarousel-next-disabled, #denim-guide-product-listing .category-images .jcarousel-prev-disabled{display: none;} 
+#denim-guide-product-listing li.selected ul.category-level2 a.active{color: #f00;}
+.denim-type-desc{ background-color: #011316; float: left; margin: 0; padding: 0; position: relative; width: 100%;}
+.denim-type-desc .additional-images{ bottom: 0; position: absolute; width:50%;}
+.denim-type-desc.product-listing  .additional-images{right: 0;}
+.denim-type-desc .col-1, .denim-type-desc .col-2, 
+.denim-type-desc .part-a, .denim-type-desc .part-b{width:50%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;-ms-box-sizing:border-box;margin:0;}
+.denim-type-desc .part-a, .denim-type-desc .part-b{float:left;}
+.denim-type-desc .col-1{float:right;}
+.denim-type-desc.product-listing .col-1{float: left;}
+.denim-type-desc .desc-text{background-color: #011316;color:#fff;text-transform: uppercase;padding: 10px 30px; line-height:21px;min-height:292px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;-ms-box-sizing:border-box;}
+.denim-type-desc .desc-text .desc-header { margin: 20px 0 10px; }
+.desc-text .desc-header .divider{color: #666666; font-size: 4em; margin: 10px;}
+.denim-type-desc .desc-text h2{font-size:3em;font-family: proximanova-semibold; display: inline;}
+.denim-type-desc .desc-text h3 {font-family: oswald; font-size: 3.1em; font-weight: 200;display: inline;}
+.desc-text h4{margin: 1em 0;}
+.denim-type-desc .desc-text .see-all-products{color: #fff; text-decoration: underline; }
+.denim-guide-search-results, .denim-guide-explore-washstory-fits{display: none;}
+.denim-type-desc .desc-text .browse-all-fits-washes{display: none;}
+.denim-type-desc .col-1 img,
+.denim-type-desc .col-2 img{max-width: 100%; width: 100%;display: block;}
+.no-show{display: none;}
+
+/* Denim guide banner */
+.denim-guide-banner-wrapper{position: relative;}
+.denim-guide-banner-wrapper.is-mobile, .denim-guide-banner-wrapper.is-mobile img{display: none !important;}
+.denim-guide-banner-wrapper.is-desktop, .denim-guide-banner-wrapper.is-desktop img{display: block !important;}
+.denim-guide-banner-wrapper img{display: block;}
+.denim-guide-banner-wrapper .banner-nav-wrapper{background-color: #FFF; bottom: 25%; display: block; font-size: 1.17em; height: 44.4%; padding: 0; position: absolute; right: 4.3%; font-family: oswald; text-transform: uppercase;}
+.banner-nav-wrapper a, .banner-nav-wrapper span {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #000; border: 1px solid #FFF; color: #FFF; display: block; float: left; height: 100%; padding: 6px 15px;}
+.wash-stories-banner .banner-nav-wrapper a, .wash-stories-banner .banner-nav-wrapper span{padding: 6px 24px;}
+.denim-guide-banner-wrapper.wash-stories-banner .banner-nav-wrapper{right: 3.3%;}
+.banner-nav-wrapper span.active{background-color: #FFF; color: #000;}
+
+.no-mobile .denimguide-mobile-banner{display: none;}
+.is-mobile .denimguide-mobile-banner{display: block;}
+.html-slot-container img{width: 100%; max-width: 100%;}
+.pt_denimguide .html-slot-container img {display: block;}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+	#denim-guide .main-image.layout-1280 {display: none;}
+	#denim-guide .main-image.layout-1024 {display: block;}
+	#denim-guide.home-page #man,#denim-guide.home-page #woman{min-height: 768px;}
+	#denim-guide{overflow: hidden;}
+/*	#denim-guide .main-block .overlay.is-main, #denim-guide .main-block .overlay.is-main:hover{display:none !important;} */
+	#denim-guide .overlay.is-main {height: 100%; position: absolute; width: 100%; z-index: 2; background-color: transparent; opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";}
+	#denim-guide.usertype-woman .overlay.is-main, #denim-guide.usertype-man .overlay.is-main{display: none;}
+	#denim-guide.usertype-woman #woman, #denim-guide.usertype-man #man{z-index: 5;}
+	/* overlay with no animation */
+    .man-guide{margin-left: -1px;}
+    .woman-guide .content, .man-guide .content{width:100%; position: relative;}
+    .man-guide .content {right: 30px;}
+    .woman-guide .content {left: 30px;}
+   /* .content .col-1{width: 35.2%;} */
+  /*  .content .col-2 {width: 56.2%;} */
+    .content .col-2 .description {width: 100%;}
+    #denim-guide-product-listing > nav li > a {margin: 0 20px;}
+    .denim-type-desc .desc-text h3{font-size: 2.1em;}
+    .denim-type-desc .desc-text h2{margin: 0.4em 0;font-size: 2em;}
+    .woman-guide .content, .man-guide .content{width:107%;}
+    .denim-type-desc .desc-text .desc-header {margin: 5px 0;}
+    .desc-text .desc-header .divider{font-size: 2.5em;}
+    .denim-type-desc .desc-text {padding: 10px;}
+    .denim-type-desc .desc-text h4{margin: .4em 0; font-family: proximanova-semibold;}
+    .denim-type-desc .desc-text p{margin: .5em 0; line-height: 16px;}
+    .denim-guide-banner-wrapper .banner-nav-wrapper a, .denim-guide-banner-wrapper .banner-nav-wrapper span {padding-top: 2px; padding-bottom: 2px;}
+    #denim-guide-product-listing nav li.selected {background-position: center 27px;}
+    #denim-guide-product-listing .category-images ul li{position: relative;}
+    .content .col-1 .overlay{background: url('../images/space.gif') repeat 0 0 transparent;width: 100%; height: 100%; position: absolute; z-index: 3;}
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) and (orientation:portrait){
+	/*	.wash-types, .fits-type {width: 384px;}  */
+	/*#woman .main-image, #man .main-image{min-height: 768px;}*/
+	.man-guide .content {right: 70px;}
+	/*.wash-types .description, .fits .description{width:198px;} */
+	.wash-types .description{width: 245px;}
+	.fits-sub-category {left: 175px;}
+	.content .col-2{padding-left: 15px;}
+	.man-guide .content .col-2 {width: 270px;}
+	#denim-guide .man-guide .jcarousel-prev, #denim-guide .woman-guide .jcarousel-prev {left: 174px;}
+	#denim-guide .jcarousel-next {left: 215px;}
+	#denim-guide .browse-all {left: 256px;}
+	.man-guide .fits .fits-sub-category{width: 205px;}
+	.man-guide .fits .description{margin-top: 40px;}
+	.denim-type-desc .desc-text{padding:10px;}
+	.denim-type-desc .desc-text h3{margin: 0.7em 0;}
+	.man-guide .content{width:117%;}
+	.woman-guide .content{width: 125%;}
+	.content .col-2 h3 {margin: 0.2em 0;}
+	.content .col-2 p {line-height: 1.33em; margin: 0;}
+	#denim-guide-product-listing.woman > nav {margin: 0 2%;}
+	#denim-guide .browse-all {width: 120px;}
+	.content .col-1 .overlay {height: 100%; position: absolute; width: 100%; z-index: 2;}
+	.denim-type-desc .desc-text h2{margin-top: 0;}
+	.denim-type-desc .desc-text h4{margin: .4em 0; font-family: proximanova-semibold;}
+	.denim-type-desc .desc-text p{margin: .2em 0; line-height: 16px;}
+	.denim-type-desc .desc-text .see-all-products{line-height: 16px;}
+	.denim-type-desc .desc-text .desc-header {margin: 2px 0;}
+	.denim-guide-banner-wrapper .banner-nav-wrapper{font-size: 1em; right: 1.3%;}
+	.denim-guide-banner-wrapper .banner-nav-wrapper > a, .denim-guide-banner-wrapper .banner-nav-wrapper > span {padding: 0 10px;}
+	
+}
+
+
+
+@media only screen and (min-width:320px) and (max-width:766px){
+	#denim-guide{overflow: hidden;}
+	.content .col-1 .overlay {height: 100%; position: absolute; width: 100%; z-index: 2;}
+	.pt_denimguide .breadcrumb{display: none;}
+	#man, #woman{min-height: 300px; height: auto;}
+	.man-guide, .woman-guide {position: relative; width: 100%;}
+	#denim-guide.usertype-man #man, #denim-guide.usertype-woman #woman {width: 100%;}
+	#denim-guide.usertype-woman .overlay.is-main, #denim-guide.usertype-man .overlay.is-main{display: none;}
+	#denim-guide.usertype-woman #man, #denim-guide.usertype-man #woman{width: 0%;}
+	#denim-guide.usertype-woman .main-image, #denim-guide.usertype-man .main-image{display: none;}
+	#denim-guide .main-image.layout-1280 {display: none !important;}
+	#denim-guide.home-page .main-image.layout-1024 {display: block;}
+/*	#denim-guide .overlay, #denim-guide .overlay:hover{display:none !important;} */
+    #denim-guide h1{font-size: 2.4em;}
+    #denim-guide h2 {font-size: 1.6em;}
+     #woman .main-image, #man .main-image {min-height: auto;max-width: 250%; height: auto;}      
+    .content h1, .content h2, .content .col-2{padding-left:25px;}
+    .denim-type-desc .desc-text h2 {font-size: 2em;}
+    .denim-type-desc .desc-text h3 {font-size: 2.1em;}
+    .content h3{margin-bottom: 0.4em;}
+    .denim-copy{right: -82px;top: 80px;}
+    .denim-copy.is-desktop{display: none;}
+	.denim-copy.is-mobile{display: block;}
+	#denim-guide div.overlay.is-main a {color: #fff; font-family: oswald; font-size: 1.17em; text-transform: uppercase; text-indent: 0;}
+	#denim-guide div.overlay.is-main {background-color:#f00; line-height: 50px; text-align: center; width: 100%; display: block; position: absolute; margin: 0;}
+    .man-guide .content, .woman-guide .content, {overflow: auto;position: static;}
+   	#denim-guide .category-header{display: block;background: none repeat 0 0 #fff; color: #000; padding: 10px 0 10px 25px;}
+   	#denim-guide .category-header a{color: #000;}
+   	#denim-guide .category-header span.not-clickable{color: #EB0028;}
+    .man-guide, .woman-guide{left: 0;}
+    .woman-guide .content{left: 0;}
+    #denim-guide .woman-guide .fits  ul.denim-carousel{margin-top: 30px;}
+    .woman-guide .fits-type .description {margin-top: 20px;}
+    .content .col-1{overflow: hidden;}
+    .content .col-1, .content .col-2 {float: none;width:100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;-ms-box-sizing:border-box;}
+    #denim-guide .content h1{display: none;}
+    .fits .col-1{margin-top: 35px;}
+    .fits .col-2 nav{position: absolute;top: 30px;}
+    #man-guide, #woman-guide{background:none repeat 0 0 #e6e6e6;height:auto; padding:0;background-size: 100% 100%; color: #000;}
+	.man-guide .wash-story, .woman-guide .fits{border-bottom: 1px solid #ccc; margin-bottom: 16px; padding-bottom: 18px;}
+    .dg-choose-category{display: inline;}
+    .description a {color: #000;}
+   	#denim-guide .jcarousel-prev{left:0}
+    #denim-guide .jcarousel-next{right:0}
+    #denim-guide .jcarousel-next {left: auto;}
+    #denim-guide .browse-all{width: 100%;left: 0; background-color: #737373;}
+    .content h2{margin: 10px 0;}
+    .fits-sub-category{left:25px;}
+    .fits-sub-category li span {color: #000;}
+    #denim-guide ul.denim-carousel li{height: 655px; overflow: hidden;}
+    #denim-guide .wash-types ul.denim-carousel li{height: 610px;}
+	.content .col-1 img {display: block; width: 100%;}
+	.wash-types, .fits-type {overflow: hidden; position: relative;}
+   	.content .description {margin-top: 20px;}
+	.wash-types .description{height: auto;}
+	.content .col-2 p{height: auto; padding-right: 10px;}
+	/* Header navigation for denim guide product listing */
+	.category-images, .category-level2{display:none;}
+	#denim-guide-product-listing ul.category-level1{overflow: auto;float: none; width: auto !important;}
+	#denim-guide-product-listing ul.category-level1 li{float: none;display:none;}
+	#denim-guide-product-listing ul.category-level1 ul.category-level2 li{display: block;}
+	#denim-guide-product-listing.woman > nav {margin: 0;}
+	#denim-guide-product-listing > nav li.selected{background:none;}
+	#denim-guide-product-listing ul.category-level1 li.selected {display:none;}
+	#denim-guide-product-listing > nav {line-height: 40px;background-color: #e6e6e6;margin:0;}
+    #denim-guide-product-listing .pipeline{display: none;}
+    #denim-guide-product-listing > nav {line-height: 32px}
+    #denim-guide-product-listing > nav ul{margin:0;}
+    #denim-guide-product-listing > nav li {padding: 0 0 0 25px;}
+    #denim-guide-product-listing > nav li li{padding: 0 18px;}
+    #denim-guide-product-listing > nav li > a{height: auto;margin:0;background-color: transparent;}
+    #denim-guide-product-listing > nav li.main-category a.level1{background:url("../images/interface/accordion.png") no-repeat right -5px;}
+    #denim-guide-product-listing ul.category-level1 li.current-denim-guide-category{display: block; background:url("../images/interface/accordion.png") no-repeat right -5px #fff; font-family: proximanova-semibold; cursor: pointer;}
+    #denim-guide-product-listing ul.category-level1 li.current-denim-guide-category.active, #denim-guide-product-listing > nav li.main-category.selected a.level1{background-position: right -95px;}
+    #denim-guide-product-listing ul.category-level1 li.current-denim-guide-category.active{color: #EB0028;}
+    #denim-guide-product-listing .category-images .jcarousel-prev, #denim-guide-product-listing .category-images .jcarousel-next {padding: 20px 10px 20px 0;}
+	#denim-guide-product-listing .category-images .jcarousel-next {background-position: right 20px;;}
+	#denim-guide-product-listing .category-images .jcarousel-prev {background-position: 0 20px;}
+	.denim-type-desc .desc-text .see-all-products{color: #000; display: none;}
+	.denim-type-desc .desc-text h4{margin: .5em 0; font-family: proximanova-semibold;}
+	.denim-type-desc .desc-text p{margin: .5em 0;}
+	#denim-guide-product-listing > nav li.selected > a {color: #000;}
+	
+    .denim-type-desc{float: none;}
+    .denim-type-desc .additional-images{display : none;}
+    .denim-type-desc .col-1, .denim-type-desc .col-2{width:100%}
+    .denim-type-desc .col-1{float: none;}
+    .denim-type-desc .col-1 img{max-height: 480px;}
+    .denim-type-desc.product-listing .col-1 {float: none;}
+    
+    .denim-type-desc .desc-text{background-color: #ccc;color: #000; padding: 10px 30px;}
+    .denim-type-desc .desc-text p{font-size: 14px; line-height: 24px; text-transform: none;}
+    
+    .denim-guide-explore-washstory-fits{background-color: #000; color: #fff; font-family: proximanova-semibold; font-size: 1.17em; line-height: 45px; padding-left: 25px; text-transform: uppercase; display: block;}
+    .denim-guide-search-results{padding: 15px 25px; background-color: #f1f1f1; font-family: proximanova-semibold; text-transform: uppercase; display: block;}
+    .denim-guide-search-results h2{font-size: 1.67em; margin: 0;}
+    .denim-guide-search-results p{font-size: 1em; margin: .4em 0;}
+    .denim-type-desc .desc-text .browse-all-fits-washes{display: block; font-family: proximanova-semibold; font-size: 14px; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; margin: 15px 0 0;}
+    
+    .denim-guide-banner-wrapper.is-mobile, .denim-guide-banner-wrapper.is-mobile img{display: block !important;}
+	.denim-guide-banner-wrapper.is-desktop, .denim-guide-banner-wrapper.is-desktop img{display: none !important;}
+	.dialog-dg-full-description{height:95% !important; top:13px !important;}
+	.dialog-dg-full-description #dialog-container{height:469px !important;overflow-y:scroll;}
+}
+
+
+@media only screen and (min-width:533px) and (max-width:766px) and (orientation:portrait){
+	#man, #woman{min-height: 500px; height: auto;}
+	#denim-guide ul.denim-carousel li { height: 900px !important;}
+	#denim-guide .wash-types ul.denim-carousel li{ height: 850px !important;}
+	.usertype-woman .denim-copy, .usertype-man .denim-copy{display: none;}
+	.denim-copy{top: 80px;}
+}
+
+@media screen and (min-width:320px) and (max-width: 568px) and (orientation:landscape){
+	#man, #woman{min-height: 530px; height: auto;}
+	#denim-guide ul.denim-carousel li{height: 930px !important; overflow: hidden;}
+    #denim-guide .wash-types ul.denim-carousel li{height: 900px !important;}
+    #denim-guide #woman ul.denim-carousel li{height: 950px !important; overflow: hidden;}
+    #denim-guide #woman .wash-types ul.denim-carousel li{height: 900px !important;}
+    .denim-copy{right:-150px;}
+    .dialog-dg-full-description #dialog-container{height:208px !important;overflow-y:scroll;}
+}
+
+@media only screen and (min-width:600px) and (max-width:805px) and (orientation:landscape){
+	.content .col-1 {width: 150px;}
+	.content .col-2 {width: 255px; padding-left: 15px;}
+	.fits-sub-category {left: 165px; width: 245px;}
+	#denim-guide ul.denim-carousel li {height: 200px !important;}
+	.woman-guide .content, .man-guide .content {width: 115%;}
+	.man-guide .content {right: 50px;}
+	.content .col-2 p {line-height: 1.17em;}
+	#denim-guide .jcarousel-prev {left: 165px;}
+	#denim-guide .browse-all {left: 247px;}
+	#denim-guide .jcarousel-next {left: 206px;}
+	.woman-guide .fits-type .description {margin-top: 40px;}
+	#denim-guide h3 {margin: 0.2em 0;}
+	.denim-type-desc .desc-text{padding:10px;}
+	.denim-type-desc .desc-text h2{margin-top: 0;}
+	.denim-type-desc .desc-text h4{margin: .4em 0; font-family: proximanova-semibold;}
+	.denim-type-desc .desc-text p{margin: .2em 0; line-height: 16px;}
+	#denim-guide-product-listing > nav li.selected {background: url("../images/interface/select-arrow.png") no-repeat scroll center 27px #000;}
+	#denim-guide-product-listing .category-images ul li img {width: 100%;}
+	#denim-guide-product-listing .category-images.carousel-wrapper ul li .overlay {width: 98.5%; height: 96%;}
+	#denim-guide-product-listing .category-images ul li span {line-height: 22px; padding-bottom: 2px;}
+	.denim-guide-banner-wrapper.is-mobile, .denim-guide-banner-wrapper.is-mobile img{display: none !important;}
+	.denim-guide-banner-wrapper.is-desktop, .denim-guide-banner-wrapper.is-desktop img{display: block !important;}
+	.denim-guide-banner-wrapper .banner-nav-wrapper{height: 48%;}
+	.denim-guide-banner-wrapper .banner-nav-wrapper a, .denim-guide-banner-wrapper .banner-nav-wrapper span {padding: 0 7px;}
+	#denim-guide-product-listing .category-images ul li{position: relative;}
+}
+
+@media only screen and (min-width:1025px) and (orientation:landscape){
+	#denim-guide.home-page #man,#denim-guide.home-page #woman{min-height: 768px;}
+}
+
+
+
+/** PLP custom scrollbar */
+#denim-custom-scroll {width:100%;}
+#denim-custom-scroll .viewport {width:97.5%;height:322px;overflow:hidden;position:relative;float:left;background:none;}
+#denim-custom-scroll .overview {list-style:none;position:absolute;left:0;top:0;width:100%;}
+#denim-custom-scroll .thumb .end, #denim-custom-scroll .thumb {background-color:#FFF;}
+#denim-custom-scroll .scrollbar {position:relative;float:right;width:2.5%;}
+#denim-custom-scroll .track {background-color:#000;height:100%;width:100%;position:relative;}
+#denim-custom-scroll .thumb {height:20px;width:100%;left: 0;cursor:pointer;overflow:hidden;position:absolute;top:0;}
+#denim-custom-scroll .thumb .end {overflow:hidden;height:5px;width:8px;}
+.noSelect {user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;}
+.wash-story .product-description-full, .fits .product-description-full,.denim-type-desc .product-description-full{display:none;}
+#denim-guide .denim-carousel p a.dg-readmore {background-position: right -379px;color: #EA1D2B;float: none;text-decoration: underline;text-transform: capitalize;padding-right:11px;}
