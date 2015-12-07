@@ -240,23 +240,63 @@ public function get_barcode($style='',$color='',$size='')
 
 //Dharmesh
 
-/*public function get_landing_products($category_name){
-	//$ret_val_arr = array();
+public function get_landing_products($category_name){
+	$ret_val_arr = array();
 
 	switch ($category_name) {
 		case 'men':
-			$product_arr = array('00SK0A0846X','00SKAL0845N')
+			$product_arr = array('00SK0A0846X','00SKAL0845N','00SDHB0842U','00S0Y80847K');
+			$criteria = "";
 			break;
-		
-		default:
-			# code...
+
+		case 'denim':
+			$product_arr = array('00SD240669T','00CKS10843S','00SKAA0667S','00SH260662E');
+			$criteria = "";
 			break;
+
+		case 'women':
+			$product_arr = array('00SJLF0NAHP','00SIH30844Q');
+			$criteria = "";
+			break;
+
 	}
 
 	// get product details 
 
-	$sql = "";
-}*/
+	foreach($product_arr as $curr_arr){
+		/*$sql = "select c.attr_value, a.disp_name , a.style, attr_code
+				from prod_mast a, prod_variation b, prod_attributes c
+				where a.style = b.style and 
+				b.style = c.style and
+				a.style = '{$curr_arr}' and
+				b.attr_type = 'color' and
+				c.attr_id = 'dgaLook'
+				group by c.style";*/
+
+		$sql = "select a.disp_name , a.style, attr_code, d.*
+				from prod_mast a, prod_variation b, category_assignment d 
+				where a.style = b.style and 
+				a.style = d.`product-id` and 
+				a.style = '{$curr_arr}' and 
+				b.attr_type = 'color'
+				group by b.style";
+
+		//echo $sql;exit;
+
+		$query = $this->db->query($sql);
+		$ret_val_arr[] = $query->row_array();	
+
+	}
+
+	/*echo '<pre>';
+	print_r($ret_val_arr);
+	echo '</pre>';
+	exit;*/
+
+	return $ret_val_arr;
+
+	
+}
 
 
 /**
@@ -266,15 +306,26 @@ public function get_barcode($style='',$color='',$size='')
  */
 
 public function get_sublisting_product($gender,$category_name){
+	$prod_arr = array();
 	$return_gender_value = $this->get_gender($gender);
-	$sql = "SELECT `product-id` FROM `category_assignment` WHERE `L1` = 'diesel' AND `L2` = '$return_gender_value' AND `L4` = '$category_name'";
+	$sql = "select a.disp_name , a.style, attr_code, d.*
+			from prod_mast a, prod_variation b, category_assignment d 
+			where a.style = b.style and 
+			a.style = d.`product-id` and
+			d.L1 = 'diesel' and
+			d.L2 = '{$return_gender_value}' and
+			d.L4 = '{$category_name}' and  
+			b.attr_type = 'color'
+			group by b.style" ;
 	//echo $sql;exit;
 	$query = $this->db->query($sql);
 	$result = $query->result_array();
-	echo '<pre>';
+	/*echo '<pre>';
 	print_r($result);
 	echo '</pre>';
-	exit;
+	exit;*/
+	return $result;
+	
 }
 
 /**
@@ -294,6 +345,27 @@ public function get_gender($gender){
 			break;
 	}
 }
+
+
+/**
+ * return pre-built header array for differenct category
+ * @return: header array
+ */
+
+public function generate_header_nav(){
+	$main_header_arr = array();
+
+	$sql = "select distinct L3 from `category_assignment` WHERE `L1` = 'diesel' AND `L2` = 'man'";
+	$query = $this->db->query($sql);
+	$l3_result = $query->result_array();
+
+	foreach($l3_result as $curr_result){
+		
+	}
+
+}
+
+
 
 	
 } // end of model class

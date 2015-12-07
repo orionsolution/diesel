@@ -1,3 +1,11 @@
+<?
+$info = listing_page_info($category);
+/*echo '<pre>';
+print_r($info);
+echo '</pre>';
+exit;*/
+
+?>
 <div id="main" role="main" class="clearfix">
       <script>
         /*$(document).ready(function() {
@@ -21,10 +29,10 @@
                 <div class="row">
                   <div class="col-md-9 col-sm-12 col-md-push-3 inpagedlpcover-image">
                     <div class="tag-mobile-men"></div>
-                    <div class="cover-fullbleed" data-stellar-ratio="0.8"> <img alt="MALE COLLECTION" title="MALE COLLECTION" src="<?=base_url().'images/category_images/'.$category.'_cover_img.jpg'?>" /> <a class="full-img-link" href="http://shop.diesel.com/man/?prefn1=onlineFrom&amp;prefv1=-30&amp;hps=true" alt="Shop New Arrivals">Explore</a> </div>
+                    <div class="cover-fullbleed" data-stellar-ratio="0.8"> <img alt="MALE COLLECTION" title="MALE COLLECTION" src="<?=base_url().'images/category_images/'.$info['slot_1']['main_image_name'].'.jpg'?>" /> <a class="full-img-link" href="http://shop.diesel.com/man/?prefn1=onlineFrom&amp;prefv1=-30&amp;hps=true" alt="Shop New Arrivals">Explore</a> </div>
                     <article class="lp-text">
-                      <h1>MALE COLLECTION</h1>
-                      <p>The Fall Winter collection is fresh, modern and still packed with that unmistakable Diesel attitude. Military camouflage and rock 'n' roll denim get updated with texture-clashing fabrics, innovative treatments and shots of color. </p> <span class="link-area"><a class="button-links"
+                      <h1><?=$info['slot_1']['heading'];?></h1>
+                      <p><?=$info['slot_1']['description'];?></p> <span class="link-area"><a class="button-links"
                       href="http://shop.diesel.com/man/?prefn1=onlineFrom&amp;prefv1=-30&amp;hps=true">SHOP NEW ARRIVALS</a>                      </span> </article>
                   </div>
                   <div class="col-md-3  col-sm-12 col-md-pull-9 accordian-gender" data-widget="sub-nav-scroll">
@@ -103,83 +111,51 @@
           <div class="content-slot">
             <div class="in-page-product clearfix ">
               <div class=" hp-product-slider">
-                <div class="panel col-lg-6 col-md-6">
-                  <div class="homepage-oneslot-carousel">
-                    <div class="image-sec col-lg-5 col-lg-push-1 col-md-5 col-md-push-1 col-sm-5"> <img itemprop="image" class="primary-image" data-altimg="images/00SK0A_0846X_01_R.jpg?sw=230&amp;sh=345" src="<?=base_url();?>images/00SK0A_0846X_01_F.jpg?sw=230&amp;sh=345" alt="TAYLHOR 0846X, " /> </div>
-                    <div class="content-sec col-lg-5 col-lg-push-1 col-md-5 col-md-push-1 col-sm-5">
-                      <div class="content-sec-inner">
-                        <div class="middle">
-                          <h5 class="gender-crousel">men</h5>
-                          <h5>TAYLHOR 0846X</h5>
-                          <div class="pricing">
-                            <div class="product-price"> <span class='price-sales'>
-      
-      $208.00</span> </div>
-                          </div> <a class="button-theme" href="<?=base_url()?>product/details">buy</a> </div>
+                <?foreach($landing_products as $curr_product):?>
+                  <? $cat = '';
+                  if($curr_product['L2'] == 'man'):
+                      $cat = 'men';
+                  elseif($curr_product['L2'] == 'woman'):
+                      $cat = 'women';
+                  endif;
+
+                  // product url:
+
+                  if($curr_product['L4'] == 'denim'){
+                    $prod_cat = $curr_product['L5'];
+                  }else{
+                    $prod_cat = $curr_product['L4'];
+                  }
+
+                  $url = base_url().'product/details/'.$prod_cat.'/'.clean_string($curr_product['disp_name']).'/'.$curr_product['style'].'/'.$curr_product['attr_code'];
+
+                  ?>
+                  <?if(!empty($landing_products)):?>
+                  <div class="panel col-lg-6 col-md-6">
+                    <div class="homepage-oneslot-carousel">
+                      <div class="image-sec col-lg-5 col-lg-push-1 col-md-5 col-md-push-1 col-sm-5"> <img itemprop="image" class="primary-image" data-altimg="images/00SK0A_0846X_01_R.jpg?sw=230&amp;sh=345" src="<?=base_url();?>images/00SK0A_0846X_01_F.jpg?sw=230&amp;sh=345" alt="TAYLHOR 0846X, " /> </div>
+                      <div class="content-sec col-lg-5 col-lg-push-1 col-md-5 col-md-push-1 col-sm-5">
+                        <div class="content-sec-inner">
+                          <div class="middle">
+                            <h5 class="gender-crousel"><?=$cat?></h5>
+                            <h5><?=$curr_product['disp_name'];?></h5>
+                            <div class="pricing">
+                              <div class="product-price"> <span class='price-sales'>$208.00</span> </div>
+                            </div> <a class="button-theme" href="<?=$url;?>">buy</a></div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="panel col-lg-6 col-md-6">
-                  <div class="homepage-oneslot-carousel">
-                    <div class="image-sec col-lg-5 col-lg-push-1 col-md-5 col-md-push-1 col-sm-5"> <img itemprop="image" class="primary-image" data-altimg="images/00SKAL_0845N_02_R.jpg?sw=230&amp;sh=345" src="<?=base_url();?>images/00SKAL_0845N_02_F.jpg?sw=230&amp;sh=345" alt="D-JIM, " /> </div>
-                    <div class="content-sec col-lg-5 col-lg-push-1 col-md-5 col-md-push-1 col-sm-5">
-                      <div class="content-sec-inner">
-                        <div class="middle">
-                          <h5 class="gender-crousel">men</h5>
-                          <h5>D-JIM</h5>
-                          <div class="pricing">
-                            <div class="product-price"> <span class='price-sales'>
-      
-      $898.00</span> </div>
-                          </div> <a class="button-theme" href="https://shop.diesel.com/jackets/d-jim/00SKAL0845N.html">buy</a> </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel col-lg-6 col-md-6">
-                  <div class="homepage-oneslot-carousel">
-                    <div class="image-sec col-lg-5 col-lg-push-1 col-md-5 col-md-push-1 col-sm-5"> <img itemprop="image" class="primary-image" data-altimg="images/00SDHB_0842U_01_R.jpg?sw=230&amp;sh=345" src="<?=base_url();?>images/00SDHB_0842U_01_F.jpg?sw=230&amp;sh=345" alt="BUSTER 0842U, " /> </div>
-                    <div class="content-sec col-lg-5 col-lg-push-1 col-md-5 col-md-push-1 col-sm-5">
-                      <div class="content-sec-inner">
-                        <div class="middle">
-                          <h5 class="gender-crousel">men</h5>
-                          <h5>BUSTER 0842U</h5>
-                          <div class="pricing">
-                            <div class="product-price"> <span class='price-sales'>
-      
-      $278.00</span> </div>
-                          </div> <a class="button-theme" href="https://shop.diesel.com/tapered/buster-0842u/00SDHB0842U.html">buy</a> </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel col-lg-6 col-md-6">
-                  <div class="homepage-oneslot-carousel">
-                    <div class="image-sec col-lg-5 col-lg-push-1 col-md-5 col-md-push-1 col-sm-5"> <img itemprop="image" class="primary-image" data-altimg="images/00S0Y8_0847K_01_R.jpg?sw=230&amp;sh=345" src="<?=base_url();?>images/00S0Y8_0847K_01_F.jpg?sw=230&amp;sh=345" alt="ELSHAR, " /> </div>
-                    <div class="content-sec col-lg-5 col-lg-push-1 col-md-5 col-md-push-1 col-sm-5">
-                      <div class="content-sec-inner">
-                        <div class="middle">
-                          <h5 class="gender-crousel">men</h5>
-                          <h5>ELSHAR</h5>
-                          <div class="pricing">
-                            <div class="product-price"> <span class='price-sales'>
-      
-      $448.00</span> </div>
-                          </div> <a class="button-theme" href="https://shop.diesel.com/jackets/elshar/00S0Y80847K.html">buy</a> </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <?endif;endforeach;?>
               </div>
             </div>
           </div>
           <div class="content-slot">
             <div data-slotid="landing-content-slot3" class="full-bleed-slot">
-              <section class="cover-fullbleed " data-stellar-background-ratio="0.5" style="background:url('<?=base_url();?>images/02_DENIM-MALE.jpg') 0 0 / cover no-repeat fixed;"> <a class="full-img-link" href="http://shop.diesel.com/mens/denim/" alt="Shop Male Denim">Explore</a>
+              <section class="cover-fullbleed " data-stellar-background-ratio="0.5" style="background:url('<?=base_url();?>images/landing_products/<?=$info['slot_2']['main_image_name'];?>.jpg') 0 0 / cover no-repeat fixed;"> <a class="full-img-link" href="http://shop.diesel.com/mens/denim/" alt="Shop Male Denim">Explore</a>
                 <article class="lp-text">
-                  <h1>DENIM</h1>
-                  <p>Worn-in for a vintage look, dyed and coated for a contemporary feel or detailed with rebel studs and punk safety pins; as long as you like your denim with attitude the Fall/ Winter range has you covered. Try the innovative stretch-denim JoggJeans for a sporty fit and effortless movement. </p> <span class="link-area"><a class="button-links" href="http://shop.diesel.com/mens/denim/">SHOP</a> </span></article>
+                  <h1><?=$info['slot_2']['heading'];?></h1>
+                  <p><?=$info['slot_2']['description'];?></p> <span class="link-area"><a class="button-links" href="http://shop.diesel.com/mens/denim/">SHOP</a> </span></article>
               </section>
             </div>
           </div>
@@ -187,17 +163,19 @@
             <section data-slotid="landing-content-slot4" class="secondary-inpage-three-slot container-fluid threeinslot parallax-window" data-stellar-background-ratio="0.2" style="background:url('http://demandware.edgesuite.net/aapk_prd/on/demandware.static/-/Sites/default/dwdad5fa3b/Diesel-Site-Unification/MEN LANDING/06_THREESLOT_MALE_BACKGROUND.jpg') 0 0 / cover no-repeat fixed;">
               <div class="row">
                 <div class="dlp-slider-threeinslot" data-widget="threefront-vid-widget">
-                  <div class="col-sm-12 col-md-4 theme-one">
-                    <div class="theme-img three-sl">
-                      <div class="inthree-img-holder"> <img alt="SHOES" title="SHOES" src='<?=base_url();?>Images/03_SHOES-MALE.jpg' /> <a class="full-img-link" href="http://shop.diesel.com/mens/footwear/" alt="Shop Male Shoes">Explore</a> </div>
-                      <div class="three-text">
-                        <h4>SHOES</h4>
-                        <p>The Fall/ Winter footwear mixes biker references with classic style. Choose from buckled motorcycle boots, clean-lined shoes or relaxed sneakers in clashing materials. </p>
-                        <p><a href="http://shop.diesel.com/mens/footwear/">SHOP</a></p>
+                  <?foreach($info['slot_3'] as $curr_slot):?>
+                    <div class="col-sm-12 col-md-4 theme-one">
+                      <div class="theme-img three-sl">
+                        <div class="inthree-img-holder"> <img alt="SHOES" title="SHOES" src='<?=base_url()."images/landing_products/".$curr_slot["feature_image_name"].".jpg"?>' /> <a class="full-img-link" href="http://shop.diesel.com/mens/footwear/" alt="Shop Male Shoes">Explore</a> </div>
+                        <div class="three-text">
+                          <h4><?=$curr_slot['feature_heading'];?></h4>
+                          <p><?=$curr_slot['feature_description'];?></p>
+                          <p><a href="http://shop.diesel.com/mens/footwear/">SHOP</a></p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-sm-12 col-md-4 theme-one">
+                  <?endforeach;?>
+                  <!-- <div class="col-sm-12 col-md-4 theme-one">
                     <div class="theme-img three-sl">
                       <div class="inthree-img-holder"> <img alt="LEATHER JACKETS" title="LEATHER JACKETS" src='<?=base_url();?>Images/04_JACKETS-MALE.jpg' /> <a class="full-img-link" href="http://shop.diesel.com/mens/jackets/leather-jackets/" alt="Shop Leather Jackets for Men">Explore</a> </div>
                       <div class="three-text">
@@ -216,18 +194,18 @@
                         <p><a href="http://shop.diesel.com/mens/watches/">SHOP</a></p>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div> <span class="anchor-icon"></span> </section>
           </div>
-          <div class="content-slot">
+          <!-- <div class="content-slot">
             <div data-slotid="landing-content-slot5" class="full-bleed-slot">
               <section class="cover-fullbleed " data-stellar-background-ratio="0.5" style="background:url('<?=base_url();?>images/07_DBG MALE.jpg') 0 0 / cover no-repeat fixed;"> <a class="full-img-link" href="http://shop.diesel.com/mens/dieselblackgold/new-arrivals/" alt="Men's DBG New Collection">Explore</a>
                 <article class="lp-text">
                   <h1>DIESEL BLACK GOLD FW15 COLLECTION</h1> <span class="link-area"><a class="button-links" href="http://shop.diesel.com/mens/dieselblackgold/new-arrivals/">SHOP</a> </span></article>
               </section>
             </div>
-          </div>
+          </div> -->
           <div class="content-slot"> </div>
           <div class="content-slot"> </div>
           <div class="content-slot"> </div>

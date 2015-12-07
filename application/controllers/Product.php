@@ -24,6 +24,7 @@ public function details($cat='',$prod_name='',$style='',$color=''){
 	
 	$data = '';
 	$this->data['title']="";
+	$data['category'] = $cat;
 	
 	if($style != '')
 	{
@@ -37,7 +38,7 @@ public function details($cat='',$prod_name='',$style='',$color=''){
 	}	
 	$this->data['prod_image_arr'] = $this->product_model->get_prod_images($style,$color);
 	//echo "<pre>";
-	//var_dump($this->data['prod_image_arr']);
+	//var_dump($this->data['prod_arr']);
 	//die();
 	//echo "<pre>";
 	//var_dump($this->data['size']);
@@ -63,6 +64,7 @@ public function listing($category=''){
 	print_r($this->config->item('denim_array'));
 	echo '</pre>';
 	exit;*/
+	$data['landing_products'] = $this->product_model->get_landing_products($category);
 	$data['main_arr'] = $this->config->item($category.'_array');
 	//echo $data['main_arr'];exit;
 	$data['category'] = $category;
@@ -77,7 +79,7 @@ public function sublisting($gender='',$category){
 		$data = '';
 		//$data['main_group_arr'] = $this->product_model->get_maingroup_product($gender,$category);
 		$data['category'] = $gender;
-		$this->product_model->get_sublisting_product($gender,$category);
+		$data['product_arr'] = $this->product_model->get_sublisting_product($gender,$category);
 		/*echo "<pre>";
 		echo "in controller";
 		echo "<pre>";
