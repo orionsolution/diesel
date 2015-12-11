@@ -9,206 +9,154 @@ class Cart_model extends CI_Model{
 
         //$this->load->library('productimage');
     }
-
-
-/**
- * check if a product exists in database and set the product
- * param: sku, color code
- * return: boolean
- */
-
-	//public function check_product($color, $barcode, $qty = 1, $style='', $cart_id = ''){
-	/*public function check_product($p_color, $pid){
-		  
-        $returnVal = false;
-
-        if(!empty($color) && empty($barcode)):
-
-            $sql = "SELECT distinct barcode	 
-					FROM prod_barcode 
-					WHERE style='$style'
-					AND color = '$color'";
-                    
-            $query  = $this->db->query($sql);
-			var_dump($query);
-			die();
-            if($query->num_rows() != 1):
-                exit;
-            endif;
-            
-            $rec        = $query->result_array();
-            $rec        = $rec[0];
-            $subtotal   = $rec['price'];
-            $user_id    = $this->session->userdata('session_id');
-            $price_sale = (!empty($rec['price_sale']))? $rec['price_sale']:0;
-
-            $cart_data = array(
-                            'user_id'    => $user_id,
-                            'product_id' => $rec['style'],
-                            'prod_type'  => $rec['prod_type'],
-                            'barcode'    => $rec['barcode'],
-                            'color'      => $rec['color_code'],
-                            'price'      => $rec['price'],
-                            'price_sale' => $price_sale,
-                            'qty'        => $qty,
-                            'created_dt' => date('Y-m-d H:i:s'),
-                        );
-
-
-
-            $barcode = $rec['barcode'];
-            $user_id = $this->session->userdata('session_id');
-
-            if(!empty($cart_id)){
-
-                $sql     = "SELECT cart_id FROM cart WHERE cart_id = '{$cart_id}' AND user_id = '{$user_id}'";
-            
-                $query  = $this->db->query($sql);
-                
-                $table = 'cart';
-
-                if($query->num_rows() == 0){
-                    $this->db->insert($table, $cart_data);
-                    $returnVal = true;
-                }else{
-                    $this->db->where("cart_id", $cart_id);
-                    $this->db->where("user_id", $user_id);
-                    $this->db->update($table, $cart_data);
-                    $returnVal = true;
-                }
-
-            }else{
-
-                $sql     = "SELECT cart_id FROM cart WHERE barcode = '{$barcode}' AND user_id = '{$user_id}'";
-            
-                $query  = $this->db->query($sql);
-                
-                $table = 'cart';
-
-                if($query->num_rows() == 0){
-                    $this->db->insert($table, $cart_data);
-                    $returnVal = true;
-                }else{
-
-                    $this->db->where("product_id", $style);
-                    $this->db->where("user_id", $user_id);
-                    $this->db->update($table, $cart_data);
-                    $returnVal = true;
-                }
-
-            }
-            
-        endif;
-                
-
-        return $returnVal;
-	}*/
 	
-	public function check_product($p_color, $pid){
-		  
-			$returnVal = false;
-            $sql = "SELECT *
-                    FROM prod_mast fm 
-                    join prod_variation fv on fm.style = fv.style 
-                    join prod_barcode fb on fb.style = fv.style AND fb.color = fv.attr_code
-                    WHERE fm.style = '$pid' AND fb.color = '$p_color'";
-                    
-            $query  = $this->db->query($sql);
+	public function check_product($colors, $barcode, $qty = '', $style='', $cart_id = '')
+	{
 			
-			if($query->num_rows() == 0):
-                exit;
-            endif;
+			$returnVal = false;
+			
+			if(!empty($colors) && !empty($barcode)):
+
+			$sql = "SELECT *
+					FROM prod_mast fm 
+					join prod_variation fv on fm.style = fv.style 
+					join prod_barcode fb on fb.style = fv.style AND fb.color = fv.attr_code
+					WHERE barcode = $barcode AND fb.color = '$colors'";
+					
+			$query  = $this->db->query($sql);
+			
+			if($query->num_rows() != 1):
+				exit;
+			endif;
 			
 			$rec        = $query->result_array();
-            $rec        = $rec[0];
+			$rec        = $rec[0];
 			
-            //$subtotal   = $rec['price'];
-            $subtotal   = '1298';
-			$user_id    = '1001';
+			//$subtotal   = $rec['price'];
+			$subtotal   = '1298';
+			$user_id    = '1003';
 			$product_id	= $rec['style'];
 			$prod_type	= 'jacket';	
 			$barcode	= $rec['barcode'];
-			$color		= $p_color;
+			$color		= $colors;
 			$price		= '1298';
 			$qty 		= 1;
-            
+			$size		= $rec['size'];
+			
 			$cart_data = array(
-                            'user_id'    => $user_id,
-                            'product_id' => $product_id,
-                            'prod_type'  => $prod_type,
-                            'code'    	 => $barcode,
-                            'color'      => $color,
-                            'price'      => $price,
-                            //'price_sale' => $price_sale,
-                            'qty'        => $qty,
-                            'created_dt' => date('Y-m-d H:i:s'),
-                        );
+							'user_id'    => $user_id,
+							'product_id' => $product_id,
+							'prod_type'  => $prod_type,
+							'code'    	 => $barcode,
+							'color'      => $color,
+							'price'      => $price,
+							'qty'        => $qty,
+							'size'		 => $size,
+							'created_dt' => date('Y-m-d H:i:s')
+						);
 						
 			//$barcode = $rec['barcode'];
-            //$user_id = $this->session->userdata('session_id');
-			$cart_id = '123545';
+			//$user_id = $this->session->userdata('session_id');
+	
+			if(!empty($cart_id))
+			{		
 
-            if(!empty($cart_id)){
+				$sql     = "SELECT cart_id FROM cart WHERE cart_id = '{$cart_id}' AND user_id = '{$user_id}'";
+			
+				$query  = $this->db->query($sql);
+				
+				$table = 'cart';
 
-                $sql     = "SELECT cart_id FROM cart WHERE cart_id = '{$cart_id}' AND user_id = '{$user_id}'";
-            
-                $query  = $this->db->query($sql);
-                
-                $table = 'cart';
+				if($query->num_rows() == 0)
+				{
+					$this->db->insert($table, $cart_data);
+					$returnVal = true;
+				}
+				
+				else
+				{
+					$this->db->where("cart_id", $cart_id);
+					$this->db->where("user_id", $user_id);
+					$this->db->update($table, $cart_data);
+					$returnVal = true;
+				}
 
-                if($query->num_rows() == 0){
-                    $this->db->insert($table, $cart_data);
-                    $returnVal = true;
-                }else{
-                    $this->db->where("cart_id", $cart_id);
-                    $this->db->where("user_id", $user_id);
-                    $this->db->update($table, $cart_data);
-                    $returnVal = true;
-                }
+			}
+			
+			else
+			{
 
-            }else{
+				$sql     = "SELECT cart_id FROM cart WHERE code = '{$barcode}' AND user_id = '{$user_id}'";
+			
+				$query  = $this->db->query($sql);
+				
+				$table = 'cart';
 
-                $sql     = "SELECT cart_id FROM cart WHERE barcode = '{$barcode}' AND user_id = '{$user_id}'";
-            
-                $query  = $this->db->query($sql);
-                
-                $table = 'cart';
+				if($query->num_rows() == 0)
+				{
+					$this->db->insert($table, $cart_data);
+					$returnVal = true;
+				}
+				
+				else
+				{
+					/*$sql     = "SELECT qty FROM cart WHERE code = '{$barcode}' AND user_id = '{$user_id}'";
+					$query   = $this->db->query($sql);
+					$quantity = $query->result();
+					var_dump($quantity);
+					die();
+					$update_quantity = $quantity + 1;*/
+					
+					$this->db->where("product_id", $style);
+					$this->db->where("user_id", $user_id);
+					$this->db->update($table, $cart_data);/*$update_quantity*/
+					$returnVal = true;
+				}
 
-                if($query->num_rows() == 0){
-                    $this->db->insert($table, $cart_data);
-                    $returnVal = true;
-                }else{
-
-                    $this->db->where("product_id", $style);
-                    $this->db->where("user_id", $user_id);
-                    $this->db->update($table, $cart_data);
-                    $returnVal = true;
-                }
-
-            }
-    
-        return $returnVal;
+			}
+		
+		endif;
+		
+		return $returnVal;
 	}
 	
-	public function show_cart(){
-        $user_id    = '1001';
+	
+	public function show_cart()
+	{
+        $user_id    = '1003';
         $sql        = "SELECT * FROM cart WHERE user_id = '{$user_id}' limit 1";
         $query      = $this->db->query($sql);
         
         
-        if($query->num_rows() != 0){
-            
+        if($query->num_rows() != 0)
+		{
+			
+			
             $carts = $query->result_array();
 				
 			
-            foreach ($carts as $cart_details) {
+            foreach ($carts as $cart_details) 
+			{
                 
                 
                 $barcode = $cart_details['code'];
-                $color   = $cart_details['color'];
-                $qty     = $cart_details['qty'];
+				
+				/*$sql        = "SELECT * FROM cart WHERE code = '{$barcode}' limit 1";
+				$query      = $this->db->query($sql);
+				
+				if($query->num_rows() != 0)
+				{
+					$quan = $query->result();
+					$product = $quan->qty;
+					
+				}
+				
+				else
+				{*/
+					$color   = $cart_details['color'];
+					$qty     = $cart_details['qty'];
 
-                $sql = "SELECT *
+					$sql = "SELECT *
                         FROM prod_mast fm 
                         join prod_variation fv on fm.style = fv.style 
                         join prod_barcode fb on fb.style = fv.style AND fb.color = fv.attr_code
@@ -217,99 +165,104 @@ class Cart_model extends CI_Model{
 
                 //echo "$sql";exit;
                         
-                $query  = $this->db->query($sql);
-                        
-                if($query->num_rows() == 0):
-                    exit;
-                endif;
-                $result     = $query->result_array();
-				
-				//echo "<pre>";
-				//var_dump($result);
-				//die();	
-            	
-                foreach ($result as $rec):
+					$query  = $this->db->query($sql);
+							
+					if($query->num_rows() == 0):
+						exit;
+					endif;
+					$result     = $query->result_array();
+					
+					//echo "<pre>";
+					//var_dump($result);
+					//die();	
+					
+					foreach ($result as $rec):
 
-                    $name       = $rec['disp_name'];
-                    $style      = $rec['style'];
-                    $gender     = 'M';
-                    //$width_code = $rec['width_name'];
-                    $color_code = $rec['attr_code'];
-                    //$prod_type  = $rec['prod_type'];
-					$price 		= '1298';
-                    
-				/*
-                    if($rec['prod_type'] == 'Footwear'){
-                        $link  = product_link($prod_type, $gender, $name, $style, $color_code);
-                        $image = $this->productimage->get_product_img($style, $name, $color_code, $type="IMAGE_LINK");
-                    }else{
-                        $link  = product_link($prod_type, $gender, $name, $style, $color_code);
-                        $image = $this->productimage->get_apparel_img($style, $name, $color_code, $type="IMAGE_LINK");
-                    }
+						$name       = $rec['disp_name'];
+						$style      = $rec['style'];
+						$gender     = 'M';
+						//$width_code = $rec['width_name'];
+						$color_code = $rec['attr_value'];
+						//$prod_type  = $rec['prod_type'];
+						
+						$price 		= '1298';
+						
+					/*
+						if($rec['prod_type'] == 'Footwear'){
+							$link  = product_link($prod_type, $gender, $name, $style, $color_code);
+							$image = $this->productimage->get_product_img($style, $name, $color_code, $type="IMAGE_LINK");
+						}else{
+							$link  = product_link($prod_type, $gender, $name, $style, $color_code);
+							$image = $this->productimage->get_apparel_img($style, $name, $color_code, $type="IMAGE_LINK");
+						}
 
-                    if($rec['price_sale'] > 0){
-                        $price = $rec['price_sale'];
-                    }else{
-                        $price = $rec['price'];
-                    }
+						if($rec['price_sale'] > 0){
+							$price = $rec['price_sale'];
+						}else{
+							$price = $rec['price'];
+						}
 
-                    $total = $price * $qty;
-                    $discount = 0;
-                    if(isset($cart_details['discount']) && $cart_details['discount'] != 0){
+						$total = $price * $qty;
+						$discount = 0;
+						if(isset($cart_details['discount']) && $cart_details['discount'] != 0){
 
-                        if($cart_details['discount_type'] == "flat"){
+							if($cart_details['discount_type'] == "flat"){
 
-                            $subtotal = $total - $cart_details['discount'];
-                            $discount = $cart_details['discount'];
+								$subtotal = $total - $cart_details['discount'];
+								$discount = $cart_details['discount'];
 
-                        }else{
+							}else{
 
-                            $subtotal = $total - (($cart_details['discount'] / 100) * $total);
-                            $discount = (($cart_details['discount'] / 100) * $total);
+								$subtotal = $total - (($cart_details['discount'] / 100) * $total);
+								$discount = (($cart_details['discount'] / 100) * $total);
 
-                        }
+							}
 
-                    }else{
-                        $subtotal = $total;
-                    }
-                    
-                    //$discount = number_format($discount, 2);
-                    //$subtotal = number_format($subtotal, 2);
-					*/
-                    $product[] = array(
-                                   // 'cart_id'       => $cart_details['cart_id'],
-                                    'name'          => $name,
-                                    'style'         => $style,
-                                    'gender'        => $gender,
-                                    //'description'   => $rec['prod_desc'],
-                                    //'image'         => $image,
-                                    //'link'          => $link,
-                                    //'prodcode'      => $rec['style'],
-                                    //'size'          => $rec['size'],
-                                    //'sku'           => $rec['sku'],
-                                    //'barcode'       => $rec['barcode'],
-                                    'price_sale'    => $price,
-                                    //'price'         => $rec['price'],
-                                    //'promo_code'    => $cart_details['promo_code'],
-                                    //'promo_string'  => $cart_details['promo_string'],
-                                    //'coup_discount' => $discount,
-                                    //'discount_type' => (!empty($cart_details['discount_type']))? $cart_details['discount_type']:'',
-                                   // 'width'         => $width_code,
-                                    'color'         => $color_code,
-                                    //'subtotal'      => $subtotal,
-                                    //'discount_amt'  => $discount,
-                                    //'type'          => $rec['prod_type'],
-                                    'qty'           => $qty
-                                );
-                    
-                endforeach;
+						}else{
+							$subtotal = $total;
+						}
+						
+						//$discount = number_format($discount, 2);
+						//$subtotal = number_format($subtotal, 2);
+						*/
+						$product[] = array(
+									   // 'cart_id'       => $cart_details['cart_id'],
+										'name'          => $name,
+										'style'         => $style,
+										'gender'        => $gender,
+										//'description'   => $rec['prod_desc'],
+										//'image'         => $image,
+										//'link'          => $link,
+										//'prodcode'      => $rec['style'],
+										'size'          => $rec['size'],	
+										//'sku'           => $rec['sku'],
+										//'barcode'       => $rec['barcode'],
+										'price_sale'    => $price,
+										//'price'         => $rec['price'],
+										//'promo_code'    => $cart_details['promo_code'],
+										//'promo_string'  => $cart_details['promo_string'],
+										//'coup_discount' => $discount,
+										//'discount_type' => (!empty($cart_details['discount_type']))? $cart_details['discount_type']:'',
+									   // 'width'         => $width_code,
+										'color'         => $color_code,
+										//'subtotal'      => $subtotal,
+										//'discount_amt'  => $discount,
+										//'type'          => $rec['prod_type'],
+										'qty'           => $qty
+									);
+						
+						endforeach;
+				//}
+                
                         
                     
             }
             
             return $product;
 
-        }else{
+        }
+		else
+		{
             return false;
         }
     }

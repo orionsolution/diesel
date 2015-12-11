@@ -2452,17 +2452,7 @@ Help
                                                 
                                                 <div class="col-lg-8 col-md-6 mini-cart-products">
                                                     <div class="mini-bag-wrapper mini-bag-lt4-wrapper">
-                                                        <div class="mini-bag-slider  mini-bag-lt4-slider">
-                                                            <div class="mini-cart-image">
-                                                                <div data-pname="W-HERMES" class="remove-item button-text" data-pid="8059966250754"></div>
-                                                                <a href="http://shop.diesel.com/winter-jackets/w-hermes/8059966250754.html" title="W-HERMES">
-                                                                    <img itemprop="image" class="primary-image" data-altimg="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw8732ec16/images/large/00SJNK_0AAKP_51F_R.jpg?sw=170&amp;sh=226" src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwf7062ddc/images/large/00SJNK_0AAKP_51F_F.jpg?sw=170&amp;sh=226" alt="W-HERMES, Army">
-                                                                </a>
-                                                            </div>
-                                                                <div class="mini-cart-productss">
-
-                                                                </div>
-                                                        </div>
+                                                        
                                                     </div>
                                                 </div>
                                                 

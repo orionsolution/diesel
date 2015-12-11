@@ -1,3 +1,5 @@
+				
+				
 				<?php foreach($prod_arr as $curr_prod) {
 					
 					$product_name 	=  $curr_prod->disp_name;			
@@ -6,10 +8,25 @@
 					$style			=  $curr_prod->style;
 					$avalue			=  $curr_prod->attr_value;
 					$acode			=  $curr_prod->attr_code;
+					$nameCode		=  $curr_prod->nameCode;
+					$washCode		=  $curr_prod->washCode;
+					}
 					
+					foreach($prod_attr as $codes)
+					{
+						if($codes->attr_id == 'nameCode')
+						{
+							$nc = $codes->attr_value;	
+						}
+						if($codes->attr_id == 'washCode')
+						{
+							$wc = $codes->attr_value;	
+						}
+						
 					}
 					
 				?>
+				
 	<div id="pdpMain" class="pdp-main clearfix ">
 					
                     <div class="pdp-main-1 pdp-redesign col-lg-9 col-md-9 col-sm-12 left-pdp-sec" style="background-image:url('<?=base_url();?>images/backmendenim.jpg');background-repeat:repeat" itemscope itemtype="http://schema.org/Product">
@@ -576,7 +593,7 @@
                                                             <li class='selected swatch-ele'>
                                                                 <?php $img = $color[$i]->color; $imgname = str_replace(' ', '', $img);?>
 
-                                                                    <img class = "<?=$imgname?>" itemprop="image" src="<?=base_url();?>images/00SJT2_0CAKE_51F_F.jpg?sw=65&amp;sh=87" alt="W-NICK, Green" data-thumb='{"src":"<?=base_url();?>images/00SJT2_0CAKE_51F_F.jpg?sw=30&amp;sh=40","altimg":"<?=base_url();?>images/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427","alt":"W-NICK, Green","title":"W-NICK, Green"}' />
+                                                                    <img class = "<?=$imgname?>" itemprop="image" src="<?=base_url();?>images/<?=$nameCode?>_<?=$washCode?>_<?=$imgname?>_F.jpg?sw=65&amp;sh=87" alt="W-NICK, Green" data-thumb='{"src":"<?=base_url();?>images/00SJT2_0CAKE_51F_F.jpg?sw=30&amp;sh=40","altimg":"<?=base_url();?>images/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427","alt":"W-NICK, Green","title":"W-NICK, Green"}' />
 
                                                                 
 																<?php if($i <= 1) { ?>
@@ -590,7 +607,7 @@
 														<?php } else { ?>
 															<li class='emptyswatch swatch-ele'>
                                                                 <?php $img = $color[$i]->color; $imgname = str_replace(' ', '', $img);?>
-                                                                    <img class = "<?=$imgname?>" itemprop="image" src="<?=base_url();?>images/00SJT2_0CAKE_51F_F.jpg?sw=65&amp;sh=87" alt="W-NICK, Green" data-thumb='{"src":"<?=base_url();?>images/00SJT2_0CAKE_51F_F.jpg?sw=30&amp;sh=40","altimg":"<?=base_url();?>images/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427","alt":"W-NICK, Green","title":"W-NICK, Green"}' />
+                                                                    <img class = "<?=$imgname?>" itemprop="image" src="<?=base_url();?>images/<?=$nameCode?>_<?=$washCode?>_<?=$imgname?>_F.jpg?sw=65&amp;sh=87" alt="W-NICK, Green" data-thumb='{"src":"<?=base_url();?>images/00SJT2_0CAKE_51F_F.jpg?sw=30&amp;sh=40","altimg":"<?=base_url();?>images/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427","alt":"W-NICK, Green","title":"W-NICK, Green"}' />
   
 																
                                                                 <div title="<?php echo $color[$i]->color; ?>" class="selected-color-overlay">
@@ -642,8 +659,10 @@
 													});
 													
 													
-													$("ul.color-slides li > img").click(function()
+													$("ul.color-slides li > img").on("click",function()
 													{
+														var overlay = jQuery('<div class="bx-loading" style="visibility:visible;"></div>');
+														overlay.appendTo(document.body);
 														//$(this).each(function(){
 															//var classname = $(this).parent().attr("class");
 															//console.log(classname);
@@ -656,51 +675,123 @@
 																//console.log(nsel);
 															//}	
 														//});
+														//$("ul.product-slides-list1").empty();
+														var prod_slides = $("ul.product-slides-list1");
+														
 														var color = $(this).attr("class");
+														document.getElementById('color').setAttribute('value', color);
 														var style = "<?=$style?>";
 														var size  = $(".selectedVal").text();
+														var data = {'color': color,'style': style};
+														
+														$.ajax({
+															url     : '<?=base_url()?>Product/get_images',
+															data: data,
+															dataType:'json',
+															success:function(result){
+																//alert("success");
+																	if(result.length > 0)
+																	{
+																		var i = 0;
+																		var j = result.length;
+																		$("ul.product-slides").children().remove();
+																		$("ul.product-slides-list1").children().remove();
+																		$.each(result, function(key, val){	
+																			
+																			
+																			/*if(i == 0)
+																			{
+																				var prod_thumb = "<li style = 'visibility:visible;' id='product-thumbview-"+i+"'><a data-href='<?=base_url();?>' class='product-image main-image' title='<?php echo $product_name;?>'><img class='primary-image' src='<?=base_url().'images/'?>"+val.image_path+"' alt='<?php echo $product_name;?>,<?php echo $avalue;?>' title='<?php echo $product_name;?>,<?php echo $avalue;?>' /></a></li>";
+																				$("ul.product-slides").append(prod_thumb);
+																			}
+																			
+																			else
+																			{
+																				var prod_thumb = "<li id='product-thumbview-"+i+"'><a data-href='<?=base_url();?>' class='product-image main-image' title='<?php echo $product_name;?>'><img class='primary-image' src='<?=base_url().'images/'?>"+val.image_path+"' alt='<?php echo $product_name;?>,<?php echo $avalue;?>' title='<?php echo $product_name;?>,<?php echo $avalue;?>' /></a></li>";
+																				$("ul.product-slides").append(prod_thumb);
+																			}
+																			
+																			var clone1count = result.length - 1;
+																			if(i == 0)
+																			{
+																				var clone1 = "<li id='product-thumbview-"+clone1count+"'><a data-href='<?=base_url();?>' class='product-image main-image' title='<?php echo $product_name;?>'><img class='primary-image' src='<?=base_url().'images/'?>"+val.image_path+"' alt='<?php echo $product_name;?>,<?php echo $avalue;?>' title='<?php echo $product_name;?>,<?php echo $avalue;?>' /></a></li>";
+																				$("ul.product-slides-list1").append(clone1);
+																			}
+																			
+																			
+																			$("ul.product-slides-list1").append(prod_thumb);
+																			i++;
+																			
+																			if(i == result.length)
+																			{
+																				var clone2 = "<li id='product-thumbview-0><a data-href='<?=base_url();?>' class='product-image main-image' title='<?php echo $product_name;?>'><img class='primary-image' src='<?=base_url().'images/'?>"+val.image_path+"' alt='<?php echo $product_name;?>,<?php echo $avalue;?>' title='<?php echo $product_name;?>,<?php echo $avalue;?>' /></a></li>";
+																				$("ul.product-slides-list1").append(clone2);
+																			}*/
+																			
+																			
+																		
+																		});	
+																	}	
+																}		
+															});
+														
 														//console.log(size);
 														if(size == 'Size')
 														{
+															console.log("this is to get list of sizes");
 															var all = {'color': color,'style': style};
 															var url = '<?=base_url()?>Product/prod_var';
-														}
-														else
-														{
-															var all = {'color': color,'style': style,'size':size};
-															var url = '<?=base_url()?>Product/get_bar';
-														}
-														//console.log(all);
-														$.ajax({
-														url     : url,
-														data: all,
-														dataType:'json',
-														success:function(result){
-															//alert("success");
-															//console.log(result);
-																if(result.length > 0)
-																{
-																	
-																	$('.swatches.swatch-variation.size').empty();
-																	if(result[0].size != '')
+															
+															$.ajax({
+															url     : url,
+															data: all,
+															dataType:'json',
+															success:function(result){
+																//alert("success");
+																//console.log(result);
+																	if(result.length > 0)
 																	{
+																		$('.swatches.swatch-variation.size').empty();
 																		$.each(result, function(key, val){	
 																			//$('.customSelectBoxScroll .viewport').attr('style','height:150px;overflow : hidden');
 																			
 																			var size = '<li class="emptyswatch"><a href="" class="swatchanchor">'+val.size+'</a></li>';
 																			$('.swatches.swatch-variation.size').append(size);
+																			
 																	
 																		});	
-																	}
-																	else
+																	}	
+																}		
+															});
+															
+														}
+														else
+														{
+															console.log("this is to get barcode");
+															var all = {'color': color,'style': style,'size':size};
+															var url = '<?=base_url()?>Product/get_bar';
+															
+															$.ajax({
+															url     : url,
+															data: all,
+															dataType:'json',
+															success:function(result){
+																//alert("success");
+																//console.log(result);
+																	if(result.length > 0)
 																	{
-																		document.getElementById('barcode').setAttribute('value', result[0].barcode);
-																	}
-																	
-																}	
-															}		
-														});
-														
+																		$.each(result, function(key, val){
+																			
+																			document.getElementById('barcode').setAttribute('value', val.barcode);
+																			
+																		});
+																	}	
+																}		
+															});
+															
+														}
+														//console.log(all);
+														$("#overlay").remove();
 													});
 													/*$("li.emptyswatch > img").click(function(e)
 													{
@@ -807,10 +898,13 @@
 																		echo $row1->size;
 																		echo '</a>';
 																		echo '</li>';*/
+																		$size = $row1->size;
+																		$lsize = ltrim($size); 
+																		$fsize = rtrim($lsize);
 																	?>
 																	<li class="emptyswatch">
 																		<a class="swatchanchor" href="">
-																			<?php echo $row1->size; ?>
+																			<?php echo $fsize; ?>
 																		</a>
 																	</li>
 																<?php	
@@ -822,31 +916,43 @@
                                                             </div>
                                                         </div>
 														<script type="text/javascript">
-															$("li.emptyswatch a.swatchanchor").click(function(e){
+															
+															//var $bdy=$(document.body);
+															
+															$("ul.swatch-variation").on('click','a.swatchanchor',function(e){
 																e.stopPropagation();
+																
+																var overlay = jQuery('<div class="bx-loading"></div>');
+																overlay.appendTo(document.body);
 																$("li.emptyswatch.is-active").removeClass("is-active");
 																$(this).parent().addClass("is-active");
-																var value = $(this).text();
-																$("span.selectedVal").text(value);
+																
+																var sv = $(this).text();
+																$("span.selectedVal").text(sv);
 																
 																//document.write("hello");
 																// check if width is selected or not
-																var size1 = $(this).text();
-																var color = $("ul.color-slides li > img").attr("class");
+																var size1 = $("span.selectedVal").text();
+																
+																var color = $("ul.color-slides li.selected > img").attr("class");
 																var style = "<?=$style?>";
-																//console.log(color);
+																console.log(color);
 																$.ajax({
 																url     : '<?=base_url()?>Product/get_bar',
 																data: {'color': color,'style': style,'size':size1},
 																dataType:'json',
 																success:function(result){
 																	//alert("success");
-																	//console.log(result);
+																	console.log(result);
 																		if(result.length > 0)
 																		{
 																			//$('.customSelectBoxScroll .viewport').attr('style','height:150px;overflow : hidden');
 																			
-																			document.getElementById('barcode').setAttribute('value', result[0].barcode);
+																			$.each(result, function(key, val){
+																				
+																				document.getElementById('barcode').setAttribute('value', val.barcode);
+																				
+																			});
 																	
 																			/*$('.swatches.swatch-variation.size').empty();
 																			$.each(result, function(key, val){	
@@ -859,7 +965,12 @@
 																		}	
 																	}		
 																});
+																
+																var size = $("li.emptyswatch.is-active a.swatchanchor").text();
+																document.getElementById('size').setAttribute('value', size);
 																e.preventDefault();
+																$("#overlay").remove();
+																
 															});
 															
 														/*$(function(){
@@ -1004,16 +1115,14 @@
                                             <form action="<?php echo base_url();?>Cart/add" method="post" id="add-to-cart" class="pdpForm">
                                                 <fieldset>
 
-                                                    <input type="hidden" name="cartAction" id="cartAction" value="add" />
-                                                    <input type="hidden" name="pid" id="pid" value="00SJT20CAKE" />
-                                                    <input type="hidden" name="pname" id="pname" value="W-NICK" />
-                                                    <input type="hidden" name="pageName" id="pageName" value="ProductDetail" />
-                                                    <input type="hidden" name="updateProduct" id="updateProduct" value="true" />
-                                                    <input type="hidden" name="isQuickView" id="isQuickView" value="false" />
-													<input type="hidden" name="barcode" id="barcode" value="" />
+                                                    <input type="hidden" name="color" id="color" value="<?=$acode?>" />
+                                                    <input type="hidden" name="style" id="style" value="<?=$style?>" />
+                                                    <input type="hidden" name="qty" id="qty" value="1" />
+                                                    <input type="hidden" name="barcode" id="barcode" value="" />
+													<input type="hidden" name="size" id="size" value="" />
 
                                                     <div id="pdp-actions" class="pdp-actions">
-                                                        <h3><button id="add-to-cart" type="submit" value="Add to Bag"  class="btn-oswald red  add-to-cart">Add to Bag</button>
+                                                        <h3><button id="add-to-cart" type="submit" value="Add to Bag"  class="button add-to-cart-button addtocartbutton">Add to Bag</button>
                                 
 														</h3>
 
@@ -1023,6 +1132,303 @@
 
                                                 </fieldset>
                                             </form>
+											
+											<script type="text/javascript">
+			/**
+**  Custom JavaScript File
+**  brooksrunning.com.au
+**  By Dominic Fernandes
+**/
+
+// Ajax Header Cart show
+/*
+$(function(){
+    load_cart();
+	$('.mini-cart-total').hover(function(){ // hover in function 
+        var qty = $('#mini-cart-quantity').val();
+        if($('div.mini-cart-content-custom').is(":visible")){
+            $('.mini-cart-total').addClass('active');
+        }
+        
+        if(qty == 0 || isNaN(qty)){
+            // console.log('is Nan');
+            $('.mini-cart-content-custom').hide('fast');
+        }else{
+            // console.log('Not Nan');
+            $(".mini-cart-content-custom").slideDown("slow");
+		}
+		
+
+    },function(){ // hover out function
+        if($('div.mini-cart-content-custom').is(":visible")){
+            $('.mini-cart-total').addClass('active');
+        }else{
+            $(this).removeClass('active');
+        }
+        
+    });
+
+    /*$('.mini-cart-total').mouseout(function() {
+        $('.mini-cart-content-custom').slideUp("slow");
+    });*/
+
+	
+
+    /*$('.mini-cart-close').click(function(){ 
+        $('.mini-cart-content-custom').hide(); 
+    });
+
+    $('.continueshop-btn').click(function(){ 
+        $('.mini-cart-content-custom').hide(); 
+    });
+    
+});*/
+
+
+function load_cart(){	
+   // $('.mini-cart-products').html('');
+    var url = $('.ajax-url').attr('href');
+    var t   = 0;
+     
+    $.ajax({
+        url     : url,
+        dataType:'json',
+        success:function(result){
+			//alert("success");
+			
+            if(result.length > 0)
+			{
+				var image       = $('.mini-cart-image a img');
+                var prod_name   = $('.mini-cart-name a');
+            //    var attribute   = $('.mini-cart-attributes');
+            //    var pricing     = $('.mini-cart-pricing');
+                var qty         = $('.mini-cart-quantity');
+                var qty_val     = $('#mini-cart-quantity');
+                var subtotal    = 0;
+                var count       = parseInt(result.length);
+
+                qty.html(count);
+                qty_val.val(count);
+
+                $.each(result, function(key, val){
+                    
+                    //var productDiv  	= $( "<div class='mini-cart-details clearfix'></div>" );                                             
+                    //var nameDiv     	= '<div class="mini-cart-name font"><a href="''">'+val.name+'</a></div>'; edited by abhishek on 17/11/15.
+					//var miniCartSize  	= $( "<div class='mini-cart-size'></div>" );
+					//var nameDiv     	= '<div class="mini-cart-name font"><h5><a href="http://shop.diesel.com/winter-jackets/w-hermes/8059966250754.html">W-HERMES</a></h5></div>';
+					//var header6			= '<h6></h6>';
+					//var value 			= '<div class="attribute"><span class="value">2</span></div>';
+					//var label 			= '<div class="attribute"><span class="label"> x </span></div>';
+					//var miniattr		= $( "<div class='mini-cart-attributes'></div>" );
+					//var attribute		= '<span class="attribute"></span>';
+					//var avalue			= '<div class="attribute"><span class="value">2 x Army , M W</span></div>';
+					
+					
+					//productDiv.appendchild(nameDiv);
+					//miniattr.appendchild(avalue);
+				
+					//$('.mini-cart-productss').appendchild(productDiv);
+					//var colorAttr   	= '<div class="attribute"><span class="label">Colour: </span><span class="value">'+val.color+'</span></div>';
+                    //var sizeAttr    	= '<div class="attribute"><span class="label">Size&nbsp&nbsp&nbsp: </span><span class="value">'+val.size+'</span></div>';
+                    
+                   /* if(val.width.length > 0){
+                        var widthAttr   = '<div class="attribute"><span class="label">Width : </span><span class="value">'+val.width+'</span></div>';
+                    }
+                    var price_sale  = val.price_sale
+                    price_sale = parseFloat(price_sale);
+                    price_sale = price_sale.toFixed(2);
+                    
+                    var pricing = '<div class="mini-cart-pricing"><span class="label">Qty&nbsp&nbsp&nbsp&nbsp: </span><span class="value">'+val.qty+'</span><span class="mini-cart-price">$'+price_sale+'</span></div>';
+                    
+                    var total   = val.subtotal;
+                    subtotal    = parseFloat(subtotal) + parseFloat(total);
+
+                    if(val.image != null && val.image != ''){
+                        var imageDiv    = $( "<div class='mini-cart-image'></div>" );
+                        var startlink   = '<a href="'+val.link+'">';
+                        var endlink     = '</a>';
+                        var img         = '<img src="'+val.image+'" alt="'+val.name+'" title="'+val.name+'" />';
+                        imageDiv.append(startlink+img+endlink);
+                        productDiv.append(imageDiv);
+                    }
+                    
+                    productDiv.append(nameDiv);
+                    attributes.append(colorAttr);
+                    attributes.append(sizeAttr);
+
+                    if(val.width.length > 0){
+                        attributes.append(widthAttr);
+                    }
+                    productDiv.append(attributes);
+                    productDiv.append(pricing);
+                    
+                    $('.mini-cart-products').append(productDiv);*/
+					var bag_slider		= $("<div class='mini-bag-slider  mini-bag-lt4-slider'></div>");
+					var imgdiv			= "<div class='mini-cart-image'><div data-pname='W-HERMES' class='remove-item button-text' data-pid='8059966250754'></div><a href='' title='W-HERMES'><img itemprop='image' class='primary-image' data-altimg='http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw8732ec16/images/large/00SJNK_0AAKP_51F_R.jpg?sw=170&amp;sh=226' src='http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwf7062ddc/images/large/00SJNK_0AAKP_51F_F.jpg?sw=170&amp;sh=226' alt='W-HERMES, Army'></a></div>";
+					var productDiv  	= $( "<div class='mini-cart-details clearfix'></div>" ); 		
+                    //var nameDiv     	= '<div class="mini-cart-name font"><a href="''">'+val.name+'</a></div>'; edited by abhishek on 17/11/15.
+					//var miniCartSize  	= $( "<div class='mini-cart-size'></div>" );
+					var nameDiv     	= '<div class="mini-cart-name font"><h5><a href="">'+val.name+'</a></h5></div>';
+					//var header6			= '<h6></h6>';
+					//var value 			= '<div class="attribute"><span class="value">2</span></div>';
+					//var label 			= '<div class="attribute"><span class="label"> x </span></div>';
+					var miniattr		= $( "<div class='mini-cart-size'></div>" );
+					//var attribute		= '<span class="attribute"></span>';
+					var header6			= $("<h6></h6>");
+					var value 			= '<span class="value">1</span>';
+					var label 			= '<span class="label"> x </span>';
+					var cartattr		= $("<span class = 'mini-cart-attributes'></span> ");
+					var attr1			= $("<span class = 'attribute'></span>");
+					var attr1val		= "<span class = 'value'>"+val.color+"</span>";
+					var attr2			= $("<span class = 'attribute'></span>");
+					var attr2val		= "<span class = 'value'>"+val.size+" W</span>";
+					var seperate		= ',';
+					//var avalue			= '<span class="value">2 x Army , M W</span>';
+					var price			= '<div class="mini-cart-pricing">$998.00</div>';
+					var item_details	= '<div class="item-details"><span class="total-items">1 Item</span><span class="items-price">$998.00</span></div><hr>';
+					var total			= '<div class="mini-bag-totals"><span class="label">Order Subtotal:</span><span class="value">$998.00</span></div>';
+					var header			= '<h2 class="heading-txt">SHOPPING BAG</h2><hr>';
+					var button_bag		= '<div class="mini-cartcheckout-button clearfix"><a class="primary-button red viewCart viewBag" href="#" title="Continue Shopping ">Continue Shopping </a></div>';			
+					
+					$(".mini-cart-totals").empty();
+					
+					attr1.append(attr1val);
+					attr2.append(attr2val);
+					cartattr.append(attr1);
+					cartattr.append(seperate);
+					cartattr.append(attr2);
+					header6.append(value);
+					header6.append(label);
+					header6.append(cartattr);
+					miniattr.append(header6);
+					$(".mini-cart-totals").append(header);
+					$(".mini-cart-totals").append(item_details);
+					$(".mini-cart-totals").append(total);
+					$(".mini-cart-totals").append(button_bag);
+					productDiv.append(nameDiv);
+					//miniattr.append(avalue);
+					productDiv.append(miniattr);
+					productDiv.append(price);
+				
+					bag_slider.append(imgdiv);
+					bag_slider.append(productDiv);
+                    $('.mini-bag-wrapper').append(bag_slider);
+					
+					
+					$("html, body").animate({ scrollTop: 0 }, "fast");
+					$('#mini-cart-icon-empty').attr('id', 'mini-cart-icon');	
+					$('.bag-holder #mini-cart-icon.empty-black-bag').removeClass('empty-black-bag').addClass('empty-red-bag');
+					$('.bag-holder #mini-cart-icon.empty-black-bag').removeClass('empty-black-bag').addClass('empty-red-bag');
+					$('.bag-holder .empty-bag-count').removeClass('empty-bag-count').addClass('bag-count');
+					$('.bag-count').html('1');
+					$(".bag-count").css({color: "rgb(208, 2, 27)"});
+					$(".mini-bag-content").css({position: "absolute !important"});
+					$(".mini-bag-content").slideDown("slow"); 
+                });
+                //subtotal = subtotal.toFixed(2);
+                //$('.mini-cart-subtotals span.value').html('$'+subtotal);
+            }
+			else
+			{
+				document.write("Hello");
+			}
+            
+        },
+        error:function(){
+            $(".mini-bag-content").hide('fast');
+        }
+        
+        
+    });
+
+}
+
+//Add product to cart 
+$(function(){
+	
+	$(".add-to-cart-button").on("click",function(e) {
+	$(".add-to-cart-button").unbind('click');	
+	e.stopPropagation();
+	var sv_value = $("span.selectedVal").text();	
+	//console.log(sv_value);
+	//return false;
+	
+	if(sv_value == 'Size')
+	{
+		e.preventDefault();	
+		$(".product-tool-tip").css({display:"block"});
+		$(".product-tool-tip .msg").text("Please Select Size"); 
+		setTimeout(function()
+		{ 
+			$(".product-tool-tip").hide();
+		}, 3000);
+		
+	}
+	
+	else
+	{
+		$(".product-tool-tip").css({display:"none"});
+		$(".pdpForm").submit(function(e){
+						
+						var color = document.getElementById("color").value;
+						var style = document.getElementById("style").value;
+						var quan  =	document.getElementById("qty").value;
+						var bar   = document.getElementById("barcode").value;
+						
+						var url         = $(this).attr("action")+'/ajax/';
+						//console.log(url);
+						var data        = {'color': color,'style': style,'qty':quan,'barcode':bar};
+						var dataType    = "json";
+						$.ajax({
+						  type: "POST",
+						  url: url,
+						  data: data,
+						  success: function( data ) {
+							if(data){
+								// $('#add-to-cart').hide();
+								load_cart();
+								
+								//$(".mini-bag-content").css({ position : "absolute", width: "1349px",left: "-1194.73px",top: "50px",overflow: "hidden"});
+								// $( "#add-to-cart" ).replaceWith( "<p>New heading</p>" );
+			
+								//$("#backToTop").trigger('click');
+			
+							}
+							
+						}
+						});
+							
+            e.preventDefault();
+        });
+		
+		$(".product-bottom-wrap").css({display: "none"});
+		$(".customSelectBox").css({display: "none"});
+		$("#product-content-detail.feedback-show .feedback-panel").css({display: "block"});
+		$("#product-content-detail .feedback-panel").css({display: "block", margintop: "10px",padding: "0 24px 0 24px",position: "relative"});
+		
+		
+	}
+	
+	//$( ".rows .mini-cart-totals" ).children().last().removeClass("mini-cart-button");
+    //$( ".rows .mini-cart-totals" ).children().last().addClass("mini-cartcheckout-button"); 
+	//$('.mini-cart-button').removeClass('mini-cart-button').addClass('mini-cartcheckout-button');
+	//$( "div.mini-cart-button" ).replaceWith( $( ".mini-cartcheckout-button" ) );
+	//$('.bag-holder #mini-cart-icon.empty-black-bag').removeClass('empty-black-bag').addClass('empty-red-bag');
+    /*if(isMobile.any()) {
+        console.log('mobile');
+    }else{*/
+	    
+    // }
+	});
+
+});
+
+
+
+
+		</script>
+											
+											
                                         </div>
 
                                     </div>
@@ -1032,7 +1438,13 @@
                                         <h4><a href="https://shop.diesel.com/cart" class="goto-mybag" title="Go to My Bag">Go to My Bag</a></h4>
                                         <h4 class="button_1"><a class="continue_shopping" title="Continue Shopping ">Continue Shopping </a></h4>
                                     </div>
-
+									<script type="text/javascript">
+										$('a.continue_shopping').click(function(){
+											$("#product-content-detail .feedback-panel").hide();
+											$(".product-bottom-wrap").show();
+											$(".customSelectBox").show();
+										});	
+									</script>
                                     <div class="goto_sec">
                                         <h5 class="pdp-explore-main" data-goto="pdp-explore-main"><a href="javascript:void(0);">Explore</a></h5>
 
