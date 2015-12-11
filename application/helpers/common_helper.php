@@ -328,7 +328,8 @@ function listing_page_info($category){
                 "slot_2" => array(
                     "heading" => "DENIM",
                     "description" => "Worn-in for a vintage look, dyed and coated for a contemporary feel or detailed with rebel studs and punk safety pins; as long as you like your denim with attitude the Fall/ Winter range has you covered. Try the innovative stretch-denim JoggJeans for a sporty fit and effortless movement.",
-                    "main_image_name" => "02_DENIM-MALE"
+                    "main_image_name" => "02_DENIM-MALE",
+                    "url" => base_url().'product/mens/denim'
 
                 ),
 
@@ -336,19 +337,129 @@ function listing_page_info($category){
                     "feature_1" => array(
                         "feature_image_name" => '03_SHOES-MALE',
                         "feature_heading"   => 'SHOES',
-                        "feature_description" => 'The Fall/ Winter footwear mixes biker references with classic style. Choose from buckled motorcycle boots, clean-lined shoes or relaxed sneakers in clashing materials.'
+                        "feature_description" => 'The Fall/ Winter footwear mixes biker references with classic style. Choose from buckled motorcycle boots, clean-lined shoes or relaxed sneakers in clashing materials.',
+                        "url" => base_url().'product/mens/footwear',
+                        "img_alt_title_data" => 'SHOES',
+                        "anchor_title_data" => 'Shop Male Shoes'
                     ),
                     "feature_2" => array(
                         "feature_image_name" => '04_JACKETS-MALE',
                         "feature_heading"   => 'LEATHER JACKETS',
-                        "feature_description" => 'Sharp silhouettes and clean-lined design bring contemporary cool to our Fall/ Winter leather jacket offering. Biker style and punk irreverence still reign supreme with metal-studded black leather and safety pins.'
+                        "feature_description" => 'Sharp silhouettes and clean-lined design bring contemporary cool to our Fall/ Winter leather jacket offering. Biker style and punk irreverence still reign supreme with metal-studded black leather and safety pins.',
+                        "url" => base_url().'product/mens/jackets',
+                        "img_alt_title_data" => 'JACKETS',
+                        "anchor_title_data" => 'Shop Jackets for Men'
                     ),
                     "feature_3" => array(
                         "feature_image_name" => '05_WATCHES-MALE',
                         "feature_heading"   => 'WATCHES',
-                        "feature_description" => 'Sync it up and strap it on. Size matters.'
+                        "feature_description" => 'Sync it up and strap it on. Size matters.',
+                        "url" => base_url().'product/mens/watches',
+                        "img_alt_title_data" => 'WATCHES',
+                        "anchor_title_data" => 'Shop New Male Watches'
                     ),
 
+                )
+
+            );
+        break;
+
+	
+		
+		//case women 	
+			
+		case "women":
+            $info = array(
+                "slot_1" => array(
+                    "heading" => "S/S'16 PRE-COLLECTION",
+                    "description" => "Mix and match 70's Americana and 90's grunge for a relaxed, downtown vibe this season",
+                    "main_image_name" => "01_2"
+                ),
+
+                "slot_2" => array(
+                    "heading" => "DENIM DU JOUR",
+                    "description" => "From alternative fits like the denim Chino to the classic, high waisted skinny, it's time to make a fresh statement with your denim",
+                    "main_image_name" => "02_2",
+                    "url" => base_url().'product/womens/denim'
+
+                ),
+
+                "slot_3" => array(
+                    "feature_1" => array(
+                        "feature_image_name" => '03_SHOES',
+                        "feature_heading"   => 'SHOES',
+                        "feature_description" => 'Wear them flatform high or distinctively mannish and low. The choice is stylishly yours',
+                        "url" => base_url().'product/womens/footwear',
+                        "img_alt_title_data" => 'SHOES',
+                        "anchor_title_data" => 'Shop Female Shoes'
+                    ),
+                    "feature_2" => array(
+                        "feature_image_name" => '04_BAGS_2',
+                        "feature_heading"   => 'IT\'S IN THE BAG',
+                        "feature_description" => 'Your new arm candy has arrived',
+                        "url" => base_url().'product/womens/bags',
+                        "img_alt_title_data" => 'BAGS',
+                        "anchor_title_data" => "Shop Women's Bags"
+                    ),
+                    "feature_3" => array(
+                        "feature_image_name" => '05_LEATHER-JACKETS',
+                        "feature_heading"   => 'LEATHER JACKETS',
+                        "feature_description" => 'From the classic biker to the updated motor cross jacket reinterpreted from our archives. Get your hands on our leathers',
+                        "url" => base_url().'product/womens/jackets',
+                        "img_alt_title_data" => 'JACKETS',
+                        "anchor_title_data" => 'Shop Jackets for Women'
+                    ),
+
+                )
+
+            );
+        break;
+
+			
+		//case denim	
+		
+		case "denim":
+            $info = array(
+                "slot_1" => array(
+                    "heading" => "TRAIL-BLAZE IN DENIM",
+                    "description" => "Introducing the S/S 16 Preview collection: We've taken denim to another level",
+                    "main_image_name" => "01_SS16COLLECTION"
+                ),
+
+                "slot_2" => array(
+                    "feature_1" => array(
+                        "feature_image_name" => '09_DENIM LANDING',
+                        "feature_heading"   => 'SEASONAL WASHES FOR HIM',
+                        "feature_description" => 'From vintage styles to rock marble washes, find your new season denim now',
+                        "url" => base_url().'product/womens/bags',
+                        "img_alt_title_data" => 'Shop the Fall Winter \'15 Wash Stories'
+                    ),
+                    "feature_2" => array(
+                        "feature_image_name" => '09_DENIM LANDING_03',
+                        "feature_heading"   => 'SEASONAL WASHES FOR HER',
+                        "feature_description" => 'From deep contrasting tones to ripped and repaired finishes, Diesel\'s mastery in denim treatments knows no bounds this season',
+                        "url" => base_url().'product/womens/bags',
+                        "img_alt_title_data" => 'Shop the Fall Winter \'15 Wash Stories'
+                    ),
+                ),
+
+                "slot_3" => array(
+                    "feature_1" => array(
+                        "feature_image_name" => '09_DENIM LANDING_04',
+                        "feature_heading"   => 'THE NEW ACTYVISTA',
+                        "feature_description" => 'Meet blogger superstar Mimi Elashiry as she shows off denim\'s versatile side',
+                        "url" => base_url().'product/womens/footwear',
+                        "background_image_name" => '05_ACTYVISTA_BACKGROUND',
+                        "img_alt_title_data" => 'ACTYVISTA',
+                        "anchor_title_data" => 'Shop Actyvista'
+                    ),
+                    "feature_2" => array(
+                        "feature_image_name" => '09_DENIM LANDING_05',
+                        "feature_heading"   => 'TELLING IT LIKE IT IS',
+                        "feature_description" => 'New season, New Denim film',
+                        "url" => base_url().'product/womens/bags',
+                        "background_image_name" => '06_BRAND-FILM_BACKGROUND',
+                    ),
                 )
 
             );
@@ -358,9 +469,20 @@ function listing_page_info($category){
         default:
             $info = array();
             break;
-
+			
     }
     return $info;
+}
+
+
+/* return proper url for navigation menu */
+
+function get_url($category_key,$gender){
+    if (strpos($category_key,'cgid') !== false) {
+        return base_url().'show_search'.strtolower($category_key);
+    }else{        
+        return base_url().'product/'.$gender.'/'.strtolower($category_key);
+    }
 }
 
 

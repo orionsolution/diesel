@@ -508,43 +508,56 @@ $config['proxy_ips'] = '';
 
 $config['men_array'] = array(
 	'denim & clothing' => array(
-		'Denim',
-		'JoggJeans',
-		'Jackets',
-		'Pants',
-		'Shirts',
-		'Sweatshirts',
-		'Sweaters',
-		'Polos',
-		'Tshirts',
-		'Underwear',
-		'Beachwear'
+		'denim'=>'Denim',
+		'?cgid=diesel-man-denimguide-joggjeans'=>'JoggJeans',
+		'jackets'=>'Jackets',
+		'pants'=>'Pants',
+		'shirts'=>'Shirts',
+		'sweat-shirts'=>'Sweatshirts',
+		'sweaters'=>'Sweaters',
+		'polos'=>'Polos',
+		't-shirts-and-tops'=>'Tshirts',
+		'underwear'=>'Underwear',
+		'beachwear'=>'Beachwear'
 	),
 
 	'shoes & accessories' => array(
-		'Shoes',
-		'Bags',
-		'Wallets',
-		'Belts',
-		'Other Accessories',
-		'Jewelry',
-		'Eyewear',
-		'Watches',
-		'Fragrance',
-		'Technology'
+		'footwear'=>'Shoes',
+		'bags'=>'Bags',
+		'wallets-and-small-goods'=>'Wallets',
+		'belts'=>'Belts',
+		'other-accessories'=>'Other Accessories',
+		'jewels'=>'Jewelry',
+		'eyewear'=>'Eyewear',
+		'watches'=>'Watches',
+		'fragrances'=>'Fragrance',
+		'technology'=>'Technology'
 	),
 
 	'shop by' => array(
 		'New Arrivals',
-		'Online Exclusives',
+		'online-exclusives-males'=>'Online Exclusives',
 		'Bestsellers',
 		'Casual Rock'
 	),
 
 	'highlights' => array(
-		'Evening Rock',
-		'Neoprene',
-		'Zip Round'
+		'link_1'=> array(
+			'link_name' => 'Evening Rock',
+			'link_url' => '#',
+			'link_image_name'	=> '10_EVENINGROCK'
+		),
+		'link_2'=> array(
+			'link_name' => 'Neoprene',
+			'link_url' => '#',
+			'link_image_name'	=> '08_NEOPRENE'
+		),
+		'link_3'=> array(
+			'link_name' => 'Zip Round',
+			'link_url' => '#',
+			'link_image_name'	=> '09_ZIP'
+		)
+		
 	)
 
 );
@@ -553,35 +566,35 @@ $config['men_array'] = array(
 
 $config['women_array'] = array(
 	'denim & clothing' => array(
-		'Denim',
-		'JoggJeans',
-		'Dresses',
-		'Jumpsuits',
-		'Jackets',
-		'Pants',
-		'Shirts',
-		'Sweatshirts',
-		'Skirts',
-		'Sweaters',
-		'Tshirts',
-		'Underwear'
+		'denim'=>'Denim',
+		'?cgid=diesel-woman-denimguide-joggjeans'=>'JoggJeans',
+		'dresses'=>'Dresses',
+		'jumpsuits'=>'Jumpsuits',
+		'jackets'=>'Jackets',
+		'pants'=>'Pants',
+		'shirts'=>'Shirts',
+		'sweat-shirts'=>'Sweatshirts',
+		'skirts'=>'Skirts',
+		'sweaters'=>'Sweaters',
+		't-shirts-and-tops'=>'Tshirts',
+		'underwear'=>'Underwear'
 	),
 
 	'shoes & accessories' => array(
-		'Shoes',
-		'Bags',
-		'Wallets',
-		'Belts',
-		'Other Accessories',
-		'Eyewear',
-		'Watches',
-		'Fragrance',
-		'Technology'
+		'footwear'=>'Shoes',
+		'bags'=>'Bags',
+		'wallets-and-small-goods'=>'Wallets',
+		'belts'=>'Belts',
+		'other-accessories'=>'Other Accessories',
+		'eyewear'=>'Eyewear',
+		'watches'=>'Watches',
+		'fragrances'=>'Fragrance',
+		'technology'=>'Technology'
 	),
 
 	'shop by' => array(
 		'New Arrivals',
-		'Online Exclusives',
+		'online-exclusives-female/'=>'Online Exclusives',
 		'Bestsellers',
 		'Casual Rock'
 	),
@@ -597,12 +610,12 @@ $config['women_array'] = array(
 $config['denim_array'] = array(
 	'MEN' => array(
 		'shop by fit' => array(
-			'Skinny',
-			'Tapered',
-			'Straight',
-			'Carrot',
-			'Bootcut',
-			'SHOP ALL'
+			'skinny'=>'Skinny',
+			'tapered'=>'Tapered',
+			'straight'=>'Straight',
+			'carrot'=>'Carrot',
+			'bootcut'=>'Bootcut',
+			'fits'=>'SHOP ALL'
 		),
 		
 		'shop by wash' => array(
@@ -611,12 +624,12 @@ $config['denim_array'] = array(
 			'Destroyed',
 			'Medium Treated',
 			'Treated',
-			'SHOP ALL'
+			'washstories'=>'SHOP ALL'
 		),
 		
 		'shop by' => array(
-			'New Arrivals',
-			'Online Exclusives',
+			'newdenim'=>'New Arrivals',
+			'online-exclusives-denim'=>'Online Exclusives',
 			'Bestsellers'
 		),
 		
@@ -629,14 +642,13 @@ $config['denim_array'] = array(
 	
 	'WOMEN' => array(
 		'shop by fit' => array(
-			'Jegging',
-			'Super Skinny',
-			'Skinny',
-			'Straight',
-			'Boyfriend',
-			'Bootcut',
-			'Flare',
-			'SHOP ALL'
+			'jegging'=>'Jegging',
+			'superskinny'=>'Super Skinny',
+			'skinny'=>'Skinny',
+			'regular-straight'=>'Straight',
+			'boyfriend'=>'Boyfriend',
+			'bootcut'=>'Bootcut',
+			'flare'=>'Flare',
 		),
 		'shop by wash' => array(
 			'Clean',
@@ -644,10 +656,10 @@ $config['denim_array'] = array(
 			'Destroyed',
 			'Medium Treated',
 			'Treated',
-			'SHOP ALL'
+			
 		),
 		'shop by' => array(
-			'New Arrivals',
+			'newdenim'=>'New Arrivals',
 			'Online Exclusives',
 			'Bestsellers'
 		),

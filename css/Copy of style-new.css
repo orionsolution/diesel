@@ -25239,34 +25239,3 @@ li.emptyswatch .swatchanchor
 }  
 
 /*Adding Filters*/
-.refinements .filter-bxSlider-plp .filter-slider-wrapper {
-    width: 80%;
-    float: left;
-}
-.refinements .filter-bxSlider-plp .filter-slider-wrapper .filter-slider {
-    float: left;
-}
-.refinements .filter-bxSlider-plp .filter-slider-wrapper .filter-slider.remove-trans {
-    transform: translate3d(0px, 0px, 0px) !important;
-    -ms-transform: translate3d(0px, 0px, 0px) !important;
-    -webkit-transform: translate3d(0px, 0px, 0px) !important;
-}
-.refinements .filter-bxSlider-plp .filter-slider-wrapper .filter-slider span {
-    font-size: 12px;
-    text-transform: uppercase;
-    margin-right: 10px;
-    display: inline-block;
-    max-width: 190px;
-    width: auto !important;
-    margin-right: 40px;
-}
-.refinements .filter-bxSlider-plp .filter-slider-wrapper .filter-slider span a {
-    display: inline-block;
-    vertical-align: middle;
-}
-.refinements .filter-bxSlider-plp .filter-slider-wrapper .filter-slider span .plp-filter-cross {
-    height: 17px;
-    width: 17px;
-    margin-left: 4px;
-}
-

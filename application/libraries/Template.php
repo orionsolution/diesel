@@ -38,7 +38,7 @@ class Template
 	function load_listing_view($view_file_name = null, $data = null){
         $this->ci->load->view('includes/header', $data);
         $this->ci->load->view($view_file_name, $data);
-        $this->ci->load->view('includes/footer', $data);
+        $this->ci->load->view('includes/footer_new', $data);
     }
     
     function load_info_view($view_file_name = null, $data = null){

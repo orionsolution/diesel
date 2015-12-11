@@ -250,20 +250,23 @@ public function get_landing_products($category_name){
 			break;
 
 		case 'denim':
-			$product_arr = array('00SD240669T','00CKS10843S','00SKAA0667S','00SH260662E');
+			$product_arr = array('00AAZL0885K','00CZAK0600V','00CNYV0842R','00CQLP0800R');
 			$criteria = "";
 			break;
 
 		case 'women':
-			$product_arr = array('00SJLF0NAHP','00SIH30844Q');
+			$product_arr = array('00SJDZ0DAJR','00SJ950SAIG');
 			$criteria = "";
 			break;
+
+		case 'home':
+			$product_arr = array('00SJT20CAKE', '00SJKF0SAGJ','00SJFF0HAHU','00SKAL0845N','00SLDR0BAAF', 'DZ733100QQQ', 'Y01182PR697', '00S5BL0837C', '00SIYP0IAIV', '00SM410HAFV', 'Y01182PR697', 'DZ733100QQQ');
 
 	}
 
 	// get product details 
 
-	foreach($product_arr as $curr_arr){
+	foreach($product_arr as $curr_style){
 		/*$sql = "select c.attr_value, a.disp_name , a.style, attr_code
 				from prod_mast a, prod_variation b, prod_attributes c
 				where a.style = b.style and 
@@ -277,14 +280,16 @@ public function get_landing_products($category_name){
 				from prod_mast a, prod_variation b, category_assignment d 
 				where a.style = b.style and 
 				a.style = d.`product-id` and 
-				a.style = '{$curr_arr}' and 
+				a.style = '{$curr_style}' and 
 				b.attr_type = 'color'
 				group by b.style";
 
 		//echo $sql;exit;
 
 		$query = $this->db->query($sql);
-		$ret_val_arr[] = $query->row_array();	
+		$curr_value = $query->row_array();
+		$curr_value['prod_images'] = $this->get_product_img_url($curr_style,1);
+		$ret_val_arr[] = $curr_value;	
 
 	}
 
@@ -305,26 +310,59 @@ public function get_landing_products($category_name){
  * @return: product array
  */
 
-public function get_sublisting_product($gender,$category_name){
+public function get_sublisting_product($gender,$category_name,$type='',$offset_value=''){
 	$prod_arr = array();
-	$return_gender_value = $this->get_gender($gender);
-	$sql = "select a.disp_name , a.style, attr_code, d.*
+
+	if(empty($offset_value)){
+		$offset_value = 0;
+	}
+	
+	//echo $category_name;exit;
+	if($category_name == 'denimguide'){
+		$return_gender_value = (!empty($this->get_gender($gender)) ? $this->get_gender($gender) : $gender);
+		//$return_gender_value = $gender;
+		$criteria = "d.L2 = '{$return_gender_value}' and
+					 d.L4 = '{$category_name}' and
+					 d.L6 = '{$type}' and";
+	}else{
+		$return_gender_value = $this->get_gender($gender);
+		$criteria = "d.L2 = '{$return_gender_value}' and
+					 d.L4 = '{$category_name}' and";
+	}
+	$sql = "select SQL_CALC_FOUND_ROWS a.disp_name , a.style, attr_code, d.*
 			from prod_mast a, prod_variation b, category_assignment d 
 			where a.style = b.style and 
 			a.style = d.`product-id` and
 			d.L1 = 'diesel' and
-			d.L2 = '{$return_gender_value}' and
-			d.L4 = '{$category_name}' and  
+			$criteria 
 			b.attr_type = 'color'
-			group by b.style" ;
-	//echo $sql;exit;
+			group by b.style
+			LIMIT 55 OFFSET $offset_value";
+	echo $sql;
+	//exit;
+	$sql_total_records = "SELECT FOUND_ROWS() as total_records";
 	$query = $this->db->query($sql);
-	$result = $query->result_array();
+	$query_total_records = $this->db->query($sql_total_records);
+	$result_total_records = $query_total_records->row_array();
 	/*echo '<pre>';
-	print_r($result);
+	print_r($result_total_records);
+	echo '</pre>';
+	echo '<pre>';
+	print_r($query->result_array());
 	echo '</pre>';
 	exit;*/
-	return $result;
+
+	$result = $query->result_array();
+
+	foreach($result as $curr_result){
+		$curr_result['prod_images'] = $this->get_product_img_url($curr_result['style'],1);
+		$prod_arr[] = $curr_result;
+	}
+	/*echo '<pre>';
+	print_r($prod_arr);
+	echo '</pre>';
+	exit;*/
+	return array('prod_arr'=>$prod_arr,'total'=>$result_total_records['total_records']);
 	
 }
 
@@ -339,12 +377,58 @@ public function get_gender($gender){
 		case 'mens':
 			return 'man';
 			break;
+
+		case 'womens':
+			return 'woman';
+			break;
 		
 		default:
-			# code...
+			return '';
 			break;
 	}
 }
+
+/**
+ * get product images url
+ * @param: product style
+ * @return: prod images url arr
+ */
+
+
+public function get_product_img_url($style,$limit=''){
+
+	$sql = "SELECT * FROM `prod_images` WHERE `style` = '$style' AND `variation_code` != '' ORDER BY `prod_images_id`";
+	if(!empty($limit)){
+		$sql .= " LIMIT $limit";
+	}
+	//echo "$sql <br>";
+
+	$query = $this->db->query($sql);	
+
+	if($query->num_rows() == 1){
+		return $query->row_array();
+	}else{
+		$result = $query->result_array();
+		return $result;
+	}
+
+	
+}
+
+/**
+ * 
+ */
+
+
+public function get_sublising_page_info($category,$sub_category){
+	$sql = "SELECT * FROM `sublisting_info` WHERE `category` = '$category' AND `sub_category` = '$sub_category'";
+	//echo $sql;exit;
+	$query = $this->db->query($sql);
+	return $query->row_array();
+}
+
+
+
 
 
 /**
@@ -352,7 +436,7 @@ public function get_gender($gender){
  * @return: header array
  */
 
-public function generate_header_nav(){
+/*public function generate_header_nav(){
 	$main_header_arr = array();
 
 	$sql = "select distinct L3 from `category_assignment` WHERE `L1` = 'diesel' AND `L2` = 'man'";
@@ -363,7 +447,7 @@ public function generate_header_nav(){
 		
 	}
 
-}
+}*/
 
 
 

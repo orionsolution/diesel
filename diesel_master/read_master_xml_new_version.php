@@ -24,7 +24,7 @@ if(count($xml->product) > 0):
 		$prodid=(string)$curr_product['product-id'];
 		if(!is_numeric($prodid)):
 			echo "<br> $prodid is Style"; 
-			parse_style($curr_product);
+			//parse_style($curr_product);
 			echo "<br>----------------------------- end of Style<br>";
 		else:
 			echo "<br> --- $prodid is barcode"; 
@@ -43,10 +43,10 @@ function parse_barcode($curr_product){
 		$attr_val=$curr_attribute;
 		echo "<br>--------- $attr_id : $attr_val ";
 
-		/*$sql = "Update prod_barcode set $attr_id='$attr_val'
+		$sql = "Update prod_barcode set $attr_id='$attr_val'
 				where barcode = '$prodid'";
 		mysql_query($sql);
-		echo "<br>SQL : $sql";*/
+		echo "<br>SQL : $sql";
 	endforeach;
 		
 }

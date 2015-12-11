@@ -49,6 +49,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+
+
+// Ajax Product Route Rule
+$route['product/ajax_load_products'] = "product/ajax_load_products";
+
+//$route['product/(:any)/(:any)/(:any)/(:any)'] = "product/details/$1/$2/$3/$4";
+$route['product/(:any)'] = "product/listing/$1";
+
+// Sublisting Page Routes
+$route['product/mens/t-shirts-and-tops'] = "product/sublisting/mens/tshirtsandtops";
+$route['product/mens/sweat-shirts'] = "product/sublisting/mens/sweatshirts";
+$route['product/mens/wallets-and-small-goods'] = "product/sublisting/mens/walletsandsmallgoods";
+$route['product/mens/other-accessories'] = "product/sublisting/mens/otheraccessories";
+
+// women
+$route['product/womens/sweat-shirts'] = "product/sublisting/womens/sweatshirts";
+$route['product/womens/t-shirts-and-tops'] = "product/sublisting/womens/tshirtsandtops";
+$route['product/womens/wallets-and-small-goods'] = "product/sublisting/womens/walletsandsmallgoods";
+$route['product/womens/other-accessories'] = "product/sublisting/womens/otheraccessories";
+
+$route['product/(:any)/(:any)'] = "product/sublisting/$1/$2";
+$route['product/(:any)/(:any)/(:any)'] = "product/sublisting/$1/$2/$3";
+
+
+// Search Page Routes
+
+$route['show_search'] = "product/show_search";
+
+
+
+
+
+
 $route['product/(:any)/(:any)/(:any)/(:any)'] = "product/details/$1/$2/$3/$4";
 $route['default_controller'] = 'home';
 $route['404_override'] = '';

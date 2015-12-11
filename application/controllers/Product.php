@@ -67,7 +67,7 @@ public function listing($category=''){
 	$data['landing_products'] = $this->product_model->get_landing_products($category);
 	$data['main_arr'] = $this->config->item($category.'_array');
 	//echo $data['main_arr'];exit;
-	$data['category'] = $category;
+	$data['category'] = $this->get_category($category);
 	if($category=="kids"){
 		$view_file_name = 'product_listing_view_kids';
 	}
@@ -75,23 +75,106 @@ public function listing($category=''){
 	$this->template->load_root_view($view_file_name , $data);
 }
 
-public function sublisting($gender='',$category){
+public function sublisting($gender,$category){
 		$data = '';
 		//$data['main_group_arr'] = $this->product_model->get_maingroup_product($gender,$category);
-		$data['category'] = $gender;
-		$data['product_arr'] = $this->product_model->get_sublisting_product($gender,$category);
+		$data['category'] = $this->get_category($gender);
+		$data['sub_category'] = $category;
+		$return_data = $this->product_model->get_sublisting_product($gender,$category);
+		$data['product_arr'] = $return_data['prod_arr'];
+		$data['total_records'] = $return_data['total'];
+		$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($gender), $category);
 		/*echo "<pre>";
 		echo "in controller";
 		echo "<pre>";
-		print_r($data['main_group_arr']);
-		exit;*/
-		$data['style'] = 'background: url(http://demandware.edgesuite.net/aapk_prd/on/demandware.static/-/Sites-diesel-navigation-non-ecom/default/dwe9cb5c1b/backmendenim.jpg);';
+		print_r($return_data);
+		exit;*/		
+		
+		$data['style'] = 'background: url('.base_url().'images/backmendenim.jpg);';
 		$data['footer_label'] = 'display:none;'; 
 		$view_file_name = 'sublisting_view';
 		$data['view_file_name'] = $view_file_name;
 		//$this->load->view('sublisting_view_dd'); 
 		$this->template->load_listing_view($view_file_name , $data);
 	}
+
+
+
+ public function show_search(){
+ 	if(!empty($_GET['cgid'])){
+/*      echo '<pre>';
+      print_r($_GET['cgid']);
+      echo '</pre>';
+      exit;*/
+
+	// retrieving search criteria info in an array
+	$search_data = explode('-', $_GET['cgid']);
+	$data['category'] = $this->get_category($search_data[1]);
+	$data['sub_category'] = $search_data[3];
+	/*echo '<pre>';
+	print_r($search_data);
+	echo '</pre>';
+	exit;*/
+	$return_data = $this->product_model->get_sublisting_product($search_data[1],$search_data[2],$search_data[3]);
+	$data['product_arr'] = $return_data['prod_arr'];
+	$data['total_records'] = $return_data['total'];
+	$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($search_data[1]), $search_data[3]);
+
+	$data['style'] = 'background: url('.base_url().'images/backmendenim.jpg);';
+	$data['footer_label'] = 'display:none;'; 
+	$view_file_name = 'sublisting_view';
+	$data['view_file_name'] = $view_file_name;
+	//$this->load->view('sublisting_view_dd'); 
+	$this->template->load_listing_view($view_file_name , $data);
+
+
+
+    }
+ }
+
+ public function ajax_load_products(){
+ 	echo '<pre>';
+ 	print_r($this->input->post());
+ 	echo '</pre>';
+ 	//exit;
+ 	//var_dump(json_decode($this->input->post('ajax_data')));
+ 	//exit;
+
+ 	$ajax_data = $this->input->post('ajax_data');
+ 	$offset = $this->input->post('next_limit');
+ 	echo 'starting if';//exit;
+ 	if($ajax_data['cgid_status'] === 'true'){
+ 		echo 'inside if';exit;
+ 	}else{
+ 		// check if subcategory contains "-" in it
+ 		echo 'inside else';exit;
+
+ 		if (strpos($ajax_data['sub_category'],'-') !== false) {
+		    // then remove "-" from the string
+		    $ajax_data['sub_category'] = str_replace('-', ' ', $ajax_data['sub_category']);
+		}
+
+
+ 		$return_data = $this->product_model->get_sublisting_product($ajax_data['category'],$ajax_data['sub_category'],'',$offset);
+		//$data['product_arr'] = $return_data['prod_arr'];
+		//$data['total_records'] = $return_data['total'];
+ 	}
+ 	
+
+
+
+ }
+
+ public function get_category($category){
+ 	if($category == 'men' || $category == 'mens' || $category == 'man'){
+ 		return 'men';
+ 	}elseif($category == 'women' || $category == 'womens' || $category == 'woman'){
+ 		return 'women';
+ 	}elseif($category == 'denim'){
+ 		return 'denim';
+ 	}
+ 	return '';
+ }
 	
 /**
  * Product variation function for different colors and sizes specifically for retrieving size based on color and style.

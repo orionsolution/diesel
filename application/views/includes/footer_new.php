@@ -1,270 +1,249 @@
 <div id="footer-large">
-  <div id="footer" role="contentinfo clearfix" class="non-burger-footer">
-    <div class="footer-banner footer-banner-desktop-ipad">
-      <div class="marketing_message_footer" class="slider">
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-      </div>
-      <span class="cross_icon"></span>
-      <div class="description-section"></div>
-    </div>
-
-    <div class="content-asset">
-      <!-- dwMarker="content" dwContentID="bc6c2iaaiM1ZAaaadnFlVrDMYt" -->
-
-      <footer>
-        <div id="footer-over">
-          <div id="footer-overlay">
-          </div>
-          <div id="footer-overlay-tab" class="footer-overlay-menu">
-            <ul class="footer-menu">
-              <li data-target="1" class="col-xs-3"><a class=""><h5>INFO & SUPPORT</h5></a>
-              </li>
-              <li data-target="2" class="col-xs-3"><a class=""><h5>WORLD OF DIESEL</h5></a>
-              </li>
-              <li data-target="3" class="col-xs-3"><a class=""><h5>FOLLOW US</h5></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-mobile footer-scroller-class">
-          <div id="footer-scroll-tab-1" class="footer-scroll-menu" data-target="1">
-            <span class="footer-menu col-md-3 col-xs-12 border-side-top  ">
-    <a class="left_arrow" data-target="1">
-               &nbsp;
-    </a>
-    <h5>INFO & SUPPORT</h5>
-   </span>
-            <span class="col-md-9 border-bottom spacing_div">
-    &nbsp;
-   </span>
-          </div>
-          <div id="footer-scroll-1" class="footer-scroll border-top">
-            <div id="footer-tab_1" class="container-fluid site-footer-tab">
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <a class="close" data-target="1">
-               &nbsp;
-            </a>
-                      <span class="content-head">POLICIES
-         <span class="svgDown"></span>
-                      </span>
-                      <ul class="footer-links accordian-tab">
-                        <li class="footer-links-responsive"><a href="#"><h6>Terms & Conditions</h6></a>
-                        </li>
-
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="footer-scroll-tab-2" class="footer-scroll-menu" data-target="2">
-            <span class="footer-menu col-md-3 border-bottom spacing_div">
-    &nbsp;
-   </span>
-            <span class="footer-menu col-md-3 col-xs-12 border-side-top ">
-    <a class="left_arrow" data-target="2">
-               &nbsp;
-    </a>
-    <h5>WORLD OF DIESEL</h5>
-   </span>
-            <span class="footer-menu col-md-3 border-side-top displayTab spacing_div">
-    <h5>FOLLOW US</h5>
-   </span>
-            <span class="footer-menu col-md-3 border-side-top displayTab spacing_div">
-    <span><h5 class="footer-sign-up">SIGN UP FOR THE NEWSLETTER</h5><input type="text" class="sign-up"/></span>
-            </span>
-            <span class="footer-menu col-md-6 border-bottom displaySpace spacing_div">
-    &nbsp;
-   </span>
-          </div>
-          <div id="footer-scroll-2" class="footer-scroll border-top">
-            <div id="footer-tab_2" class="container-fluid site-footer-tab">
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="row">
-                    <div class="col-xs-12 ">
-                      <a class="close" data-target="2">
-               &nbsp;
-             </a>
-                      <span class="content-head">WORLD OF DIESEL</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4">
-                    </div>
-                    <div class="col-md-2">
-                      <ul class="footer-links first">
-                        <li class="footer-links-responsive"><a href="#"><h6>About Diesel</h6></a>
-                        </li>
-                        <li class="footer-links-responsive"><a target="_blank" href="#"><h6>News</h6></a>
-                        </li>
-                        <li class="footer-links-responsive"><a target="_blank" href="#"><h6>Careers</h6></a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-2">
-                      <ul class="footer-links second">
-                        <li class="footer-links-responsive"><a target="_blank" href="#"><h6>OTB Group</h6></a>
-                        </li>
-                        <li class="footer-links-responsive"><a target="_blank" href="#"><h6>D:CODE Program</h6></a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-4">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="footer-scroll-tab-3" class="footer-scroll-menu" data-target="3">
-            <span class="footer-menu col-md-6 border-bottom spacing_div">
-    &nbsp;
-   </span>
-            <span class="footer-menu col-xs-12 col-md-3 border-side-top ">
-    <a class="left_arrow" data-target="3">
-               &nbsp;
-    </a>
-    <h5>FOLLOW US</h5>
-   </span>
-            <span class="footer-menu col-md-3 border-side-top displayTab spacing_div ">
-    <span><h5 class="footer-sign-up">SIGN UP FOR THE NEWSLETTER</h5><input type="text" class="sign-up"/></span>
-            </span>
-            <span class="footer-menu col-md-3 border-bottom displaySpace spacing_div">
-    &nbsp;
-   </span>
-          </div>
-          <div id="footer-scroll-3" class="footer-scroll border-top">
-            <div id="footer-tab_3" class="container-fluid site-footer-tab">
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="row">
-                    <div class="col-xs-12 ">
-                      <a class="close" data-target="3">
-               &nbsp;
-             </a>
-                      <span class="content-head">CONNECT WITH DIESEL</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-8 col-md-offset-2  col-lg-6 col-lg-offset-3">
-                      <span class="footer-links">From promotions to the latest releases, see everything you do with Diesel.</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-1 col-lg-offset-4 ">
-                      <div class="col-md-offset-2 col-md-1"><a target="_blank" href="#" class="facebook">Facebook</a>
-                      </div>
-                      <div class="col-md-1"><a target="_blank" href="#" class="twitter">Twitter</a>
-                      </div>
-                    </div>
-                    <div class="col-lg-1 ">
-                      <div class="col-md-1"><a target="_blank" href="#" class="google">Google +</a>
-                      </div>
-                      <div class="col-md-1"><a target="_blank" href="#" class="instagram">Instagram</a>
-                      </div>
-                    </div>
-                    <div class="col-lg-1 ">
-                      <div class="col-md-1"><a target="_blank" href="#" class="youtube">Diesel Planet</a>
-                      </div>
-                      <div class="col-md-1"><a target="_blank" href="#" class="pinterest">Pinterest</a>
-                      </div>
-                    </div>
-                    <div class="col-lg-1 ">
-                      <div class="col-md-1"><a target="_blank" href="#" class="socialIcon">Tumbler</a>
-                      </div>
-                      <div class="col-md-1"><a target="_blank" href="#" class="tumbler">Tumbler</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="footer-scroll-fixed-tab" class="footer-scroll-fixed-menu">
-            <span id="footer-menu-3" class="footer-menu-3 footer-menu col-md-3 border-side-top" data-target="3">
-    <h5>FOLLOW US</h5>
-   </span>
-            <span id="footer-menu-2" class="footer-menu-2 footer-menu col-md-3 border-side-top" data-target="2">
-    <h5>WORLD OF DIESEL</h5>
-   </span>
-            <span id="footer-menu-1" class="footer-menu-1 footer-menu col-md-3 border-side-top" data-target="1">
-    <h5>INFO & SUPPORT</h5>
-   </span>
-          </div>
-        </div>
-    </div>
-    <!-- End content-asset -->
-
-  </div>
-  <!-- /footer -->
+	<div id="footer" role="contentinfo clearfix" class="non-burger-footer" style="position: relative;">
+		<div class="content-asset">
+			<!-- dwMarker="content" dwContentID="bc6c2iaaiM1ZAaaadnFlVrDMYt" -->
+			<footer>
+			<div id="footer-over" style="display: none;">
+				<div id="footer-overlay">
+				</div>
+				<div id="footer-overlay-tab" class="footer-overlay-menu">
+					<ul class="footer-menu">
+						<li data-target="1" class="col-xs-4"><a class="">
+						<h5>INFO &amp; SUPPORT</h5>
+						</a></li>
+						<li data-target="2" class="col-xs-4"><a class="">
+						<h5>WORLD OF DIESEL</h5>
+						</a></li>
+						<li data-target="3" class="col-xs-4"><a class="">
+						<h5>FOLLOW US</h5>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-mobile footer-scroller-class" id="footer-scroller" style="display: block;">
+				<div id="footer-scroll-tab-1" class="footer-scroll-menu" data-target="1" style="display: none;">
+					<span class="footer-menu col-md-3 col-xs-12 border-side-top ">
+					<a class="left_arrow" data-target="1">
+					&nbsp; </a>
+					<h5>INFO &amp; SUPPORT</h5>
+					</span>
+					<span class="col-md-9 border-bottom spacing_div">
+					&nbsp; </span>
+				</div>
+				<div id="footer-scroll-1" class="footer-scroll border-top" style="display: block;">
+					<div id="footer-tab_1" class="container-fluid site-footer-tab">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-md-12">
+										<a class="close" data-target="1">
+										&nbsp; </a>
+										<span class="content-head">POLICIES <span class="svgDown"></span>
+										</span>
+										<ul class="footer-links accordian-tab" style="display: block;">
+											<li class="footer-links-responsive"><a href="http://global.diesel.com/cms/legal/terms.html">
+											<h6>Terms &amp; Conditions</h6>
+											</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="footer-scroll-tab-2" class="footer-scroll-menu" data-target="2" style="display: none;">
+					<span class="footer-menu col-md-3 border-bottom spacing_div">
+					&nbsp; </span>
+					<span class="footer-menu col-md-3 col-xs-12 border-side-top ">
+					<a class="left_arrow" data-target="2">
+					&nbsp; </a>
+					<h5>WORLD OF DIESEL</h5>
+					</span>
+					<span class="footer-menu col-md-3 border-side-top displayTab spacing_div">
+					<h5>FOLLOW US</h5>
+					</span>
+					<span class="footer-menu col-md-3 border-side-top displayTab spacing_div">
+					<span>
+					<h5 class="footer-sign-up">SIGN UP FOR THE NEWSLETTER</h5>
+					<input type="text" class="sign-up"></span>
+					</span>
+					<span class="footer-menu col-md-6 border-bottom displaySpace spacing_div">
+					&nbsp; </span>
+				</div>
+				<div id="footer-scroll-2" class="footer-scroll border-top" style="display: block;">
+					<div id="footer-tab_2" class="container-fluid site-footer-tab">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-xs-12 ">
+										<a class="close" data-target="2">
+										&nbsp; </a>
+										<span class="content-head">WORLD OF DIESEL</span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+									</div>
+									<div class="col-md-2">
+										<ul class="footer-links first">
+											<li class="footer-links-responsive"><a href="http://global.diesel.com/worldofdiesel/">
+											<h6>About Diesel</h6>
+											</a></li>
+											<li class="footer-links-responsive"><a target="_blank" href="https://www.facebook.com/Diesel/events">
+											<h6>News</h6>
+											</a></li>
+											<li class="footer-links-responsive"><a target="_blank" href="https://www.otb.net/people/career/">
+											<h6>Careers</h6>
+											</a></li>
+										</ul>
+									</div>
+									<div class="col-md-2">
+										<ul class="footer-links second">
+											<li class="footer-links-responsive"><a target="_blank" href="https://www.otb.net/">
+											<h6>OTB Group</h6>
+											</a></li>
+											<li class="footer-links-responsive"><a target="_blank" href="http://global.diesel.com/d%3Acode-is-a-loyalty-thing/D%3ACODE_global.html?type=stories">
+											<h6>D:CODE Program</h6>
+											</a></li>
+										</ul>
+									</div>
+									<div class="col-md-4">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="footer-scroll-tab-3" class="footer-scroll-menu" data-target="3" style="display: none;">
+					<span class="footer-menu col-md-6 border-bottom spacing_div">
+					&nbsp; </span>
+					<span class="footer-menu col-xs-12 col-md-3 border-side-top ">
+					<a class="left_arrow" data-target="3">
+					&nbsp; </a>
+					<h5>FOLLOW US</h5>
+					</span>
+					<span class="footer-menu col-md-3 border-side-top displayTab spacing_div ">
+					<span>
+					<h5 class="footer-sign-up">SIGN UP FOR THE NEWSLETTER</h5>
+					<input type="text" class="sign-up"></span>
+					</span>
+					<span class="footer-menu col-md-3 border-bottom displaySpace spacing_div">
+					&nbsp; </span>
+				</div>
+				<div id="footer-scroll-3" class="footer-scroll border-top" style="display: block;">
+					<div id="footer-tab_3" class="container-fluid site-footer-tab">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-xs-12 ">
+										<a class="close" data-target="3">
+										&nbsp; </a>
+										<span class="content-head">CONNECT WITH DIESEL</span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+										<span class="footer-links">From promotions to the latest releases, see everything you do with Diesel.</span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-1 col-lg-offset-4 ">
+										<div class="col-md-offset-2 col-md-1">
+											<a target="_blank" href="https://www.facebook.com/Diesel" class="facebook">Facebook</a>
+										</div>
+										<div class="col-md-1">
+											<a target="_blank" href="https://twitter.com/diesel" class="twitter">Twitter</a>
+										</div>
+									</div>
+									<div class="col-lg-1 ">
+										<div class="col-md-1">
+											<a target="_blank" href="https://plus.google.com/+Diesel/posts" class="google">Google +</a>
+										</div>
+										<div class="col-md-1">
+											<a target="_blank" href="http://instagram.com/diesel" class="instagram">Instagram</a>
+										</div>
+									</div>
+									<div class="col-lg-1 ">
+										<div class="col-md-1">
+											<a target="_blank" href="http://www.youtube.com/user/DieselPlanet" class="youtube">Diesel Planet</a>
+										</div>
+										<div class="col-md-1">
+											<a target="_blank" href="http://www.pinterest.com/diesel/" class="pinterest">Pinterest</a>
+										</div>
+									</div>
+									<div class="col-lg-1 ">
+										<div class="col-md-1">
+											<a target="_blank" href="http://dieselreboot.tumblr.com/" class="socialIcon">Tumbler</a>
+										</div>
+										<div class="col-md-1">
+											<a target="_blank" href="http://dieselreboot.tumblr.com/" class="tumbler">Tumbler</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="footer-scroll-fixed-tab" class="footer-scroll-fixed-menu" style="display: none; z-index: 1;">
+					<span id="footer-menu-3" class="footer-menu-3 footer-menu border-side-top col-md-4" data-target="3">
+					<h5>FOLLOW US</h5>
+					</span>
+					<span id="footer-menu-2" class="footer-menu-2 footer-menu border-side-top col-md-4" data-target="2">
+					<h5>WORLD OF DIESEL</h5>
+					</span>
+					<span id="footer-menu-1" class="footer-menu-1 footer-menu border-side-top col-md-4" data-target="1">
+					<h5>INFO &amp; SUPPORT</h5>
+					</span>
+				</div>
+				<div class="storefront-mobile-menu">
+					<h5 class="footer-sign-up"><a href="http://global.diesel.com/storelocator" target="_blank">STORE LOCATOR</a></h5>
+				</div>
+			</div>
+			</footer>
+		</div>
+		<!-- End content-asset -->
+	</div>
+	<!-- /footer -->
 </div>
+<!-- end footer-large -->
 
-<script type="text/javascript">
-  var utag_data = {
-    "page_name": "Sites-DieselNonEcommerce-Site",
-    "page_type": "category",
-    "page_context_type": "search",
-    "page_context_title": "product search results",
-    "user_anonymous": "true",
-    "user_authenticated": "false",
-    "user_registered": "false",
-    "customer_id": "cdbzrcrVYBkYaJ1tGT6Eh2Kw8c",
-    "page_category": "diesel-man-denimandclothing-jackets"
-  };
+<?php /*?><script type="text/javascript">
+var utag_data = {
+  "page_name": "Sites-DieselNonEcommerce-Site",
+  "page_type": "category",
+  "page_context_type": "search",
+  "page_context_title": "product search results",
+  "user_anonymous": "true",
+  "user_authenticated": "false",
+  "user_registered": "false",
+  "customer_id": "acaIv4SZDOSZLpb4cNg5tdjKBJ",
+  "page_category": "diesel-man-denimandclothing-jackets"
+};
 </script>
-
 <script type="text/javascript">
-  (function(a, b, c, d) {
-    a = '//tags.tiqcdn.com/utag/diesel/main/prod/utag.js';
-    b = document;
-    c = 'script';
-    d = b.createElement(c);
-    d.src = a;
-    d.type = 'text/java' + c;
-    d.async = 1;
-    a = b.getElementsByTagName(c)[0];
-    a.parentNode.insertBefore(d, a);
-  })();
-</script>
-
-<script src="<?=base_url();?>js/isotope.min.js" type="text/javascript"></script>
-<script src="<?=base_url();?>js/packery-mode.pkgd.js" type="text/javascript"></script>
-<script src="<?=base_url();?>js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+    (function(a,b,c,d){
+    a='//tags.tiqcdn.com/utag/diesel/main/prod/utag.js';
+    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=1;
+    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+    })();
+</script><?php */?>
+<?php /*?><script src="<?=base_url();?>js/isotope.min.js" type="text/javascript"></script>
+<script src="<?=base_url();?>js/packery-mode.pkgd.js" type="text/javascript"></script><?php */?>
+<script src="<?=base_url();?>js/imagesloaded.pkgd.min.js" type="text/javascript"></script> 
 <script src="<?=base_url();?>js/persist-all-min.js" type="text/javascript"></script>
 <script src="<?=base_url();?>js/diesel.plugins.min.js" type="text/javascript"></script>
 <script src="<?=base_url();?>js/carousel.min.js" type="text/javascript"></script>
-<script src="<?=base_url();?>js/hammer.min.js" type="text/javascript"></script>
+<?php /*?><script src="<?=base_url();?>js/hammer.min.js" type="text/javascript"></script><?php */?>
 <script src="<?=base_url();?>js/jquery.bxslider.js" type="text/javascript"></script>
-<script src="<?=base_url();?>js/jquery.mousewheel.js" type="text/javascript"></script>
+<?php /*?><script src="<?=base_url();?>js/jquery.mousewheel.js" type="text/javascript"></script>
 <script src="<?=base_url();?>js/jquery.jscrollpane.min.js" type="text/javascript"></script>
 <script src="<?=base_url();?>js/jquery.stellar.min.js" type="text/javascript"></script>
 <script src="<?=base_url();?>js/backgroundVideo.min.js" type="text/javascript"></script>
 <script src="<?=base_url();?>js/jquery.tooltipster.js" type="text/javascript"></script>
 <script src="<?=base_url();?>js/jquery.inViewport.js" type="text/javascript"></script>
+<script src="<?=base_url();?>js/scoped.js" type="text/javascript"></script><?php */?>
 
+<!----------------------------for top main menu--------------------------------->
 <script type="text/javascript">
   (function(app) {
     app.isMobileUserAgent = false;
@@ -337,83 +316,83 @@
       "REMAIN_NOT_AVAILABLE": "The remaining items are currently not available. Please adjust the quantity."
     };
     app.urls = {
-      "appResources": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Resources-Load",
-      "pageInclude": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Page-Include",
-      "continueUrl": "http://global.diesel.com/search-show?dwcont=C1361651831",
-      "staticPath": "http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselNonEcommerce-Site/-/en/v1444183760310/",
-      "addGiftCert": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/GiftCert-Purchase",
-      "minicartGC": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/GiftCert-ShowMiniCart",
-      "addProduct": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Cart-AddProduct",
-      "minicart": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Cart-MiniAddProduct",
+      "appResources": "/on/demandware.store/Sites-DieselUS-Site/default/Resources-Load",
+      "pageInclude": "/on/demandware.store/Sites-DieselUS-Site/default/Page-Include",
+      "continueUrl": "http://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/Product-Show/C2022244318",
+      "staticPath": "http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselUS-Site/-/default/v1442959426974/",
+      "addGiftCert": "/on/demandware.store/Sites-DieselUS-Site/default/GiftCert-Purchase",
+      "minicartGC": "/on/demandware.store/Sites-DieselUS-Site/default/GiftCert-ShowMiniCart",
+      "addProduct": "Cart-AddProduct.html",
+      "minicart": "/on/demandware.store/Sites-DieselUS-Site/default/Cart-MiniAddProduct",
       "cartShow": "/cart",
-      "giftRegAdd": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Address-GetAddressDetails?addressID=",
-      "paymentsList": "https://global.diesel.com/paymentinstruments-list",
-      "addressesList": "https://global.diesel.com/address-list",
-      "wishlistAddress": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Wishlist-SetShippingAddress",
-      "deleteAddress": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Address-Delete",
-      "getProductUrl": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Product-Show",
-      "getBonusProducts": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Product-GetBonusProducts",
-      "addBonusProduct": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Cart-AddBonusProductToCart",
-      "getSetItem": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Product-GetSetItem",
+      "giftRegAdd": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/Address-GetAddressDetails?addressID=",
+      "paymentsList": "https://shop.diesel.com/paymentinstruments-list",
+      "addressesList": "https://shop.diesel.com/address-list",
+      "wishlistAddress": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/Wishlist-SetShippingAddress",
+      "deleteAddress": "/on/demandware.store/Sites-DieselUS-Site/default/Address-Delete",
+      "getProductUrl": "/on/demandware.store/Sites-DieselUS-Site/default/Product-Show",
+      "getBonusProducts": "/on/demandware.store/Sites-DieselUS-Site/default/Product-GetBonusProducts",
+      "addBonusProduct": "/on/demandware.store/Sites-DieselUS-Site/default/Cart-AddBonusProductToCart",
+      "getSetItem": "/on/demandware.store/Sites-DieselUS-Site/default/Product-GetSetItem",
       "productDetail": "/product-detail",
-      "getAvailability": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Product-GetAvailability",
-      "removeImg": "http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselNonEcommerce-Site/-/en/v1444183760310/images/interface/icon_remove.gif",
-      "searchsuggest": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Search-GetSuggestions",
-      "productNav": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Product-Productnav",
-      "summaryRefreshURL": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COBilling-UpdateSummary",
-      "billingSelectCC": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COBilling-SelectCreditCard",
-      "updateAddressDetails": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COShipping-UpdateAddressDetails",
-      "updateAddressDetailsBilling": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COBilling-UpdateAddressDetails",
-      "shippingMethodsJSON": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COShipping-GetApplicableShippingMethodsJSON",
-      "shippingMethodsList": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COShipping-UpdateShippingMethodList",
-      "selectShippingMethodsList": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COShipping-SelectShippingMethod",
-      "resetPaymentForms": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COBilling-ResetPaymentForms",
-      "compareShow": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Compare-Show",
-      "compareAdd": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Compare-AddProduct",
-      "compareRemove": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Compare-RemoveProduct",
-      "compareEmptyImage": "http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselNonEcommerce-Site/-/en/v1444183760310/images/comparewidgetempty.png",
-      "giftCardCheckBalance": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COBilling-GetGiftCertificateBalance",
-      "addCoupon": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Cart-AddCoupon",
-      "removeCoupon": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COShipping-RemoveCoupon",
-      "powerReviewsFullJs": "http://demandware.edgesuite.net/aapk_prd/on/demandware.static/-/Sites-diesel-navigation-non-ecom/en/v1444183760310/pwr/engine/js/full.js",
-      "powerReviewsZip": "http://demandware.edgesuite.net/aapk_prd/on/demandware.static/-/Sites-diesel-navigation-non-ecom/en/v1444183760310",
-      "shippingAddressValidation": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COShipping-ValidateShippingAddress",
-      "shippingSave": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COShipping-ShippingSave",
-      "billingSave": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COBilling-BillingSave",
-      "verifyOriginalAddress": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/GSIVerifyAddress-OriginalAddress",
-      "verifySuggestedAddress": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/GSIVerifyAddress-SuggestedAddress",
-      "shippingSummary": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/COShipping-ShowShippingAddress",
-      "cart": "https://global.diesel.com/cart",
-      "shippingForm": "https://global.diesel.com/shipping",
-      "billingStart": "https://global.diesel.com/billing",
-      "shopprunnerValidateLogin": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/ShopRunner-ValidateToken",
-      "shopprunnerPayrunnerAPI": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/ShopRunner-PayrunnerAPI",
-      "shopprunnerStartPRCheckout": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/ShopRunner-StartPRCheckout",
-      "newsletterSubscription": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Account-SubscriptionForm",
-      "loginPopup": "https://global.diesel.com/account",
-      "getUserStatus": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Home-IncludeHeaderCustomerInfo",
-      "getUserWishlistStatus": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Home-IncludeHeaderCustomerWishlistInfo",
-      "gsiFraudHelper": "https://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/GSIFraudHelper-Start",
-      "removeBonusProduct": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Cart-RemoveBonusProductFromCart",
-      "showMiniCart": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Cart-MiniCart",
-      "emailNotification": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Cart-NotifyProductCO",
-      "test": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Stores-GetData",
-      "getStores": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Stores-GetStoreByStateCode",
-      "getStoreDetails": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Stores-GetStoreDetails",
-      "gmappointer": "http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselNonEcommerce-Site/-/default/dw9c52a1a3/images/map_pointer.png",
+      "getAvailability": "/on/demandware.store/Sites-DieselUS-Site/default/Product-GetAvailability",
+      "removeImg": "http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselUS-Site/-/default/v1442959426974/images/interface/icon_remove.gif",
+      "searchsuggest": "/on/demandware.store/Sites-DieselUS-Site/default/Search-GetSuggestions",
+      "productNav": "/on/demandware.store/Sites-DieselUS-Site/default/Product-Productnav",
+      "summaryRefreshURL": "/on/demandware.store/Sites-DieselUS-Site/default/COBilling-UpdateSummary",
+      "billingSelectCC": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/COBilling-SelectCreditCard",
+      "updateAddressDetails": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/COShipping-UpdateAddressDetails",
+      "updateAddressDetailsBilling": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/COBilling-UpdateAddressDetails",
+      "shippingMethodsJSON": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/COShipping-GetApplicableShippingMethodsJSON",
+      "shippingMethodsList": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/COShipping-UpdateShippingMethodList",
+      "selectShippingMethodsList": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/COShipping-SelectShippingMethod",
+      "resetPaymentForms": "/on/demandware.store/Sites-DieselUS-Site/default/COBilling-ResetPaymentForms",
+      "compareShow": "/on/demandware.store/Sites-DieselUS-Site/default/Compare-Show",
+      "compareAdd": "/on/demandware.store/Sites-DieselUS-Site/default/Compare-AddProduct",
+      "compareRemove": "/on/demandware.store/Sites-DieselUS-Site/default/Compare-RemoveProduct",
+      "compareEmptyImage": "http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselUS-Site/-/default/v1442959426974/images/comparewidgetempty.png",
+      "giftCardCheckBalance": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/COBilling-GetGiftCertificateBalance",
+      "addCoupon": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/Cart-AddCoupon",
+      "removeCoupon": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/COShipping-RemoveCoupon",
+      "powerReviewsFullJs": "http://demandware.edgesuite.net/aapk_prd/on/demandware.static/-/Sites-diesel-navigation-catalog/default/v1442959426974/pwr/engine/js/full.js",
+      "powerReviewsZip": "http://demandware.edgesuite.net/aapk_prd/on/demandware.static/-/Sites-diesel-navigation-catalog/default/v1442959426974",
+      "shippingAddressValidation": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/COShipping-ValidateShippingAddress",
+      "shippingSave": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/COShipping-ShippingSave",
+      "billingSave": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/COBilling-BillingSave",
+      "verifyOriginalAddress": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/GSIVerifyAddress-OriginalAddress",
+      "verifySuggestedAddress": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/GSIVerifyAddress-SuggestedAddress",
+      "shippingSummary": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/COShipping-ShowShippingAddress",
+      "cart": "https://shop.diesel.com/cart",
+      "shippingForm": "https://shop.diesel.com/shipping",
+      "billingStart": "https://shop.diesel.com/billing",
+      "shopprunnerValidateLogin": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/ShopRunner-ValidateToken",
+      "shopprunnerPayrunnerAPI": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/ShopRunner-PayrunnerAPI",
+      "shopprunnerStartPRCheckout": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/ShopRunner-StartPRCheckout",
+      "newsletterSubscription": "/on/demandware.store/Sites-DieselUS-Site/default/Account-SubscriptionForm",
+      "loginPopup": "https://shop.diesel.com/account",
+      "getUserStatus": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/Home-IncludeHeaderCustomerInfo",
+      "getUserWishlistStatus": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/Home-IncludeHeaderCustomerWishlistInfo",
+      "gsiFraudHelper": "https://shop.diesel.com/on/demandware.store/Sites-DieselUS-Site/default/GSIFraudHelper-Start",
+      "removeBonusProduct": "/on/demandware.store/Sites-DieselUS-Site/default/Cart-RemoveBonusProductFromCart",
+      "showMiniCart": "/on/demandware.store/Sites-DieselUS-Site/default/Cart-MiniCart",
+      "emailNotification": "/on/demandware.store/Sites-DieselUS-Site/default/Cart-NotifyProductCO",
+      "test": "/on/demandware.store/Sites-DieselUS-Site/default/Stores-GetData",
+      "getStores": "/on/demandware.store/Sites-DieselUS-Site/default/Stores-GetStoreByStateCode",
+      "getStoreDetails": "/on/demandware.store/Sites-DieselUS-Site/default/Stores-GetStoreDetails",
+      "gmappointer": "http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselUS-Site/-/default/dw9c52a1a3/images/map_pointer.png",
       "customerPickup": "/stsordercustpickup",
       "orderReceivedInStore": "/stsorderreceived",
       "customerNotShowUp": "/stscustnotshowup"
     };
     app.newUrls = {
-      "homeLogin": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Home-Login",
+      "homeLogin": "/on/demandware.store/Sites-DieselUS-Site/default/Home-Login",
       "homeHelp": "/home-help",
-      "homeRegion": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Home-ShipTo",
+      "homeRegion": "/on/demandware.store/Sites-DieselUS-Site/default/Home-ShipTo",
       "plpDiesel": "/search-show",
-      "article": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Page-Show",
+      "article": "/on/demandware.store/Sites-DieselUS-Site/default/Page-Show",
       "miniBagRemove": "/cart-remove",
-      "tooltipMsgclear": "/cart-clearmessage",
-      "wishlistSort": "/on/demandware.store/Sites-DieselNonEcommerce-Site/en/Wishlist-Sort",
+      "tooltipMsgclear": "<?=base_url();?>js/cart-clearmessage.js",
+      "wishlistSort": "/on/demandware.store/Sites-DieselUS-Site/default/Wishlist-Sort",
       "addAllCart": "/wishlist-addall",
       "accountHome": "/account"
     };
@@ -421,73 +400,40 @@
       "LISTING_INFINITE_SCROLL": true,
       "LISTING_REFINE_SORT": true
     };
-    app.newsletterSignUp = false
+    app.newsletterSignUp = true
     app.enableShipToStore = true;
   }(window.app = window.app || {}));
 </script>
-<script type="text/javascript" src="<?=base_url();?>js/addthis_widget.js#pubid=ra-524670f854b3d609"></script>
-<script src="http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselNonEcommerce-Site/-/en/v1444183760310/js/app.js" type="text/javascript"></script>
-<script src="http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselNonEcommerce-Site/-/en/v1444183760310/js/diesel.app.js" type="text/javascript"></script>
-<script src="http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselNonEcommerce-Site/-/en/v1444183760310/js/common.js" type="text/javascript"></script>
+<!------------------------------------------------------------------------------>
 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524670f854b3d609"></script>
+<script src="<?=base_url();?>js/app.js"  type="text/javascript"></script>
+<script src="<?=base_url();?>js/common.js"  type="text/javascript"></script>
+<script src="<?=base_url();?>js/diesel.app.js" type="text/javascript"></script>
+<?php /*?><script>app.page.setContext({"title":"Storefront","type":"storefront","ns":"storefront"});</script>
+<script src="https://maps.googleapis.com/maps/api/js"></script> 
 <script>
-  app.page.setContext({
-    "title": "Product Search Results",
-    "type": "search",
-    "ns": "searchV2"
-  });
+var meta = "Diesel";
+var keywords = "Diesel, Reference Application";
 </script>
 
-<script>
-  var meta = "";
-  var keywords = "";
-</script>
-<script type="text/javascript">
-  if (!window.mstag) mstag = {
-    loadTag: function() {},
-    time: (new Date()).getTime()
-  };
-</script>
-<script id="mstag_tops" type="text/javascript" src="<?=base_url();?>js/mstag.js"></script>
-<script type="text/javascript">
-  mstag.loadTag("analytics", {
-    dedup: "1",
-    domainId: "1994212",
-    type: "1",
-    revenue: "",
-    actionid: "166326"
-  })
-</script>
+<script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script>
+<script id="mstag_tops" type="text/javascript" src="//flex.msn.com/mstag/site/dcb81f33-cc3f-44b3-8772-02e309239e1f/mstag.js"></script>
+<script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1994212",type:"1",revenue:"",actionid:"166326"})</script>
 <noscript>
-  <iframe src="//flex.msn.com/mstag/tag/dcb81f33-cc3f-44b3-8772-02e309239e1f/analytics.html?dedup=1&domainId=1994212&type=1&revenue=&actionid=166326" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe>
+<iframe src="//flex.msn.com/mstag/tag/dcb81f33-cc3f-44b3-8772-02e309239e1f/analytics.html?dedup=1&domainId=1994212&type=1&revenue=&actionid=166326" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none">
+</iframe>
 </noscript>
-
 <!-- Google Code for Remarketing Tag -->
 <noscript>
-  <div style="display:inline;">
-    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/984403838/?value=0&amp;guid=ON&amp;script=0" />
-  </div>
-</noscript>
+<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/984403838/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript><?php */?>
 
 </div>
+<!--  wrapper -->
 
-<!-- Demandware Analytics code 1.0 -->
-<script type="text/javascript" src="<?=base_url();?>js/dwanalytics.js"></script>
-<script type="text/javascript">
-  //<!--
-  /* <![CDATA[ */
-  try {
-    var trackingUrl = "http://global.diesel.com/on/demandware.store/Sites-DieselNonEcommerce-Site/en/__Analytics-Tracking";
-    var dwAnalytics = dw.__dwAnalytics.getTracker(trackingUrl);
-    if (typeof dw.ac == "undefined") {
-      dwAnalytics.trackPageView();
-    } else {
-      dw.ac.setDWAnalytics(dwAnalytics);
-    }
-  } catch (err) {};
-  /* ]]> */
-  // -->
-</script>
+
 </body>
-
 </html>
