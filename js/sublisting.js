@@ -66,7 +66,7 @@ $( document ).ready(function() {
 
 /*--------------------- Loading More Products through ajax ---------------------*/
 
-$('a.load-more').on('click',function(event){
+/*$('a.load-more').on('click',function(event){
 	//console.log("button clicked");
 	event.preventDefault();
 	var url = $(this).data('ajax-url');
@@ -91,6 +91,6 @@ $('a.load-more').on('click',function(event){
 		}
 	});
 
-});
+});*/
 	
 });
