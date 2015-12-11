@@ -36,8 +36,9 @@ public function details($cat='',$prod_name='',$style='',$color=''){
 		$this->data['count_color'] = $count;
 	}	
 	$this->data['prod_image_arr'] = $this->product_model->get_prod_images($style,$color);
+	
 	//echo "<pre>";
-	//var_dump($this->data['prod_image_arr']);
+	//var_dump($this->data['prod_arr']);
 	//die();
 	//echo "<pre>";
 	//var_dump($this->data['size']);
@@ -128,13 +129,23 @@ public function get_bar()
 	$size  = $_GET['size'];
 	$size_rep = ltrim($size);
 	$fsize = rtrim($size_rep);
-	var_dump($color);
+	//var_dump($color);
 	//die();
 	
 	$this->data['prod_barcode'] = $this->product_model->get_barcode($style,$color,$fsize);
 	
 	echo json_encode($this->data["prod_barcode"]);
 	
+	
+}
+
+public function get_images()
+{
+	$color = $_GET['color'];
+	$style = $_GET['style'];
+	
+	$this->data['prod_image_arr'] = $this->product_model->get_prod_images($style,$color);
+	echo json_encode($this->data['prod_image_arr']);
 }
 
 // Abhishek adding my code.

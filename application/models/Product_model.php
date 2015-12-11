@@ -271,9 +271,9 @@ public function get_sublisting_product($gender,$category_name){
 	//echo $sql;exit;
 	$query = $this->db->query($sql);
 	$result = $query->result_array();
-	echo '<pre>';
-	print_r($result);
-	echo '</pre>';
+	//echo '<pre>';
+	//print_r($result);
+	//echo '</pre>';
 	exit;
 }
 
