@@ -3432,13 +3432,13 @@ New Denim FW15</isprint></a>
 
                                             
 
-                                            <li id="diesel-kids" class="<?=( (!empty($category)) && $category == 'kids') ? 'selected'  : '' ;?>">
+                                            <!-- <li id="diesel-kids" class="<?=( (!empty($category)) && $category == 'kids') ? 'selected'  : '' ;?>">
                                                 <h4><a  href='<?=base_url()?>product/kids'class="level-1 <?=( (!empty($category)) && $category == 'kids') ? 'active'  : '' ;?>"><span class="s-diesel-kids s-catflytemp4" >KIDS</span>
                                                         <div class="s-diesel-kids s-catflytemp4 main-nav-arr"></div>
                                                     </a>
                                                 </h4>
                                                 <?$kids_arr = $this->config->item('kids_array');?>
-
+                                            
                                                 <div class=" container-fluid level-2 menu-horizontal s-catflytemp4">
                                                     <ul class="level-2 row clearfix">
                                                         <li class='sub-category-list col-md-6 first active'>
@@ -3474,19 +3474,19 @@ New Denim FW15</isprint></a>
                                                                                 </ul>
                                                                             </div>
                                                                         </li>
-
+                                            
                                                                     </ul>
                                                                 </div>
-
+                                            
                                                             </div>
-
+                                            
                                                             <div class="custom-feature row"></div>
                                                             <ul class="highlights-category desktop-only row">
                                                                 <li class="col-md-4 highlight-items">
                                                                     <div class="img-container">
                                                                         <a data-catId="diesel-kids-boys-highlights-jjjunior-1" href='#'>
                                                                             <img alt="See All" src='http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-navigation-catalog/default/dw87b5e7f7/images/Diesel-Site-Unification/00_CATEGORY BANNERS - MEGAMENU/15_JJJ-BOY.jpg?cx=0&amp;cy=0&amp;cw=320&amp;ch=180' />
-
+                                            
                                                                         </a>
                                                                     </div>
                                                                     <div class="txt-content">
@@ -3532,7 +3532,7 @@ New Denim FW15</isprint></a>
                                                                         <li class=" col-md-6 category-items first ">
                                                                             <a data-catId="diesel-kids-girls-junior " href="#"><h3>JUNIOR &#40;4-16 YEARS&#41;</h3>
                                                                             </a>
-
+                                            
                                                                         <div class="level-4 ">
                                                                             <ul class="level-4 s-catflytemp4 ">
                                                                                 <?foreach($kids_arr['Boys']['Infant'] as $key=>$curr_category):?>
@@ -3548,93 +3548,56 @@ New Denim FW15</isprint></a>
                                                             </div>
                                                         </div>
                                                 <div class="custom-feature row "></div>
-
-
-
-<ul class="highlights-category desktop-only row ">
-
-<li class="col-md-4 highlight-items ">
-<div class="img-container ">
-
-<a data-catId="diesel-kids-girls-highlights-jjjunior-1 " href='#'>
-
-
-
-
-    
-        
-    
-    
-        
-    
-    
-        
-    
-    
-        
-    
-    
-        
-    
-    
-        <img  alt="See All " 
-        
-                            src='http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-navigation-catalog/default/dwde776963/images/Diesel-Site-Unification/00_CATEGORY BANNERS - MEGAMENU/18_JJJ-GIRL.jpg?cx=0&amp;cy=0&amp;cw=320&amp;ch=180'/>
-    
-</a>
-</div>
-<div class="txt-content ">
-
-<a data-catId="diesel-kids-girls-highlights-jjjunior-1 " href='#'>
-
-See All</isprint></a>
-</div>
-</li>
-
-</ul>
-<div class="highlights-category mobile-only row ">
-                                                                <div class="txt-items col-md-6">
-
-                                                                    <h2>highlights </h2>
-
-                                                                    <div class="txt-content">
-
-                                                                        <a data-catId="diesel-kids-girls-highlights-jjjunior-1" href='#'>
-
-See All</isprint></a>
+                                                <ul class="highlights-category desktop-only row ">
+                                                    <li class="col-md-4 highlight-items ">
+                                                        <div class="img-container ">
+                                                            <a data-catId="diesel-kids-girls-highlights-jjjunior-1 " href='#'>
+                                                                <img  alt="See All " src='http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-navigation-catalog/default/dwde776963/images/Diesel-Site-Unification/00_CATEGORY BANNERS - MEGAMENU/18_JJJ-GIRL.jpg?cx=0&amp;cy=0&amp;cw=320&amp;ch=180'/>
+                                                            </a>
+                                                        </div>
+                                                        <div class="txt-content ">
+                                                            <a data-catId="diesel-kids-girls-highlights-jjjunior-1 " href='#'>See All</isprint></a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="highlights-category mobile-only row ">
+                                                    <div class="txt-items col-md-6">
+                                                        <h2>highlights </h2>
+                                                        <div class="txt-content">
+                                                            <a data-catId="diesel-kids-girls-highlights-jjjunior-1" href='#'>See All</isprint></a>
                                                                     </div>
-
+                                            
                                                                 </div>
                                                                 <div class="img-items col-md-6">
-
+                                            
                                                                     <div class="img-container">
-
+                                            
                                                                         <a data-catId="diesel-kids-girls-highlights-jjjunior-1" href='#'>
-
-
-
-
-
+                                            
+                                            
+                                            
+                                            
+                                            
                                                                             <img class="primary-image2 " src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-navigation-catalog/default/dwde776963/images/Diesel-Site-Unification/00_CATEGORY BANNERS - MEGAMENU/18_JJJ-GIRL.jpg?cx=0&amp;cy=0&amp;cw=320&amp;ch=180" alt="See All" />
-
+                                            
                                                                         </a>
                                                                     </div>
-
+                                            
                                                                 </div>
                                                             </div>
-
+                                            
                                                         </li>
-
+                                            
                                                     </ul>
                                                     <span class="ipad_cross_icon"></span>
                                                 </div>
-
-
-                                            </li>
+                                            
+                                            
+                                            </li> -->
 
                                             <li id="diesel-stories" class="<?=( (!empty($category)) && $category == 'magazine') ? 'selected'  : '' ;?>">
 
-                                                <h4><a  href='<?=base_url()?>product/magazine' class="level-1 <?=( (!empty($category)) && $category == 'magazine') ? 'active'  : '' ;?>">
+                                                <h4><a  href='#KIDS' class="level-1 <?=( (!empty($category)) && $category == 'magazine') ? 'active'  : '' ;?>">
 <span class="s-diesel-stories" >MAGAZINE</span>
 <div class="s-diesel-stories main-nav-arr"></div>
 </a></h4>

@@ -336,9 +336,8 @@ public function get_sublisting_product($gender,$category_name,$type='',$offset_v
 			d.L1 = 'diesel' and
 			$criteria 
 			b.attr_type = 'color'
-			group by b.style
-			LIMIT 55 OFFSET $offset_value";
-	echo $sql;
+			group by b.style";
+	//echo $sql;
 	//exit;
 	$sql_total_records = "SELECT FOUND_ROWS() as total_records";
 	$query = $this->db->query($sql);

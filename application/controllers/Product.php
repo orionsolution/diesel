@@ -75,12 +75,12 @@ public function listing($category=''){
 	$this->template->load_root_view($view_file_name , $data);
 }
 
-public function sublisting($gender,$category){
+public function sublisting($gender,$category,$type=''){
 		$data = '';
 		//$data['main_group_arr'] = $this->product_model->get_maingroup_product($gender,$category);
 		$data['category'] = $this->get_category($gender);
 		$data['sub_category'] = $category;
-		$return_data = $this->product_model->get_sublisting_product($gender,$category);
+		$return_data = $this->product_model->get_sublisting_product($gender,$category,$type);
 		$data['product_arr'] = $return_data['prod_arr'];
 		$data['total_records'] = $return_data['total'];
 		$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($gender), $category);
