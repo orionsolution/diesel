@@ -593,7 +593,7 @@
                                                             <li class='selected swatch-ele'>
                                                                 <?php $img = $color[$i]->color; $imgname = str_replace(' ', '', $img);?>
 
-                                                                    <img class = "<?=$imgname?>" itemprop="image" src="<?=base_url();?>images/<?=$nameCode?>_<?=$washCode?>_<?=$imgname?>_F.jpg?sw=65&amp;sh=87" alt="W-NICK, Green" data-thumb='{"src":"<?=base_url();?>images/00SJT2_0CAKE_51F_F.jpg?sw=30&amp;sh=40","altimg":"<?=base_url();?>images/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427","alt":"W-NICK, Green","title":"W-NICK, Green"}' />
+                                                                    <img class = "<?=$imgname?>" itemprop="image" src="<?=base_url();?>images/large/<?=$nameCode?>_<?=$washCode?>_<?=$imgname?>_F.jpg?sw=65&amp;sh=87" alt="W-NICK, Green" data-thumb='{"src":"<?=base_url();?>images/00SJT2_0CAKE_51F_F.jpg?sw=30&amp;sh=40","altimg":"<?=base_url();?>images/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427","alt":"W-NICK, Green","title":"W-NICK, Green"}' />
 
                                                                 
 																<?php if($i <= 1) { ?>
@@ -607,7 +607,7 @@
 														<?php } else { ?>
 															<li class='emptyswatch swatch-ele'>
                                                                 <?php $img = $color[$i]->color; $imgname = str_replace(' ', '', $img);?>
-                                                                    <img class = "<?=$imgname?>" itemprop="image" src="<?=base_url();?>images/<?=$nameCode?>_<?=$washCode?>_<?=$imgname?>_F.jpg?sw=65&amp;sh=87" alt="W-NICK, Green" data-thumb='{"src":"<?=base_url();?>images/00SJT2_0CAKE_51F_F.jpg?sw=30&amp;sh=40","altimg":"<?=base_url();?>images/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427","alt":"W-NICK, Green","title":"W-NICK, Green"}' />
+                                                                    <img class = "<?=$imgname?>" itemprop="image" src="<?=base_url();?>images/large/<?=$nameCode?>_<?=$washCode?>_<?=$imgname?>_F.jpg?sw=65&amp;sh=87" alt="W-NICK, Green" data-thumb='{"src":"<?=base_url();?>images/00SJT2_0CAKE_51F_F.jpg?sw=30&amp;sh=40","altimg":"<?=base_url();?>images/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427","alt":"W-NICK, Green","title":"W-NICK, Green"}' />
   
 																
                                                                 <div title="<?php echo $color[$i]->color; ?>" class="selected-color-overlay">
