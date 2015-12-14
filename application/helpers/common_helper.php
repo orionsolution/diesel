@@ -196,35 +196,8 @@ function get_search_link($url){
 }
 
 
-function quickview_link($prod_type, $gender, $name, $style, $color_code, $cart_id, $qty, $barcode=""){
-    
-    switch ($gender){
-        
-        case 'W':
-            $fGen="women";
-        break;
-            case 'M':
-            $fGen="men";
-        break;
-        case 'w':
-            $fGen="women";
-        break;
-        case 'm':
-            $fGen="men";
-        break;
-        default:
-            $fGen="all";
-        break;
-    }
-    $prod_type     = clean_string($prod_type);
-    $formatappname = clean_string($name);
-    $formatid = $style."_".$color_code;
 
-    $link = base_url()."cart/show_product/$prod_type/$fGen/$formatappname/$formatid/$cart_id/$qty/$barcode";
 
-    return $link;
-
-}
 
 
 
@@ -472,6 +445,60 @@ function listing_page_info($category){
 			
     }
     return $info;
+}
+
+
+
+/**
+ * return different filter by option for particular category
+ * @param: category name string
+ * @return: options array
+ */
+
+
+function get_filter_by_options($sub_category_name){
+
+    switch ($sub_category_name) {
+        case 'jackets':
+            //return array('prod_attributes'=>'category','prod_attributes'=>'color','prod_variation'=>'size');
+            return array(
+                array(
+                    'table_name'=>'prod_attributes',
+                    'option_name'=>'category',
+                ),
+                array(
+                    'table_name'=>'prod_attributes',
+                    'option_name'=>'color',
+                ),
+                array(
+                    'table_name'=>'prod_variation',
+                    'option_name'=>'size',
+                ),
+
+                
+            );
+            
+            break;
+        
+        default:
+            return array(
+                array(
+                    'table_name'=>'prod_attributes',
+                    'option_name'=>'category',
+                ),
+                array(
+                    'table_name'=>'prod_attributes',
+                    'option_name'=>'color',
+                ),
+                array(
+                    'table_name'=>'prod_variation',
+                    'option_name'=>'size',
+                ),
+
+                
+            );
+            break;
+    }
 }
 
 

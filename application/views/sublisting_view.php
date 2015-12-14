@@ -80,36 +80,47 @@
                         <span class="hide-filter-block"></span>
                     </div>
                     <ul class="refinement-list">
-                        <li class="refinement-header-item Category">
-                        <h3 class="refinement-header">
-                        <span>
-                        Category </span>
-                        </h3>
-                        <div class="refinement-item">
-                            <div class="clearfix">
-                                <ul>
-                                    <!-- SCROLLABLE -->
-                                    <li>
-                                    <a data-prefn="productGroup" data-prefv="Jacket" href="#">Jacket</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="productGroup" data-prefv="Leather jacket" href="#">Leather jacket</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="productGroup" data-prefv="Winter Jacket" href="#">Winter Jacket</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="reset-refinement">
-                                <a data-prefn="productGroup" title="Show all options" href="#">reset</a>
-                            </div>
-                            <div class="apply-refinement">
-                                <span>apply</span>
-                            </div>
-                        </div>
-                        <!-- PRICE REFINEMENTS -->
-                        </li>
-                        <li class="refinement-header-item Color">
+                        <?foreach($filter_arr as $option_name=>$curr_option):?>                            
+                            <li class="refinement-header-item <?=ucfirst($option_name);?>">
+                            <h3 class="refinement-header">
+                            <span>
+                            <?=ucfirst($option_name);?> </span>
+                            </h3>
+                            <div class="refinement-item">
+                                <div class="clearfix">
+                                    <!-- check for the count -->
+                                    <?if(count($curr_option) > 4):?>
+                                        <?for($i = 0; $i < count($curr_option); $i += 4):?>                                    
+                                                <ul>
+                                                    <?foreach(array_slice($curr_option,$i,4) as $curr_value):?>                       
+                                                        <li>
+                                                            <a href="#"><?=$curr_value['attr_value'];?></a>
+                                                        </li>                                                       
+                                                    <?endforeach; //foreach($curr_option as $curr_value) ?>
+                                                </ul>                                            
+                                        <?endfor;?>
+                                    <?else:?>
+                                        <ul> 
+                                        <?foreach($curr_option as $curr_value):?>                                           
+                                            <li>
+                                            <a href="#"><?=$curr_value['attr_value'];?></a>
+                                            </li>
+                                        <?endforeach;?>
+                                    </ul>
+                                    <?endif;//if(count($curr_option) > 4)?>
+                                    
+                                </div>
+                                <div class="reset-refinement">
+                                    <a data-prefn="productGroup" title="Show all options" href="#">reset</a>
+                                </div>
+                                <div class="apply-refinement">
+                                    <span>apply</span>
+                                </div>
+                            </div>                                
+                            </li>                            
+                        <?endforeach;?>
+
+<!--                         <li class="refinement-header-item Color">
                         <h3 class="refinement-header">
                         <span>
                         Color </span>
@@ -117,7 +128,7 @@
                         <div class="refinement-item">
                             <div class="clearfix">
                                 <ul class="scrollable">
-                                    <!-- SCROLLABLE -->
+                                    
                                     <li>
                                     <a data-prefn="macroColor" data-prefv="Azure" href="#">Azure</a>
                                     </li>
@@ -161,15 +172,15 @@
                                 <span>apply</span>
                             </div>
                         </div>
-                        <!-- PRICE REFINEMENTS -->
-                        </li>
-                        <li class="refinement-header-item Size">
+                        
+                        </li> -->
+<!--                         <li class="refinement-header-item Size">
                         <h3 class="refinement-header">
                         <span>
                         Size </span>
                         </h3>
                         <div class="refinement-item">
-                            <!-- SWATCHES -->
+                            
                             <div class="clearfix">
                                 <ul class="clearfix swatches Size">
                                     <li class="swatch-36-37">
@@ -221,8 +232,8 @@
                                 <span>apply</span>
                             </div>
                         </div>
-                        <!-- PRICE REFINEMENTS -->
-                        </li>
+                        
+                        </li> -->
                     </ul>
                     <div class="filter-global-reset mobile">
                         <span>Reset All</span>
@@ -269,7 +280,7 @@
                     <div class="pagination">
                         <div class="results-hits">
                             <span class="showing-label">Showing </span><span class="current-page-label"><?=count($product_arr);?> /</span>
-                            <span class="total-count"><?=(!empty($total_records) ? $total_records : '');?></span> Products
+                            <span class="total-count"><?=count($product_arr);?></span> Products
                         </div>
                     </div>
                 <?endif;?>
@@ -293,7 +304,13 @@
                             }else{
                                 $prod_cat = $curr_product['L4'];
                             }
-                            $url = base_url().'product/details/'.$prod_cat.'/'.clean_string($curr_product['disp_name']).'/'.$curr_product['style'].'/'.$curr_product['attr_code'];
+
+                            /*echo '<pre>';
+                            print_r($curr_product);
+                            echo '</pre>';
+                            exit;*/                            
+
+                            $url = base_url().'product/details/'.$prod_cat.'/'.clean_string($curr_product['disp_name']).'/'.$curr_product['style'].'/';
                             if(!empty($curr_product['prod_images'])){
                                 $image_path = base_url().'images/'.$curr_product['prod_images']['image_path'];
                             }else{
@@ -308,18 +325,20 @@
                                         <div class="item-swatches">
                                             <div class="griditem-swatchlist">
                                                 <ul id="00SJT20CAKE" class="product-view swatch-itemslider bxslider product-view-container">
-                                                    <li style="display: block;">
-                                                    <a href="<?=$url;?>" title="Green">
-                                                    <img itemprop="image" class="primary-image lazy" data-src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-original="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-altimg="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwc6cd363b/images/large/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427" src="<?=$image_path;?>" alt="W-NICK, Green">
-                                                    </a>
-                                                    </li>
-                                                    <li style="display: none;">
+                                                    <?foreach($curr_product['color_code'] as $key=>$curr_color_code):?>
+                                                        <li style="<?=($key == 0) ? 'display: block;' : 'display: none;' ?>">
+                                                        <a href="<?=$url.$curr_color_code['attr_code'];?>" title="<?=$curr_color_code['attr_value'];?>">
+                                                        <img itemprop="image" class="primary-image lazy" data-src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-original="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-altimg="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwc6cd363b/images/large/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427" src="<?=$image_path;?>" alt="<?=$curr_product['disp_name'], $curr_color_code['attr_value'];?>">
+                                                        </a>
+                                                        </li>
+                                                    <?endforeach;?>
+                                                    <!-- <li style="display: none;">
                                                     <a href="#" title="Green">
                                                     <img itemprop="image" class="primary-image lazy" data-src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-original="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-altimg="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwc6cd363b/images/large/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427" src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_O.jpg?sw=320&amp;sh=427" alt="W-NICK, Green">
                                                     </a>
-                                                    </li>
+                                                    </li> -->
                                                 </ul>
-                                                <ul class="outfit-view swatch-itemslider bxslider outfit-view-container">
+                                                <!-- <ul class="outfit-view swatch-itemslider bxslider outfit-view-container">
                                                     <li>
                                                     <a href="#" title="Green">
                                                     <img itemprop="image" class="primary-image lazy" data-src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-original="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-altimg="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwc6cd363b/images/large/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427" src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_O.jpg?sw=320&amp;sh=427" alt="W-NICK, Green">
@@ -330,7 +349,7 @@
                                                     <img itemprop="image" class="primary-image lazy" data-src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-original="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-altimg="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwc6cd363b/images/large/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427" src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" alt="W-NICK, Green">
                                                     </a>
                                                     </li>
-                                                </ul>
+                                                </ul> -->
                                             </div>
                                         </div>
                                     </div>
@@ -338,7 +357,7 @@
                                         <div class="product-swatches-online-wrap clearfix ">
                                             <div class="product-swatches-online clearfix">
                                                 <span class="product-swatches-all single-col">
-                                                1 Color </span>
+                                                <?=count($curr_product['color_code']);?> Color </span>
                                             </div>
                                         </div>
                                         <div class="product-name clearfix">
@@ -357,7 +376,7 @@
             
             
                 <!-- load more -->
-                <? if(!empty($product_arr) && (count($product_arr) != count($total_records))): ?>
+                <? if(!empty($product_arr)): ?>
                     <div class="load-more-wrap">
                         <div class="load-ajax-content" style="display: none;">
                         </div>
@@ -385,15 +404,15 @@
                         }
 
                         ?>
-                        <a class="load-more" data-next-limit="<?=count($product_arr);?>" data-ajax-url="<?=base_url().'product/ajax_load_products';?>" data-ajax="<?=htmlentities($json, ENT_QUOTES, 'UTF-8'); ?>">LOAD MORE (
+                        <!-- <a class="load-more" data-next-limit="<?=count($product_arr);?>" data-ajax-url="<?=base_url().'product/ajax_load_products';?>" data-ajax="<?=htmlentities($json, ENT_QUOTES, 'UTF-8'); ?>">LOAD MORE (
                         <div class="pagination fixed" style="right: 0px;">
                             <div class="results-hits">
                                 <span class="showing-label">Showing </span><span class="current-page-label"><?=count($product_arr);?> /</span>
-                                <span class="total-count"><?=(!empty($total_records) ? $total_records : '');?></span> Products
+                                <span class="total-count"><?=count($product_arr);?></span> Products
                             </div>
                         </div>
-                        <!-- END: viewby -->
-                        )</a>
+                        
+                        )</a> -->
                     </div>
                 <?endif;?>
                 <!-- load more end -->

@@ -323,45 +323,46 @@ public function get_sublisting_product($gender,$category_name,$type='',$offset_v
 		//$return_gender_value = $gender;
 		$criteria = "d.L2 = '{$return_gender_value}' and
 					 d.L4 = '{$category_name}' and
-					 d.L6 = '{$type}' and";
+					 d.L6 = '{$type}'";
 	}else{
 		$return_gender_value = $this->get_gender($gender);
 		$criteria = "d.L2 = '{$return_gender_value}' and
-					 d.L4 = '{$category_name}' and";
+					 d.L4 = '{$category_name}'";
 	}
-	$sql = "select SQL_CALC_FOUND_ROWS a.disp_name , a.style, attr_code, d.*
-			from prod_mast a, prod_variation b, category_assignment d 
-			where a.style = b.style and 
-			a.style = d.`product-id` and
+	$sql = "select a.disp_name , a.style, d.*
+			from prod_mast a, category_assignment d 
+			where a.style = d.`product-id` and
 			d.L1 = 'diesel' and
 			$criteria 
-			b.attr_type = 'color'
-			group by b.style";
+			group by a.style";
+
+/*	select a.disp_name , a.style, count(*)
+	from prod_mast a, category_assignment d
+	where  a.style = d.`product-id` and d.L1 = 'diesel' and d.L2 = 'man' and d.L4 = 'denim' group by a.style*/
 	//echo $sql;
 	//exit;
-	$sql_total_records = "SELECT FOUND_ROWS() as total_records";
+	
 	$query = $this->db->query($sql);
-	$query_total_records = $this->db->query($sql_total_records);
-	$result_total_records = $query_total_records->row_array();
+	$result = $query->result_array();	
 	/*echo '<pre>';
 	print_r($result_total_records);
 	echo '</pre>';
 	echo '<pre>';
 	print_r($query->result_array());
 	echo '</pre>';
-	exit;*/
-
-	$result = $query->result_array();
+	exit;*/	
 
 	foreach($result as $curr_result){
 		$curr_result['prod_images'] = $this->get_product_img_url($curr_result['style'],1);
+		$curr_result['color_code'] = $this->get_product_color($curr_result['style']);
 		$prod_arr[] = $curr_result;
 	}
 	/*echo '<pre>';
 	print_r($prod_arr);
 	echo '</pre>';
 	exit;*/
-	return array('prod_arr'=>$prod_arr,'total'=>$result_total_records['total_records']);
+	//return array('prod_arr'=>$prod_arr,'total'=>$result_total_records['total_records']);
+	return $prod_arr;
 	
 }
 
@@ -427,6 +428,80 @@ public function get_sublising_page_info($category,$sub_category){
 }
 
 
+/**
+ * get all the colors for particulat product
+ * @param: style number
+ */
+
+public function get_product_color($style){
+	$sql = "SELECT attr_code,attr_value  FROM `prod_variation` WHERE `style` = '$style' and attr_type = 'color'";
+	$query = $this->db->query($sql);
+	$result = $query->result_array();
+	return $result;
+}
+
+
+
+/**
+ * return distinct filter value for different option for particular sub_category, like distinct values for category, colors, size for jackets
+ * @param: option_value (string), sub_category_name (string), $criteria (string)
+ * @return: filter value
+ */
+
+public function get_filter($sub_category){
+	$filter_arr = array();
+	// get filter options array
+	//echo $sub_category;exit;
+
+	$option_arr = get_filter_by_options($sub_category);
+	/*echo '<pre>';
+	print_r($option_arr);
+	echo '</pre>';
+	exit;*/
+
+	foreach($option_arr as $curr_option){
+		$sql = "select distinct b.attr_value
+				from prod_mast a, {$curr_option['table_name']} b, category_assignment d 
+				where a.style = d.`product-id` and
+				a.style = b.style and 
+				d.L1 = 'diesel' and 
+				d.L2 = 'man' 
+				and d.L4 = '$sub_category' and 
+				b.attr_value != '' and ";
+
+		if($curr_option['option_name'] == 'category'){
+			$sql .= "b.attr_id = 'productGroup'";
+		}elseif($curr_option['option_name'] == 'color'){
+			$sql .= "b.attr_id = 'macroColor'";
+		}elseif ($curr_option['option_name'] == 'size') {
+			$sql .= "b.attr_type = 'size'";
+		}
+
+		//echo $sql.'<br>';
+
+		$query = $this->db->query($sql);
+		$filter_arr[$curr_option['option_name']] = $query->result_array();
+				
+
+			/*select distinct b.attr_value
+			from prod_mast a, prod_variation b, category_assignment d 
+			where a.style = d.`product-id` and
+			a.style = b.style and 
+			d.L1 = 'diesel' and 
+			d.L2 = 'man' 
+			and d.L4 = 'jackets' and
+			b.attr_type = 'size'*/
+	}
+
+	/*echo '<pre>';
+	print_r($filter_arr);
+	echo '</pre>';
+	exit;*/
+
+	return $filter_arr;
+
+	
+}
 
 
 

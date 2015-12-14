@@ -81,10 +81,9 @@ public function sublisting($gender,$category,$type=''){
 		//$data['main_group_arr'] = $this->product_model->get_maingroup_product($gender,$category);
 		$data['category'] = $this->get_category($gender);
 		$data['sub_category'] = $category;
-		$return_data = $this->product_model->get_sublisting_product($gender,$category,$type);
-		$data['product_arr'] = $return_data['prod_arr'];
-		$data['total_records'] = $return_data['total'];
+		$data['product_arr'] = $this->product_model->get_sublisting_product($gender,$category,$type);
 		$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($gender), $category);
+		$data['filter_arr'] = $this->product_model->get_filter($category);
 		/*echo "<pre>";
 		echo "in controller";
 		echo "<pre>";
@@ -116,9 +115,7 @@ public function sublisting($gender,$category,$type=''){
 	print_r($search_data);
 	echo '</pre>';
 	exit;*/
-	$return_data = $this->product_model->get_sublisting_product($search_data[1],$search_data[2],$search_data[3]);
-	$data['product_arr'] = $return_data['prod_arr'];
-	$data['total_records'] = $return_data['total'];
+	$data['product_arr'] = $this->product_model->get_sublisting_product($search_data[1],$search_data[2],$search_data[3]);
 	$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($search_data[1]), $search_data[3]);
 
 	$data['style'] = 'background: url('.base_url().'images/backmendenim.jpg);';
@@ -134,29 +131,33 @@ public function sublisting($gender,$category,$type=''){
  }
 
  public function ajax_load_products(){
- 	echo '<pre>';
+ 	/*echo '<pre>';
  	print_r($this->input->post());
- 	echo '</pre>';
+ 	echo '</pre>';*/
  	//exit;
  	//var_dump(json_decode($this->input->post('ajax_data')));
  	//exit;
 
  	$ajax_data = $this->input->post('ajax_data');
  	$offset = $this->input->post('next_limit');
- 	echo 'starting if';//exit;
+ 	//echo 'starting if';//exit;
  	if($ajax_data['cgid_status'] === 'true'){
- 		echo 'inside if';exit;
+ 		//echo 'inside if';exit;
  	}else{
  		// check if subcategory contains "-" in it
- 		echo 'inside else';exit;
+ 		//echo 'inside else';exit;
 
  		if (strpos($ajax_data['sub_category'],'-') !== false) {
 		    // then remove "-" from the string
-		    $ajax_data['sub_category'] = str_replace('-', ' ', $ajax_data['sub_category']);
+		    //echo 'inside strpost if';exit;	
+		    $ajax_data['sub_category'] = str_replace('-', '', $ajax_data['sub_category']);
+		    //echo $ajax_data['sub_category'];exit;
 		}
 
-
+		//echo 'before call to sublisting method';
  		$return_data = $this->product_model->get_sublisting_product($ajax_data['category'],$ajax_data['sub_category'],'',$offset);
+ 		//$return_data = $this->product_model->get_sublisting_product('','','','');
+ 		//echo 'after call to sublisting method';
 		//$data['product_arr'] = $return_data['prod_arr'];
 		//$data['total_records'] = $return_data['total'];
  	}

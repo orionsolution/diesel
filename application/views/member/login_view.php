@@ -74,7 +74,7 @@
                      </form>
                      <div class="mobile-login" style="display: none;">
                         <h3 class="title-newuser">NEW USER</h3>
-                        <a class="new-register" href="https://shop.diesel.com/signup" value="Login" target="_parent" name="dwfrm_login_login">
+                        <a class="new-register" href="<?=base_url();?>member/register" value="Login" target="_parent" name="dwfrm_login_login">
                         CREATE ACCOUNT
                         </a>
                      </div>
@@ -87,7 +87,7 @@
                   <h2 class="section-header">New Customers</h2>
                   <div class="login-box-content clearfix">
                      <p class="create-message">Creating an account is easy. Just fill in the form below and enjoy the benefits of having an account.</p>
-                     <form action="https://shop.diesel.com/account?dwcont=C1520335179" method="post" id="dwfrm_login_register">
+                     <form action="<?=base_url();?>member/register" method="post" id="dwfrm_login_register">
                         <fieldset>
                            <div class="form-row form-row-button clearfix">
                               <button type="submit" value="Create an Account" class="create-sccount-btn" name="dwfrm_login_register">

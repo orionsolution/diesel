@@ -13,6 +13,10 @@ class Member extends CI_Controller {
 	}
 
 	public function login(){
+		if(isset($this->session->userdata['s_uid'])){
+			redirect('home');
+		}
+
 		$this->form_validation->set_message('dwfrm_login_username_d0sjourfhqrs','Please enter valid email;');
 		$view_file_name = 'login_view';
 		$data = '';
@@ -42,7 +46,7 @@ class Member extends CI_Controller {
 			$user_detail = $this->member_model->check_user_login($data);
 			if($user_detail):
 				//Redirect to account page
-				echo "Thank you for login";
+				redirect('home');
 			else:
 				$this->form_validation->set_message('dwfrm_login_username_d0sjourfhqrs','Please enter valid email;');
 				$this->login();
@@ -65,7 +69,7 @@ class Member extends CI_Controller {
 			$user_detail = $this->member_model->check_user_login($data);
 			if($user_detail):
 				//Redirect to account page
-				echo "Thank you for login";
+				redirect('home');
 			else:
 				$this->form_validation->set_message('dwfrm_login_username_d0tjusaihued','Please enter valid email;');
 				$this->login_popup();
@@ -75,7 +79,10 @@ class Member extends CI_Controller {
 
 
 	public function register(){
-
+		if(isset($this->session->userdata['s_uid'])){
+			redirect('home');
+		} 
+		
 		$view_file_name = 'register_view';
 		$data = '';
 		$data['view_file_name'] = $view_file_name;
@@ -126,4 +133,9 @@ class Member extends CI_Controller {
 			return false;
 		endif;
 	} 
+
+	function logout(){
+		$this->session->sess_destroy();
+		redirect("home");
+	}
 }

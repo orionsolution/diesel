@@ -235,35 +235,29 @@ if($view_file_name == 'home_view') { ?>
 
 
                 <input type="hidden" id="isUserLogin" value="false" />
+                <?php if(isset($this->session->userdata['s_uid'])) { ?>
+                    <li class="myacc-login">
+                        <?php $user_name = $this->session->userdata['s_fname'];?>
+                        <span class="my-account">Welcome <?=$user_name;?></span> | 
+                        <span class="my-account"><a href="<?=base_url();?>member/logout">Log Out</a></span> |                               
+                    </li>
+                <?php } else { ?>
                 <li class="myacc">
                     <h4>
-            
-            <a href="#" class="user-account">
-            Log In / Register
-            
-             </a>
-            <div style="display: none;">
-                <ul class="header-myacc-drop">
-                    <li class="first">
-                     <a title="Login" href="<?=base_url();?>member/login_popup" class="user-login ">
-                    Log In
-                     </a>       
-                    </li>
-                
-                    <li>
-                         <a title="Register" href="<?=base_url();?>" class="user-register">
-                            Register
-                        </a>            
-                    </li>
-                
-                </ul>
-            </div>
-             
-             </h4>
-
+                        <a href="#" class="user-account">Log In / Register</a>
+                        <div style="display: none;">
+                            <ul class="header-myacc-drop">
+                                <li class="first">
+                                    <a title="Login" href="<?=base_url();?>member/login_popup" class="user-login ">Log In</a>       
+                                </li>
+                                <li>
+                                    <a title="Register" href="<?=base_url();?>" class="user-register">Register</a>            
+                                </li>
+                            </ul>
+                        </div>             
+                    </h4>
                 </li>
-
-
+                <?php } ?>
             </ul>
             <div class="mobile-menu-flip">
 
@@ -2099,35 +2093,31 @@ Store Locator
 
 
                             <input type="hidden" id="isUserLogin" value="false" />
-                            <li class="myacc">
-                                <h4>
-            
-            <a href="<?=base_url();?>member/login" class="user-account">
-            Log In / Register
-            
-             </a>
-            <div style="display: none;">
-                <ul class="header-myacc-drop">
-                    <li class="first">
-                     <a title="Login" href="<?=base_url();?>member/login_popup" class="user-login ">
-                    Log In
-                     </a>       
-                    </li>
-                
-                    <li>
-                         <a title="Register" href="<?=base_url('member/register');?>" class="user-register">
-                            Register
-                        </a>            
-                    </li>
-                
-                </ul>
-            </div>
-             
-             </h4>
-
-                            </li>
-
-
+                            <?php if(isset($this->session->userdata['s_uid'])) { ?>
+                                <li class="myacc-login">
+                                    <?php $user_name = $this->session->userdata['s_fname'];?>
+                                    <span class="my-account">Welcome <?=$user_name;?></span> | 
+                                    <span class="my-account"><a href="<?=base_url();?>member/logout">Log Out</a></span> |                               
+                                </li>
+                            <?php } else { ?>
+                                <li class="myacc">
+                                    <h4>
+                                        <a href="<?=base_url();?>member/login" class="user-account">Log In / Register</a>
+                                        <div style="display: none;">
+                                            <ul class="header-myacc-drop">
+                                                <li class="first">
+                                                    <a title="Login" href="<?=base_url();?>member/login_popup" class="user-login ">Log In</a>
+                                                </li>
+                                                <li>
+                                                     <a title="Register" href="<?=base_url('member/register');?>" class="user-register">Register
+                                                     </a>            
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </h4>
+                                </li>
+                            <?php } ?>
+                            
                             <li class="last help">
 
                                 <h4>
