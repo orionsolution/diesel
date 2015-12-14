@@ -45,6 +45,7 @@ exit;
                           <div class='inpage-accordian'>
                             <ul>                    
                               <?foreach($main_arr as $category_name=>$category_list):?>
+                                <?if(strtolower($category_name) !== 'highlights'): ?>
                                 <li> <a href="javascript:void(0)"><span><?=$category_name;?></span></a>
                                   <ul>
                                     <?foreach($category_list as $key=>$curr_category):
@@ -64,6 +65,7 @@ exit;
                                     <?endforeach;?>
                                   </ul>
                                 </li>
+                                <?endif;?>
                               <?endforeach;?>
                             </ul>                                
                           </div>                      

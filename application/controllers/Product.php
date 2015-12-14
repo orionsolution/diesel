@@ -37,6 +37,7 @@ public function details($cat='',$prod_name='',$style='',$color=''){
 		$this->data['count_color'] = $count;
 	}	
 	$this->data['prod_image_arr'] = $this->product_model->get_prod_images($style,$color);
+	
 	//echo "<pre>";
 	//var_dump($this->data['prod_arr']);
 	//die();
@@ -75,12 +76,12 @@ public function listing($category=''){
 	$this->template->load_root_view($view_file_name , $data);
 }
 
-public function sublisting($gender,$category){
+public function sublisting($gender,$category,$type=''){
 		$data = '';
 		//$data['main_group_arr'] = $this->product_model->get_maingroup_product($gender,$category);
 		$data['category'] = $this->get_category($gender);
 		$data['sub_category'] = $category;
-		$return_data = $this->product_model->get_sublisting_product($gender,$category);
+		$return_data = $this->product_model->get_sublisting_product($gender,$category,$type);
 		$data['product_arr'] = $return_data['prod_arr'];
 		$data['total_records'] = $return_data['total'];
 		$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($gender), $category);
@@ -213,13 +214,23 @@ public function get_bar()
 	$size  = $_GET['size'];
 	$size_rep = ltrim($size);
 	$fsize = rtrim($size_rep);
-	var_dump($color);
+	//var_dump($color);
 	//die();
 	
 	$this->data['prod_barcode'] = $this->product_model->get_barcode($style,$color,$fsize);
 	
 	echo json_encode($this->data["prod_barcode"]);
 	
+	
+}
+
+public function get_images()
+{
+	$color = $_GET['color'];
+	$style = $_GET['style'];
+	
+	$this->data['prod_image_arr'] = $this->product_model->get_prod_images($style,$color);
+	echo json_encode($this->data['prod_image_arr']);
 }
 
 // Abhishek adding my code.

@@ -297,7 +297,7 @@
                             if(!empty($curr_product['prod_images'])){
                                 $image_path = base_url().'images/'.$curr_product['prod_images']['image_path'];
                             }else{
-                                $image_path = '';
+                                $image_path = base_url().'images/sublisting/prod_no_image.jpg';
                             }
                             
                         ?>
