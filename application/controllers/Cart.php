@@ -52,54 +52,34 @@ class Cart extends CI_Controller {
 
 	public function add($type = '')
 	{
+		
 		//retrieve all the post data.
-		$pid 		= $this->input->post('pid');
-		$p_color 	= $this->input->post('prd_color');
-		$p_name 	= $this->input->post('pname');
-		
-		
-		//$p_barcode 		= $this->input->post('prd_barcode');
-		
-		
-		/*$style 		= $this->input->post('prd_style');
-		$prod_qty 	= $this->input->post('Quantity');
-		$barcode 	= $this->input->post('prd_barcode');
+		$color 		= $this->input->post('color');
+		$style 		= $this->input->post('style');
+		$prod_qty 	= $this->input->post('qty');
+		$barcode 	= $this->input->post('barcode');
 		$cart_id 	= $this->input->post('cart_id');
-		*/
-		//echo "cart id $cart_id";
-		//echo "type: $type";
-		//exit;
 		
-
-		// check if the products exists in database
-
-		//$prod 		= $this->cart_model->check_product($p_color, $barcode, $prod_qty, $style, $cart_id);
-		$prod 		= $this->Cart_model->check_product($p_color, $pid);
 		
-			/*$this->session->set_userdata('style',$prod[0]->style);
-			$this->session->set_userdata('name',$prod[0]->disp_name);
-			$style = $this->session->userdata('style');
-			$name = $this->session->userdata('name');
-			
-			echo $style,$name;
+		$prod 		= $this->Cart_model->check_product($color, $barcode, $prod_qty, $style, $cart_id);
+		
+		if(!empty($prod))
+		{
+			$updates = true;
 		}
 		
 		else
 		{
-			echo "something wrong";
-			die();
-			$updates = false;
-		}
-		*/
-		if($prod){
-			$updates = true;
-		}else{
 			$updates = false;
 		}
 
-		if(!empty($type) && $type == 'ajax'){
+		if(!empty($type) && $type == 'ajax')
+		{
 			echo $updates;
-		}else{
+		}
+		
+		else
+		{
 			//echo 'inside redirect cart';exit;
 			redirect('cart');
 		}
@@ -113,7 +93,8 @@ class Cart extends CI_Controller {
  * return: none
  */
 
-	public function ajax_cart(){
+	public function ajax_cart()
+	{
 		
 		ini_set('max_execution_time', 3600);
 
