@@ -384,8 +384,8 @@ exit;*/
                                             </div>
                                         </div>
                                         <div class="product-name clearfix">
-                                            <a class="name-link" href="<?=$url;?>" title="<?=$curr_product['disp_name'];?>"><?=$curr_product['disp_name'];?></a>
-                                            <a class="name-link-sub" href="<?=$url;?>" title="<?=$curr_product['disp_name'];?>"><?=$prod_cat?></a>
+                                            <a class="name-link" href="<?=$url.$curr_product['color_code'][0]['attr_code'];?>" title="<?=$curr_product['disp_name'];?>"><?=$curr_product['disp_name'];?></a>
+                                            <a class="name-link-sub" href="<?=$url.$curr_product['color_code'][0]['attr_code'];?>" title="<?=$curr_product['disp_name'];?>"><?=$prod_cat?></a>
                                         </div>
                                     </div>
                                 </div>

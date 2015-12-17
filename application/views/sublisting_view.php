@@ -79,12 +79,12 @@
                         <span class="hide-filter-block"></span>
                     </div>
                     <ul class="refinement-list">
-                        <?foreach($filter_arr as $option_name=>$curr_option):?>                            
+                        <? foreach($filter_arr as $option_name=>$curr_option):?>                            
                             <li class="refinement-header-item <?=ucfirst($option_name);?>">
                             <h3 class="refinement-header">
                             <span>
                             <?=ucfirst($option_name);?> </span>
-                            <?if($option_name == 'color'):
+                            <? if($option_name == 'color'):
                                 $data_prefn = 'macroColor';
                               else:
                                 $data_prefn = $option_name;
@@ -94,8 +94,8 @@
                             <div class="refinement-item">
                                 <div class="clearfix">
                                     <!-- check for the count -->
-                                    <?if(count($curr_option) > 4):?>
-                                        <?for($i = 0; $i < count($curr_option); $i += 4):?>                                    
+                                    <? if(count($curr_option) > 4):?>
+                                        <? for($i = 0; $i < count($curr_option); $i += 4):?>                                    
                                                 <ul>
                                                     <?foreach(array_slice($curr_option,$i,4) as $curr_value):?>                       
                                                         <li>
@@ -107,12 +107,12 @@
                                                         ?>
                                                             <a href="<?=base_url().'product/'.$gender.'/'.$sub_category.'/filter?'.$option_name.'='.$curr_value['attr_value'];?>" data-prefn="<?=$data_prefn;?>" data-prefv="<?=$curr_value['attr_value'];?>"><?=$curr_value['attr_value'];?></a>
                                                         </li>                                                       
-                                                    <?endforeach; //foreach($curr_option as $curr_value) ?>
+                                                    <? endforeach; //foreach($curr_option as $curr_value) ?>
                                                 </ul>                                            
-                                        <?endfor;?>
-                                    <?else:?>
+                                        <? endfor;?>
+                                    <? else:?>
                                         <ul> 
-                                        <?foreach($curr_option as $curr_value):?>                                           
+                                        <? foreach($curr_option as $curr_value):?>                                           
                                             <li>
                                              <? if (strpos($curr_value['attr_value'],' ') !== false) {
                                                     $curr_value['attr_value'] = str_replace(' ', '-', $curr_value['attr_value']);
@@ -120,9 +120,9 @@
                                             ?>
                                             <a href="<?=base_url().'product/'.$gender.'/'.$sub_category.'/filter?'.$option_name.'='.$curr_value['attr_value'];?>" data-prefn="<?=$data_prefn;?>" data-prefv="<?=$curr_value['attr_value'];?>"><?=$curr_value['attr_value'];?></a>
                                             </li>
-                                        <?endforeach;?>
+                                        <? endforeach;?>
                                     </ul>
-                                    <?endif;//if(count($curr_option) > 4)?>
+                                    <? endif;//if(count($curr_option) > 4)?>
                                     
                                 </div>
                                 <div class="reset-refinement">
@@ -133,7 +133,7 @@
                                 </div>
                             </div>                                
                             </li>                            
-                        <?endforeach;?>
+                        <? endforeach;?>
 
 <!--                         <li class="refinement-header-item Color">
                         <h3 class="refinement-header">
@@ -335,18 +335,18 @@
                         ?>
                         <div class=" grid-tile item w2 h2 reorder " data-colors-to-show="51F" style="max-width: 248px;">
                             <div class="product-tile default-products " id="bcidoiaaiMmMaaaadkUroyokxa" data-itemid="00SJT20CAKE">
-                                <div class="product-tile-content" data-queue="{&quot;mo&quot;: []}">
+                                <div class="product-tile-content" data-queue="{"mo": []}">
                                     <div class="product-image clearfix" style="min-height: 0px; height: 304px;">
                                         <div class="item-swatches">
                                             <div class="griditem-swatchlist">
                                                 <ul id="00SJT20CAKE" class="product-view swatch-itemslider bxslider product-view-container">
-                                                    <?foreach($curr_product['color_code'] as $key=>$curr_color_code):?>
+                                                    <? foreach($curr_product['color_code'] as $key=>$curr_color_code):?>
                                                         <li style="<?=($key == 0) ? 'display: block;' : 'display: none;' ?>">
                                                         <a href="<?=$url.$curr_color_code['attr_code'];?>" title="<?=$curr_color_code['attr_value'];?>">
                                                         <img itemprop="image" class="primary-image lazy" data-src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-original="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-altimg="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwc6cd363b/images/large/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427" src="<?=$image_path;?>" alt="<?=$curr_product['disp_name'], $curr_color_code['attr_value'];?>">
                                                         </a>
                                                         </li>
-                                                    <?endforeach;?>
+                                                    <? endforeach;?>
                                                     <!-- <li style="display: none;">
                                                     <a href="#" title="Green">
                                                     <img itemprop="image" class="primary-image lazy" data-src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-original="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-altimg="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwc6cd363b/images/large/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427" src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_O.jpg?sw=320&amp;sh=427" alt="W-NICK, Green">
