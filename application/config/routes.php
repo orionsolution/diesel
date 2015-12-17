@@ -69,8 +69,15 @@ $route['product/womens/t-shirts-and-tops'] = "product/sublisting/womens/tshirtsa
 $route['product/womens/wallets-and-small-goods'] = "product/sublisting/womens/walletsandsmallgoods";
 $route['product/womens/other-accessories'] = "product/sublisting/womens/otheraccessories";
 
+// Filter routing rules
+
+$route['product/(:any)/(:any)/filter'] = "product/filter/$1/$2";
+$route['product/(:any)/(:any)/(:any)/filter'] = "product/filter/$1/$2/$3";
+
 $route['product/(:any)/(:any)'] = "product/sublisting/$1/$2";
 $route['product/(:any)/(:any)/(:any)'] = "product/sublisting/$1/$2/$3";
+
+
 
 
 // Search Page Routes

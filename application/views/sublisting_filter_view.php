@@ -1,6 +1,13 @@
 <?//=//$this->uri->segment(1);//exit;?>
 <?//=//parse_str($_SERVER['QUERY_STRING'], $_GET);exit;?>
 <?//=//$_GET['cgid'];exit;?>
+
+<?
+/*echo '<pre>';
+print_r($selection_category_arr);
+echo '</pre>';
+exit;*/
+?>
 <script type="text/javascript" src="<?=base_url();?>js/sublisting.js"></script>
 
 <div id="main" role="main" class="clearfix plp-search-page">
@@ -84,12 +91,7 @@
                             <h3 class="refinement-header">
                             <span>
                             <?=ucfirst($option_name);?> </span>
-                            <?if($option_name == 'color'):
-                                $data_prefn = 'macroColor';
-                              else:
-                                $data_prefn = $option_name;
-                              endif;
-                            ?>
+                            <?$check_arr = (!empty(${'selected_'.$option_name}) ? explode("|",${'selected_'.$option_name}) : array());?>
                             </h3>
                             <div class="refinement-item">
                                 <div class="clearfix">
@@ -97,28 +99,98 @@
                                     <?if(count($curr_option) > 4):?>
                                         <?for($i = 0; $i < count($curr_option); $i += 4):?>                                    
                                                 <ul>
-                                                    <?foreach(array_slice($curr_option,$i,4) as $curr_value):?>                       
-                                                        <li>
-                                                        <? if (strpos($curr_value['attr_value'],' ') !== false) {
-                                                                $curr_value['attr_value'] = str_replace(' ', '-', $curr_value['attr_value']);
-                                                            }
+                                                    <?foreach(array_slice($curr_option,$i,4) as $curr_value):?>
+                                                        <?
+                                                        $current_filter_url = base_url().'product/'.$gender.'/'.$sub_category.'/filter';
+                                                        if(in_array(str_replace(" ", "-", $curr_value['attr_value']), $check_arr) ){
+                                                            if($option_name == 'category'):
+                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
+                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
+                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');                                                            
+                                                          elseif($option_name == 'color'):
+                                                           $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
+                                                            $current_filter_url .= (!empty(${'selected_'.$option_name}) ? '&color='.${'selected_'.$option_name} : '&color=');
+                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');
+                                                          elseif($option_name == 'size'):
+                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
+                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
+                                                            $current_filter_url .= (!empty(${'selected_'.$option_name}) ? '&size='.${'selected_'.$option_name} : '&size=');
+                                                          endif;
+                                                            
+                                                            $selected = "selected";
+                                                        }else{
+                                                            if($option_name == 'category'):
+                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category.'|'.str_replace(" ", "-", $curr_value['attr_value']) : '?category=');
+                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
+                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');                                                            
+                                                          elseif($option_name == 'color'):
+                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
+                                                            
+                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color.'|'.str_replace(" ", "-", $curr_value['attr_value']) : '&color='.str_replace(" ", "-", $curr_value['attr_value']));
+                                                            //echo $current_filter_url;exit;
+                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');
+                                                          elseif($option_name == 'size'):
+                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
+                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
+                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size.'|'.str_replace(" ", "-", $curr_value['attr_value']) : '&size='.str_replace(" ", "-", $curr_value['attr_value']));
+                                                          endif;
 
-
-                                                        ?>
-                                                            <a href="<?=base_url().'product/'.$gender.'/'.$sub_category.'/filter?'.$option_name.'='.$curr_value['attr_value'];?>" data-prefn="<?=$data_prefn;?>" data-prefv="<?=$curr_value['attr_value'];?>"><?=$curr_value['attr_value'];?></a>
+                                                            //$curr_filter_url = base_url().'product/'.$gender.'/'.$sub_category.'/filter'.$category_prefix.'|'.str_replace(" ", "-", $curr_value['attr_value']).$color_prefix.$size_prefix;                                                
+                                                            $selected = "";
+                                                        }
+                                                        //$filter_url = (str_replace(" ", "-", $curr_value['attr_value']) == )
+                                                        //$filter_url = (in_array(str_replace(" ", "-", $curr_value['attr_value']), 'selection_'.$option_name.'_arr')  ? '?category=' . str_replace(" ", "-", $curr_value['attr_value']) : );
+                                                        ?>                        
+                                                        <li class="<?=$selected;?>">
+                                                            <a href="<?=$current_filter_url;?>"><?=$curr_value['attr_value'];?></a>
                                                         </li>                                                       
                                                     <?endforeach; //foreach($curr_option as $curr_value) ?>
                                                 </ul>                                            
                                         <?endfor;?>
                                     <?else:?>
                                         <ul> 
-                                        <?foreach($curr_option as $curr_value):?>                                           
-                                            <li>
-                                             <? if (strpos($curr_value['attr_value'],' ') !== false) {
-                                                    $curr_value['attr_value'] = str_replace(' ', '-', $curr_value['attr_value']);
-                                                }
-                                            ?>
-                                            <a href="<?=base_url().'product/'.$gender.'/'.$sub_category.'/filter?'.$option_name.'='.$curr_value['attr_value'];?>" data-prefn="<?=$data_prefn;?>" data-prefv="<?=$curr_value['attr_value'];?>"><?=$curr_value['attr_value'];?></a>
+                                        <?foreach($curr_option as $curr_value):?> 
+                                            <?
+                                            $current_filter_url = base_url().'product/'.$gender.'/'.$sub_category.'/filter';
+                                                        if(in_array(str_replace(" ", "-", $curr_value['attr_value']), $check_arr) ){
+                                                            if($option_name == 'category'):
+                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
+                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
+                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');                                                            
+                                                          elseif($option_name == 'color'):
+                                                           $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
+                                                            $current_filter_url .= (!empty(${'selected_'.$option_name}) ? '&color='.${'selected_'.$option_name} : '&color=');
+                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');
+                                                          elseif($option_name == 'size'):
+                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
+                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
+                                                            $current_filter_url .= (!empty(${'selected_'.$option_name}) ? '&size='.${'selected_'.$option_name} : '&size=');
+                                                          endif;
+                                                            
+                                                          $selected = "selected";
+                                                        }else{
+                                                            if($option_name == 'category'):
+                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category.'|'.str_replace(" ", "-", $curr_value['attr_value']) : '?category='.str_replace(" ", "-", $curr_value['attr_value']));
+                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
+                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');                                                            
+                                                          elseif($option_name == 'color'):
+                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
+                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color.'|'.str_replace(" ", "-", $curr_value['attr_value']) : '&color='.str_replace(" ", "-", $curr_value['attr_value']));
+                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');
+                                                          elseif($option_name == 'size'):
+                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
+                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
+                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size.'|'.str_replace(" ", "-", $curr_value['attr_value']) : '&size='.str_replace(" ", "-", $curr_value['attr_value']));
+                                                          endif;
+
+                                                            //$curr_filter_url = base_url().'product/'.$gender.'/'.$sub_category.'/filter'.$category_prefix.'|'.str_replace(" ", "-", $curr_value['attr_value']).$color_prefix.$size_prefix;                                                
+                                                            $selected = "";
+                                                        }
+                                            //$filter_url = (str_replace(" ", "-", $curr_value['attr_value']) == )
+                                            //$filter_url = (in_array(str_replace(" ", "-", $curr_value['attr_value']), 'selection_'.$option_name.'_arr')  ? '?category=' . str_replace(" ", "-", $curr_value['attr_value']) : );
+                                            ?>                                          
+                                            <li class="<?=$selected;?>">                                            
+                                            <a href="<?=$current_filter_url;?>"><?=$curr_value['attr_value'];?></a>
                                             </li>
                                         <?endforeach;?>
                                     </ul>
@@ -126,7 +198,7 @@
                                     
                                 </div>
                                 <div class="reset-refinement">
-                                    <a data-prefn="productGroup" title="Show all options" href="#">reset</a>
+                                    <a data-prefn="productGroup" title="Show all options" href="">reset</a>
                                 </div>
                                 <div class="apply-refinement">
                                     <span>apply</span>
@@ -134,148 +206,84 @@
                             </div>                                
                             </li>                            
                         <?endforeach;?>
-
-<!--                         <li class="refinement-header-item Color">
-                        <h3 class="refinement-header">
-                        <span>
-                        Color </span>
-                        </h3>
-                        <div class="refinement-item">
-                            <div class="clearfix">
-                                <ul class="scrollable">
-                                    
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Azure" href="#">Azure</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Black" href="#">Black</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Blue" href="#">Blue</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Brown" href="#">Brown</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Green" href="#">Green</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Grey" href="#">Grey</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Pink" href="#">Pink</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Red" href="#">Red</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Violet" href="#">Violet</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="White" href="#">White</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="reset-refinement">
-                                <a data-prefn="macroColor" title="Show all options" href="#">reset</a>
-                            </div>
-                            <div class="apply-refinement">
-                                <span>apply</span>
-                            </div>
-                        </div>
-                        
-                        </li> -->
-<!--                         <li class="refinement-header-item Size">
-                        <h3 class="refinement-header">
-                        <span>
-                        Size </span>
-                        </h3>
-                        <div class="refinement-item">
-                            
-                            <div class="clearfix">
-                                <ul class="clearfix swatches Size">
-                                    <li class="swatch-36-37">
-                                    <a id="swatch-36-37" data-prefn="size" data-prefv="36-37" href="#" title="36-37">
-                                    36-37 </a>
-                                    </li>
-                                    <li class="swatch-38-39">
-                                    <a id="swatch-38-39" data-prefn="size" data-prefv="38-39" href="#" title="38-39">
-                                    38-39 </a>
-                                    </li>
-                                    <li class="swatch-40-44">
-                                    <a id="swatch-40-44" data-prefn="size" data-prefv="40-44" href="#" title="40-44">
-                                    40-44 </a>
-                                    </li>
-                                    <li class="swatch-XS">
-                                    <a id="swatch-XS" data-prefn="size" data-prefv="XS" href="#" title="XS">
-                                    XS </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li class="swatch-S">
-                                    <a id="swatch-S" data-prefn="size" data-prefv="S" href="#" title="S">
-                                    S </a>
-                                    </li>
-                                    <li class="swatch-M">
-                                    <a id="swatch-M" data-prefn="size" data-prefv="M" href="#" title="M">
-                                    M </a>
-                                    </li>
-                                    <li class="swatch-L">
-                                    <a id="swatch-L" data-prefn="size" data-prefv="L" href="#" title="L">
-                                    L </a>
-                                    </li>
-                                    <li class="swatch-XL">
-                                    <a id="swatch-XL" data-prefn="size" data-prefv="XL" href="#" title="XL">
-                                    XL </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li class="swatch-XXL">
-                                    <a id="swatch-XXL" data-prefn="size" data-prefv="XXL" href="#" title="XXL">
-                                    XXL </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="reset-refinement">
-                                <a data-prefn="size" title="Show all options" href="#">reset</a>
-                            </div>
-                            <div class="apply-refinement">
-                                <span>apply</span>
-                            </div>
-                        </div>
-                        
-                        </li> -->
                     </ul>
                     <div class="filter-global-reset mobile">
-                        <span>Reset All</span>
+                        <span class="reset">Reset All</span>
                     </div>
                     <div class="filter-done mobile">
                         <span>DONE</span>
                     </div>
                 </div>
-                <div class="filter-bxSlider-plp clearfix">
-                    <div class="filter-slider-wrapper">
-                        <!--<div class="filter-slider remove-trans">
-                        </div>-->
-                    </div>
+                <div class="filter-bxSlider-plp clearfix" style="display:block;">
+                        <div class="filter-slider-wrapper" >
+                            <form action="<?=base_url().'product/'.$gender.'/'.$sub_category.'/filter';?>" method="post" name="selection_form">
+                            <?if(!empty($selected_category) || !empty($selected_color) || !empty($selected_size)):?>
+                                <div class="filter-slider remove-trans">
+                                    <?if(!empty($selected_category)):
+                                        $selection_category_arr = explode("|",$selected_category);
+                                    ?>
+                                        <?foreach($selection_category_arr as $curr_selection):?>
+                                            <span class="breadcrumb-refinement-value"><?=str_replace('-', " ", $curr_selection);?>
+                                                <a class="breadcrumb-relax" href="#">
+                                                    <img class="plp-filter-cross" src="<?=base_url();?>images/refine_filter.svg" alt="REMOVE">
+                                                </a>
+                                                <input type="hidden" name="category_selection_filter[]" value="<?=str_replace('-', " ", $curr_selection);?>">
+                                            </span>
+                                        <?endforeach;?>
+                                    <?endif;?>
+
+                                    <?if(!empty($selected_color)):
+                                        $selection_color_arr = explode("|",$selected_color);
+                                    ?>
+                                        <?foreach($selection_color_arr as $curr_selection):?>
+                                            <span class="breadcrumb-refinement-value"><?=str_replace('-', " ", $curr_selection);?>
+                                                <a class="breadcrumb-relax" href="#">
+                                                    <img class="plp-filter-cross" src="<?=base_url();?>images/refine_filter.svg" alt="REMOVE">
+                                                </a>
+                                                <input type="hidden" name="color_selection_filter[]" value="<?=str_replace('-', " ", $curr_selection);?>">
+                                            </span>
+                                        <?endforeach;?>
+                                    <?endif;?>
+
+                                    <?if(!empty($selected_size)):
+                                        $selection_size_arr = explode("|",$selected_size);
+                                    ?>
+                                        <?foreach($selection_size_arr as $curr_selection):?>
+                                            <span class="breadcrumb-refinement-value"><?=str_replace('-', " ", $curr_selection);?>
+                                                <a class="breadcrumb-relax" href="#">
+                                                    <img class="plp-filter-cross" src="<?=base_url();?>images/refine_filter.svg" alt="REMOVE">
+                                                </a>
+                                                <input type="hidden" name="size_selection_filter[]" value="<?=str_replace('-', " ", $curr_selection);?>">
+                                            </span>
+                                        <?endforeach;?>
+                                    <?endif;?>
+                                </div> <!-- end of filter-slider remove-trans -->
+                            <?endif;?>
+                            </form>
+                        </div> <!-- end of filter-slider-wrapper -->
                     <div class="filter-global-reset">
-                        <span>Reset</span>
+                        <a href="<?=base_url().'product/'.$gender.'/'.$sub_category;?>" style="color: #FFF;text-decoration:none;"><span style="border:none;">Reset</span></a>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end filter by -->
+        <script>
+        // script for clearing the filter options
+            $('a.breadcrumb-relax').on('click',function(event){
+                event.preventDefault();
+                $(this).next('input[type=hidden]').val("");
+                //console.log('correct function');
+                $('form[name="selection_form"]').submit();
+            }); // end of click method
+        </script>
         
         <h1 class="visually-hidden">Jackets</h1>
         
         <!-- start search-result-options -->
         <div class="search-result-options">
             <div class="result-options-right">
-                <!-- <div class="sort-by">
+               <!--  <div class="sort-by">
                     <form action="" method="post" name="Product-Sorting-Options" novalidate="novalidate">
                         <fieldset style="position: relative;">
                             <label for="grid-sort-header">Sort By:</label>
@@ -343,7 +351,7 @@
                                                     <?foreach($curr_product['color_code'] as $key=>$curr_color_code):?>
                                                         <li style="<?=($key == 0) ? 'display: block;' : 'display: none;' ?>">
                                                         <a href="<?=$url.$curr_color_code['attr_code'];?>" title="<?=$curr_color_code['attr_value'];?>">
-                                                        <img itemprop="image" class="primary-image lazy" data-src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-original="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-altimg="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwc6cd363b/images/large/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427" src="<?=$image_path;?>" alt="<?=$curr_product['disp_name'], $curr_color_code['attr_value'];?>">
+                                                        <img itemprop="image" class="primary-image lazy" data-src="" data-original="" data-altimg="" src="<?=$image_path;?>" alt="<?=$curr_product['disp_name'], $curr_color_code['attr_value'];?>">
                                                         </a>
                                                         </li>
                                                     <?endforeach;?>

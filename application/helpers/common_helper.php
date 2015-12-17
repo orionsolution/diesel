@@ -528,7 +528,7 @@ function make_sql_in_string($type_arr){
        foreach($type_arr as $curr_type):
         $type_range .= "'" . $curr_type . "'".",";
         endforeach;
-        $type_range = trim($type_range,','); 
+        //$type_range = trim($type_range,','); 
     }
     
     return $type_range;

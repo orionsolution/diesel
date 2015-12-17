@@ -80,6 +80,7 @@ public function sublisting($gender,$category,$type=''){
 		$data = '';
 		//$data['main_group_arr'] = $this->product_model->get_maingroup_product($gender,$category);
 		$data['category'] = $this->get_category($gender);
+		$data['gender'] = $gender;
 		$data['sub_category'] = $category;
 		$data['product_arr'] = $this->product_model->get_sublisting_product($gender,$category,$type);
 		$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($gender), $category);
@@ -129,6 +130,138 @@ public function sublisting($gender,$category,$type=''){
 
     }
  }
+
+ public function filter($gender,$category,$type=''){
+ 	//echo 'inside filter method';exit;
+
+ 	$data['category'] = $this->get_category($gender);
+	$data['sub_category'] = $category;
+	$data['gender'] = $gender;
+
+	$category_filter = $color_filter = $size_filter = '';
+
+	/*echo "category: <br>";
+	print_r($_POST['category_selection_filter'])."<br>";
+	echo "color: <br>";
+	print_r($_POST['color_selection_filter'])."<br>";
+	echo "size: <br>";
+	print_r($_POST['size_selection_filter'])."<br>";*/
+	//exit;
+
+	if(!empty($_POST['category_selection_filter'])){
+		$_POST['category_selection_filter'] = array_filter($_POST['category_selection_filter']);
+	}
+
+	if(!empty($_POST['color_selection_filter'])){
+		$_POST['color_selection_filter'] = array_filter($_POST['color_selection_filter']);
+	}
+
+	if(!empty($_POST['size_selection_filter'])){
+		$_POST['size_selection_filter'] = array_filter($_POST['size_selection_filter']);
+	}
+
+	
+	//$_POST['color_selection_filter'] = array_filter($_POST['color_selection_filter']);
+	//$_POST['size_selection_filter'] = array_filter($_POST['size_selection_filter']);
+
+
+
+	if(!empty($_POST['category_selection_filter']) || !empty($_POST['color_selection_filter']) || !empty($_POST['size_selection_filter'])){
+		//echo 'inside if statement';exit;
+		/*echo '<pre>size selection filter';
+		print_r($_POST['color_selection_filter']);
+		exit;*/
+
+		if(!empty($_POST['category_selection_filter'])){
+				/*echo '<pre>size selection filter';
+				print_r($_POST['category_selection_filter']);
+				exit;*/
+				$category_filter = array_filter($_POST['category_selection_filter']);
+				$temp_category_selection_filter = $category_filter;
+				foreach ($temp_category_selection_filter as $key=>$value) {
+					if (strpos($value,' ') !== false) {
+			    		$temp_category_selection_filter[$key] = str_replace(' ', '-', $value);
+					}
+				}
+				$data['selected_category'] = implode("|", $temp_category_selection_filter);
+			}
+
+
+		if(!empty($_POST['color_selection_filter'])){
+			$color_filter = array_filter($_POST['color_selection_filter']);
+			$data['selected_color'] = implode("|", array_filter($_POST['color_selection_filter']));
+		}
+
+		if(!empty($_POST['size_selection_filter'])){
+			$size_filter = array_filter($_POST['size_selection_filter']);
+			$data['selected_size'] = implode("|", array_filter($_POST['size_selection_filter']));
+		}
+	}
+
+	elseif (!empty($_GET['category']) || !empty($_GET['color']) || !empty($_GET['size'])) {
+		//echo 'inside elseif statement';exit;
+		if(!empty($_GET['category'])){
+	 		//print_r( $_GET['category'] );exit;
+	 		$category_filter = explode("|",$_GET['category']);
+	 		$data['selected_category'] = $_GET['category'];
+	 		foreach($category_filter as $key=>$curr_filter){
+	 			if (strpos($curr_filter,'-') !== false) {
+			    	$category_filter[$key] = str_replace('-', ' ', $curr_filter);
+				}
+			}
+		}
+
+	 	if(!empty($_GET['color'])){
+	 		//print_r( $_GET['category'] );exit;
+	 		$color_filter = explode("|",$_GET['color']);
+	 		$data['selected_color'] = $_GET['color'];
+	 		foreach($color_filter as $key=>$curr_filter){
+	 			if (strpos($curr_filter,'-') !== false) {
+			    	$color_filter[$key] = str_replace('-', ' ', $curr_filter);
+				}
+			}
+	 	}
+
+	 	if(!empty($_GET['size'])){
+	 		//print_r( $_GET['category'] );exit;
+	 		$size_filter = explode("|",$_GET['size']);
+	 		$data['selected_size'] = $_GET['size'];
+	 		foreach($size_filter as $key=>$curr_filter){
+	 			if (strpos($curr_filter,'-') !== false) {
+			    	$size_filter[$key] = str_replace('-', ' ', $size_filter);
+				}
+			}
+	 	}
+		
+	}
+	else{
+		//echo 'inside else statement';exit;
+		redirect('product/'.$gender.'/'.$category, 'refresh');
+	}
+
+	//echo $data['selected_category'];exit;
+
+ 	
+
+ 	$data['product_arr'] = $this->product_model->get_filter_product($gender,$category,$type,$category_filter,$color_filter,$size_filter);
+
+ 	$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($gender), $category);
+	$data['filter_arr'] = $this->product_model->get_filter($category);
+
+	/*echo "<pre>";
+	echo "in controller";
+	echo "<pre>";
+	print_r($data['filter_arr']);
+	exit;*/		
+	
+	$data['style'] = 'background: url('.base_url().'images/backmendenim.jpg);';
+	$data['footer_label'] = 'display:none;'; 
+	$view_file_name = 'sublisting_filter_view';
+	$data['view_file_name'] = $view_file_name;
+	//$this->load->view('sublisting_view_dd'); 
+	$this->template->load_listing_view($view_file_name , $data);
+ }
+
 
  public function ajax_load_products(){
  	/*echo '<pre>';
