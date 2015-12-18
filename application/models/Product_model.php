@@ -307,9 +307,59 @@ public function get_landing_products($category_name){
  * function to retrieve products from db as per filter options
  */
 
-public function get_filter_product($gender,$category_name,$type='',$category_filter='',$color_filter='',$size_filter=''){
+public function get_filter_product($gender,$category_name,$type='',$filter){
 
-	$table_name = '';
+	$prod_attributes_filter_value = '';
+
+	$sql = "SELECT a.disp_name , a.style, d.*
+			FROM prod_mast a, category_assignment d ";
+
+
+	foreach($filter as $key=>$curr_filter){
+		switch($key){
+			case "category":
+				$sql .= " , prod_attributes b";
+				$prod_attributes_status = true;	// prod_attributes table status
+				$prod_attributes_filter_value .= make_sql_in_string($filter[$key]);
+				$prod_attribute_join_criteria = " a.style = b.style AND ";
+				break;
+
+			case "color":
+				if(!$prod_attributes){
+					$sql .= " , prod_attributes b";
+					$prod_attributes_status = true;
+					$prod_attribute_join_criteria = " a.style = b.style AND ";
+				}
+
+				$prod_attributes_filter_value .= make_sql_in_string($filter[$key]);
+				break;
+
+			case "size":
+				$sql .= " , prod_variation c";
+				$prod_variation_status = true;
+				$prod_variation_filter_value .= make_sql_in_string($filter[$key]);
+				$prod_attribute_join_criteria = " a.style = b.style AND ";
+				break;
+
+			default:
+				break;
+		}
+	}
+
+	$sql .= "WHERE "
+
+
+	if($prod_attributes_status){
+		$sql .= " b.attr_value IN($prod_attributes_filter_value) AND";
+	}
+
+	if($prod_variation_status){
+		$sql .= " c.attr_value IN($prod_variation_filter_value) AND";
+	}
+
+
+
+/*	$table_name = '';
 	$prod_arr = array();
 
 	
@@ -374,9 +424,8 @@ public function get_filter_product($gender,$category_name,$type='',$category_fil
 			a.style = d.`product-id` and
 			$table_criteria
 			d.L1 = 'diesel' and
-			$criteria
-						
-			group by a.style";
+			$criteria			
+			group by a.style";*/
 	//echo $sql;
 	//exit;
 

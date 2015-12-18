@@ -199,9 +199,33 @@ public function sublisting($gender,$category,$type=''){
 		}
 	}
 
-	elseif (!empty($_GET['category']) || !empty($_GET['color']) || !empty($_GET['size'])) {
+	elseif (!empty($_GET)) {
 		//echo 'inside elseif statement';exit;
-		if(!empty($_GET['category'])){
+
+		/*echo '<pre>';
+		print_r($_GET);
+		echo '</pre>';
+		exit;*/
+		foreach($_GET as $key=>$curr_category){
+			if(!empty($curr_category)){
+	 		//print_r( $_GET['category'] );exit;
+		 		$filter[$key] = explode("|",$curr_category);
+		 		//$data['selected_category'] = $curr_category;
+		 		foreach($filter[$key] as $inner_key=>$curr_filter){
+		 			if (strpos($curr_filter,'-') !== false) {
+				    	$filter[$key][$inner_key] = str_replace('-', ' ', $curr_filter);
+					}
+				}
+			}
+		}
+
+		/*echo '<pre>';
+		print_r($filter);
+		echo '</pre>';
+		exit;*/
+		
+
+		/*if(!empty($_GET['category'])){
 	 		//print_r( $_GET['category'] );exit;
 	 		$category_filter = explode("|",$_GET['category']);
 	 		$data['selected_category'] = $_GET['category'];
@@ -232,7 +256,7 @@ public function sublisting($gender,$category,$type=''){
 			    	$size_filter[$key] = str_replace('-', ' ', $size_filter);
 				}
 			}
-	 	}
+	 	}*/
 		
 	}
 	else{
@@ -244,7 +268,7 @@ public function sublisting($gender,$category,$type=''){
 
  	
 
- 	$data['product_arr'] = $this->product_model->get_filter_product($gender,$category,$type,$category_filter,$color_filter,$size_filter);
+ 	$data['product_arr'] = $this->product_model->get_filter_product($gender,$category,$type,$filter);
 
  	$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($gender), $category);
 	$data['filter_arr'] = $this->product_model->get_filter($category,$gender);
