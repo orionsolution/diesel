@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
+<!-- saved from url=(0036)http://global.diesel.com/mens/denim/ -->
+
 <html lang="en" class="js infinite-scroll">
 <!--<![endif]-->
-<head>
 
-    <link rel="alternate" hreflang="ja-jp" href="http://www.store.diesel.co.jp">
-    <meta charset=UTF-8>
-    
-    <script type="text/javascript" async="">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript" async="">
     (function() {
       try {
         if (typeof window['asdfdsasdfdsa'] === 'undefined') {
@@ -55,6 +51,7 @@
   </script>
   <script type="text/javascript" async="" charset="utf-8" src="<?=base_url()?>js/conversion_async.js" id="utag_27"></script>
     
+  <meta charset="UTF-8">
     <title>Diesel Online Store: jeans, clothing, shoes, bags and watches</title>
     <link rel="apple-touch-icon" sizes="57x57" href="<?=base_url();?>images/icons/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?=base_url();?>images/icons/favicons/apple-touch-icon-60x60.png">
@@ -72,18 +69,22 @@
      <meta name="description" content='Diesel' />
     <meta name="keywords" content='Diesel, Reference Application' />
     <link rel="stylesheet" href="<?=base_url();?>css/MyFontsWebfontsKit.css" />
-    <link href="<?=base_url();?>css/jquery.ui.all.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet" href="<?=base_url();?>css/jquery.css" />
-    <!--<link href="<?//=base_url()?>css/headcss.css" type="text/css" rel="stylesheet">-->
-    <!-- jQuery -->
-    
-    <script src="<?=base_url();?>js/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <!--http://code.jquery.com/jquery-1.7.1.js-->
-    
-    <script>
-        var app = {};
-    </script>
-    <script type="text/javascript" src="<?=base_url();?>js/igdrta.js"></script>
+  <link rel="stylesheet" href="<?=base_url()?>css/MyFontsWebfontsKit.css">
+
+  <link href="<?=base_url()?>css/jquery.ui.all.css" type="text/css" rel="stylesheet">
+  <!-- jQuery -->
+  <script type="text/javascript" async="" charset="utf-8" src="<?=base_url()?>js/a.js" id="utag_30"></script>
+  <script type="text/javascript" async="" charset="utf-8" src="<?=base_url()?>js/fbevents.js" id="utag_26"></script>
+  <script async="" id="tealium-tag-7110" src="<?=base_url()?>js/analytics.js"></script>
+  <script type="text/javascript" async="" src="<?=base_url()?>js/ec.js"></script>
+  <script type="text/javascript" async="" src="<?=base_url()?>js/linkid.js"></script>
+  <script src="<?=base_url()?>js/utag.js" type="text/javascript" async=""></script>
+  <script async="" src="<?=base_url()?>js/analytics.js"></script>
+  <script src="<?=base_url()?>js/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script>
+    var app = {};
+  </script>
+  <script type="text/javascript" src="<?=base_url()?>js/igdrta.js"></script>
 
 
     <!--[if lt IE 9]>
@@ -98,7 +99,15 @@
 
 
     <!--  UI -->
-    <link rel="stylesheet" href="<?=base_url()?>css/style-new.css" />    <meta name="google-site-verification" content="v4gmkBxtjNnhdyrMHJcx4rp7jnKkAwi5nOZqnhQf8WU" />
+    <link rel="stylesheet" href="<?=base_url()?>css/style-new.css" />
+
+
+
+    <!--<meta name="google-site-verification" content="v4gmkBxtjNnhdyrMHJcx4rp7jnKkAwi5nOZqnhQf8WU" />-->
+
+
+
+
 
     <div class="content-asset">
         <!-- dwMarker="content" dwContentID="bcu5aiaaiMZcgaaadnNlZrDMYt" -->
@@ -143,7 +152,7 @@
     
 
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-    <script src="<?=base_url();?>js/responsive.js"></script>
+  <script src="<?=base_url()?>js/responsive.js"></script>
     <!-- Google Analytics -->
     <script>
         (function(i, s, o, g, r, a, m) {
@@ -169,10 +178,22 @@
         }
 
         //Custom dimension specific tracking
+
+
+
+
         ga('set', 'dimension4', 'guest');
+
+
+
+
         ga('send', 'pageview');
     </script>
-    <!-- End Google Analytics -->    <script type="text/javascript">
+    <!-- End Google Analytics -->
+
+
+
+    <script type="text/javascript">
         function updatePRButtonUI() {
             $('.diesel-payrunner > p').css('visibility', 'visible');
         }
@@ -187,7 +208,10 @@
         setTimeout(updatePRButtonUI, 2000);
     </script>
     
-    <link rel="stylesheet" href="<?=base_url();?>css/denimguide.css" />
+  <link rel="stylesheet" href="<?=base_url()?>css/denimguide.css">
+    <link rel="canonical" href="./Denim _ Diesel International Site_files/Denim _ Diesel International Site.html">
+
+  <script type="text/javascript" src="<?=base_url()?>js/conversion_async.js" charset="utf-8"></script>
     <link rel="canonical" href="/mens/jackets/" />
     
 </head>
@@ -230,1232 +254,1387 @@ if($view_file_name == 'home_view') { ?>
     <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 
 
+
+
+
     <div class="mobile-menu-wrap z-index-5">
-        <div class="mobile-inner-wrap">
-            <ul class="menu-utility menu-utility-mobile col-lg-4 col-md-4">
-                <li class="ship_to">
-                    <div class="ship_to_inner">
-                        <h4>SHIP TO: </h4>
-                        <span class="ship_to_flag"></span>
-                    </div>
-                </li>
+    <div class="mobile-inner-wrap">
+      <ul class="menu-utility menu-utility-mobile col-lg-4 col-md-4">
 
-                <li class="seprator store-loca">
-                    <h4>
-                    <a href="#" target="_blank" title="Store Locator">
-                        Store<br/> Locator
-                    </a>
-                </h4>
-                </li>
+        <li class="ship_to">
+          <div class="ship_to_inner">
 
-                <input type="hidden" id="isUserLogin" value="false" />
-                <?php if(isset($this->session->userdata['s_uid'])) { ?>
-                    <li class="myacc-login">
-                        <?php $user_name = $this->session->userdata['s_fname'];?>
-                        <span class="my-account">Welcome <?=$user_name;?></span> | 
-                        <span class="my-account"><a href="<?=base_url();?>member/logout">Log Out</a></span> |                               
-                    </li>
-                <?php } else { ?>
-                <li class="myacc">
-                    <h4>
-                        <a href="#" class="user-account">Log In / Register</a>
-                        <div style="display: none;">
-                            <ul class="header-myacc-drop">
-                                <li class="first">
-                                    <a title="Login" href="<?=base_url();?>member/login_popup" class="user-login ">Log In</a>       
-                                </li>
-                                <li>
-                                    <a title="Register" href="<?=base_url();?>" class="user-register">Register</a>            
-                                </li>
-                            </ul>
-                        </div>             
-                    </h4>
-                </li>
-                <?php } ?>
-            </ul>
-            <div class="mobile-menu-flip">
-                <ul class="menu-category-mobile level-1">                    
-                	<li id="mobdiesel-denim" class="first ">
-                        <h4><a href="javascript:void(0)" data-href="#" class="level-1">
-                                <span class="s-diesel-denim" >DENIM</span>
-                                <div class="s-diesel-denim main-nav-arr"></div>
-                            </a></h4>
-                    </li>
+            <h4>OTHER<br>COUNTRIES</h4>
 
-                    <li id="mobdiesel-man" class="">
-                        <h4><a href="javascript:void(0)" data-href="#" class="level-1">
-                                <span class="s-diesel-man" >MEN</span>
-                                <div class="s-diesel-man main-nav-arr"></div>
-                            </a></h4>
-                    </li>
+          </div>
 
-                    <li id="mobdiesel-woman" class="">
-                        <h4><a href="javascript:void(0)" data-href="#" class="level-1">
-                                <span class="s-diesel-woman" >WOMEN</span>
-                                <div class="s-diesel-woman main-nav-arr"></div>
-                            </a></h4>
-                    </li>                    <li id="mobdiesel-kids" class="">
-                        <h4><a href="javascript:void(0)" data-href="#" class="level-1">
-                                <span class="s-diesel-kids" >KIDS</span>
-                                <div class="s-diesel-kids main-nav-arr"></div>
-                            </a></h4>
-                    </li>
+        </li>
 
+        <li class="mobile-menu-search" style="cursor: pointer;">
+          <h4 class="search-btn" title="Search">SEARCH</h4>
+        </li>
 
-                    <li id="mobdiesel-stories" class="last mob-no-subcat-arrow">
-                        <h4><a href="javascript:void(0)" data-href="#" class="level-1">
-                                <span class="s-diesel-stories" >MAGAZINE</span>
-                                <div class="s-diesel-stories main-nav-arr"></div>
-                            </a></h4>
-                    </li>
+      </ul>
+      <div class="mobile-menu-flip">
+
+        <ul class="menu-category-mobile level-1">
+
+          <li id="mobdiesel-denim" class="first ">
+            <h4><a href="javascript:void(0)" data-href="http://global.diesel.com/search-show?cgid=diesel-denim" class="level-1">
+								<span class="s-diesel-denim">DENIM</span>
+								<div class="s-diesel-denim main-nav-arr"></div>
+							</a></h4>
+          </li>
+
+          <li id="mobdiesel-man" class="">
+            <h4><a href="javascript:void(0)" data-href="http://global.diesel.com/man/" class="level-1">
+								<span class="s-diesel-man">MEN</span>
+								<div class="s-diesel-man main-nav-arr"></div>
+							</a></h4>
+          </li>
+
+          <li id="mobdiesel-woman" class="">
+            <h4><a href="javascript:void(0)" data-href="http://global.diesel.com/woman/" class="level-1">
+								<span class="s-diesel-woman">WOMEN</span>
+								<div class="s-diesel-woman main-nav-arr"></div>
+							</a></h4>
+          </li>
+
+          <li id="mobdieselblackgold" class="">
+            <h4><a href="javascript:void(0)" data-href="http://global.diesel.com/dieselblackgold/" class="level-1">
+								<span class="s-dieselblackgold">DIESEL BLACK GOLD</span>
+								<div class="s-dieselblackgold main-nav-arr"></div>
+							</a></h4>
+          </li>
+
+          <li id="mobdiesel-kids" class="">
+            <h4><a href="javascript:void(0)" data-href="http://global.diesel.com/kids/" class="level-1">
+								<span class="s-diesel-kids">KIDS</span>
+								<div class="s-diesel-kids main-nav-arr"></div>
+							</a></h4>
+          </li>
+
+          <li id="mobdiesel-stories" class="last mob-no-subcat-arrow">
+            <h4><a href="javascript:void(0)" data-href="http://global.diesel.com/stories/" class="level-1">
+								<span class="s-diesel-stories">MAGAZINE</span>
+								<div class="s-diesel-stories main-nav-arr"></div>
+							</a></h4>
+          </li>
+
+        </ul>
+
+        <div id="mobile-category-content" class="display-none">
+          <div id="div_mobdiesel-denim">
+
+            <ul class="mobile-level-1">
+              <li class="mobile-level-1 ">
+                <span class="mobile-span-level-1 cursor">
+				<a class="left_arrow" data-target="1">
+					      					&nbsp;
+				</a>DENIM
+		</span>
+                <ul class="mobile-level-2">
+
+                  <li class="mobile-level-2 empty-child">
+                    MEN
+                    <ul class="mobile-level-3">
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">EXPLORE BY FIT</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 ">
+                            <a data-catid="diesel-man-features-denimguide-fits-skinny" href="http://global.diesel.com/mens/denimguide/skinny/">
+															Skinny
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+                            <a data-catid="diesel-man-features-denimguide-fits-tapered" href="http://global.diesel.com/mens/denimguide/tapered/">
+															Tapered
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+                            <a data-catid="diesel-man-features-denimguide-fits-straight" href="http://global.diesel.com/mens/denimguide/straight/">
+															Straight
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+                            <a data-catid="diesel-man-features-denimguide-fits-carrot" href="http://global.diesel.com/mens/denimguide/carrot/">
+															Carrot
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+                            <a data-catid="diesel-man-features-denimguide-fits-bootcut" href="http://global.diesel.com/mens/denimguide/bootcut/">
+															Bootcut
+														</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">EXPLORE BY WASH</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-man-features-denimguide-washstories-clean" href="http://global.diesel.com/search-show?cgid=diesel-man-features-denimguide-washstories-clean">
+															Clean
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-man-features-denimguide-washstories-coated" href="http://global.diesel.com/search-show?cgid=diesel-man-features-denimguide-washstories-coated">
+															Coated
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-man-features-denimguide-washstories-destroyed" href="http://global.diesel.com/search-show?cgid=diesel-man-features-denimguide-washstories-destroyed">
+															Destroyed
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-man-features-denimguide-washstories-mediumtreated" href="http://global.diesel.com/search-show?cgid=diesel-man-features-denimguide-washstories-mediumtreated">
+															Medium Treated
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-man-features-denimguide-washstories-treated" href="http://global.diesel.com/search-show?cgid=diesel-man-features-denimguide-washstories-treated">
+															Treated
+														</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">highlights</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-man-denim-highlights-denim-for-party" href="http://global.diesel.com/search-show?cgid=diesel-giftguide-men-bluechristmas">
+															Denim for Party
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-man-denim-highlights-joggjeans" href="http://global.diesel.com/search-show?cgid=diesel-man-denim-highlights-joggjeans">
+															JoggJeans
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-man-denim-highlights-newdenim" href="http://global.diesel.com/search-show?cgid=diesel-man-denim-highlights-newdenim">
+															New Denim SS16
+														</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                    </ul>
+                  </li>
+
+                  <li class="mobile-level-2 empty-child">
+                    WOMEN
+                    <ul class="mobile-level-3">
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">EXPLORE BY FIT</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 ">
+                            <a data-catid="diesel-woman-features-denimguide-fits-jegging" href="http://global.diesel.com/womens/denimguide/jegging/">
+															Jegging
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+                            <a data-catid="diesel-woman-features-denimguide-fits-superskinny" href="http://global.diesel.com/womens/denimguide/superskinny/">
+															Super Skinny
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+                            <a data-catid="diesel-woman-features-denimguide-fits-skinny" href="http://global.diesel.com/womens/denimguide/skinny/">
+															Skinny
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+                            <a data-catid="diesel-woman-features-denimguide-fits-regular-straight" href="http://global.diesel.com/womens/denimguide/regular-straight/">
+															Straight
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+                            <a data-catid="diesel-woman-features-denimguide-fits-boyfriend" href="http://global.diesel.com/womens/denimguide/boyfriend/">
+															Boyfriend
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+                            <a data-catid="diesel-woman-features-denimguide-fits-bootcut" href="http://global.diesel.com/womens/denimguide/bootcut/">
+															Bootcut
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+                            <a data-catid="diesel-woman-features-denimguide-fits-flare" href="http://global.diesel.com/womens/denimguide/flare/">
+															Flare
+														</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">EXPLORE BY WASH</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-woman-features-denimguide-washstories-clean" href="http://global.diesel.com/search-show?cgid=diesel-woman-features-denimguide-washstories-clean">
+															Clean
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-woman-features-denimguide-washstories-coated" href="http://global.diesel.com/search-show?cgid=diesel-woman-features-denimguide-washstories-coated">
+															Coated
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-woman-features-denimguide-washstories-destroyed" href="http://global.diesel.com/search-show?cgid=diesel-woman-features-denimguide-washstories-destroyed">
+															Destroyed
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-woman-features-denimguide-washstories-mediumtreated" href="http://global.diesel.com/search-show?cgid=diesel-woman-features-denimguide-washstories-mediumtreated">
+															Medium Treated
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-woman-features-denimguide-washstories-treated" href="http://global.diesel.com/search-show?cgid=diesel-woman-features-denimguide-washstories-treated">
+															Treated
+														</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">highlights</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-woman-denim-highlights-denim-for-party" href="http://global.diesel.com/search-show?cgid=diesel-giftguide-women-bluechristmas">
+															Denim for Party
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-woman-denim-highlights-joggjeans" href="http://global.diesel.com/search-show?cgid=diesel-woman-denim-highlights-joggjeans">
+															JoggJeans
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+                            <a data-catid="diesel-woman-denim-highlights-newdenim" href="http://global.diesel.com/search-show?cgid=diesel-woman-denim-highlights-newdenim">
+															New Denim SS16
+														</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                    </ul>
+                  </li>
+
                 </ul>
+              </li>
+            </ul>
 
-                <div id="mobile-category-content" class="display-none">
-                    <div id="div_mobdiesel-denim">
-                        <ul class="mobile-level-1">
-                            <li class='mobile-level-1 '>
-                                <span class="mobile-span-level-1 cursor"><a class="left_arrow" data-target="1">&nbsp;</a>DENIM</span>
-                                <ul class="mobile-level-2">
-                                    <li class="mobile-level-2"><a data-catId="diesel-denim" href='#'>DENIM's Home</a>
-                                    </li>
-
-                                    <li class="mobile-level-2 empty-child">
-                                        MEN
-                                        <ul class="mobile-level-3">
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">SHOP BY FIT</div>
-
-                                                <ul class="mobile-level-4">
-
-
-                                                    <li class='cursor mobile-level-4 '>
-                                                        <a data-catId="diesel-man-features-denimguide-fits-skinny" href='#'>
-                                                            Skinny
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
-                                                        <a data-catId="diesel-man-features-denimguide-fits-tapered" href='#'>
-                                                            Tapered
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
-                                                        <a data-catId="diesel-man-features-denimguide-fits-straight" href='#'>
-                                                            Straight
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
-                                                        <a data-catId="diesel-man-features-denimguide-fits-carrot" href='#'>
-                                                            Carrot
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
-                                                        <a data-catId="diesel-man-features-denimguide-fits-bootcut" href='#'>
-                                                            Bootcut
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 see-all-link'>
-                                                        <p><a href="#">SHOP ALL</a>
-                                                        </p>
-                                                    </li>
-
-                                                </ul>
-
-                                            </li>
-
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">SHOP BY WASH</div>
-
-                                                <ul class="mobile-level-4">
-
-                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-man-features-denimguide-washstories-clean" href='#'>
-                                                            Clean
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-man-features-denimguide-washstories-coated" href='#'>
-                                                            Coated
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-man-features-denimguide-washstories-destroyed" href='#'>
-                                                            Destroyed
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-man-features-denimguide-washstories-mediumtreated" href='#'>
-                                                            Medium Treated
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-man-features-denimguide-washstories-treated" href='#'>
-                                                            Treated
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 see-all-link'>
-                                                        <p><a href="#">SHOP ALL</a>
-                                                        </p>
-                                                    </li>
-
-                                                </ul>
-
-                                            </li>
-
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">HIGHLIGHTS</div>
-
-                                                <ul class="mobile-level-4">
-
-
-                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-man-denim-highlights-newstyle" href='#'>
-                                                            New Style: Taylhor
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-man-denim-highlights-joggjeans" href='#'>
-                                                            JoggJeans
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-man-denim-highlights-newdenim" href='#'>
-                                                            New Denim FW15
-                                                        </a>
-                                                    </li>                                                </ul>
-
-                                            </li>
-
-
-                                        </ul>
-                                    </li>
-
-                                    <li class="mobile-level-2 empty-child">
-                                        WOMEN
-                                        <ul class="mobile-level-3">
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">SHOP BY FIT</div>
-
-                                                <ul class="mobile-level-4">
-
-
-                                                    <li class='cursor mobile-level-4 '>
-                                                        <a data-catId="diesel-woman-features-denimguide-fits-jegging" href='#'>
-                                                            Jegging
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
-                                                        <a data-catId="diesel-woman-features-denimguide-fits-superskinny" href='#'>
-                                                            Super Skinny
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
-                                                        <a data-catId="diesel-woman-features-denimguide-fits-skinny" href='#'>
-                                                            Skinny
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
-                                                        <a data-catId="diesel-woman-features-denimguide-fits-regular-straight" href='#'>
-                                                            Straight
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
-                                                        <a data-catId="diesel-woman-features-denimguide-fits-boyfriend" href='#'>
-                                                            Boyfriend
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
-                                                        <a data-catId="diesel-woman-features-denimguide-fits-bootcut" href='#'>
-                                                            Bootcut
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
-                                                        <a data-catId="diesel-woman-features-denimguide-fits-flare" href='#'>
-                                                            Flare
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 see-all-link'>
-                                                        <p><a href="#">SHOP ALL</a>
-                                                        </p>
-                                                    </li>
-
-                                                </ul>
-
-                                            </li>
-
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">SHOP BY WASH</div>
-
-                                                <ul class="mobile-level-4">
-
-                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-woman-features-denimguide-washstories-clean" href='#'>
-                                                            Clean
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-woman-features-denimguide-washstories-coated" href='#'>
-                                                            Coated
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-woman-features-denimguide-washstories-destroyed" href='#'>
-                                                            Destroyed
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-woman-features-denimguide-washstories-mediumtreated" href='#'>
-                                                            Medium Treated
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-woman-features-denimguide-washstories-treated" href='#'>
-                                                            Treated
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 see-all-link'>
-                                                        <p><a href="#">SHOP ALL</a>
-                                                        </p>
-                                                    </li>
-
-                                                </ul>
-
-                                            </li>
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">HIGHLIGHTS</div>
-
-                                                <ul class="mobile-level-4">
-
-
-                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-woman-denim-highlights-newstyle" href='#'>
-                                                            New Style: Actyvista
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-woman-denim-highlights-joggjeans" href='#'>
-                                                            JoggJeans
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
-                                                        <a data-catId="diesel-woman-denim-highlights-newdenim" href='#'>
-                                                            New Denim FW15
-                                                        </a>
-                                                    </li>                                                </ul>
-
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div id="mobile-category-content" class="display-none">
-                    <div id="div_mobdiesel-man">
-
-                        <ul class="mobile-level-1">
-                            <li class='mobile-level-1 '>
-                                <span class="mobile-span-level-1 cursor">
-            <a class="left_arrow" data-target="1">
-                                            &nbsp;
-            </a>
-            MEN</span>
-                                <ul class="mobile-level-2">
-                                    <li class="mobile-level-2"><a data-catId="diesel-man" href='#'>MEN's Home</a>
-                                    </li>
-                                    <li class="mobile-level-2">
-                                        <ul class="mobile-level-3">
-
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">DENIM &amp; CLOTHING</div>
-
-
-                                                <ul class="mobile-level-4">
-
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-denimandclothing-denim" href='<?= base_url();?>producttest/sublisting/mens/demin'>
-                                                            Denim
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-denimandclothing-joggjeans" href='#'>
-                                                            JoggJeans
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-denimandclothing-jackets" href='#'>
-                                                            Jackets
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-denimandclothing-pants" href='#'>
-                                                            Pants
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-denimandclothing-shirts" href='#'>
-                                                            Shirts
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-denimandclothing-sweatshirts" href='#'>
-                                                            Sweatshirts
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-denimandclothing-sweaters" href='#'>
-                                                            Sweaters
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-denimandclothing-polos" href='#'>
-                                                            Polos
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-denimandclothing-tshirtsandtops" href='#'>
-                                                            Tshirts
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-denimandclothing-underwear" href='#'>
-                                                            Underwear
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-denimandclothing-beachwear" href='#'>
-                                                            Beachwear
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-
-                                            </li>
-
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">SHOES &amp; ACCESSORIES</div>
-
-
-                                                <ul class="mobile-level-4">
-
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-footwearandaccessories-footwear" href='#'>
-                                                            Shoes
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-footwearandaccessories-bags" href='#'>
-                                                            Bags
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-footwearandaccessories-walletsandsmallgoods" href='#'>
-                                                            Wallets
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-footwearandaccessories-belts" href='#'>
-                                                            Belts
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-footwearandaccessories-otheraccessories" href='#'>
-                                                            Other Accessories
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-footwearandaccessories-jewels" href='#'>
-                                                            Jewelry
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-footwearandaccessories-eyewear" href='#'>
-                                                            Eyewear
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-footwearandaccessories-timeframes" href='#'>
-                                                            Watches
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-footwearandaccessories-fragrances" href='#'>
-                                                            Fragrance
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-footwearandaccessories-technology" href='#'>
-                                                            Technology
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-
-                                            </li>
-
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">SHOP BY</div>
-                                                <ul class="mobile-level-4">
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-features-latestarrivals" href='#'>
-                                                                New Arrivals
-                                                                
-                                                            </a>
-                                                    </li>
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-features-onlineexclusives" href='#'>
-                                                                Online Exclusives
-                                                                
-                                                            </a>
-                                                    </li>
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-features-bestsellers" href='#'>
-                                                                Bestsellers
-                                                                
-                                                            </a>
-                                                    </li>
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-features-Rock" href='#'>
-                                                                Casual Rock
-                                                                
-                                                            </a>
-                                                    </li>
-
-                                                </ul>
-
-
-                                            </li>
-
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">highlights</div>
-
-
-                                                <ul class="mobile-level-4">
-
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-highlights-eveningrock" href='#'>
-                                                            Evening Rock
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-highlights-neoprene" href='#'>
-                                                            Neoprene
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-man-highlights-zipround" href='#'>
-                                                            Zip Round
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-
-                    </div>
-                </div>
-
-                <div id="mobile-category-content" class="display-none">
-                    <div id="div_mobdiesel-woman">
-
-                        <ul class="mobile-level-1">
-                            <li class='mobile-level-1 '>
-                                <span class="mobile-span-level-1 cursor">
-            <a class="left_arrow" data-target="1">
-                                            &nbsp;
-            </a>
-            WOMEN</span>
-                                <ul class="mobile-level-2">
-                                    <li class="mobile-level-2"><a data-catId="diesel-woman" href='#'>WOMEN's Home</a>
-                                    </li>
-                                    <li class="mobile-level-2">
-                                        <ul class="mobile-level-3">
-
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">DENIM &amp; CLOTHING</div>
-
-
-                                                <ul class="mobile-level-4">
-
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-denim" href='#'>
-                                                            Denim
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-joggjeans" href='#'>
-                                                            JoggJeans
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-dresses" href='#'>
-                                                            Dresses
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-jumpsuits" href='#'>
-                                                            Jumpsuits
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-jackets" href='#'>
-                                                            Jackets
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-pants" href='#'>
-                                                            Pants
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-shirts" href='#'>
-                                                            Shirts
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-sweatshirts" href='#'>
-                                                            Sweatshirts
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-skirts" href='#'>
-                                                            Skirts
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-sweaters" href='#'>
-                                                            Sweaters
-                                                        </a>
-                                                    </li>
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-tshirtsandtops" href='#'>
-                                                            Tshirts
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-underwear" href='#'>
-                                                            Underwear
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-denimandclothing-beachwear" href='#'>
-                                                            Beachwear
-                                                        </a>
-                                                    </li>                                                </ul>
-
-
-                                            </li>
-
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">SHOES &amp; ACCESSORIES</div>
-
-
-                                                <ul class="mobile-level-4">
-
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-footwearandaccessories-footwear" href='#'>
-                                                            Shoes
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-footwearandaccessories-bags" href='#'>
-                                                            Bags
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-footwearandaccessories-walletsandsmallgoods" href='#'>
-                                                            Wallets
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-footwearandaccessories-belts" href='#'>
-                                                            Belts
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-footwearandaccessories-otheraccessories" href='#'>
-                                                            Other Accessories
-                                                        </a>
-                                                    </li>
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-footwearandaccessories-eyewear" href='#'>
-                                                            Eyewear
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-footwearandaccessories-timeframes" href='#'>
-                                                            Watches
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-footwearandaccessories-fragrances" href='#'>
-                                                            Fragrance
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-footwearandaccessories-technology" href='#'>
-                                                            Technology
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-
-                                            </li>
-
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">SHOP BY</div>
-                                                <ul class="mobile-level-4">
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-features-latestarrivals" href='#'>
-                                                                New Arrivals
-                                                                
-                                                            </a>
-                                                    </li>
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-features-onlineexclusives" href='#'>
-                                                                Online Exclusives
-                                                                
-                                                            </a>
-                                                    </li>
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-features-bestsellers" href='#'>
-                                                                Bestsellers
-                                                                
-                                                            </a>
-                                                    </li>
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-features-rock" href='#'>
-                                                                Casual Rock
-                                                                
-                                                            </a>
-                                                    </li>
-
-                                                </ul>
-
-
-                                            </li>
-
-                                            <li class='cursor mobile-level-3 '>
-                                                <div class="mobile-level-3-text">highlights</div>
-
-
-                                                <ul class="mobile-level-4">
-
-
-                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-highlights-eveningrock" href='#'>
-                                                            Evening Rock
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-highlights-tartan" href='#'>
-                                                            Tartan + Leather
-                                                        </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
-                                                        <a data-catId="diesel-woman-highlights-industrialbag" href='#'>
-                                                            Industrial Bag
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-
-                    </div>
-                </div>
-
-                <div id="mobile-category-content" class="display-none">
-                    <div id="div_mobdiesel-kids">
-
-                        <ul class='mobile-level-1'>
-                            <li class='mobile-level-1 '>
-                                <span class="mobile-span-level-1 cursor">
-                <a class="left_arrow" data-target="1">
-                                            &nbsp;
-                </a>
-                KIDS
-            </span>
-                                <ul class="mobile-level-2">
-                                    <li class="mobile-level-2"><a data-catId="diesel-kids" href='#'>KIDS's Home</a>
-                                    </li>
-
-                                    <li class='mobile-level-2 empty-child'>
-                                        BOYS
-
-                                        <ul class="mobile-level-3">
-
-
-                                            <li class='cursor mobile-level-3 '>
-
-                                                <div class="mobile-level-3-text">INFANT &#40;3-36 MONTHS&#41;</div>
-
-
-                                                <ul class="mobile-level-4">                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-boys-baby-denim" href='#'>
-                                                                        Denim
-                                                                    </a>
-
-
-                                                    </li>
-                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-boys-baby-clothing" href='#'>
-                                                                        Clothing
-                                                                    </a>
-
-
-                                                    </li>
-
-                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-boys-baby-accessories" href='#'>
-                                                                        Accessories
-                                                                    </a>
-
-
-                                                    </li>
-
-                                                </ul>
-
-                                            </li>                                            <li class='cursor mobile-level-3 '>
-
-                                                <div class="mobile-level-3-text">JUNIOR &#40;4-16 YEARS&#41;</div>
-
-
-                                                <ul class="mobile-level-4">                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-boys-junior-denim" href='#'>
-                                                                        Denim
-                                                                    </a>
-
-
-                                                    </li>
-                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-boys-junior-clothing" href='#'>
-                                                                        Clothing
-                                                                    </a>
-
-
-                                                    </li>
-
-                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-boys-junior-accessories" href='#'>
-                                                                        Accessories
-                                                                    </a>
-
-
-                                                    </li>
-
-                                                </ul>
-
-                                            </li>                                            <li class='cursor mobile-level-3 '>
-
-                                                <div class="mobile-level-3-text">highlights</div>
-
-
-                                                <ul class="mobile-level-4">
-
-                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-boys-highlights-jjjunior-1" href='#'>
-                                                                        See All
-                                                                    </a>
-
-
-                                                    </li>                                                </ul>
-
-                                            </li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li class='mobile-level-2 empty-child'>
-                                        GIRLS
-
-                                        <ul class="mobile-level-3">
-
-
-                                            <li class='cursor mobile-level-3 '>
-
-                                                <div class="mobile-level-3-text">INFANT &#40;3-36 MONTHS&#41;</div>
-
-
-                                                <ul class="mobile-level-4">                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-girls-baby-denim" href='#'>
-                                                                        Denim
-                                                                    </a>
-
-
-                                                    </li>
-                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-girls-baby-clothing" href='#'>
-                                                                        Clothing
-                                                                    </a>
-
-
-                                                    </li>
-
-                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-girls-baby-accessories" href='#'>
-                                                                        Accessories
-                                                                    </a>
-
-
-                                                    </li>
-
-                                                </ul>
-
-                                            </li>                                            <li class='cursor mobile-level-3 '>
-
-                                                <div class="mobile-level-3-text">JUNIOR &#40;4-16 YEARS&#41;</div>
-
-
-                                                <ul class="mobile-level-4">                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-girls-junior-denim" href='#'>
-                                                                        Denim
-                                                                    </a>
-
-
-                                                    </li>
-                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-girls-junior-clothing" href='#'>
-                                                                        Clothing
-                                                                    </a>
-
-
-                                                    </li>
-
-                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-girls-junior-accessories" href='#'>
-                                                                        Accessories
-                                                                    </a>
-
-
-                                                    </li>
-
-                                                </ul>
-
-                                            </li>                                            <li class='cursor mobile-level-3 '>
-
-                                                <div class="mobile-level-3-text">highlights</div>
-
-
-                                                <ul class="mobile-level-4">
-
-                                                    <li class='cursor mobile-level-4 empty-child'>
-
-                                                        <a data-catId="diesel-kids-girls-highlights-jjjunior-1" href='#'>
-                                                                        See All
-                                                                    </a>
-
-
-                                                    </li>                                                </ul>
-
-                                            </li>
-
-                                        </ul>
-
-                                    </li>
-
-
-                                </ul>
-                            </li>
-                        </ul>
-
-
-                    </div>
-                </div>
-
-                <div id="mobile-category-content" class="display-none">
-                    <div id="div_mobdiesel-stories">
-
-                    </div>
-                </div>
-
-                <div id="footer-content-wrapper">
-                    <div id="footer-burger" role="contentinfo clearfix" class="burger-footer">
-                        <div class="content-asset">
-                            <!-- dwMarker="content" dwContentID="bc6c2iaaiM1ZAaaadnFlVrDMYt" -->
-                            <footer>
-                                <div id="footer-over">
-                                    <div id="footer-overlay">
-                                    </div>
-                                    <div id="footer-overlay-tab" class="footer-overlay-menu">
-                                        <ul class="footer-menu">
-                                            <li data-target="1" class="col-xs-3"><a class=""><h5>SHIPPING INFO & SUPPORT</h5></a>
-                                            </li>
-                                            <li data-target="2" class="col-xs-3"><a class=""><h5>WORLD OF DIESEL</h5></a>
-                                            </li>
-                                            <li data-target="3" class="col-xs-3"><a class=""><h5>FOLLOW US</h5></a>
-                                            </li>
-                                            <li data-target="4" class="col-xs-3"><a class=""><span><h5 class="footer-sign-up">SIGN UP FOR THE NEWSLETTER</h5><input readonly type="text" class="sign-up"/></span></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="footer-mobile footer-scroller-class">
-                                    <div id="footer-scroll-tab-1" class="footer-scroll-menu" data-target="1">
-                                        <span class="footer-menu col-md-3 col-xs-12 border-side-top  ">
-    <a class="left_arrow" data-target="1">
-               &nbsp;
-    </a>
-    <h5>SHIPPING INFO & SUPPORT</h5>
-   </span>
-                                        <span class="col-md-9 border-bottom spacing_div">
-    &nbsp;
-   </span>
-                                    </div>
-                                    <div id="footer-scroll-1" class="footer-scroll border-top">
-                                        <div id="footer-tab_1" class="container-fluid site-footer-tab">
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <span class="content-head">SHIPPING & RETURNS 
-         <span class="svgUp"></span>
-                                                            </span>
-                                                            <ul class="footer-links active-accordian-tab">
-                                                                <li class="footer-links-responsive"><a href="#"><h6>Track Order</h6></a>
-                                                                </li>
-                                                                <li class="footer-links-responsive"><a data-dlg-action='{"test":100}' data-dlg-options='{"width":"80%","height":"500","dialogClass":"dialog-footer-shipping"}' class="open-dialog" href="http://shop.diesel.com/cms/help/shipping/shippingtimescosts.html"><h6>Shipping</h6></a>
-                                                                </li>
-                                                                <li class="footer-links-responsive"><a data-dlg-action='{"test":100}' data-dlg-options='{"width":"80%","height":"500","dialogClass":"dialog-footer-return"}' class="open-dialog" href="http://shop.diesel.com/cms/help/returns.html"><h6>Returns</h6></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <span class="content-head">HELP & SUPPORT
-         <span class="svgDown"></span>
-                                                            </span>
-                                                            <ul class="footer-links accordian-tab">
-                                                                <li class="footer-links-responsive"><a href="#"><h6>Size Guide</h6></a>
-                                                                </li>
-                                                                <li class="footer-links-responsive"><a href="#"><h6>Payment</h6></a>
-                                                                </li>
-                                                                <li class="footer-links-responsive"><a href="#"><h6>Contact Us</h6></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <a class="close" data-target="1">
-               &nbsp;
-            </a>
-                                                            <span class="content-head">POLICIES
-         <span class="svgDown"></span>
-                                                            </span>
-                                                            <ul class="footer-links accordian-tab">
-                                                                <li class="footer-links-responsive"><a href="#"><h6>Terms & Conditions</h6></a>
-                                                                </li>
-                                                                <li class="footer-links-responsive"><a href="#"><h6>Privacy Policy</h6></a>
-                                                                </li>
-                                                                <li class="footer-links-responsive"><a href="#"><h6>Site Map</h6></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div id="footer-scroll-tab-2" class="footer-scroll-menu" data-target="2">
-                                        <span class="footer-menu col-md-3 border-bottom spacing_div">
-    &nbsp;
-   </span>
-                                        <span class="footer-menu col-md-3 col-xs-12 border-side-top ">
-    <a class="left_arrow" data-target="2">
-               &nbsp;
-    </a>
-    <h5>WORLD OF DIESEL</h5>
-   </span>
-                                        <span class="footer-menu col-md-3 border-side-top displayTab spacing_div">
-    <h5>FOLLOW US</h5>
-   </span>
-                                        <span class="footer-menu col-md-3 border-side-top displayTab spacing_div">
-    <span><h5 class="footer-sign-up">SIGN UP FOR THE NEWSLETTER</h5><input type="text" class="sign-up"/></span>
-                                        </span>
-                                        <span class="footer-menu col-md-6 border-bottom displaySpace spacing_div">
-    &nbsp;
-   </span>
-                                    </div>
-                                    <div id="footer-scroll-2" class="footer-scroll border-top">
-                                        <div id="footer-tab_2" class="container-fluid site-footer-tab">
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="row">
-                                                        <div class="col-xs-12 ">
-                                                            <a class="close" data-target="2">
-               &nbsp;
-             </a>
-                                                            <span class="content-head">WORLD OF DIESEL</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                        </div>
-                                                        <div class="col-md-2">
-                                                            <ul class="footer-links first">
-                                                                <li class="footer-links-responsive"><a href="#"><h6>About Diesel</h6></a>
-                                                                </li>
-                                                                <li class="footer-links-responsive"><a href="#" target="_blank"><h6>News</h6></a>
-                                                                </li>
-                                                                <li class="footer-links-responsive"><a href="#" target="_blank"><h6>Careers</h6></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-md-2">
-                                                            <ul class="footer-links second">
-                                                                <li class="footer-links-responsive"><a href="#"><h6>FAQ's</h6></a>
-                                                                </li>
-                                                                <li class="footer-links-responsive"><a href="#" target="_blank"><h6>OTB Group</h6></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="footer-scroll-tab-3" class="footer-scroll-menu" data-target="3">
-                                        <span class="footer-menu col-md-6 border-bottom spacing_div">
-    &nbsp;
-   </span>
-                                        <span class="footer-menu col-xs-12 col-md-3 border-side-top ">
-    <a class="left_arrow" data-target="3">
-               &nbsp;
-    </a>
-    <h5>FOLLOW US</h5>
-   </span>
-                                        <span class="footer-menu col-md-3 border-side-top displayTab spacing_div ">
-    <span><h5 class="footer-sign-up">SIGN UP FOR THE NEWSLETTER</h5><input type="text" class="sign-up"/></span>
-                                        </span>
-                                        <span class="footer-menu col-md-3 border-bottom displaySpace spacing_div">
-    &nbsp;
-   </span>
-                                    </div>
-                                    <div id="footer-scroll-3" class="footer-scroll border-top">
-                                        <div id="footer-tab_3" class="container-fluid site-footer-tab">
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="row">
-                                                        <div class="col-xs-12 ">
-                                                            <a class="close" data-target="3">
-               &nbsp;
-             </a>
-                                                            <span class="content-head">CONNECT WITH DIESEL</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-8 col-md-offset-2  col-lg-6 col-lg-offset-3">
-                                                            <span class="footer-links">From promotions to the latest releases, see everything you do with Diesel.</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-1 col-lg-offset-4 ">
-                                                            <div class="col-md-offset-2 col-md-1"><a target="_blank" href="https://www.facebook.com/Diesel" class="facebook">Facebook</a>
-                                                            </div>
-                                                            <div class="col-md-1">
-                                                            	<a href="https://twitter.com/diesel" target="_blank" class="twitter">Twitter</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-1 ">
-                                                            <div class="col-md-1"><a target="_blank" href="https://plus.google.com/+Diesel/posts" class="google">Google</a>
-                                                            </div>
-                                                            <div class="col-md-1">
-                                                            	<a href="http://instagram.com/diesel" target="_blank" class="instagram">Instagram</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-1 ">
-                                                            <div class="col-md-1"><a target="_blank" href="http://www.youtube.com/user/DieselPlanet" class="youtube">Youtube</a>
-                                                            </div>
-                                                            <div class="col-md-1">
-                                                            	<a href="http://www.pinterest.com/diesel/" target="_blank" class="pinterest">Pinterest</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-1 ">
-                                                            <div class="col-md-1"><a target="_blank" href="http://dieselreboot.tumblr.com/" class="socialIcon">Social Icon</a>
-                                                            </div>
-                                                            <div class="col-md-1">
-                                                            	<a href="http://dieselreboot.tumblr.com/" target="_blank" class="tumbler">Tumbler</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="footer-scroll-tab-4" class="footer-scroll-menu" data-target="4">
-                                        <span class="footer-menu col-md-9 border-bottom spacing_div">
-    &nbsp;
-   </span>
-                                        <span class="footer-menu col-md-3 col-xs-12 border-side-top">
-    
-    <a class="left_arrow" data-target="4">
-               &nbsp;
-    </a>
-    <h5 class="footer-sign-up">SIGN UP FOR THE NEWSLETTER</h5><input readonly type="text" class="sign-up"/>
-   </span>
-                                    </div>
-                                    <div id="footer-scroll-4" class="footer-scroll border-top">
-                                        <div id="footer-tab_4" class="container-fluid site-footer-tab sticky-dcode">
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="row">
-                                                        <div class="col-xs-12 ">
-                                                            <a class="close" data-target="4">
-               &nbsp;
-             </a>
-                                                            <span class="content-head ">SIGN UP FOR THE NEWSLETTER</span>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-md-10  col-md-offset-1 col-lg-6 col-lg-offset-3">
-                                                            <span class="footer-links">Sign up to receive must-have style news, updates and promotions before anyone else.</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-offset-1">
-                                                            <form id="frmDCode" action="#" class="d-code">
-                                                                <div class="col-lg-4 col-md-4  dcode-email">
-                                                                    <div class=dcode-wrapper>
-                                                                        <input id="dCodeEmail" required name="email" placeholder="ENTER EMAIL ADDRESS" type="email" />
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-2 col-md-3">
-                                                                    <input id="submit-men" type="submit" value="sign up for men" class="btn-d-code" />
-                                                                </div>
-                                                                <div class="col-lg-2 col-md-3">
-                                                                    <input id="submit-women" type="submit" value="sign up for women" class="btn-d-code" />
-                                                                </div>
-                                                                <div class="col-lg-2 col-md-3 footer-more">
-                                                                    <a href="#" class="more">
-                                                                        <span class="svgMore"></span>
-                                                                        <span class="learn-more-text">LEARN MORE ABOUT NEWSLETTER</span>
-                                                                    </a>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="footer-scroll-fixed-tab" class="footer-scroll-fixed-menu">
-                                        <span id="footer-menu-4" class="footer-menu-4 footer-menu col-md-3 border-side-top" data-target="4">
-    <span><h5 class="footer-sign-up">SIGN UP FOR THE NEWSLETTER</h5><input type="text" class="sign-up"/></span>
-                                        </span>
-                                        <span id="footer-menu-3" class="footer-menu-3 footer-menu col-md-3 border-side-top" data-target="3">
-    <h5>FOLLOW US</h5>
-   </span>
-                                        <span id="footer-menu-2" class="footer-menu-2 footer-menu col-md-3 border-side-top" data-target="2">
-    <h5>WORLD OF DIESEL</h5>
-   </span>
-                                        <span id="footer-menu-1" class="footer-menu-1 footer-menu col-md-3 border-side-top" data-target="1">
-    <h5>SHIPPING INFO & SUPPORT</h5>
-   </span>
-                                    </div>
-                                </div>
-                            </footer>
-                        </div>
-                        <!-- End content-asset -->
-                    </div>
-                </div>
-            </div>
-            <div class="mobile-content-flip sliderDiv">
-            </div>
+          </div>
         </div>
-    </div>
 
-    <?php if($view_file_name == 'home_view') { ?>
+        <div id="mobile-category-content" class="display-none">
+          <div id="div_mobdiesel-man">
+
+            <ul class="mobile-level-1">
+              <li class="mobile-level-1 ">
+                <span class="mobile-span-level-1 cursor">
+			<a class="left_arrow" data-target="1">
+					      					&nbsp;
+			</a>
+			MEN</span>
+                <ul class="mobile-level-2">
+
+                  <li class="mobile-level-2">
+                    <ul class="mobile-level-3">
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">DENIM &amp; CLOTHING</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-denimandclothing-denim" href="./Denim _ Diesel International Site_files/Denim _ Diesel International Site.html">
+															Denim
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-denimandclothing-joggjeans" href="http://global.diesel.com/search-show?cgid=diesel-man-denimandclothing-joggjeans">
+															JoggJeans
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-denimandclothing-jackets" href="http://global.diesel.com/mens/jackets/">
+															Jackets
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-denimandclothing-pants" href="http://global.diesel.com/mens/pants/">
+															Pants
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-denimandclothing-shirts" href="http://global.diesel.com/mens/shirts/">
+															Shirts
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-denimandclothing-sweatshirts" href="http://global.diesel.com/mens/sweat-shirts/">
+															Sweatshirts
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-denimandclothing-sweaters" href="http://global.diesel.com/mens/sweaters/">
+															Sweaters
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-denimandclothing-polos" href="http://global.diesel.com/mens/polos/">
+															Polos
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-denimandclothing-tshirtsandtops" href="http://global.diesel.com/mens/t-shirts-and-tops/">
+															Tshirts
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-denimandclothing-underwear" href="http://global.diesel.com/mens/underwear/">
+															Underwear
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-denimandclothing-beachwear" href="http://global.diesel.com/mens/beachwear/">
+															Beachwear
+														</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">SHOES &amp; ACCESSORIES</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-footwearandaccessories-footwear" href="http://global.diesel.com/mens/footwear/">
+															Shoes
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-footwearandaccessories-bags" href="http://global.diesel.com/mens/bags/">
+															Bags
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-footwearandaccessories-walletsandsmallgoods" href="http://global.diesel.com/mens/wallets-and-small-goods/">
+															Wallets
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-footwearandaccessories-belts" href="http://global.diesel.com/mens/belts/">
+															Belts
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-footwearandaccessories-otheraccessories" href="http://global.diesel.com/mens/other-accessories/">
+															Other Accessories
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-footwearandaccessories-eyewear" href="http://global.diesel.com/mens/eyewear/">
+															Eyewear
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-footwearandaccessories-timeframes" href="http://global.diesel.com/mens/watches/">
+															Watches
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-footwearandaccessories-fragrances" href="http://global.diesel.com/mens/fragrances/">
+															Fragrance
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-footwearandaccessories-technology" href="http://global.diesel.com/mens/technology/">
+															Technology
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-footwearandaccessories-bijouxandgadget" href="http://global.diesel.com/mens/bijouxandgadget/">
+															Jewelry
+														</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">EXPLORE BY</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-features-latestarrivals" href="http://global.diesel.com/shop-latest-arrivals-1/">
+																New Arrivals
+																
+															</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-features-bestsellers" href="http://global.diesel.com/search-show?cgid=diesel-man-features-bestsellers">
+																Bestsellers
+																
+															</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-features-Military" href="http://global.diesel.com/search-show?cgid=diesel-man-features-Military">
+																Military Look
+																
+															</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">highlights</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-highlights-prep-rock" href="http://global.diesel.com/search-show?cgid=diesel-marketing-men-preprock">
+															Prep Rock
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-highlights-gift-guide" href="http://global.diesel.com/search-show?cgid=gifts">
+															Gift Guide
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-highlights-watches" href="http://global.diesel.com/mens/watches/">
+															Watches
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-highlights-tartan" href="http://global.diesel.com/search-show?cgid=diesel-man-highlights-tartan">
+															TARTAN + LEATHER
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-highlights-zipround" href="http://global.diesel.com/search-show?cgid=diesel-man-highlights-zipround">
+															Zip Round
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-highlights-neoprene" href="http://global.diesel.com/search-show?cgid=diesel-man-highlights-neoprene">
+															Neoprene
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-highlights-metallict" href="http://global.diesel.com/search-show?cgid=diesel-man-highlights-metallict">
+															Metallic T-Shirts
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-man-highlights-eveningrock" href="http://global.diesel.com/search-show?cgid=diesel-man-highlights-eveningrock">
+															Evening Rock
+														</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div id="mobile-category-content" class="display-none">
+          <div id="div_mobdiesel-woman">
+
+            <ul class="mobile-level-1">
+              <li class="mobile-level-1 ">
+                <span class="mobile-span-level-1 cursor">
+			<a class="left_arrow" data-target="1">
+					      					&nbsp;
+			</a>
+			WOMEN</span>
+                <ul class="mobile-level-2">
+
+                  <li class="mobile-level-2">
+                    <ul class="mobile-level-3">
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">DENIM &amp; CLOTHING</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-denim" href="http://global.diesel.com/womens/denim/">
+															Denim
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-joggjeans" href="http://global.diesel.com/womens/joggjeans-1/">
+															JoggJeans
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-dresses" href="http://global.diesel.com/womens/dresses/">
+															Dresses
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-jumpsuits" href="http://global.diesel.com/womens/jumpsuits/">
+															Jumpsuits
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-jackets" href="http://global.diesel.com/womens/jackets/">
+															Jackets
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-pants" href="http://global.diesel.com/womens/pants/">
+															Pants
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-shirts" href="http://global.diesel.com/womens/shirts/">
+															Shirts
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-sweatshirts" href="http://global.diesel.com/womens/sweat-shirts/">
+															Sweatshirts
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-skirts" href="http://global.diesel.com/womens/skirts/">
+															Skirts
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-sweaters" href="http://global.diesel.com/womens/sweaters/">
+															Sweaters
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-tshirtsandtops" href="http://global.diesel.com/womens/t-shirts-and-tops/">
+															Tshirts
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-underwear" href="http://global.diesel.com/womens/underwear/">
+															Underwear
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-denimandclothing-beachwear" href="http://global.diesel.com/womens/beachwear/">
+															Beachwear
+														</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">SHOES &amp; ACCESSORIES</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-footwearandaccessories-footwear" href="http://global.diesel.com/womens/footwear/">
+															Shoes
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-footwearandaccessories-bags" href="http://global.diesel.com/womens/bags/">
+															Bags
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-footwearandaccessories-walletsandsmallgoods" href="http://global.diesel.com/womens/wallets-and-small-goods/">
+															Wallets
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-footwearandaccessories-belts" href="http://global.diesel.com/womens/belts/">
+															Belts
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-footwearandaccessories-otheraccessories" href="http://global.diesel.com/womens/other-accessories/">
+															Other Accessories
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-footwearandaccessories-eyewear" href="http://global.diesel.com/womens/eyewear/">
+															Eyewear
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-footwearandaccessories-timeframes" href="http://global.diesel.com/womens/watches/">
+															Watches
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-footwearandaccessories-fragrances" href="http://global.diesel.com/womens/fragrances/">
+															Fragrance
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-footwearandaccessories-technology" href="http://global.diesel.com/womens/technology/">
+															Technology
+														</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">EXPLORE BY</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-features-latestarrivals" href="http://global.diesel.com/shop-latest-arrivals-2/">
+																New Arrivals
+																
+															</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-features-bestsellers" href="http://global.diesel.com/search-show?cgid=diesel-woman-features-bestsellers">
+																Bestsellers
+																
+															</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-features-military" href="http://global.diesel.com/search-show?cgid=diesel-woman-features-military">
+																Military Look
+																
+															</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+                        <div class="mobile-level-3-text">highlights</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-highlights-prep-rock" href="http://global.diesel.com/search-show?cgid=diesel-marketing-women-preprock">
+															Prep Rock
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-highlights-gift-guide" href="http://global.diesel.com/search-show?cgid=gifts">
+															Gift Guide
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-highlights-partywear" href="http://global.diesel.com/search-show?cgid=diesel-marketing-women-partywear">
+															Partywear
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-highlights-industrialbag" href="http://global.diesel.com/search-show?cgid=diesel-woman-highlights-industrialbag">
+															Industrial Bag
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-highlights-tartan" href="http://global.diesel.com/search-show?cgid=diesel-woman-highlights-tartan">
+															Tartan + Leather
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-highlights-metallict" href="http://global.diesel.com/search-show?cgid=diesel-woman-highlights-metallict">
+															Metallic T-Shirts
+														</a>
+                          </li>
+
+                          <li class="cursor mobile-level-4">
+                            <a data-catid="diesel-woman-highlights-eveningrock" href="http://global.diesel.com/search-show?cgid=diesel-woman-highlights-eveningrock">
+															Evening Rock
+														</a>
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div id="mobile-category-content" class="display-none">
+          <div id="div_mobdieselblackgold">
+
+            <ul class="mobile-level-1 diesel-black-gold">
+              <li class="mobile-level-1 ">
+                <span class="mobile-span-level-1 cursor">
+				<a class="left_arrow" data-target="1">
+					      					&nbsp;
+				</a>
+				DIESEL BLACK GOLD
+			</span>
+                <ul class="mobile-level-2">
+
+                  <li class="mobile-level-2 empty-child">
+                    MAN
+
+                    <ul class="mobile-level-3">
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">DENIM &amp; CLOTHING</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 ">
+
+                            <a data-catid="dieselblackgold-man-denimandclothing-denim" href="http://global.diesel.com/mens/dieselblackgold/denim/">
+																		Denim 
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+
+                            <a data-catid="dieselblackgold-man-denimandclothing-leather" href="http://global.diesel.com/mens/dieselblackgold/leather/">
+																		Leather 
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+
+                            <a data-catid="dieselblackgold-man-denimandclothing-readytowear" href="http://global.diesel.com/mens/dieselblackgold/rtw/">
+																		Ready to Wear 
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">FOOTWEAR &amp; ACCESSORIES</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 ">
+
+                            <a data-catid="dieselblackgold-man-footwearandaccessories-footwear" href="http://global.diesel.com/mens/dieselblackgold/footwear/">
+																		Shoes 
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+
+                            <a data-catid="dieselblackgold-man-footwearandaccessories-bags" href="http://global.diesel.com/mens/dieselblackgold/bags/">
+																		Bags 
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+
+                            <a data-catid="dieselblackgold-man-footwearandaccessories-otheraccessories" href="http://global.diesel.com/mens/dieselblackgold/other-accessories/">
+																		Other Accessories 
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">FEATURES</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="dieselblackgold-man-features-newarrivals" href="http://global.diesel.com/mens/dieselblackgold/new-arrivals/">
+																		New Arrivals 
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="dieselblackgold-man-features-bestsellers" href="http://global.diesel.com/search-show?cgid=dieselblackgold-man-features-bestsellers">
+																		Bestsellers 
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">HIGHLIGHTS</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="dieselblackgold-man-highlights-fashionshow" href="http://global.diesel.com/mens/dieselblackgold/fashionshow/">
+																		Fashion Show 
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="dieselblackgold-man-highlights-autumn" href="http://global.diesel.com/search-show?cgid=dieselblackgold-man-highlights-autumn">
+																		Autumn 
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                    </ul>
+
+                  </li>
+
+                  <li class="mobile-level-2 empty-child">
+                    WOMAN
+
+                    <ul class="mobile-level-3">
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">DENIM &amp; CLOTHING</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 ">
+
+                            <a data-catid="dieselblackgold-woman-denimandclothing-denim" href="http://global.diesel.com/womens/dieselblackgold/denim/">
+																		Denim 
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+
+                            <a data-catid="dieselblackgold-woman-denimandclothing-leather" href="http://global.diesel.com/womens/dieselblackgold/leather/">
+																		Leather 
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+
+                            <a data-catid="dieselblackgold-woman-denimandclothing-readytowear" href="http://global.diesel.com/womens/dieselblackgold/rtw/">
+																		Ready to Wear 
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">FOOTWEAR &amp; ACCESSORIES</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 ">
+
+                            <a data-catid="dieselblackgold-woman-footwearandaccessories-footwear" href="http://global.diesel.com/womens/dieselblackgold/footwear/">
+																		Shoes 
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+
+                            <a data-catid="dieselblackgold-woman-footwearandaccessories-bags" href="http://global.diesel.com/womens/dieselblackgold/bags/">
+																		Bags 
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 ">
+
+                            <a data-catid="dieselblackgold-woman-footwearandaccessories-otheraccessories" href="http://global.diesel.com/womens/dieselblackgold/other-accessories/">
+																		Other Accessories 
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">FEATURES</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="dieselblackgold-woman-features-newarrivals" href="http://global.diesel.com/womens/dieselblackgold/new-arrivals/">
+																		New Arrivals 
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="dieselblackgold-woman-features-bestsellers" href="http://global.diesel.com/search-show?cgid=dieselblackgold-woman-features-bestsellers">
+																		Bestsellers 
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">HIGHLIGHTS</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="dieselblackgold-woman-highlights-fashionshow" href="http://global.diesel.com/womens/dieselblackgold/fashionshow/">
+																		Fashion Show 
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="dieselblackgold-woman-highlights-metallicdetails" href="http://global.diesel.com/search-show?cgid=dieselblackgold-woman-highlights-metallicdetails">
+																		Metallic Details 
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                    </ul>
+
+                  </li>
+
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div id="mobile-category-content" class="display-none">
+          <div id="div_mobdiesel-kids">
+
+            <ul class="mobile-level-1">
+              <li class="mobile-level-1 ">
+                <span class="mobile-span-level-1 cursor">
+				<a class="left_arrow" data-target="1">
+					      					&nbsp;
+				</a>
+				KIDS
+			</span>
+                <ul class="mobile-level-2">
+
+                  <li class="mobile-level-2 empty-child">
+                    BOYS
+
+                    <ul class="mobile-level-3">
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">INFANT</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-boys-baby-denim" href="http://global.diesel.com/boys-baby/denim/">
+																		Denim
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-boys-baby-clothing" href="http://global.diesel.com/search-show?cgid=diesel-kids-boys-baby-clothing">
+																		Clothing
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-boys-baby-accessories" href="http://global.diesel.com/boys-baby/accessories/">
+																		Accessories
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">JUNIOR</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-boys-junior-denim" href="http://global.diesel.com/boys-junior/denim/">
+																		Denim
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-boys-junior-clothing" href="http://global.diesel.com/search-show?cgid=diesel-kids-boys-junior-clothing">
+																		Clothing
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-boys-junior-accessories" href="http://global.diesel.com/boys-junior/accessories/">
+																		Accessories
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">highlights</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-boys-highlights-jjjunior" href="http://global.diesel.com/search-show?cgid=diesel-kids-boys-highlights-jjjunior">
+																		JJ Junior
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-boys-highlights-lightdownjackets" href="http://global.diesel.com/search-show?cgid=diesel-kids-boys-highlights-lightdownjackets">
+																		Light Down Jackets
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-boys-highlights-graphics" href="http://global.diesel.com/search-show?cgid=diesel-kids-boys-highlights-graphics">
+																		Graphics
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                    </ul>
+
+                  </li>
+
+                  <li class="mobile-level-2 empty-child">
+                    GIRLS
+
+                    <ul class="mobile-level-3">
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">INFANT</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-girls-baby-denim" href="http://global.diesel.com/girls-baby/denim/">
+																		Denim
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-girls-baby-clothing" href="http://global.diesel.com/search-show?cgid=diesel-kids-girls-baby-clothing">
+																		Clothing
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-girls-baby-accessories" href="http://global.diesel.com/girls-baby/accessories/">
+																		Accessories
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">JUNIOR</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-girls-junior-denim" href="http://global.diesel.com/girls-junior/denim/">
+																		Denim
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-girls-junior-clothing" href="http://global.diesel.com/search-show?cgid=diesel-kids-girls-junior-clothing">
+																		Clothing
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-girls-junior-accessories" href="http://global.diesel.com/girls-junior/accessories/">
+																		Accessories
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                      <li class="cursor mobile-level-3 ">
+
+                        <div class="mobile-level-3-text">highlights</div>
+
+                        <ul class="mobile-level-4">
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-girls-highlights-jjjunior" href="http://global.diesel.com/search-show?cgid=diesel-kids-girls-highlights-jjjunior">
+																		JJ Junior
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-girls-highlights-lightdownjackets" href="http://global.diesel.com/search-show?cgid=diesel-kids-girls-highlights-lightdownjackets">
+																		Light Down Jackets
+																	</a>
+
+                          </li>
+
+                          <li class="cursor mobile-level-4 empty-child">
+
+                            <a data-catid="diesel-kids-girls-highlights-graphics" href="http://global.diesel.com/search-show?cgid=diesel-kids-girls-highlights-graphics">
+																		Graphics
+																	</a>
+
+                          </li>
+
+                        </ul>
+
+                      </li>
+
+                    </ul>
+
+                  </li>
+
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div id="mobile-category-content" class="display-none">
+          <div id="div_mobdiesel-stories">
+
+          </div>
+        </div>
+
+        <div id="footer-content-wrapper">
+          <div id="footer-burger" role="contentinfo clearfix" class="burger-footer" style="position: relative;">
+
+            <div class="content-asset">
+              <!-- dwMarker="content" dwContentID="bc6c2iaaiM1ZAaaadnFlVrDMYt" -->
+
+              <footer></footer>
+            </div>
+            <!-- End content-asset -->
+
+          </div>
+        </div>
+      </div>
+      <div class="mobile-content-flip sliderDiv">
+      </div>
+    </div>
+  </div>
+
     <div id="wrapper" class="pt_storefront pageName " data-pagename="Homepage">
-    <?php } else { ?>
-    <div id="wrapper" class="pt_product-search-result plp-redesign horizontal-filter">
-    <?php } ?>
+		<div class="show-filter-background" style="background: url(http://demandware.edgesuite.net/aapk_prd/on/demandware.static/-/Sites-diesel-navigation-non-ecom/default/dwe9cb5c1b/backmendenim.jpg);"> </div>
+
         <div class="landscape-body">
             <div class="landscape-container">
                 <div class="close-div">
@@ -1467,7 +1646,6 @@ if($view_file_name == 'home_view') { ?>
                 </div>
             </div>
         </div>
-        
         <div id="header" class="new-header clearfix" role="banner">
             <!--[if lte IE 8]>
 <div class="ie8-ux-message">The site is not optimized for IE8. Please upgrade your browser to enhance your shopping experience and enjoy full features/functionality of the site.</div>
@@ -1496,10 +1674,18 @@ Store Locator
                         <div class="slider" id="marketing_message">
                             <div>
 
+
+
+
+
                                 <div data-slotid="header-marketing-banner-1" class="html-slot-container">
 
 
-                                    <div>                                        <div class="pannel" data-desc="Free Ground Shipping on All Orders. The promotion will be applied automatically at check out." data-title="FREE GROUND SHIPPING ON ALL ORDERS!">
+                                    <div>
+
+
+
+                                        <div class="pannel" data-desc="Free Ground Shipping on All Orders. The promotion will be applied automatically at check out." data-title="FREE GROUND SHIPPING ON ALL ORDERS!">
                                             <h7>FREE GROUND SHIPPING ON ALL ORDERS!</h7>
                                         </div>
 
@@ -1509,10 +1695,18 @@ Store Locator
                             </div>
                             <div>
 
+
+
+
+
                                 <div data-slotid="header-marketing-banner-2" class="html-slot-container">
 
 
-                                    <div>                                        <div class="pannel" data-desc="Free Returns on all orders. &lt;a href=&quot;#&quot&gt;CLICK HERE&lt;/a&gt; to get more details" data-title="EASY &amp; FREE RETURNS!">
+                                    <div>
+
+
+
+                                        <div class="pannel" data-desc="Free Returns on all orders. &lt;a href=&quot;#&quot&gt;CLICK HERE&lt;/a&gt; to get more details" data-title="EASY &amp; FREE RETURNS!">
                                             <h7>EASY &amp; FREE RETURNS</h7>
                                         </div>
 
@@ -1522,10 +1716,18 @@ Store Locator
                             </div>
                             <div>
 
+
+
+
+
                                 <div data-slotid="header-marketing-banner-3" class="html-slot-container">
 
 
-                                    <div>                                        <div class="pannel" data-desc="Create an account at shop.diesel.com. Enjoy 15% off your first online order. &lt;a href=&quot;<?=base_url();?>member/register&quot&gt;REGISTER HERE&lt;/a&gt;, you'll get your coupon code via email." data-title="REGISTER FOR EXCLUSIVE BENEFITS">
+                                    <div>
+
+
+
+                                        <div class="pannel" data-desc="Create an account at shop.diesel.com. Enjoy 15% off your first online order. &lt;a href=&quot;<?=base_url();?>member/register&quot&gt;REGISTER HERE&lt;/a&gt;, you'll get your coupon code via email." data-title="REGISTER FOR EXCLUSIVE BENEFITS">
                                             <h7>REGISTER FOR EXCLUSIVE BENEFITS</h7>
                                         </div>
 
@@ -1549,6 +1751,10 @@ Store Locator
                     </div>
                     <div class="menu-utility-user-wrap col-lg-4 col-md-4">
                         <ul class="menu-utility-user">
+
+
+
+
                             <input type="hidden" id="isUserLogin" value="false" />
                             <?php if(isset($this->session->userdata['s_uid'])) { ?>
                                 <li class="myacc-login">
@@ -1588,6 +1794,10 @@ Help
                     </div>
                 </div>
                 <div class="store-ship" style="height:0px ;overflow:hidden; float:left; width: 100%;">
+
+
+
+
 
                     <div class="content-asset">
                         <!-- dwMarker="content" dwContentID="bcoNIiaaiMuvAaaadnQlZrDMYt" -->
@@ -1697,6 +1907,10 @@ Help
 
                         </div>
 
+
+
+
+
                         <div class="mobile-reg">
                             <h1>SHIP TO</h1>
                             <div class="current-cou">Your current ship to country is :</div>
@@ -1799,6 +2013,10 @@ Help
                     </div>
                     <!-- End content-asset -->
 
+
+
+
+
                 </div>
                 <div class="floating-nav-wrapper">
                     <div class="floating-nav-topcontainer">
@@ -1820,12 +2038,24 @@ Help
                                 </a>
                             </div>
                             <div class="rgt-content-wrap col-lg-3 col-md-2 col-sm-5">
-                                <div class="rgt-content">                                    <div class="elements mini-cart-holder" id="cartpage">
+                                <div class="rgt-content">
+
+
+
+                                    <div class="elements mini-cart-holder" id="cartpage">
+
+
+
+
 
                                         <!-- Report any requested source code -->
 
 
-                                        <!-- Report the active source code -->                                        <div class="bag-holder">
+                                        <!-- Report the active source code -->
+
+
+
+                                        <div class="bag-holder">
                                             
                                             <a href="<?php echo base_url();?>Cart/ajax_cart" class="ajax-url"></a>
                                             
@@ -1834,17 +2064,37 @@ Help
 
                                                 <span id="mini-cart-icon-empty" class='header-mini-cart empty-black-bag'>Empty Bag</span>
 
+
+
+
+
                                                 <span class="empty-bag-count">Bag Count</span>
+
+
+
+
                                             </a>
 
-                                            <div class="minicart-tool-tip">                                            </div>
+                                            <div class="minicart-tool-tip">
 
-                                        </div>                                        
+
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                        
                                         <div class="mini-bag-content container-fluid  pageName" data-pagename="Mini Cart" >
                                             <div class="row">
                                                 <!--<div class="col-lg-8 col-md-6 mini-cart-products empty-cart-wrapper">
                                                     <div class="left-text-block">
                                                         <h2 class="heading-txt">Feed me I'm hungry </h2>
+
+
+
+
 
                                                     </div>
 
@@ -1877,7 +2127,15 @@ Help
                                             </div>
                                         </div>
 
-                                        <div class="rtaminicart" data-rtaCart="" data-rtaCartSku="" data-rtaCartAmounts="" data-rtaCartQuantities="" data-rtaSpecial="" data-rtaTags=""></div>                                    </div>
+
+
+
+
+                                        <div class="rtaminicart" data-rtaCart="" data-rtaCartSku="" data-rtaCartAmounts="" data-rtaCartQuantities="" data-rtaSpecial="" data-rtaTags=""></div>
+
+
+
+                                    </div>
 
                                     <div class="elements header-search active-search" style="cursor: pointer;">
                                         <h4 class="search-btn" title="Search">Search</h4>
@@ -1917,43 +2175,83 @@ Help
                                                             <a href="#">
                                         timeframe
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         watches
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         jogg jeans
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         denim
                                     </a>
-                                                        </li>                                                        <li class='columnbreak' style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li class='columnbreak' style="display:none;">
                                                             <a href="#">
                                         shoes
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         kids
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         man
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         woman
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         sale
                                     </a>
-                                                        </li>                                                        <li class='columnbreak' style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li class='columnbreak' style="display:none;">
                                                             <a href="#">
                                         boys
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         girls
                                     </a>
@@ -1982,6 +2280,10 @@ Help
                                     <h2 class="visually-hidden navigation-header">Catalog Navigation</h2>
                                     <div class="header-menus">
 
+
+
+
+
                                         <ul class="menu-category level-1 desktop-only">
 
                                             <li id="diesel-denim" class='first <?=( (!empty($category)) && $category == 'denim') ? 'selected'  : '' ;?>'>
@@ -1994,21 +2296,21 @@ Help
                                                             <div class="sub-menus row">
                                                                 <div class="white-bg col-md-12 col-lg-8">
                                                                     <h2>MEN</h2>
-                                                                    <? $denim_arr = $this->config->item('denim_array');?>
+                                                                    <?$denim_arr = $this->config->item('denim_array');?>
                                                                     <div class="level-3 clearfix">
                                                                         <ul class="level-3">
                                                                             <li class="s-catflytemp2 col-md-6">
                                                                                 <a class="unclickable">SHOP BY FIT</a>
                                                                                 <div class='level-4 '>
                                                                                     <ul class="level-4">
-                                                                                        <? foreach($denim_arr['MEN']['shop by fit'] as $key =>$curr_category):
+                                                                                        <?foreach($denim_arr['MEN']['shop by fit'] as $key =>$curr_category):
                                                                                             // display the first 6 elements
                                                                                             if($key <= 4):
                                                                                         ?>
                                                                                             <li>
                                                                                                 <a data-catId="diesel-man-features-denimguide-fits-skinny" href="<?=base_url().'product/mens/denimguide/'.strtolower($key)?>"><?=$curr_category?></a>
                                                                                             </li>
-                                                                                        <? endif; endforeach;?>
+                                                                                        <?endif;endforeach;?>
                                                                                         <li class="see-all-link">
                                                                                             <p><a href="#">SHOP ALL</a>
                                                                                             </p>
@@ -2021,7 +2323,7 @@ Help
                                                                                 <a class="unclickable">SHOP BY WASH</a>
                                                                                 <div class='level-4 '>
                                                                                     <ul class="level-4">
-                                                                                        <? foreach($denim_arr['MEN']['shop by wash'] as $key =>$curr_category):
+                                                                                        <?foreach($denim_arr['MEN']['shop by wash'] as $key =>$curr_category):
                                                                                             // display the first 6 elements
                                                                                             if($key <= 4):
                                                                                         ?>
@@ -2047,13 +2349,13 @@ Help
                                                                         <li class="s-catflytemp2">
                                                                             <a class="unclickable">SHOP BY</a>
                                                                             <ul>
-                                                                                <? foreach($denim_arr['MEN']['shop by'] as $key =>$curr_category):?>
+                                                                                <?foreach($denim_arr['MEN']['shop by'] as $key =>$curr_category):?>
                                                                                 <li>
                                                                                     <a data-catId="diesel-denim-man-features-NA" href='#'>
                                                                                         <span><?=$curr_category?></span>
                                                                                     </a>
                                                                                 </li>
-                                                                                <? endforeach;?>
+                                                                                <?endforeach;?>
                                                                             </ul>
                                                                         </li>
                                                                     </ul>
@@ -2072,14 +2374,14 @@ Help
                                                                                 <a class="unclickable">SHOP BY FIT</a>
                                                                                 <div class='level-4 '>
                                                                                     <ul class="level-4">
-                                                                                        <? foreach($denim_arr['WOMEN']['shop by fit'] as $key =>$curr_category):
+                                                                                        <?foreach($denim_arr['WOMEN']['shop by fit'] as $key =>$curr_category):
                                                                                             // display the first 6 elements
                                                                                             if($key <= 4):
                                                                                         ?>
                                                                                             <li>
                                                                                                 <a data-catId="diesel-woman-features-denimguide-fits-jegging" href="#"><?=$curr_category?></a>
                                                                                             </li>
-                                                                                        <? endif; endforeach;?>
+                                                                                        <?endif;endforeach;?>
                                                                                         <li class="see-all-link">
                                                                                             <p><a href="#">SHOP ALL</a>
                                                                                             </p>
@@ -2093,14 +2395,14 @@ Help
                                                                                 <a class="unclickable">SHOP BY WASH</a>
                                                                                 <div class='level-4 '>
                                                                                     <ul class="level-4">
-                                                                                        <? foreach($denim_arr['WOMEN']['shop by wash'] as $key =>$curr_category):
+                                                                                        <?foreach($denim_arr['WOMEN']['shop by wash'] as $key =>$curr_category):
                                                                                             // display the first 6 elements
                                                                                             if($key <= 4):
                                                                                         ?>
                                                                                             <li>
                                                                                                 <a data-catId="diesel-woman-features-denimguide-washstories-clean" href="#"><?=$curr_category?></a>
                                                                                             </li>
-                                                                                        <? endif; endforeach;?>
+                                                                                        <?endif;endforeach;?>
                                                                                         <li class="see-all-link">
                                                                                             <p><a href="#">SHOP ALL</a>
                                                                                             </p>
@@ -2120,13 +2422,13 @@ Help
                                                                         <li class="s-catflytemp2">
                                                                             <a class="unclickable">SHOP BY</a>
                                                                             <ul>
-                                                                                <? foreach($denim_arr['WOMEN']['shop by'] as $key =>$curr_category):?>
+                                                                                <?foreach($denim_arr['WOMEN']['shop by'] as $key =>$curr_category):?>
                                                                                 <li>
                                                                                     <a data-catId="diesel-denim-man-features-NA" href='#'>
                                                                                         <span><?=$curr_category?></span>
                                                                                     </a>
                                                                                 </li>
-                                                                                <? endforeach;?>
+                                                                                <?endforeach;?>
                                                                             </ul>
                                                                         </li>
                                                                     </ul>
@@ -2138,6 +2440,10 @@ Help
 
                                                     <ul class="highlights-category row">
 
+
+
+
+
                                                         <li class="category-higlight col-md-6">
                                                             <ul class="desktop-only bottom-section">
 
@@ -2145,6 +2451,10 @@ Help
                                                                     <div class="img-container ">
 
                                                                         <a data-catId="diesel-man-denim-highlights-newstyle" href='#'>
+
+
+
+
 
                                                                             <img alt="New Style: Taylhor" src='<?=base_url();?>images/01_STIKKER.jpg' />
 
@@ -2163,6 +2473,10 @@ New Style: Taylhor</isprint></a>
 
                                                                         <a data-catId="diesel-man-denim-highlights-joggjeans" href='#'>
 
+
+
+
+
                                                                             <img alt="JoggJeans" src='<?=base_url();?>images/02_JOOGJEANS.jpg' />
 
                                                                         </a>
@@ -2179,6 +2493,10 @@ JoggJeans</isprint></a>
                                                                     <div class="img-container ">
 
                                                                         <a data-catId="diesel-man-denim-highlights-newdenim" href='#'>
+
+
+
+
 
                                                                             <img alt="New Denim FW15" src='<?=base_url();?>images/03_DENIM-MALE.jpg' />
 
@@ -2225,6 +2543,10 @@ New Denim FW15</isprint></a>
 
                                                                         <a data-catId="diesel-man-denim-highlights-newstyle" href='#'>
 
+
+
+
+
                                                                             <img class="primary-image2 " src="<?=base_url();?>images/01_STIKKER.jpg" alt="New Style: Taylhor" />
 
                                                                         </a>
@@ -2233,6 +2555,10 @@ New Denim FW15</isprint></a>
                                                                     <div class="img-container">
 
                                                                         <a data-catId="diesel-man-denim-highlights-joggjeans" href='#'>
+
+
+
+
 
                                                                             <img class="primary-image2 " src="<?=base_url();?>images/02_JOOGJEANS.jpg" alt="JoggJeans" />
 
@@ -2243,6 +2569,10 @@ New Denim FW15</isprint></a>
 
                                                                         <a data-catId="diesel-man-denim-highlights-newdenim" href='#'>
 
+
+
+
+
                                                                             <img class="primary-image2 " src="<?=base_url();?>images/02_JOOGJEANS.jpg" alt="New Denim FW15" />
 
                                                                         </a>
@@ -2252,6 +2582,10 @@ New Denim FW15</isprint></a>
                                                             </div>
                                                         </li>
 
+
+
+
+
                                                         <li class="category-higlight col-md-6">
                                                             <ul class="desktop-only bottom-section">
 
@@ -2259,6 +2593,10 @@ New Denim FW15</isprint></a>
                                                                     <div class="img-container ">
 
                                                                         <a data-catId="diesel-woman-denim-highlights-newstyle" href='#'>
+
+
+
+
 
                                                                             <img alt="New Style: Actyvista" src='<?=base_url();?>images/04_ACTYVISTA.jpg' />
 
@@ -2277,6 +2615,10 @@ New Style: Actyvista</isprint></a>
 
                                                                         <a data-catId="diesel-woman-denim-highlights-joggjeans" href='#'>
 
+
+
+
+
                                                                             <img alt="JoggJeans" src='<?=base_url();?>images/05_JOGGJEANS.jpg' />
 
                                                                         </a>
@@ -2293,6 +2635,10 @@ JoggJeans</isprint></a>
                                                                     <div class="img-container ">
 
                                                                         <a data-catId="diesel-woman-denim-highlights-newdenim" href='#'>
+
+
+
+
 
                                                                             <img alt="New Denim FW15" src='<?=base_url();?>images/03_DENIM-MALE.jpg' />
 
@@ -2339,6 +2685,10 @@ New Denim FW15</isprint></a>
 
                                                                         <a data-catId="diesel-woman-denim-highlights-newstyle" href='#'>
 
+
+
+
+
                                                                             <img class="primary-image2 " src="<?=base_url();?>images/04_ACTYVISTA.jpg" alt="New Style: Actyvista" />
 
                                                                         </a>
@@ -2347,6 +2697,10 @@ New Denim FW15</isprint></a>
                                                                     <div class="img-container">
 
                                                                         <a data-catId="diesel-woman-denim-highlights-joggjeans" href='#'>
+
+
+
+
 
                                                                             <img class="primary-image2 " src="<?=base_url();?>images/05_JOGGJEANS.jpg" alt="JoggJeans" />
 
@@ -2357,6 +2711,10 @@ New Denim FW15</isprint></a>
 
                                                                         <a data-catId="diesel-woman-denim-highlights-newdenim" href='#'>
 
+
+
+
+
                                                                             <img class="primary-image2 " src="<?=base_url();?>images/06_DENIM-FEMALE.jpg" alt="New Denim FW15" />
 
                                                                         </a>
@@ -2365,6 +2723,10 @@ New Denim FW15</isprint></a>
                                                                 </div>
                                                             </div>
                                                         </li>
+
+
+
+
 
                                                     </ul>
 
@@ -2393,7 +2755,7 @@ New Denim FW15</isprint></a>
                                                                         <h2><a href="" class="level-2 unclickable">DENIM &amp; CLOTHING</a></h2>
                                                                         <div class="level-3">
                                                                             <ul class="level-3 col-lg-6 col-md-6">
-                                                                                <? foreach($men_arr['denim & clothing'] as $key =>$curr_category):
+                                                                                <?foreach($men_arr['denim & clothing'] as $key =>$curr_category):
                                                                                   // display the first 6 elements
                                                                                     if($i <= 5):
                                                                                         $i++;
@@ -2411,11 +2773,11 @@ New Denim FW15</isprint></a>
                                                                                         <a data-catId ="diesel-man-denimandclothing-denim" href="<?=$url;?>"><?=$curr_category;?></a>
                                                                                     </h6>
                                                                                 </li>
-                                                                                <? endif;?>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key =>$curr_category) ?>
+                                                                                <?endif;?>
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key =>$curr_category) ?>
                                                                             </ul>
                                                                             <ul class="level-3 col-lg-6 col-md-6 second">
-                                                                                <? // loop again in same array and display rest of the elements
+                                                                                <?// loop again in same array and display rest of the elements
                                                                                 
                                                                                 foreach(array_slice($men_arr['denim & clothing'],6) as $key=> $curr_category):
                                                                                     $url = get_url($key,'mens');
@@ -2425,7 +2787,7 @@ New Denim FW15</isprint></a>
                                                                                         <a data-catId ="diesel-man-denimandclothing-denim" href="<?=$url;?>"><?=$curr_category;?></a>
                                                                                     </h6>
                                                                                 </li>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>                                                     
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>                                                     
                                                                             </ul>
                                                                         </div> <!-- end of level 3 -->
 
@@ -2449,11 +2811,11 @@ New Denim FW15</isprint></a>
                                                                                         <a data-catId ="diesel-man-denimandclothing-denim" href="<?=base_url().'product/mens/'.strtolower($key)?>"><?=$curr_category;?></a>
                                                                                     </h6>
                                                                                 </li>
-                                                                                <? endif;?>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key =>$curr_category) ?>  
+                                                                                <?endif;?>
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key =>$curr_category) ?>  
                                                                             </ul>
                                                                             <ul class="level-3 col-lg-6 col-md-6 second">
-                                                                                <? // loop again in same array and display rest of the elements
+                                                                                <?// loop again in same array and display rest of the elements
                                                                                 foreach(array_slice($men_arr['shoes & accessories'],6) as $key=> $curr_category):
                                                                                     
                                                                                 ?>
@@ -2462,7 +2824,7 @@ New Denim FW15</isprint></a>
                                                                                         <a data-catId ="diesel-man-denimandclothing-denim" href="<?=base_url().'product/mens/'.strtolower($key)?>"><?=$curr_category;?></a>
                                                                                     </h6>
                                                                                 </li>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>
                                                                             </ul>
                                                                         </div>
 
@@ -2482,14 +2844,14 @@ New Denim FW15</isprint></a>
                                                                 </div>
                                                                 <div class="you-enjoy-list">
                                                                     <ul>
-                                                                        <? foreach($men_arr['shop by'] as $curr_category):?>
+                                                                        <?foreach($men_arr['shop by'] as $curr_category):?>
                                                                         <li>
                                                                             <h6><a data-catId="diesel-man-features-latestarrivals" href='#'>
                                                                                 <span><?=$curr_category?></span>
                                                                                 </a>
                                                                             </h6>
                                                                         </li>
-                                                                        <? endforeach;?>
+                                                                        <?endforeach;?>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -2499,7 +2861,7 @@ New Denim FW15</isprint></a>
                                                                     <ul class="horizantal-slider" id="">
                                                                         <li class="col-lg-12">
                                                                             <h2 class="highlights">Highlights</h2>
-                                                                            <? foreach($men_arr['highlights'] as $key=>$curr_category):?>
+                                                                            <?foreach($men_arr['highlights'] as $key=>$curr_category):?>
                                                                             <div class='image-sec col-lg-2 col-md-6'>
                                                                                 <a data-catId="" href='#'>
                                                                                 <img alt="<?=$curr_category['link_name']?>" src='<?=base_url()."images/nav/".$curr_category['link_image_name'].".jpg";?>' />
@@ -2511,7 +2873,7 @@ New Denim FW15</isprint></a>
                                                                                     <a data-catId="diesel-man-highlights-eveningrock" href='<?=$curr_category['link_url']?>'><?=$curr_category['link_name']?></a></span>
                                                                                 </h6>
                                                                             </div>
-                                                                            <? endforeach;?>
+                                                                            <?endforeach;?>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -2523,7 +2885,7 @@ New Denim FW15</isprint></a>
                                                                 <ul class="horizantal-slider" id="">
                                                                     <li class="col-lg-12">
                                                                         <h2 class="highlights">Highlight</h2>
-                                                                        <? foreach($men_arr['highlights'] as $curr_category):?>
+                                                                        <?foreach($men_arr['highlights'] as $curr_category):?>
                                                                             <div class='image-sec col-lg-2 col-md-6 '>
                                                                                 <a data-catId="" href='#'>
                                                                                     <img alt="<?=$curr_category['link_name']?>" src='<?=base_url()."images/nav/".$curr_category['link_image_name'].".jpg";?>' />
@@ -2536,7 +2898,7 @@ New Denim FW15</isprint></a>
                                                                                     </a></span>
                                                                                 </h6>
                                                                             </div>
-                                                                        <? endforeach;?>
+                                                                        <?endforeach;?>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -2570,7 +2932,7 @@ New Denim FW15</isprint></a>
                                                                         <h2><a href="" class="level-2 unclickable">DENIM &amp; CLOTHING</a></h2>
                                                                         <div class="level-3">
                                                                             <ul class="level-3 col-lg-6 col-md-6">
-                                                                                <? foreach($women_arr['denim & clothing'] as $key =>$curr_category):
+                                                                                <?foreach($women_arr['denim & clothing'] as $key =>$curr_category):
                                                                                   // display the first 6 elements
                                                                                     if($i <= 5):
                                                                                         $i++;
@@ -2579,11 +2941,11 @@ New Denim FW15</isprint></a>
                                                                                     <li>
                                                                                         <h6><a data-catId ="diesel-woman-denimandclothing-denim" href="<?=$url;?>"><?=$curr_category;?></a></h6>
                                                                                     </li>
-                                                                                <? endif;?>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key =>$curr_category) ?>
+                                                                                <?endif;?>
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key =>$curr_category) ?>
                                                                             </ul>
                                                                             <ul class="level-3 col-lg-6 col-md-6 second">
-                                                                                <? // loop again in same array and display rest of the elements
+                                                                                <?// loop again in same array and display rest of the elements
                                                                                 foreach(array_slice($women_arr['denim & clothing'],6) as $key=> $curr_category):
                                                                                     $url = get_url($key,'womens');
                                                                                 ?>
@@ -2591,7 +2953,7 @@ New Denim FW15</isprint></a>
                                                                                         <h6><a data-catId ="diesel-woman-denimandclothing-shirts" href="<?=$url;?>"><?=$curr_category;?></a>
                                                                                         </h6>
                                                                                     </li>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>
                                                                             </ul>
                                                                             <ul class="level-3 last">
                                                                                 <li>
@@ -2619,17 +2981,17 @@ New Denim FW15</isprint></a>
                                                                                         <h6><a data-catId ="diesel-woman-footwearandaccessories-footwear" href="<?=base_url().'product/womens/'.strtolower($key)?>"><?=$curr_category;?>
                                                                                         </a></h6>
                                                                                     </li>
-                                                                                <? endif;?>
-                                                                                <? endforeach;?> 
+                                                                                <?endif;?>
+                                                                                <?endforeach;?> 
                                                                             </ul>
                                                                             <ul class="level-3 col-lg-6 col-md-6 second">
-                                                                                <? // loop again in same array and display rest of the elements
+                                                                                <?// loop again in same array and display rest of the elements
                                                                                 foreach(array_slice($women_arr['shoes & accessories'],6) as $key=> $curr_category):
                                                                                 ?>
                                                                                     <li>
                                                                                         <h6><a data-catId ="diesel-woman-footwearandaccessories-timeframes" href="<?=base_url().'product/womens/'.strtolower($key)?>"><?=$curr_category;?></a></h6>
                                                                                     </li>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>
                                                                             </ul>
                                                                         </div>
 
@@ -2648,12 +3010,12 @@ New Denim FW15</isprint></a>
                                                                 </div>
                                                                 <div class="you-enjoy-list">
                                                                     <ul>
-                                                                        <? foreach($women_arr['shop by'] as $curr_category):?>
+                                                                        <?foreach($women_arr['shop by'] as $curr_category):?>
                                                                         <li>
                                                                             <h6><a data-catId="diesel-woman-features-latestarrivals" href='#'><span><?=$curr_category?></span></a>
                                                                             </h6>
                                                                         </li>
-                                                                        <? endforeach;?>
+                                                                        <?endforeach;?>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -2662,7 +3024,7 @@ New Denim FW15</isprint></a>
                                                                     <ul class="horizantal-slider" id="">
                                                                         <li class="col-lg-12">
                                                                             <h2 class="highlights">Highlights</h2>
-                                                                            <? foreach($women_arr['highlights'] as $key=>$curr_category):?>
+                                                                            <?foreach($women_arr['highlights'] as $key=>$curr_category):?>
                                                                                 <div class='image-sec col-lg-2 col-md-6 <?=($key == 0 ? 'first-element': '')?>'>
                                                                                     <a data-catId="diesel-woman-highlights-eveningrock" href='#'>
                                                                                         <img alt="Evening Rock" src='<?=base_url();?>images/10_EVENINGROCK.jpg' />
@@ -2674,17 +3036,21 @@ New Denim FW15</isprint></a>
                                                                                         <a data-catId="diesel-woman-highlights-eveningrock" href='#'><?=$curr_category?></a></span>
                                                                                     </h6>
                                                                                 </div>
-                                                                            <? endforeach;?>
+                                                                            <?endforeach;?>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
-                                                        </div>                                                        <div class="custom horizantal-custom col-lg-12 col-md-6" id="horizantal-custom-diesel-woman">
+                                                        </div>
+
+
+
+                                                        <div class="custom horizantal-custom col-lg-12 col-md-6" id="horizantal-custom-diesel-woman">
                                                             <div>
                                                                 <ul class="horizantal-slider" id="">
                                                                     <li class="col-lg-12">
                                                                         <h2 class="highlights">Highlights</h2>
-                                                                        <? foreach($women_arr['highlights'] as $curr_category):?>
+                                                                        <?foreach($women_arr['highlights'] as $curr_category):?>
                                                                         <div class='image-sec col-lg-2 col-md-6'>
                                                                             <a data-catId="diesel-woman-highlights-eveningrock" href='#'>
                                                                                 <img alt="Evening Rock" src='<?=base_url();?>images/10_EVENINGROCK.jpg' />
@@ -2693,7 +3059,7 @@ New Denim FW15</isprint></a>
                                                                         <div class='content-wrapper col-lg-2 col-md-6'>
                                                                             <h6><span class="display-text"><a data-catId="diesel-woman-highlights-eveningrock" href='#'><?=$curr_category?></a></span></h6>
                                                                         </div>
-                                                                        <? endforeach;?>
+                                                                        <?endforeach;?>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -2879,6 +3245,10 @@ New Denim FW15</isprint></a>
 <div class="s-diesel-stories main-nav-arr"></div>
 </a></h4>
 
+
+
+
+
                                             </li>
 
                                         </ul>
@@ -2891,25 +3261,88 @@ New Denim FW15</isprint></a>
                 </div>
             </header>
             
-            <div class="myaccount-mobile-child" id="myaccount-mobile-content" style="display:none;">
+                    <div class="myaccount-mobile-child" id="myaccount-mobile-content" style="display:none;">
+
+
+
+
                 <div class="signin-mobile-nav">
+
+
+
+
+
                     <div class="login-box login-account">
+
                         <h2 class="section-header">SIGN IN</h2>
+
                         <div class="login-box-content returning-customers clearfix">
+
+
                             <form action="<?=base_url();?>member/login_popup" method="post" class="clearfix" id="dwfrm_login">
+
                                 <fieldset>
+
+
+
+
+
                                     <div class="form-row   required " data-required-text="Please enter your email address">
+
+
+
+
+
                                         <label for="dwfrm_login_username_d0qcmvezdvqp">
-                                            <span>email address*</span>
+
+
+                                            <span>
+                email address*
+                </span>
+
                                         </label>
+
+
+
+
+
                                         <input autocomplete="off" class="input-text email-input email required" id="dwfrm_login_username_d0qcmvezdvqp" type="email" name="dwfrm_login_username_d0qcmvezdvqp" value="" maxlength="2147483647" />
+
+
+
+
+
                                     </div>
 
+
+
+
+
                                     <div class="form-row   required " data-required-text="Please enter your password">
+
+
+
+
+
                                         <label for="dwfrm_login_password">
-                                            <span>Password*</span>
+
+
+                                            <span>
+                Password*
+                </span>
+
                                         </label>
+
+
+
+
+
                                         <input autocomplete="off" class="input-text-pw password-input required" id="dwfrm_login_password" type="password" name="dwfrm_login_password" value="" maxlength="2147483647" />
+
+
+
+
+
                                     </div>
                                     <div class="forgot-password-overlay-remove">
                                         <a id="password-reset-mobile" href="/account-passwordReset" title="Forgot Password?" data-dlg-action='{"test":100}' data-target="#myaccount-mobile-content" data-dlg-options='{"width":590,"height":"auto","dialogClass":"dialog-forgot-password"}'>
@@ -2922,9 +3355,16 @@ New Denim FW15</isprint></a>
                                         </button>
 
                                     </div>
+
+
+
+
                                     <input type="hidden" name="dwfrm_login_securekey" value="632676247" />
+
                                 </fieldset>
+
                             </form>
+
                         </div>
 
                         <div class="col-2">
@@ -2950,41 +3390,92 @@ New Denim FW15</isprint></a>
                     </div>
                 </div>
 
+
+
+
+
             </div>
         </div>
+        
+        
     
         <div class="footer-banner footer-banner-mobile-only">
             <div class="marketing_message_footer" class="slider">
                 <div>
+
+
+
+
+
                     <div data-slotid="footer-marketing-banner-1" class="html-slot-container">
-                        <div>                            
-                        	<div class="pannel" data-desc="Free Ground Shipping on All Orders. The promotion will be applied automatically at check out." data-title="FREE GROUND SHIPPING ON ALL ORDERS!">
+
+
+                        <div>
+
+
+
+                            <div class="pannel" data-desc="Free Ground Shipping on All Orders. The promotion will be applied automatically at check out." data-title="FREE GROUND SHIPPING ON ALL ORDERS!">
                                 <h7>FREE GROUND SHIPPING ON ALL ORDERS!</h7>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
                 <div>
+
+
+
+
+
                     <div data-slotid="footer-marketing-banner-2" class="html-slot-container">
-                        <div>                            
-                        	<div class="pannel" data-desc="Free Returns on all orders. &lt;a href=&quot;#&quot&gt;CLICK HERE&lt;/a&gt; to get more details" data-title="EASY &amp; FREE RETURNS!">
+
+
+                        <div>
+
+
+
+                            <div class="pannel" data-desc="Free Returns on all orders. &lt;a href=&quot;#&quot&gt;CLICK HERE&lt;/a&gt; to get more details" data-title="EASY &amp; FREE RETURNS!">
                                 <h7>EASY &amp; FREE RETURNS</h7>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
                 <div>
+
+
+
+
+
                     <div data-slotid="footer-marketing-banner-3" class="html-slot-container">
-                        <div>                            
-                        	<div class="pannel" data-desc="Create an account at shop.diesel.com. Enjoy 15% off your first online order. &lt;a href=&quot;<?=base_url();?>member/register&quot&gt;REGISTER HERE&lt;/a&gt;, you'll get your coupon code via email." data-title="REGISTER FOR EXCLUSIVE BENEFITS">
+
+
+                        <div>
+
+
+
+                            <div class="pannel" data-desc="Create an account at shop.diesel.com. Enjoy 15% off your first online order. &lt;a href=&quot;<?=base_url();?>member/register&quot&gt;REGISTER HERE&lt;/a&gt;, you'll get your coupon code via email." data-title="REGISTER FOR EXCLUSIVE BENEFITS">
                                 <h7>REGISTER FOR EXCLUSIVE BENEFITS</h7>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+
+
+                </div>
+                <div>
+
+
+                </div>
+                <div>
+
+
+                </div>
             </div>
             <span class="cross_icon"></span>
             <div class="description-section"></div>
@@ -2992,5 +3483,3 @@ New Denim FW15</isprint></a>
         <div class="fake-content">
             <img id="loader-img" alt="" src="http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselUS-Site/-/default/dwdf84dfc4/images/bx_loader.gif" width="32" height="32" align="center" />
         </div>
-        
-        <input type="hidden" name="TotalProductCountOnLoad" value="225" id="TotalProductCountOnLoad">

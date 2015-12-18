@@ -334,11 +334,11 @@ exit;*/
                             exit;*/                            
 
                             $url = base_url().'product/details/'.$prod_cat.'/'.clean_string($curr_product['disp_name']).'/'.$curr_product['style'].'/';
-                            if(!empty($curr_product['prod_images'])){
+                            /*if(!empty($curr_product['prod_images'])){
                                 $image_path = base_url().'images/'.$curr_product['prod_images']['image_path'];
                             }else{
                                 $image_path = base_url().'images/sublisting/prod_no_image.jpg';
-                            }
+                            }*/
                             
                         ?>
                         <div class=" grid-tile item w2 h2 reorder " data-colors-to-show="51F" style="max-width: 248px;">
@@ -348,13 +348,19 @@ exit;*/
                                         <div class="item-swatches">
                                             <div class="griditem-swatchlist">
                                                 <ul id="00SJT20CAKE" class="product-view swatch-itemslider bxslider product-view-container">
-                                                    <?foreach($curr_product['color_code'] as $key=>$curr_color_code):?>
-                                                        <li style="<?=($key == 0) ? 'display: block;' : 'display: none;' ?>">
+                                                    <?foreach($curr_product['color_code'] as $key=>$curr_color_code):
+                                                        if(!empty($curr_color_code['prod_images'])){
+                                                            $image_path = base_url().'images/'.$curr_color_code['prod_images']['image_path'];
+                                                        }else{
+                                                            $image_path = base_url().'images/sublisting/prod_no_image.jpg';
+                                                        }
+                                                    ?>
+                                                        <li>
                                                         <a href="<?=$url.$curr_color_code['attr_code'];?>" title="<?=$curr_color_code['attr_value'];?>">
                                                         <img itemprop="image" class="primary-image lazy" data-src="" data-original="" data-altimg="" src="<?=$image_path;?>" alt="<?=$curr_product['disp_name'], $curr_color_code['attr_value'];?>">
                                                         </a>
                                                         </li>
-                                                    <?endforeach;?>
+                                                    <? endforeach;?>
                                                     <!-- <li style="display: none;">
                                                     <a href="#" title="Green">
                                                     <img itemprop="image" class="primary-image lazy" data-src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-original="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-altimg="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwc6cd363b/images/large/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427" src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_O.jpg?sw=320&amp;sh=427" alt="W-NICK, Green">
@@ -403,7 +409,7 @@ exit;*/
                     <div class="load-more-wrap">
                         <div class="load-ajax-content" style="display: none;">
                         </div>
-                        <?if($this->uri->segment(1) !== 'show_search'){
+                        <? if($this->uri->segment(1) !== 'show_search'){
                             $category = $this->uri->segment(2);
                             $sub_category = $this->uri->segment(3);
                             //$cgid_status = false;
@@ -440,9 +446,9 @@ exit;*/
                 <?endif;?>
                 <!-- load more end -->
 
-            <?else:?>
+            <? else:?>
                 <h2 style="font-size: 2.5em; text-align: center; margin-bottom: 20px;">Sorry No Products Available</h2>
-            <?endif; //  if(!empty($product_arr)):  ?>
+            <? endif; //  if(!empty($product_arr)):  ?>
             
         </div>
         <!-- end search-result-content -->

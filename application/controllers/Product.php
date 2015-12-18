@@ -84,7 +84,7 @@ public function sublisting($gender,$category,$type=''){
 		$data['sub_category'] = $category;
 		$data['product_arr'] = $this->product_model->get_sublisting_product($gender,$category,$type);
 		$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($gender), $category);
-		$data['filter_arr'] = $this->product_model->get_filter($category);
+		$data['filter_arr'] = $this->product_model->get_filter($category,$gender);
 		/*echo "<pre>";
 		echo "in controller";
 		echo "<pre>";
@@ -118,6 +118,7 @@ public function sublisting($gender,$category,$type=''){
 	exit;*/
 	$data['product_arr'] = $this->product_model->get_sublisting_product($search_data[1],$search_data[2],$search_data[3]);
 	$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($search_data[1]), $search_data[3]);
+	//$data['filter_arr'] = $this->product_model->get_filter($search_data[2]);
 
 	$data['style'] = 'background: url('.base_url().'images/backmendenim.jpg);';
 	$data['footer_label'] = 'display:none;'; 
@@ -246,7 +247,7 @@ public function sublisting($gender,$category,$type=''){
  	$data['product_arr'] = $this->product_model->get_filter_product($gender,$category,$type,$category_filter,$color_filter,$size_filter);
 
  	$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($gender), $category);
-	$data['filter_arr'] = $this->product_model->get_filter($category);
+	$data['filter_arr'] = $this->product_model->get_filter($category,$gender);
 
 	/*echo "<pre>";
 	echo "in controller";
