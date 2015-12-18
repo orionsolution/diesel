@@ -135,5 +135,8 @@ $( document ).ready(function() {
 	});
 
 });*/
+
+/*--------------------- Listing page slides ---------------------*/
+
 	
 });

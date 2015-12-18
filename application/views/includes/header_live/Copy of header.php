@@ -203,45 +203,6 @@
   <link rel="canonical" href="./Denim _ Diesel International Site_files/Denim _ Diesel International Site.html">
 
   <script type="text/javascript" src="<?=base_url()?>js/conversion_async.js" charset="utf-8"></script>
-  
-</head>
-<?php 
-if($view_file_name == 'home_view') { ?>
-<body class="layout1280 header-sticky" style="<?= (!empty($style) ?  $style : '' )?>">
-<?php } else { ?>
-<body class="layout1280" style="<?= (!empty($style) ?  $style : '' )?>">
-<?php } ?>
-    <script type="text/javascript">
-        var google_tag_params = {
-            ecomm_prodid: null,
-            ecomm_pagetype: 'home',
-            ecomm_totalvalue: null
-        };
-    </script>
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        var google_conversion_id = 984403838;
-        var google_custom_params = window.google_tag_params;
-        var google_remarketing_only = true;
-        /* ]]> */
-    </script>
-    <script type="text/javascript" src="<?=base_url();?>js/conversion.js"></script>
-    <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/984403838/?value=0&amp;guid=ON&amp;script=0" />
-        </div>
-    </noscript>
-
-
-    <script type="text/javascript">
-        var axel = Math.random() + "";
-        var a = axel * 10000000000000;
-        document.write('<iframe class="fls-iframe" src="https://4440632.fls.doubleclick.net/activityi;src=4440632;type=Unive0;cat=Unive0;u1=New Delhi;u2=DL;u3=null;u4=IN;u5=desktop;u6=;u7=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
-    </script>
-    <noscript>
-        <iframe src="https://4440632.fls.doubleclick.net/activityi;src=4440632;type=Unive0;cat=Unive0;u1=New Delhi;u2=DL;u3=null;u4=IN;u5=desktop;u6=;u7=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
-    </noscript>
-    <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 
   <div class="mobile-menu-wrap z-index-5">
     <div class="mobile-inner-wrap">
@@ -1632,7 +1593,6 @@ if($view_file_name == 'home_view') { ?>
         </div>
       </div>
     </div>
-    
     <div id="header" class="new-header clearfix" role="banner">
       <!--[if lte IE 8]>
 <div class="ie8-ux-message">The site is not optimized for IE8. Please upgrade your browser to enhance your shopping experience and enjoy full features/functionality of the site.</div>

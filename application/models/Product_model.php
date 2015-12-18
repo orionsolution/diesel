@@ -377,15 +377,25 @@ public function get_filter_product($gender,$category_name,$type='',$category_fil
 			$criteria
 						
 			group by a.style";
-	echo $sql;
+	//echo $sql;
 	//exit;
 
 	$query = $this->db->query($sql);
 	$result = $query->result_array();	
 
 	foreach($result as $curr_result){
-		$curr_result['prod_images'] = $this->get_product_img_url($curr_result['style'],1);
 		$curr_result['color_code'] = $this->get_product_color($curr_result['style']);
+		foreach($curr_result['color_code'] as $key=>$curr_color){
+			$return_image_value = $this->get_product_img_url($curr_result['style'],1,$curr_color['attr_code']);
+			/*echo '<pre>';
+			print_r($return_image_value);
+			echo '</pre>';*/
+			//exit;
+			if($return_image_value){
+				$curr_result['color_code'][$key]['prod_images'] = $return_image_value;
+			}
+			
+		}
 		$prod_arr[] = $curr_result;
 	}
 	return $prod_arr;
@@ -440,10 +450,26 @@ public function get_sublisting_product($gender,$category_name,$type='',$offset_v
 	echo '</pre>';
 	exit;*/	
 
-	foreach($result as $curr_result){
-		$curr_result['prod_images'] = $this->get_product_img_url($curr_result['style'],1);
+	foreach($result as $curr_result){		
 		$curr_result['color_code'] = $this->get_product_color($curr_result['style']);
+		foreach($curr_result['color_code'] as $key=>$curr_color){
+			$return_image_value = $this->get_product_img_url($curr_result['style'],1,$curr_color['attr_code']);
+			/*echo '<pre>';
+			print_r($return_image_value);
+			echo '</pre>';*/
+			//exit;
+			if($return_image_value){
+				$curr_result['color_code'][$key]['prod_images'] = $return_image_value;
+			}
+			
+		}
+		//$curr_result['prod_images'] = $this->get_product_img_url($curr_result['style']);
 		$prod_arr[] = $curr_result;
+
+		/*echo '<pre>';
+		print_r($prod_arr);
+		echo '</pre>';
+		exit;*/
 	}
 	/*echo '<pre>';
 	print_r($prod_arr);
@@ -483,19 +509,33 @@ public function get_gender($gender){
  */
 
 
-public function get_product_img_url($style,$limit=''){
+public function get_product_img_url($style,$limit='',$color_code=''){
 
-	$sql = "SELECT * FROM `prod_images` WHERE `style` = '$style' AND `variation_code` != '' ORDER BY `prod_images_id`";
+	$sql = "SELECT * FROM `prod_images` WHERE `style` = '$style'";
+
+	if(!empty($color_code)){
+		$sql .= " AND `variation_code` = '$color_code' ";
+	}else{
+		$sql .= " AND `variation_code` != '' ";
+	}
+
+	$sql .= " ORDER BY `prod_images_id`";
+
 	if(!empty($limit)){
 		$sql .= " LIMIT $limit";
 	}
+
 	//echo "$sql <br>";
 
-	$query = $this->db->query($sql);	
+	$query = $this->db->query($sql);
 
-	if($query->num_rows() == 1){
+	if($query->num_rows() == 0){
+		//echo 'if <br>';
+		return false;
+	}elseif($query->num_rows() == 1){
 		return $query->row_array();
 	}else{
+		//echo 'else <br>';
 		$result = $query->result_array();
 		return $result;
 	}
@@ -536,8 +576,9 @@ public function get_product_color($style){
  * @return: filter value
  */
 
-public function get_filter($sub_category){
+public function get_filter($sub_category,$gender){
 	$filter_arr = array();
+	$return_gender_value = $this->get_gender($gender);
 	// get filter options array
 	//echo $sub_category;exit;
 
@@ -553,7 +594,7 @@ public function get_filter($sub_category){
 				where a.style = d.`product-id` and
 				a.style = b.style and 
 				d.L1 = 'diesel' and 
-				d.L2 = 'man' 
+				d.L2 = '$return_gender_value' 
 				and d.L4 = '$sub_category' and 
 				b.attr_value != '' and ";
 
