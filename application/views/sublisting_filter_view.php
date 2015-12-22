@@ -91,7 +91,16 @@ exit;*/
                             <h3 class="refinement-header">
                             <span>
                             <?=ucfirst($option_name);?> </span>
-                            <?$check_arr = (!empty(${'selected_'.$option_name}) ? explode("|",${'selected_'.$option_name}) : array());?>
+                            <?$check_arr = (!empty(${'selected_'.$option_name}) ? explode("|",${'selected_'.$option_name}) : array());
+                              $filter_arr_keys = array_keys($filter_arr);
+                              $selected = "";
+                              /*echo '<pre>';
+                                print_r($filter_arr_keys);
+                                echo '</pre>';
+                                exit;  */
+
+
+                            ?>
                             </h3>
                             <div class="refinement-item">
                                 <div class="clearfix">
@@ -101,93 +110,136 @@ exit;*/
                                                 <ul>
                                                     <?foreach(array_slice($curr_option,$i,4) as $curr_value):?>
                                                         <?
+                                                        //$option_name = 'category';
                                                         $current_filter_url = base_url().'product/'.$gender.'/'.$sub_category.'/filter';
-                                                        if(in_array(str_replace(" ", "-", $curr_value['attr_value']), $check_arr) ){
-                                                            if($option_name == 'category'):
-                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
-                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
-                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');                                                            
-                                                          elseif($option_name == 'color'):
-                                                           $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
-                                                            $current_filter_url .= (!empty(${'selected_'.$option_name}) ? '&color='.${'selected_'.$option_name} : '&color=');
-                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');
-                                                          elseif($option_name == 'size'):
-                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
-                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
-                                                            $current_filter_url .= (!empty(${'selected_'.$option_name}) ? '&size='.${'selected_'.$option_name} : '&size=');
-                                                          endif;
-                                                            
-                                                            $selected = "selected";
-                                                        }else{
-                                                            if($option_name == 'category'):
-                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category.'|'.str_replace(" ", "-", $curr_value['attr_value']) : '?category=');
-                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
-                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');                                                            
-                                                          elseif($option_name == 'color'):
-                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
-                                                            
-                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color.'|'.str_replace(" ", "-", $curr_value['attr_value']) : '&color='.str_replace(" ", "-", $curr_value['attr_value']));
-                                                            //echo $current_filter_url;exit;
-                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');
-                                                          elseif($option_name == 'size'):
-                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
-                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
-                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size.'|'.str_replace(" ", "-", $curr_value['attr_value']) : '&size='.str_replace(" ", "-", $curr_value['attr_value']));
-                                                          endif;
+                                                        //Check if the current option_name is present in selected_filters array
+                                                        if(!empty($selected_filters[$option_name])){
+                                                            // check for all the filter options that exists befor the current option name in filter_array_keys
+                                                                
+                                                                $current_filter_url .= append_filter_before($filter_arr_keys,$option_name,$selected_filters);
+                                                                
 
-                                                            //$curr_filter_url = base_url().'product/'.$gender.'/'.$sub_category.'/filter'.$category_prefix.'|'.str_replace(" ", "-", $curr_value['attr_value']).$color_prefix.$size_prefix;                                                
-                                                            $selected = "";
-                                                        }
-                                                        //$filter_url = (str_replace(" ", "-", $curr_value['attr_value']) == )
-                                                        //$filter_url = (in_array(str_replace(" ", "-", $curr_value['attr_value']), 'selection_'.$option_name.'_arr')  ? '?category=' . str_replace(" ", "-", $curr_value['attr_value']) : );
+
+                                                                // Appending the current option name values in current url string
+
+                                                                
+                                                                $current_exploded_arr = explode("|",$selected_filters[$option_name]);
+
+                                                                if(in_array(str_replace(" ", "-", $curr_value['attr_value']), $current_exploded_arr)){
+                                                                    $current_filter_url .= $selected_filters[$option_name];
+                                                                    $selected = "selected";
+                                                                }
+                                                                else{
+                                                                    $selected = "";
+                                                                    $current_filter_url .= $selected_filters[$option_name]."|".str_replace(" ", "-", $curr_value['attr_value']);
+                                                                }
+
+                                                                //echo $current_filter_url."<br>";
+
+                                                                // check for all the filter options that exists after the current option name in filter_array_keys and perform the same operation in reverse order
+
+                                                                $current_filter_url .= append_filter_after($filter_arr_keys,$option_name,$selected_filters);
+
+                                                                
+
+                                                                
+
+                                                        } // if(!empty($selected_filters[$option_name]))
+
+                                                        //exit;
+
+
+                                                        else{
+                                                           // not present in selected filters array
+
+                                                                $current_filter_url .= append_filter_before($filter_arr_keys,$option_name,$selected_filters);
+
+                                                                // No need to check the values in selected_filters_array as the current option_name is not present it. Just append the $curr_value['attr_value'];
+
+
+                                                                $current_filter_url .= str_replace(" ", "-", $curr_value['attr_value']);
+
+                                                                // check for all the filter options that exists after the current option name in filter_array_keys and perform the same operation in reverse order
+
+                                                                $current_filter_url .= append_filter_after($filter_arr_keys,$option_name,$selected_filters);
+
+                                                                //echo $current_filter_url;exit;
+                                                                
+ 
+                                                        } // end of final else clause
+
+                                                        //echo $current_filter_url."<br>";
+
+                                                        
                                                         ?>                        
                                                         <li class="<?=$selected;?>">
                                                             <a href="<?=$current_filter_url;?>"><?=$curr_value['attr_value'];?></a>
                                                         </li>                                                       
-                                                    <?endforeach; //foreach($curr_option as $curr_value) ?>
+                                                    <?endforeach;//exit; //foreach($curr_option as $curr_value) ?>
                                                 </ul>                                            
-                                        <?endfor;?>
+                                        <?endfor;//exit;?>
                                     <?else:?>
                                         <ul> 
                                         <?foreach($curr_option as $curr_value):?> 
                                             <?
                                             $current_filter_url = base_url().'product/'.$gender.'/'.$sub_category.'/filter';
-                                                        if(in_array(str_replace(" ", "-", $curr_value['attr_value']), $check_arr) ){
-                                                            if($option_name == 'category'):
-                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
-                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
-                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');                                                            
-                                                          elseif($option_name == 'color'):
-                                                           $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
-                                                            $current_filter_url .= (!empty(${'selected_'.$option_name}) ? '&color='.${'selected_'.$option_name} : '&color=');
-                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');
-                                                          elseif($option_name == 'size'):
-                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
-                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
-                                                            $current_filter_url .= (!empty(${'selected_'.$option_name}) ? '&size='.${'selected_'.$option_name} : '&size=');
-                                                          endif;
-                                                            
-                                                          $selected = "selected";
-                                                        }else{
-                                                            if($option_name == 'category'):
-                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category.'|'.str_replace(" ", "-", $curr_value['attr_value']) : '?category='.str_replace(" ", "-", $curr_value['attr_value']));
-                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
-                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');                                                            
-                                                          elseif($option_name == 'color'):
-                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
-                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color.'|'.str_replace(" ", "-", $curr_value['attr_value']) : '&color='.str_replace(" ", "-", $curr_value['attr_value']));
-                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size : '&size=');
-                                                          elseif($option_name == 'size'):
-                                                            $current_filter_url .= (!empty($selected_category) ? '?category='.$selected_category : '?category=');
-                                                            $current_filter_url .= (!empty($selected_color) ? '&color='.$selected_color : '&color=');
-                                                            $current_filter_url .= (!empty($selected_size) ? '&size='.$selected_size.'|'.str_replace(" ", "-", $curr_value['attr_value']) : '&size='.str_replace(" ", "-", $curr_value['attr_value']));
-                                                          endif;
+                                            //Check if the current option_name is present in selected_filters array
+                                                        if(!empty($selected_filters[$option_name])){
+                                                            // check for all the filter options that exists befor the current option name in filter_array_keys
+                                                                
+                                                                $current_filter_url .= append_filter_before($filter_arr_keys,$option_name,$selected_filters);
+                                                                
 
-                                                            //$curr_filter_url = base_url().'product/'.$gender.'/'.$sub_category.'/filter'.$category_prefix.'|'.str_replace(" ", "-", $curr_value['attr_value']).$color_prefix.$size_prefix;                                                
-                                                            $selected = "";
-                                                        }
-                                            //$filter_url = (str_replace(" ", "-", $curr_value['attr_value']) == )
-                                            //$filter_url = (in_array(str_replace(" ", "-", $curr_value['attr_value']), 'selection_'.$option_name.'_arr')  ? '?category=' . str_replace(" ", "-", $curr_value['attr_value']) : );
+
+                                                                // Appending the current option name values in current url string
+
+                                                                
+                                                                $current_exploded_arr = explode("|",$selected_filters[$option_name]);
+
+                                                                if(in_array(str_replace(" ", "-", $curr_value['attr_value']), $current_exploded_arr)){
+                                                                    $current_filter_url .= $selected_filters[$option_name];
+                                                                    $selected = "selected";
+                                                                }
+                                                                else{
+                                                                    $selected = "";
+                                                                    $current_filter_url .= $selected_filters[$option_name]."|".str_replace(" ", "-", $curr_value['attr_value']);
+                                                                }
+
+                                                                //echo $current_filter_url."<br>";
+
+                                                                // check for all the filter options that exists after the current option name in filter_array_keys and perform the same operation in reverse order
+
+                                                                $current_filter_url .= append_filter_after($filter_arr_keys,$option_name,$selected_filters);
+
+                                                                
+
+                                                                
+
+                                                        } // if(!empty($selected_filters[$option_name]))
+
+                                                        //exit;
+
+
+                                                        else{
+                                                           // not present in selected filters array
+
+                                                                $current_filter_url .= append_filter_before($filter_arr_keys,$option_name,$selected_filters);
+
+                                                                // No need to check the values in selected_filters_array as the current option_name is not present it. Just append the $curr_value['attr_value'];
+
+
+                                                                $current_filter_url .= str_replace(" ", "-", $curr_value['attr_value']);
+
+                                                                // check for all the filter options that exists after the current option name in filter_array_keys and perform the same operation in reverse order
+
+                                                                $current_filter_url .= append_filter_after($filter_arr_keys,$option_name,$selected_filters);
+
+                                                                //echo $current_filter_url;exit;
+                                                                
+ 
+                                                        } // end of final else clause
+
+                                                        //echo $current_filter_url."<br>";
                                             ?>                                          
                                             <li class="<?=$selected;?>">                                            
                                             <a href="<?=$current_filter_url;?>"><?=$curr_value['attr_value'];?></a>
@@ -205,7 +257,7 @@ exit;*/
                                 </div>
                             </div>                                
                             </li>                            
-                        <?endforeach;?>
+                        <?endforeach;?><?//exit;?>
                     </ul>
                     <div class="filter-global-reset mobile">
                         <span class="reset">Reset All</span>
@@ -217,46 +269,23 @@ exit;*/
                 <div class="filter-bxSlider-plp clearfix" style="display:block;">
                         <div class="filter-slider-wrapper" >
                             <form action="<?=base_url().'product/'.$gender.'/'.$sub_category.'/filter';?>" method="post" name="selection_form">
-                            <?if(!empty($selected_category) || !empty($selected_color) || !empty($selected_size)):?>
+                            <?if(!empty($selected_filters)):?>
+                                <?/*echo '<pre>';
+                                print_r($selected_filters);
+                                echo '</pre>';
+                                exit;*/?>
                                 <div class="filter-slider remove-trans">
-                                    <?if(!empty($selected_category)):
-                                        $selection_category_arr = explode("|",$selected_category);
+                                    <?foreach($selected_filters as $filter_name=>$curr_selected_filter):
+                                            $selection_filter_arr = explode("|",$curr_selected_filter);
                                     ?>
-                                        <?foreach($selection_category_arr as $curr_selection):?>
+                                        <?foreach($selection_filter_arr as $curr_selection):?>
                                             <span class="breadcrumb-refinement-value"><?=str_replace('-', " ", $curr_selection);?>
                                                 <a class="breadcrumb-relax" href="#">
                                                     <img class="plp-filter-cross" src="<?=base_url();?>images/refine_filter.svg" alt="REMOVE">
                                                 </a>
-                                                <input type="hidden" name="category_selection_filter[]" value="<?=str_replace('-', " ", $curr_selection);?>">
+                                                <input type="hidden" name="<?=$filter_name.'_selection_filter[]';?>" value="<?=str_replace('-', " ", $curr_selection);?>">
                                             </span>
-                                        <?endforeach;?>
-                                    <?endif;?>
-
-                                    <?if(!empty($selected_color)):
-                                        $selection_color_arr = explode("|",$selected_color);
-                                    ?>
-                                        <?foreach($selection_color_arr as $curr_selection):?>
-                                            <span class="breadcrumb-refinement-value"><?=str_replace('-', " ", $curr_selection);?>
-                                                <a class="breadcrumb-relax" href="#">
-                                                    <img class="plp-filter-cross" src="<?=base_url();?>images/refine_filter.svg" alt="REMOVE">
-                                                </a>
-                                                <input type="hidden" name="color_selection_filter[]" value="<?=str_replace('-', " ", $curr_selection);?>">
-                                            </span>
-                                        <?endforeach;?>
-                                    <?endif;?>
-
-                                    <?if(!empty($selected_size)):
-                                        $selection_size_arr = explode("|",$selected_size);
-                                    ?>
-                                        <?foreach($selection_size_arr as $curr_selection):?>
-                                            <span class="breadcrumb-refinement-value"><?=str_replace('-', " ", $curr_selection);?>
-                                                <a class="breadcrumb-relax" href="#">
-                                                    <img class="plp-filter-cross" src="<?=base_url();?>images/refine_filter.svg" alt="REMOVE">
-                                                </a>
-                                                <input type="hidden" name="size_selection_filter[]" value="<?=str_replace('-', " ", $curr_selection);?>">
-                                            </span>
-                                        <?endforeach;?>
-                                    <?endif;?>
+                                        <?endforeach;endforeach;?>
                                 </div> <!-- end of filter-slider remove-trans -->
                             <?endif;?>
                             </form>

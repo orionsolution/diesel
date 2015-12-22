@@ -104,6 +104,12 @@ class Member extends CI_Controller {
 		if($this->form_validation->run() == FALSE):
    			$this->register();
   		else:
+  			$date_array = explode('/', $this->input->post('dwfrm_profile_customer_birthday'));
+			if(!empty($date_array)){
+				$date = $date_array[2].'-'.$date_array[0].'-'.$date_array[1];	
+			} else {
+				$date = $this->input->post('dwfrm_profile_customer_birthday');
+			}
 			$data = array(
 				'fname' => $this->input->post('dwfrm_profile_customer_firstname'),
 				'lname' => $this->input->post('dwfrm_profile_customer_lastname'),
@@ -111,7 +117,7 @@ class Member extends CI_Controller {
 				'password' => $this->input->post('dwfrm_profile_login_password'),
 				'gender' => $this->input->post('dwfrm_profile_customer_customergender'),
 				'postcode' => $this->input->post('dwfrm_profile_customer_zip'),
-				'dob' => $this->input->post('dwfrm_profile_customer_birthday')
+				'dob' => $date
 			);
    			$register_id = $this->member_model->register($data);
    			if($register_id):
@@ -121,8 +127,13 @@ class Member extends CI_Controller {
 	}
 
 	function checkDateFormat($date) {
-				if (preg_match('/^(0[1-9]|[1-2][0-9]|3[0-1])-(0[1-9]|1[0-2])-[0-9]{4}$/',$date)):
-			if(checkdate(substr($date, 3, 2), substr($date, 0, 2), substr($date, 6, 4))):
+		$date_array = explode('/', $date);
+		if(!empty($date_array)){
+			$date = $date_array[2].'-'.$date_array[0].'-'.$date_array[1];	
+		}
+		
+		if (preg_match('/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/',$date)):
+			if(checkdate(substr($date, 5, 2), substr($date, 8, 2), substr($date, 0, 4))):
 				return true;
 			else:
 				$this->form_validation->set_message('checkDateFormat','Please enter valid birth date.');

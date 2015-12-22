@@ -307,55 +307,55 @@ public function get_landing_products($category_name){
  * function to retrieve products from db as per filter options
  */
 
-public function get_filter_product($gender,$category_name,$type='',$category_filter='',$color_filter='',$size_filter=''){
+public function get_filter_product($gender,$category_name,$type='',$filter){
 
-	$table_name = '';
-	$prod_arr = array();
+	$prod_attributes_filter_value = $prod_variation_filter_value = $prod_attribute_join_criteria = $prod_variation_join_criteria = $prod_variation_status = $prod_attributes_status = '' ;
 
-	
+	$sql = "SELECT a.disp_name , a.style, d.*
+			FROM prod_mast a, category_assignment d ";
 
-	$size_criteria = $filter_criteria = '';
-	$table_criteria = 'a.style = b.style and ';
-	$table_name .= ', prod_attributes b';
-	$filter_criteria = " b.attr_value IN (";
-	$filter_value = '';
-	if(!empty($category_filter)){		
-		$filter_value .= make_sql_in_string($category_filter);
-	}
 
-	if(!empty($color_filter)){
-		$filter_value .= make_sql_in_string($color_filter);
-	}
+	foreach($filter as $key=>$curr_filter){
+		switch($key){
+			case "category":
+				$sql .= " , prod_attributes b ";
+				$prod_attributes_status = true;	// prod_attributes table status
+				$prod_attributes_filter_value .= make_sql_in_string($filter[$key]);
+				$prod_attribute_join_criteria = " AND a.style = b.style  ";
+				break;
 
-	//print_r($category_filter);exit;
+			case "color":
+				if(!$prod_attributes_status){
+					$sql .= " , prod_attributes b ";
+					$prod_attributes_status = true;
+					$prod_attribute_join_criteria = " AND a.style = b.style  ";
+				}
 
-	
+				$prod_attributes_filter_value .= make_sql_in_string($filter[$key]);
+				break;
 
-	if(!empty($size_filter)){
-		if(!empty($category_filter) || !empty($color_filter)){
-			$filter_value = trim($filter_value,',');
-			$filter_criteria .= "$filter_value) and";
+			case "size":
+				$sql .= " , prod_variation c ";
+				$prod_variation_status = true;
+				$prod_variation_filter_value .= make_sql_in_string($filter[$key]);
+				$prod_variation_join_criteria = " AND a.style = c.style  ";
+				break;
+
+			default:
+				break;
 		}
-		elseif(!empty($category_filter) && !empty($color_filter)){
-			$filter_value = trim($filter_value,',');
-			$filter_criteria .= "$filter_value) and";	
-			
-		}else{
-			$table_name = '';
-			$filter_criteria = '';
-			$table_criteria = '';
-		}
-		$table_name .= ', prod_variation c';
-		$table_criteria .= 'a.style = c.style and ';
-		$size_criteria = "c.attr_value IN (". trim(make_sql_in_string($size_filter), ',').") and";
-	}else{
-		$filter_value = trim($filter_value,',');
-		$filter_criteria .= "$filter_value) and";
 	}
 
-	
+	$sql .= "WHERE a.style = d.`product-id` $prod_attribute_join_criteria $prod_variation_join_criteria ";
 
-	
+
+	if($prod_attributes_status){
+		$sql .= " AND b.attr_value IN (".trim($prod_attributes_filter_value, ',') .") ";
+	}
+
+	if($prod_variation_status){
+		$sql .= " AND c.attr_value IN (".trim($prod_variation_filter_value, ',') .") ";
+	}
 
 	if($category_name == 'denimguide'){
 		$return_gender_value = (!empty($this->get_gender($gender)) ? $this->get_gender($gender) : $gender);
@@ -368,15 +368,11 @@ public function get_filter_product($gender,$category_name,$type='',$category_fil
 		$criteria = "d.L2 = '{$return_gender_value}' and
 					 d.L4 = '{$category_name}'";
 	}
-	$sql = "select a.disp_name , a.style, d.*
-			from prod_mast a, category_assignment d $table_name 
-			where $size_criteria $filter_criteria	
-			a.style = d.`product-id` and
-			$table_criteria
-			d.L1 = 'diesel' and
-			$criteria
-						
-			group by a.style";
+
+	$sql .="AND d.L1 = 'diesel' AND
+			$criteria			
+			GROUP BY a.style";
+
 	//echo $sql;
 	//exit;
 
