@@ -572,9 +572,9 @@ public function get_product_color($style){
  * @return: filter value
  */
 
-public function get_filter($sub_category,$gender){
+public function get_filter($sub_category,$gender,$category_name=''){
 	$filter_arr = array();
-	$return_gender_value = $this->get_gender($gender);
+	//$return_gender_value = $this->get_gender($gender);
 	// get filter options array
 	//echo $sub_category;exit;
 
@@ -589,10 +589,21 @@ public function get_filter($sub_category,$gender){
 				from prod_mast a, {$curr_option['table_name']} b, category_assignment d 
 				where a.style = d.`product-id` and
 				a.style = b.style and 
-				d.L1 = 'diesel' and 
-				d.L2 = '$return_gender_value' 
-				and d.L4 = '$sub_category' and 
-				b.attr_value != '' and ";
+				d.L1 = 'diesel' and ";
+
+		if($category_name == 'denimguide'){
+			$return_gender_value = (!empty($this->get_gender($gender)) ? $this->get_gender($gender) : $gender);
+			//$return_gender_value = $gender;
+			$sql .= "d.L2 = '{$return_gender_value}' and
+					 d.L4 = '{$category_name}' and
+					 d.L6 = '{$sub_category}' and";
+		}else{
+			$return_gender_value = $this->get_gender($gender);
+			$sql .= "d.L2 = '{$return_gender_value}' and
+					 d.L4 = '{$sub_category}' and";
+		} 
+				
+		$sql .= " b.attr_value != '' and ";
 
 		if($curr_option['option_name'] == 'category'){
 			$sql .= "b.attr_id = 'productGroup'";
@@ -602,7 +613,7 @@ public function get_filter($sub_category,$gender){
 			$sql .= "b.attr_type = 'size'";
 		}
 
-		//echo $sql.'<br>';
+		//echo $sql.'<br>';exit;
 
 		$query = $this->db->query($sql);
 		$filter_arr[$curr_option['option_name']] = $query->result_array();

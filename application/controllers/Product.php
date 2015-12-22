@@ -118,6 +118,7 @@ public function sublisting($gender,$category,$type=''){
 	exit;*/
 	$data['product_arr'] = $this->product_model->get_sublisting_product($search_data[1],$search_data[2],$search_data[3]);
 	$data['page_info'] = $this->product_model->get_sublising_page_info($this->get_category($search_data[1]), $search_data[3]);
+	$data['filter_arr'] = $this->product_model->get_filter($search_data[3],$search_data[1],$search_data[2]);
 	//$data['filter_arr'] = $this->product_model->get_filter($search_data[2]);
 
 	$data['style'] = 'background: url('.base_url().'images/backmendenim.jpg);';
