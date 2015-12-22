@@ -18,270 +18,8 @@ function clean_string_alt($string){
     return preg_replace('/[^A-Za-z0-9\-]/', ' ',$string); // Removes special chars.
 }
 
-function get_gender($gender)
-{
-    switch ($gender){
-        
-        case 'Women':
-            $fGen="w";
-        break;
-            case 'Men':
-            $fGen="m";
-        break;
-         case 'women':
-            $fGen="w";
-        break;
-            case 'men':
-            $fGen="m";
-        break;
-
-        case 'all':
-            $fGen="Men's";
-        break;
-
-        case 'All':
-            $fGen="Men's ";
-        break;
-    }
 
 
-    return $fGen;
-}
-
-function get_gender_suffix($gender){
-    
-    switch (strtolower($gender)):
-		case 'w':
-		case 'women':
-            $fGen="Women's ";
-			break;
-		case 'm':
-		case 'men':
-		case 'all':
-            $fGen="Men's ";
-			break;
-		case 'kids':
-            $fGen="Kids ";
-			break;
-		case 'unisex':
-		default:
-            $fGen="";
-			break;			
-	endswitch;
-    return $fGen;
-}
-
-
-function test_empty_array_elements($arr_ele){
-	if(!empty($arr_ele)){
-		return true;
-	}else{
-		return false;
-	}
-}
-
-function get_gender_name($gender){
-    
-    switch ($gender){        
-        case 'W':
-            $fGen="women";
-        break;
-            case 'M':
-            $fGen="men";
-        break;
-        case 'w':
-            $fGen="women";
-        break;
-        case 'm':
-            $fGen="men";
-        break;
-        case 'women':
-            $fGen="women";
-        break;
-        case 'men':
-            $fGen="men";
-        break;
-
-        case 'kids':
-            $fGen="kids";
-        break;
-
-
-        case 'all':
-            $fGen="men";
-        break;
-
-        case 'All':
-            $fGen="men";
-        break;
-        default:
-            $fGen=$gender;
-        break;
-    }
-
-
-    return $fGen;
-}
-
-/*function footwear_link($gender, $name, $style, $color_code){
-    
-    switch ($gender){
-        
-        case 'W':
-            $fGen="women";
-        break;
-            case 'M':
-            $fGen="men";
-        break;
-        case 'w':
-            $fGen="women";
-        break;
-        case 'm':
-            $fGen="men";
-        break;
-        default:
-            $fGen=$gender;
-        break;
-    }
-
-    
-
-    $formatid = $style."/".$color_code;
-    $formatappname = clean_string($name);
-    
-
-    $link = base_url()."product/detail/$formatappname/$fGen/$formatid/";
-
-    $link =strtolower($link);
-    
-    return $link;
-
-}*/
-
-
-function product_link($prod_type, $gender, $name, $style, $color_code){
-    
-    switch (strtolower($gender)):
-        case 'w':
-        case 'women':
-            $fGen="women";
-            break;
-        case 'm':
-        case 'men':
-            $fGen="men";
-            break;
-        default:
-            $fGen="men";
-            break;
-    endswitch;
-
-    $prod_type     = clean_string($prod_type);
-    $formatappname = clean_string($name);
-    $formatid      = $style."_".$color_code;
-    $base_url      = base_url();
-
-    $link = $base_url."$prod_type/$fGen/$formatappname/$formatid/";
-    // $link = "$prod_type/$fGen/$formatappname/$formatid/";
-
-    return $link;
-
-}
-
-
-function get_search_link($url){
-    $base_url      = base_url();
-    $link = $base_url.$url;
-
-    return $link;
-}
-
-
-function quickview_link($prod_type, $gender, $name, $style, $color_code, $cart_id, $qty, $barcode=""){
-    
-    switch ($gender){
-        
-        case 'W':
-            $fGen="women";
-        break;
-            case 'M':
-            $fGen="men";
-        break;
-        case 'w':
-            $fGen="women";
-        break;
-        case 'm':
-            $fGen="men";
-        break;
-        default:
-            $fGen="all";
-        break;
-    }
-    $prod_type     = clean_string($prod_type);
-    $formatappname = clean_string($name);
-    $formatid = $style."_".$color_code;
-
-    $link = base_url()."cart/show_product/$prod_type/$fGen/$formatappname/$formatid/$cart_id/$qty/$barcode";
-
-    return $link;
-
-}
-
-
-
-/* Clean DB Entries */
-
-function cleanDbEntries($data){
-
-    $data = htmlspecialchars($data);
-    $data = htmlentities($data);
-    $data = addslashes($data);
-
-    return $data;
-
-}
-
-// Form Select
-function sel_chk($db_val,$sel_val){
-    if($db_val==$sel_val){
-        echo 'selected="selected"';
-    }
-}
-
-
-/**
- * function to sort array of result set in asc order on price & price_sale
- */
-
-function ascProduct($a, $b) {
-    if($a["price_sale"] != 0 && $b["price_sale"] == 0){
-        return $a["price_sale"] - $b["price"];
-    }elseif($a["price_sale"] == 0 && $b["price_sale"] != 0){
-        return $a["price"] - $b["price_sale"];
-    }elseif($a["price_sale"] != 0 && $b["price_sale"] != 0){
-        return $a["price_sale"] - $b["price_sale"];
-    }else{
-        return $a["price"] - $b["price"];
-    }
-
-} // end of ascProduct
-
-
-function descProduct($a, $b) {
-    if($a["price_sale"] != 0 && $b["price_sale"] == 0){
-        if($a['price_sale']==$b['price']) return 0;
-        return $a['price_sale'] < $b['price']? 1:-1;
-    }elseif($a["price_sale"] == 0 && $b["price_sale"] != 0){
-        if($a['price']==$b['price_sale']) return 0;
-        return $a['price'] < $b['price_sale']? 1:-1;
-    }elseif($a["price_sale"] != 0 && $b["price_sale"] != 0){
-        if($a['price_sale']==$b['price_sale']) return 0;
-        return $a['price_sale'] < $b['price_sale']? 1:-1;
-    }else{
-        if($a['price']==$b['price']) return 0;
-        return $a['price'] < $b['price']? 1:-1;
-    }
-    
-} // end of descProduct
 
 
 
@@ -475,6 +213,60 @@ function listing_page_info($category){
 }
 
 
+
+/**
+ * return different filter by option for particular category
+ * @param: category name string
+ * @return: options array
+ */
+
+
+function get_filter_by_options($sub_category_name){
+
+    switch ($sub_category_name) {
+        case 'jackets':
+            //return array('prod_attributes'=>'category','prod_attributes'=>'color','prod_variation'=>'size');
+            return array(
+                array(
+                    'table_name'=>'prod_attributes',
+                    'option_name'=>'category',
+                ),
+                array(
+                    'table_name'=>'prod_attributes',
+                    'option_name'=>'color',
+                ),
+                array(
+                    'table_name'=>'prod_variation',
+                    'option_name'=>'size',
+                ),
+
+                
+            );
+            
+            break;
+        
+        default:
+            return array(
+                array(
+                    'table_name'=>'prod_attributes',
+                    'option_name'=>'category',
+                ),
+                array(
+                    'table_name'=>'prod_attributes',
+                    'option_name'=>'color',
+                ),
+                array(
+                    'table_name'=>'prod_variation',
+                    'option_name'=>'size',
+                ),
+
+                
+            );
+            break;
+    }
+}
+
+
 /* return proper url for navigation menu */
 
 function get_url($category_key,$gender){
@@ -501,150 +293,106 @@ function make_sql_in_string($type_arr){
        foreach($type_arr as $curr_type):
         $type_range .= "'" . $curr_type . "'".",";
         endforeach;
-        $type_range = trim($type_range,','); 
+        //$type_range = trim($type_range,','); 
     }
     
     return $type_range;
 }
 
-function sort_width($gender,$array){
-    
-    if($gender == 'women'){
-       $order_arr = array('B-Normal','2A-Narrow','D-Wide','2E-Extra');
-    }else{
-       $order_arr = array('D-Normal','B-Narrow','2E-Wide','4E-Extra');
+
+
+// Sublisting filter page functions
+
+function append_filter_before($filter_arr_keys, $option_name, $selected_filters){
+    $url = '';
+    // check for all the filter options that exists befor the current option name in filter_array_keys
+    $sliced_array = array_slice($filter_arr_keys, 0,array_search($option_name, $filter_arr_keys));
+
+    /*echo '<pre>';
+    print_r($sliced_array);
+    echo '</pre>';
+    exit;   */                                                             
+
+    if(!empty($sliced_array)){
+    // If option exists Yes
+    //echo 'inside if';exit; 
+
+    // Then check if this option/options present in the sliced array exists in selectd_filters_array
+
+        foreach($sliced_array as $curr_slice_key=>$curr_sliced_value){
+            if(!empty($selected_filters[$curr_sliced_value])){
+                // +if exists Yes
+                // Then append its string present in respective selected_filters_array element
+                $url .= ($curr_slice_key == 0 ? '?' : "&");
+
+                $url .= $curr_sliced_value . "=" . $selected_filters[$curr_sliced_value];
+            }
+
+            else{
+                // if exits No
+                $url .= ($curr_slice_key == 0 ? '?' : "&");
+
+                $url .= $curr_sliced_value . "=";
+            }
+            //echo $current_filter_url;exit;
+
+        } // foreach($sliced_array as $curr_slice_key=>$curr_sliced_value)
+
+        $url .= "&$option_name=";
+
+    } //if(!empty($sliced_array))
+
+    else{
+        $url .= "?$option_name="; 
     }
 
-    usort($array, array(new TermMetaCmpClosure($order_arr), "call"));
-
-    return $array;
-
-}
+    return $url;
+} // end of function
 
 
-function custom_compare($a, $b, $order_arr){
-    
-    $a = array_search($a['width_name'], $order_arr);
-    $b = array_search($b['width_name'], $order_arr);
-    if($a === false && $b === false) { 
-        return 0;                      
-    }
-    else if ($a === false) {           
-        return 1;                     
-    }
-    else if ($b === false) {           
-        return -1;                     
-    }
-    else {
-        return $a - $b;
-    }
-}
+function append_filter_after($filter_arr_keys, $option_name, $selected_filters){
+    $url = '';
+    $sliced_reverse_array = array_slice($filter_arr_keys, array_search($option_name, $filter_arr_keys) + 1);
 
+    /*echo '<pre>';
+    print_r($sliced_reverse_array);
+    echo '</pre>';
+    exit;*/
 
-class TermMetaCmpClosure
-{
-    private $meta;
+    if(!empty($sliced_reverse_array)){
+        // If option exists Yes
+        //echo 'inside if';exit; 
 
-    function __construct( $meta ) {
-        $this->meta = $meta;
-    }
+       // Then check if this option/options present in the sliced array exists in selectd_filters_array
 
-    function call( $a, $b ) {
-        return custom_compare($a, $b, $this->meta);
-    }
-}
+        foreach($sliced_reverse_array as $curr_slice_key=>$curr_sliced_value){
+            if(!empty($selected_filters[$curr_sliced_value])){
+                // +if exists Yes
+                // Then append its string present in respective selected_filters_array element
+                $url .= "&";
+                $url .= $curr_sliced_value . "=" . $selected_filters[$curr_sliced_value];
+            }
 
+            else{
+                // if exits No
+                $url .= "&";
 
-function get_width_name($width_name){
-    switch ($width_name) {
-        case 'b-normal':
-            return 'B-Normal';
-            break;
-        case 'd-wide':
-            return 'D-Wide';
-            break;
+                $url .= $curr_sliced_value . "=";
+            }
+            //echo $current_filter_url;exit;
 
-        case '2e-extra-wide':
-            return '2E-Extra-Wide';
-            break;
+        } // foreach($sliced_reverse_array as $curr_slice_key=>$curr_sliced_value)
 
-        case 'a-narrow':
-            return 'A-Narrow';
-            break;
+        //$current_filter_url .= "&$option_name=";
 
-        case 'd-normal':
-            return 'D-Normal';
-            break;
+    } //if(!empty($sliced_reverse_array))
 
-        case 'b-narrow':
-            return 'B-Narrow';
-            break;
+    // no else part for sliced_reverse_array
 
-        case '2e-wide':
-            return '2E-Wide';
-            break;
+    /*else{
+       $current_filter_url .= "?$option_name="; 
+    }*/
 
-        case '4e-extra-wide':
-            return '4E-Extra-Wide';
-            break;
+    return $url;
 
-        default:
-            return '';
-            break;
-    }
-}
-
-
-function invenDescSort($item1,$item2){
-    if ($item1['style'] == $item2['style']) return 0;
-    return ($item1['style'] < $item2['style']) ? 1 : -1;
-}
-
-// To check If file exist
-function is_url_exist($url){
-    $ch = curl_init($url);    
-    curl_setopt($ch, CURLOPT_NOBODY, true);
-    curl_exec($ch);
-    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-
-    if($code == 200){
-       $status = true;
-    }else{
-      $status = false;
-    }
-    curl_close($ch);
-   return $status;
-}
-
-
-
-
-// Ecommerce Tracking Functions
-
-// Function to return the JavaScript representation of a TransactionData object.
-function getTransactionJs(&$trans) {
-return <<<HTML
-      ga('ecommerce:addTransaction', {
-        'id': '{$trans['id']}',
-        'affiliation': '{$trans['affiliation']}',
-        'revenue': '{$trans['revenue']}',
-        'shipping': '{$trans['shipping']}',
-        'tax': '{$trans['tax']}'
-      });
-HTML;
-}
-
-
-// Function to return the JavaScript representation of an ItemData object.
-function getItemJs(&$transId, &$item) {
-return <<<HTML
-      ga('ecommerce:addItem', {
-        'id': '$transId',
-        'name': '{$item['name']}',
-        'sku': '{$item['sku']}',
-        'category': '{$item['category']}',
-        'price': '{$item['price']}',
-        'quantity': '{$item['quantity']}'
-      });
-HTML;
 }

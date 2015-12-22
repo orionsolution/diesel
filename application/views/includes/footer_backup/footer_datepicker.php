@@ -730,10 +730,10 @@
         app.enableShipToStore = true;
       }(window.app = window.app || {}));
     </script>
-    <script type="text/javascript" src="<?=base_url();?>js/addthis_widget.js#pubid=ra-524670f854b3d609"></script>
-    <script src="<?=base_url();?>js/app.js" type="text/javascript"></script>
-    <script src="<?=base_url();?>js/common.js" type="text/javascript"></script>
-    <script src="<?=base_url();?>js/diesel.app.js" type="text/javascript"></script>
+    <script type="text/javascript" src="<?=base_url()?>js/addthis_widget.js#pubid=ra-524670f854b3d609"></script>
+    <script src="<?=base_url()?>js/app.js" type="text/javascript"></script>
+    <script src="<?=base_url()?>js/common.js" type="text/javascript"></script>
+    <script src="<?=base_url()?>js/diesel.app.js" type="text/javascript"></script>
 
     <script>
       app.page.setContext({
@@ -753,7 +753,7 @@
         time: (new Date()).getTime()
       };
     </script>
-    <script id="mstag_tops" type="text/javascript" src="<?=base_url();?>js/mstag.js"></script>
+    <script id="mstag_tops" type="text/javascript" src="<?=base_url()?>js/mstag.js"></script>
     <script type="text/javascript">
       mstag.loadTag("analytics", {
         dedup: "1",
@@ -790,7 +790,7 @@
   </div>
 
   <!-- Demandware Analytics code 1.0 -->
-  <script type="text/javascript" src="<?=base_url();?>js/dwanalytics.js"></script>
+  <script type="text/javascript" src="<?=base_url()?>js/dwanalytics.js"></script>
   <script type="text/javascript">
     //<!--
     /* <![CDATA[ */

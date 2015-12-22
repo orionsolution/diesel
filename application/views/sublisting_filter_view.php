@@ -1,6 +1,13 @@
 <?//=//$this->uri->segment(1);//exit;?>
 <?//=//parse_str($_SERVER['QUERY_STRING'], $_GET);exit;?>
 <?//=//$_GET['cgid'];exit;?>
+
+<?
+/*echo '<pre>';
+print_r($selection_category_arr);
+echo '</pre>';
+exit;*/
+?>
 <script type="text/javascript" src="<?=base_url();?>js/sublisting.js"></script>
 
 <div id="main" role="main" class="clearfix plp-search-page">
@@ -79,203 +86,233 @@
                         <span class="hide-filter-block"></span>
                     </div>
                     <ul class="refinement-list">
-                        <? foreach($filter_arr as $option_name=>$curr_option):?>                            
+                        <?foreach($filter_arr as $option_name=>$curr_option):?>                            
                             <li class="refinement-header-item <?=ucfirst($option_name);?>">
                             <h3 class="refinement-header">
                             <span>
                             <?=ucfirst($option_name);?> </span>
-                            <? if($option_name == 'color'):
-                                $data_prefn = 'macroColor';
-                              else:
-                                $data_prefn = $option_name;
-                              endif;
+                            <?$check_arr = (!empty(${'selected_'.$option_name}) ? explode("|",${'selected_'.$option_name}) : array());
+                              $filter_arr_keys = array_keys($filter_arr);
+                              $selected = "";
+                              /*echo '<pre>';
+                                print_r($filter_arr_keys);
+                                echo '</pre>';
+                                exit;  */
+
+
                             ?>
                             </h3>
                             <div class="refinement-item">
                                 <div class="clearfix">
                                     <!-- check for the count -->
-                                    <? if(count($curr_option) > 4):?>
-                                        <? for($i = 0; $i < count($curr_option); $i += 4):?>                                    
+                                    <?if(count($curr_option) > 4):?>
+                                        <?for($i = 0; $i < count($curr_option); $i += 4):?>                                    
                                                 <ul>
-                                                    <?foreach(array_slice($curr_option,$i,4) as $curr_value):?>                       
-                                                        <li>
-                                                        <? if (strpos($curr_value['attr_value'],' ') !== false) {
-                                                                $curr_value['attr_value'] = str_replace(' ', '-', $curr_value['attr_value']);
-                                                            }
+                                                    <?foreach(array_slice($curr_option,$i,4) as $curr_value):?>
+                                                        <?
+                                                        //$option_name = 'category';
+                                                        $current_filter_url = base_url().'product/'.$gender.'/'.$sub_category.'/filter';
+                                                        //Check if the current option_name is present in selected_filters array
+                                                        if(!empty($selected_filters[$option_name])){
+                                                            // check for all the filter options that exists befor the current option name in filter_array_keys
+                                                                
+                                                                $current_filter_url .= append_filter_before($filter_arr_keys,$option_name,$selected_filters);
+                                                                
 
 
-                                                        ?>
-                                                            <a href="<?=base_url().'product/'.$gender.'/'.$sub_category.'/filter?'.$option_name.'='.$curr_value['attr_value'];?>" data-prefn="<?=$data_prefn;?>" data-prefv="<?=$curr_value['attr_value'];?>"><?=$curr_value['attr_value'];?></a>
+                                                                // Appending the current option name values in current url string
+
+                                                                
+                                                                $current_exploded_arr = explode("|",$selected_filters[$option_name]);
+
+                                                                if(in_array(str_replace(" ", "-", $curr_value['attr_value']), $current_exploded_arr)){
+                                                                    $current_filter_url .= $selected_filters[$option_name];
+                                                                    $selected = "selected";
+                                                                }
+                                                                else{
+                                                                    $selected = "";
+                                                                    $current_filter_url .= $selected_filters[$option_name]."|".str_replace(" ", "-", $curr_value['attr_value']);
+                                                                }
+
+                                                                //echo $current_filter_url."<br>";
+
+                                                                // check for all the filter options that exists after the current option name in filter_array_keys and perform the same operation in reverse order
+
+                                                                $current_filter_url .= append_filter_after($filter_arr_keys,$option_name,$selected_filters);
+
+                                                                
+
+                                                                
+
+                                                        } // if(!empty($selected_filters[$option_name]))
+
+                                                        //exit;
+
+
+                                                        else{
+                                                           // not present in selected filters array
+
+                                                                $current_filter_url .= append_filter_before($filter_arr_keys,$option_name,$selected_filters);
+
+                                                                // No need to check the values in selected_filters_array as the current option_name is not present it. Just append the $curr_value['attr_value'];
+
+
+                                                                $current_filter_url .= str_replace(" ", "-", $curr_value['attr_value']);
+
+                                                                // check for all the filter options that exists after the current option name in filter_array_keys and perform the same operation in reverse order
+
+                                                                $current_filter_url .= append_filter_after($filter_arr_keys,$option_name,$selected_filters);
+
+                                                                //echo $current_filter_url;exit;
+                                                                
+ 
+                                                        } // end of final else clause
+
+                                                        //echo $current_filter_url."<br>";
+
+                                                        
+                                                        ?>                        
+                                                        <li class="<?=$selected;?>">
+                                                            <a href="<?=$current_filter_url;?>"><?=$curr_value['attr_value'];?></a>
                                                         </li>                                                       
-                                                    <? endforeach; //foreach($curr_option as $curr_value) ?>
+                                                    <?endforeach;//exit; //foreach($curr_option as $curr_value) ?>
                                                 </ul>                                            
-                                        <? endfor;?>
-                                    <? else:?>
+                                        <?endfor;//exit;?>
+                                    <?else:?>
                                         <ul> 
-                                        <? foreach($curr_option as $curr_value):?>                                           
-                                            <li>
-                                             <? if (strpos($curr_value['attr_value'],' ') !== false) {
-                                                    $curr_value['attr_value'] = str_replace(' ', '-', $curr_value['attr_value']);
-                                                }
-                                            ?>
-                                            <a href="<?=base_url().'product/'.$gender.'/'.$sub_category.'/filter?'.$option_name.'='.$curr_value['attr_value'];?>" data-prefn="<?=$data_prefn;?>" data-prefv="<?=$curr_value['attr_value'];?>"><?=$curr_value['attr_value'];?></a>
+                                        <?foreach($curr_option as $curr_value):?> 
+                                            <?
+                                            $current_filter_url = base_url().'product/'.$gender.'/'.$sub_category.'/filter';
+                                            //Check if the current option_name is present in selected_filters array
+                                                        if(!empty($selected_filters[$option_name])){
+                                                            // check for all the filter options that exists befor the current option name in filter_array_keys
+                                                                
+                                                                $current_filter_url .= append_filter_before($filter_arr_keys,$option_name,$selected_filters);
+                                                                
+
+
+                                                                // Appending the current option name values in current url string
+
+                                                                
+                                                                $current_exploded_arr = explode("|",$selected_filters[$option_name]);
+
+                                                                if(in_array(str_replace(" ", "-", $curr_value['attr_value']), $current_exploded_arr)){
+                                                                    $current_filter_url .= $selected_filters[$option_name];
+                                                                    $selected = "selected";
+                                                                }
+                                                                else{
+                                                                    $selected = "";
+                                                                    $current_filter_url .= $selected_filters[$option_name]."|".str_replace(" ", "-", $curr_value['attr_value']);
+                                                                }
+
+                                                                //echo $current_filter_url."<br>";
+
+                                                                // check for all the filter options that exists after the current option name in filter_array_keys and perform the same operation in reverse order
+
+                                                                $current_filter_url .= append_filter_after($filter_arr_keys,$option_name,$selected_filters);
+
+                                                                
+
+                                                                
+
+                                                        } // if(!empty($selected_filters[$option_name]))
+
+                                                        //exit;
+
+
+                                                        else{
+                                                           // not present in selected filters array
+
+                                                                $current_filter_url .= append_filter_before($filter_arr_keys,$option_name,$selected_filters);
+
+                                                                // No need to check the values in selected_filters_array as the current option_name is not present it. Just append the $curr_value['attr_value'];
+
+
+                                                                $current_filter_url .= str_replace(" ", "-", $curr_value['attr_value']);
+
+                                                                // check for all the filter options that exists after the current option name in filter_array_keys and perform the same operation in reverse order
+
+                                                                $current_filter_url .= append_filter_after($filter_arr_keys,$option_name,$selected_filters);
+
+                                                                //echo $current_filter_url;exit;
+                                                                
+ 
+                                                        } // end of final else clause
+
+                                                        //echo $current_filter_url."<br>";
+                                            ?>                                          
+                                            <li class="<?=$selected;?>">                                            
+                                            <a href="<?=$current_filter_url;?>"><?=$curr_value['attr_value'];?></a>
                                             </li>
-                                        <? endforeach;?>
+                                        <?endforeach;?>
                                     </ul>
-                                    <? endif;//if(count($curr_option) > 4)?>
+                                    <?endif;//if(count($curr_option) > 4)?>
                                     
                                 </div>
                                 <div class="reset-refinement">
-                                    <a data-prefn="productGroup" title="Show all options" href="#">reset</a>
+                                    <a data-prefn="productGroup" title="Show all options" href="">reset</a>
                                 </div>
                                 <div class="apply-refinement">
                                     <span>apply</span>
                                 </div>
                             </div>                                
                             </li>                            
-                        <? endforeach;?>
-
-<!--                         <li class="refinement-header-item Color">
-                        <h3 class="refinement-header">
-                        <span>
-                        Color </span>
-                        </h3>
-                        <div class="refinement-item">
-                            <div class="clearfix">
-                                <ul class="scrollable">
-                                    
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Azure" href="#">Azure</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Black" href="#">Black</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Blue" href="#">Blue</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Brown" href="#">Brown</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Green" href="#">Green</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Grey" href="#">Grey</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Pink" href="#">Pink</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Red" href="#">Red</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="Violet" href="#">Violet</a>
-                                    </li>
-                                    <li>
-                                    <a data-prefn="macroColor" data-prefv="White" href="#">White</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="reset-refinement">
-                                <a data-prefn="macroColor" title="Show all options" href="#">reset</a>
-                            </div>
-                            <div class="apply-refinement">
-                                <span>apply</span>
-                            </div>
-                        </div>
-                        
-                        </li> -->
-<!--                         <li class="refinement-header-item Size">
-                        <h3 class="refinement-header">
-                        <span>
-                        Size </span>
-                        </h3>
-                        <div class="refinement-item">
-                            
-                            <div class="clearfix">
-                                <ul class="clearfix swatches Size">
-                                    <li class="swatch-36-37">
-                                    <a id="swatch-36-37" data-prefn="size" data-prefv="36-37" href="#" title="36-37">
-                                    36-37 </a>
-                                    </li>
-                                    <li class="swatch-38-39">
-                                    <a id="swatch-38-39" data-prefn="size" data-prefv="38-39" href="#" title="38-39">
-                                    38-39 </a>
-                                    </li>
-                                    <li class="swatch-40-44">
-                                    <a id="swatch-40-44" data-prefn="size" data-prefv="40-44" href="#" title="40-44">
-                                    40-44 </a>
-                                    </li>
-                                    <li class="swatch-XS">
-                                    <a id="swatch-XS" data-prefn="size" data-prefv="XS" href="#" title="XS">
-                                    XS </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li class="swatch-S">
-                                    <a id="swatch-S" data-prefn="size" data-prefv="S" href="#" title="S">
-                                    S </a>
-                                    </li>
-                                    <li class="swatch-M">
-                                    <a id="swatch-M" data-prefn="size" data-prefv="M" href="#" title="M">
-                                    M </a>
-                                    </li>
-                                    <li class="swatch-L">
-                                    <a id="swatch-L" data-prefn="size" data-prefv="L" href="#" title="L">
-                                    L </a>
-                                    </li>
-                                    <li class="swatch-XL">
-                                    <a id="swatch-XL" data-prefn="size" data-prefv="XL" href="#" title="XL">
-                                    XL </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li class="swatch-XXL">
-                                    <a id="swatch-XXL" data-prefn="size" data-prefv="XXL" href="#" title="XXL">
-                                    XXL </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="reset-refinement">
-                                <a data-prefn="size" title="Show all options" href="#">reset</a>
-                            </div>
-                            <div class="apply-refinement">
-                                <span>apply</span>
-                            </div>
-                        </div>
-                        
-                        </li> -->
+                        <?endforeach;?><?//exit;?>
                     </ul>
                     <div class="filter-global-reset mobile">
-                        <span>Reset All</span>
+                        <span class="reset">Reset All</span>
                     </div>
                     <div class="filter-done mobile">
                         <span>DONE</span>
                     </div>
                 </div>
-                <div class="filter-bxSlider-plp clearfix">
-                    <div class="filter-slider-wrapper">
-                        <!--<div class="filter-slider remove-trans">
-                        </div>-->
-                    </div>
+                <div class="filter-bxSlider-plp clearfix" style="display:block;">
+                        <div class="filter-slider-wrapper" >
+                            <form action="<?=base_url().'product/'.$gender.'/'.$sub_category.'/filter';?>" method="post" name="selection_form">
+                            <?if(!empty($selected_filters)):?>
+                                <?/*echo '<pre>';
+                                print_r($selected_filters);
+                                echo '</pre>';
+                                exit;*/?>
+                                <div class="filter-slider remove-trans">
+                                    <?foreach($selected_filters as $filter_name=>$curr_selected_filter):
+                                            $selection_filter_arr = explode("|",$curr_selected_filter);
+                                    ?>
+                                        <?foreach($selection_filter_arr as $curr_selection):?>
+                                            <span class="breadcrumb-refinement-value"><?=str_replace('-', " ", $curr_selection);?>
+                                                <a class="breadcrumb-relax" href="#">
+                                                    <img class="plp-filter-cross" src="<?=base_url();?>images/refine_filter.svg" alt="REMOVE">
+                                                </a>
+                                                <input type="hidden" name="<?=$filter_name.'_selection_filter[]';?>" value="<?=str_replace('-', " ", $curr_selection);?>">
+                                            </span>
+                                        <?endforeach;endforeach;?>
+                                </div> <!-- end of filter-slider remove-trans -->
+                            <?endif;?>
+                            </form>
+                        </div> <!-- end of filter-slider-wrapper -->
                     <div class="filter-global-reset">
-                        <span>Reset</span>
+                        <a href="<?=base_url().'product/'.$gender.'/'.$sub_category;?>" style="color: #FFF;text-decoration:none;"><span style="border:none;">Reset</span></a>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end filter by -->
+        <script>
+        // script for clearing the filter options
+            $('a.breadcrumb-relax').on('click',function(event){
+                event.preventDefault();
+                $(this).next('input[type=hidden]').val("");
+                //console.log('correct function');
+                $('form[name="selection_form"]').submit();
+            }); // end of click method
+        </script>
         
         <h1 class="visually-hidden">Jackets</h1>
         
         <!-- start search-result-options -->
         <div class="search-result-options">
             <div class="result-options-right">
-                <!-- <div class="sort-by">
+               <!--  <div class="sort-by">
                     <form action="" method="post" name="Product-Sorting-Options" novalidate="novalidate">
                         <fieldset style="position: relative;">
                             <label for="grid-sort-header">Sort By:</label>
@@ -335,7 +372,7 @@
                         ?>
                         <div class=" grid-tile item w2 h2 reorder " data-colors-to-show="51F" style="max-width: 248px;">
                             <div class="product-tile default-products " id="bcidoiaaiMmMaaaadkUroyokxa" data-itemid="00SJT20CAKE">
-                                <div class="product-tile-content" data-queue="{"mo": []}">
+                                <div class="product-tile-content" data-queue="{&quot;mo&quot;: []}">
                                     <div class="product-image clearfix" style="min-height: 0px; height: 304px;">
                                         <div class="item-swatches">
                                             <div class="griditem-swatchlist">
@@ -353,7 +390,7 @@
                                                         </a>
                                                         </li>
                                                     <? endforeach;?>
-                                                     <!--<li style="display: none;">
+                                                    <!-- <li style="display: none;">
                                                     <a href="#" title="Green">
                                                     <img itemprop="image" class="primary-image lazy" data-src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-original="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_F.jpg?sw=320&amp;sh=427" data-altimg="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwc6cd363b/images/large/00SJT2_0CAKE_51F_R.jpg?sw=320&amp;sh=427" src="http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw5153feb8/images/large/00SJT2_0CAKE_51F_O.jpg?sw=320&amp;sh=427" alt="W-NICK, Green">
                                                     </a>
@@ -401,7 +438,7 @@
                     <div class="load-more-wrap">
                         <div class="load-ajax-content" style="display: none;">
                         </div>
-                        <?if($this->uri->segment(1) !== 'show_search'){
+                        <? if($this->uri->segment(1) !== 'show_search'){
                             $category = $this->uri->segment(2);
                             $sub_category = $this->uri->segment(3);
                             //$cgid_status = false;
@@ -438,9 +475,9 @@
                 <?endif;?>
                 <!-- load more end -->
 
-            <?else:?>
+            <? else:?>
                 <h2 style="font-size: 2.5em; text-align: center; margin-bottom: 20px;">Sorry No Products Available</h2>
-            <?endif; //  if(!empty($product_arr)):  ?>
+            <? endif; //  if(!empty($product_arr)):  ?>
             
         </div>
         <!-- end search-result-content -->

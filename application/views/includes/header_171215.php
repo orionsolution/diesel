@@ -4,8 +4,7 @@
 <!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en" class="js infinite-scroll">
-<!--<![endif]-->
-<head>
+<!--<![endif]--><head>
 
     <link rel="alternate" hreflang="ja-jp" href="http://www.store.diesel.co.jp">
     <meta charset=UTF-8>
@@ -98,7 +97,15 @@
 
 
     <!--  UI -->
-    <link rel="stylesheet" href="<?=base_url()?>css/style-new.css" />    <meta name="google-site-verification" content="v4gmkBxtjNnhdyrMHJcx4rp7jnKkAwi5nOZqnhQf8WU" />
+    <link rel="stylesheet" href="<?=base_url()?>css/style-new.css" />
+
+
+
+    <meta name="google-site-verification" content="v4gmkBxtjNnhdyrMHJcx4rp7jnKkAwi5nOZqnhQf8WU" />
+
+
+
+
 
     <div class="content-asset">
         <!-- dwMarker="content" dwContentID="bcu5aiaaiMZcgaaadnNlZrDMYt" -->
@@ -169,10 +176,22 @@
         }
 
         //Custom dimension specific tracking
+
+
+
+
         ga('set', 'dimension4', 'guest');
+
+
+
+
         ga('send', 'pageview');
     </script>
-    <!-- End Google Analytics -->    <script type="text/javascript">
+    <!-- End Google Analytics -->
+
+
+
+    <script type="text/javascript">
         function updatePRButtonUI() {
             $('.diesel-payrunner > p').css('visibility', 'visible');
         }
@@ -230,15 +249,23 @@ if($view_file_name == 'home_view') { ?>
     <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 
 
+
+
+
     <div class="mobile-menu-wrap z-index-5">
         <div class="mobile-inner-wrap">
             <ul class="menu-utility menu-utility-mobile col-lg-4 col-md-4">
+
                 <li class="ship_to">
                     <div class="ship_to_inner">
+
                         <h4>SHIP TO: </h4>
+
                         <span class="ship_to_flag"></span>
                     </div>
+
                 </li>
+
 
                 <li class="seprator store-loca">
                     <h4>
@@ -247,6 +274,10 @@ if($view_file_name == 'home_view') { ?>
                     </a>
                 </h4>
                 </li>
+
+
+
+
 
                 <input type="hidden" id="isUserLogin" value="false" />
                 <?php if(isset($this->session->userdata['s_uid'])) { ?>
@@ -274,13 +305,21 @@ if($view_file_name == 'home_view') { ?>
                 <?php } ?>
             </ul>
             <div class="mobile-menu-flip">
-                <ul class="menu-category-mobile level-1">                    
-                	<li id="mobdiesel-denim" class="first ">
+
+
+
+
+                <ul class="menu-category-mobile level-1">
+
+
+
+                    <li id="mobdiesel-denim" class="first ">
                         <h4><a href="javascript:void(0)" data-href="#" class="level-1">
                                 <span class="s-diesel-denim" >DENIM</span>
                                 <div class="s-diesel-denim main-nav-arr"></div>
                             </a></h4>
                     </li>
+
 
                     <li id="mobdiesel-man" class="">
                         <h4><a href="javascript:void(0)" data-href="#" class="level-1">
@@ -289,12 +328,17 @@ if($view_file_name == 'home_view') { ?>
                             </a></h4>
                     </li>
 
+
                     <li id="mobdiesel-woman" class="">
                         <h4><a href="javascript:void(0)" data-href="#" class="level-1">
                                 <span class="s-diesel-woman" >WOMEN</span>
                                 <div class="s-diesel-woman main-nav-arr"></div>
                             </a></h4>
-                    </li>                    <li id="mobdiesel-kids" class="">
+                    </li>
+
+
+
+                    <li id="mobdiesel-kids" class="">
                         <h4><a href="javascript:void(0)" data-href="#" class="level-1">
                                 <span class="s-diesel-kids" >KIDS</span>
                                 <div class="s-diesel-kids main-nav-arr"></div>
@@ -308,7 +352,9 @@ if($view_file_name == 'home_view') { ?>
                                 <div class="s-diesel-stories main-nav-arr"></div>
                             </a></h4>
                     </li>
+
                 </ul>
+
 
                 <div id="mobile-category-content" class="display-none">
                     <div id="div_mobdiesel-denim">
@@ -322,6 +368,10 @@ if($view_file_name == 'home_view') { ?>
                                     <li class="mobile-level-2 empty-child">
                                         MEN
                                         <ul class="mobile-level-3">
+
+
+
+
                                             <li class='cursor mobile-level-3 '>
                                                 <div class="mobile-level-3-text">SHOP BY FIT</div>
 
@@ -332,23 +382,43 @@ if($view_file_name == 'home_view') { ?>
                                                         <a data-catId="diesel-man-features-denimguide-fits-skinny" href='#'>
                                                             Skinny
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 '>
                                                         <a data-catId="diesel-man-features-denimguide-fits-tapered" href='#'>
                                                             Tapered
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 '>
                                                         <a data-catId="diesel-man-features-denimguide-fits-straight" href='#'>
                                                             Straight
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 '>
                                                         <a data-catId="diesel-man-features-denimguide-fits-carrot" href='#'>
                                                             Carrot
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 '>
                                                         <a data-catId="diesel-man-features-denimguide-fits-bootcut" href='#'>
                                                             Bootcut
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 see-all-link'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 see-all-link'>
                                                         <p><a href="#">SHOP ALL</a>
                                                         </p>
                                                     </li>
@@ -362,27 +432,51 @@ if($view_file_name == 'home_view') { ?>
 
                                                 <ul class="mobile-level-4">
 
+
+
+
+
                                                     <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-man-features-denimguide-washstories-clean" href='#'>
                                                             Clean
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-man-features-denimguide-washstories-coated" href='#'>
                                                             Coated
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-man-features-denimguide-washstories-destroyed" href='#'>
                                                             Destroyed
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-man-features-denimguide-washstories-mediumtreated" href='#'>
                                                             Medium Treated
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-man-features-denimguide-washstories-treated" href='#'>
                                                             Treated
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 see-all-link'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 see-all-link'>
                                                         <p><a href="#">SHOP ALL</a>
                                                         </p>
                                                     </li>
@@ -390,6 +484,10 @@ if($view_file_name == 'home_view') { ?>
                                                 </ul>
 
                                             </li>
+
+
+
+
 
                                             <li class='cursor mobile-level-3 '>
                                                 <div class="mobile-level-3-text">HIGHLIGHTS</div>
@@ -401,15 +499,27 @@ if($view_file_name == 'home_view') { ?>
                                                         <a data-catId="diesel-man-denim-highlights-newstyle" href='#'>
                                                             New Style: Taylhor
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-man-denim-highlights-joggjeans" href='#'>
                                                             JoggJeans
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-man-denim-highlights-newdenim" href='#'>
                                                             New Denim FW15
                                                         </a>
-                                                    </li>                                                </ul>
+                                                    </li>
+
+
+
+                                                </ul>
 
                                             </li>
 
@@ -420,6 +530,10 @@ if($view_file_name == 'home_view') { ?>
                                     <li class="mobile-level-2 empty-child">
                                         WOMEN
                                         <ul class="mobile-level-3">
+
+
+
+
                                             <li class='cursor mobile-level-3 '>
                                                 <div class="mobile-level-3-text">SHOP BY FIT</div>
 
@@ -430,31 +544,59 @@ if($view_file_name == 'home_view') { ?>
                                                         <a data-catId="diesel-woman-features-denimguide-fits-jegging" href='#'>
                                                             Jegging
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 '>
                                                         <a data-catId="diesel-woman-features-denimguide-fits-superskinny" href='#'>
                                                             Super Skinny
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 '>
                                                         <a data-catId="diesel-woman-features-denimguide-fits-skinny" href='#'>
                                                             Skinny
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 '>
                                                         <a data-catId="diesel-woman-features-denimguide-fits-regular-straight" href='#'>
                                                             Straight
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 '>
                                                         <a data-catId="diesel-woman-features-denimguide-fits-boyfriend" href='#'>
                                                             Boyfriend
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 '>
                                                         <a data-catId="diesel-woman-features-denimguide-fits-bootcut" href='#'>
                                                             Bootcut
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 '>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 '>
                                                         <a data-catId="diesel-woman-features-denimguide-fits-flare" href='#'>
                                                             Flare
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 see-all-link'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 see-all-link'>
                                                         <p><a href="#">SHOP ALL</a>
                                                         </p>
                                                     </li>
@@ -468,27 +610,51 @@ if($view_file_name == 'home_view') { ?>
 
                                                 <ul class="mobile-level-4">
 
+
+
+
+
                                                     <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-woman-features-denimguide-washstories-clean" href='#'>
                                                             Clean
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-woman-features-denimguide-washstories-coated" href='#'>
                                                             Coated
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-woman-features-denimguide-washstories-destroyed" href='#'>
                                                             Destroyed
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-woman-features-denimguide-washstories-mediumtreated" href='#'>
                                                             Medium Treated
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-woman-features-denimguide-washstories-treated" href='#'>
                                                             Treated
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 see-all-link'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 see-all-link'>
                                                         <p><a href="#">SHOP ALL</a>
                                                         </p>
                                                     </li>
@@ -496,6 +662,10 @@ if($view_file_name == 'home_view') { ?>
                                                 </ul>
 
                                             </li>
+
+
+
+
                                             <li class='cursor mobile-level-3 '>
                                                 <div class="mobile-level-3-text">HIGHLIGHTS</div>
 
@@ -506,17 +676,33 @@ if($view_file_name == 'home_view') { ?>
                                                         <a data-catId="diesel-woman-denim-highlights-newstyle" href='#'>
                                                             New Style: Actyvista
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-woman-denim-highlights-joggjeans" href='#'>
                                                             JoggJeans
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
                                                         <a data-catId="diesel-woman-denim-highlights-newdenim" href='#'>
                                                             New Denim FW15
                                                         </a>
-                                                    </li>                                                </ul>
+                                                    </li>
+
+
+
+                                                </ul>
 
                                             </li>
+
+
+
+
                                         </ul>
                                     </li>
 
@@ -529,6 +715,10 @@ if($view_file_name == 'home_view') { ?>
 
                 <div id="mobile-category-content" class="display-none">
                     <div id="div_mobdiesel-man">
+
+
+
+
 
                         <ul class="mobile-level-1">
                             <li class='mobile-level-1 '>
@@ -554,47 +744,91 @@ if($view_file_name == 'home_view') { ?>
                                                         <a data-catId="diesel-man-denimandclothing-denim" href='<?= base_url();?>producttest/sublisting/mens/demin'>
                                                             Denim
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-denimandclothing-joggjeans" href='#'>
                                                             JoggJeans
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-denimandclothing-jackets" href='#'>
                                                             Jackets
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-denimandclothing-pants" href='#'>
                                                             Pants
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-denimandclothing-shirts" href='#'>
                                                             Shirts
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-denimandclothing-sweatshirts" href='#'>
                                                             Sweatshirts
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-denimandclothing-sweaters" href='#'>
                                                             Sweaters
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-denimandclothing-polos" href='#'>
                                                             Polos
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-denimandclothing-tshirtsandtops" href='#'>
                                                             Tshirts
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-denimandclothing-underwear" href='#'>
                                                             Underwear
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-denimandclothing-beachwear" href='#'>
                                                             Beachwear
                                                         </a>
                                                     </li>
+
+
+
+
 
                                                 </ul>
 
@@ -612,43 +846,83 @@ if($view_file_name == 'home_view') { ?>
                                                         <a data-catId="diesel-man-footwearandaccessories-footwear" href='#'>
                                                             Shoes
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-footwearandaccessories-bags" href='#'>
                                                             Bags
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-footwearandaccessories-walletsandsmallgoods" href='#'>
                                                             Wallets
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-footwearandaccessories-belts" href='#'>
                                                             Belts
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-footwearandaccessories-otheraccessories" href='#'>
                                                             Other Accessories
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-footwearandaccessories-jewels" href='#'>
                                                             Jewelry
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-footwearandaccessories-eyewear" href='#'>
                                                             Eyewear
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-footwearandaccessories-timeframes" href='#'>
                                                             Watches
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-footwearandaccessories-fragrances" href='#'>
                                                             Fragrance
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-footwearandaccessories-technology" href='#'>
                                                             Technology
                                                         </a>
                                                     </li>
+
+
+
+
 
                                                 </ul>
 
@@ -657,7 +931,15 @@ if($view_file_name == 'home_view') { ?>
 
                                             <li class='cursor mobile-level-3 '>
                                                 <div class="mobile-level-3-text">SHOP BY</div>
+
+
+
+
                                                 <ul class="mobile-level-4">
+
+
+
+
 
                                                     <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-features-latestarrivals" href='#'>
@@ -666,12 +948,20 @@ if($view_file_name == 'home_view') { ?>
                                                             </a>
                                                     </li>
 
+
+
+
+
                                                     <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-features-onlineexclusives" href='#'>
                                                                 Online Exclusives
                                                                 
                                                             </a>
                                                     </li>
+
+
+
+
 
                                                     <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-features-bestsellers" href='#'>
@@ -680,12 +970,20 @@ if($view_file_name == 'home_view') { ?>
                                                             </a>
                                                     </li>
 
+
+
+
+
                                                     <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-features-Rock" href='#'>
                                                                 Casual Rock
                                                                 
                                                             </a>
                                                     </li>
+
+
+
+
 
                                                 </ul>
 
@@ -703,15 +1001,27 @@ if($view_file_name == 'home_view') { ?>
                                                         <a data-catId="diesel-man-highlights-eveningrock" href='#'>
                                                             Evening Rock
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-highlights-neoprene" href='#'>
                                                             Neoprene
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-man-highlights-zipround" href='#'>
                                                             Zip Round
                                                         </a>
                                                     </li>
+
+
+
+
 
                                                 </ul>
 
@@ -730,6 +1040,10 @@ if($view_file_name == 'home_view') { ?>
 
                 <div id="mobile-category-content" class="display-none">
                     <div id="div_mobdiesel-woman">
+
+
+
+
 
                         <ul class="mobile-level-1">
                             <li class='mobile-level-1 '>
@@ -755,57 +1069,109 @@ if($view_file_name == 'home_view') { ?>
                                                         <a data-catId="diesel-woman-denimandclothing-denim" href='#'>
                                                             Denim
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-denimandclothing-joggjeans" href='#'>
                                                             JoggJeans
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-denimandclothing-dresses" href='#'>
                                                             Dresses
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-denimandclothing-jumpsuits" href='#'>
                                                             Jumpsuits
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-denimandclothing-jackets" href='#'>
                                                             Jackets
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-denimandclothing-pants" href='#'>
                                                             Pants
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-denimandclothing-shirts" href='#'>
                                                             Shirts
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-denimandclothing-sweatshirts" href='#'>
                                                             Sweatshirts
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-denimandclothing-skirts" href='#'>
                                                             Skirts
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-denimandclothing-sweaters" href='#'>
                                                             Sweaters
                                                         </a>
                                                     </li>
 
+
+
+
+
                                                     <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-denimandclothing-tshirtsandtops" href='#'>
                                                             Tshirts
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-denimandclothing-underwear" href='#'>
                                                             Underwear
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-denimandclothing-beachwear" href='#'>
                                                             Beachwear
                                                         </a>
-                                                    </li>                                                </ul>
+                                                    </li>
+
+
+
+                                                </ul>
 
 
                                             </li>
@@ -821,41 +1187,77 @@ if($view_file_name == 'home_view') { ?>
                                                         <a data-catId="diesel-woman-footwearandaccessories-footwear" href='#'>
                                                             Shoes
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-footwearandaccessories-bags" href='#'>
                                                             Bags
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-footwearandaccessories-walletsandsmallgoods" href='#'>
                                                             Wallets
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-footwearandaccessories-belts" href='#'>
                                                             Belts
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-footwearandaccessories-otheraccessories" href='#'>
                                                             Other Accessories
                                                         </a>
                                                     </li>
 
+
+
+
+
                                                     <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-footwearandaccessories-eyewear" href='#'>
                                                             Eyewear
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-footwearandaccessories-timeframes" href='#'>
                                                             Watches
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-footwearandaccessories-fragrances" href='#'>
                                                             Fragrance
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-footwearandaccessories-technology" href='#'>
                                                             Technology
                                                         </a>
                                                     </li>
+
+
+
+
 
                                                 </ul>
 
@@ -864,7 +1266,15 @@ if($view_file_name == 'home_view') { ?>
 
                                             <li class='cursor mobile-level-3 '>
                                                 <div class="mobile-level-3-text">SHOP BY</div>
+
+
+
+
                                                 <ul class="mobile-level-4">
+
+
+
+
 
                                                     <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-features-latestarrivals" href='#'>
@@ -873,12 +1283,20 @@ if($view_file_name == 'home_view') { ?>
                                                             </a>
                                                     </li>
 
+
+
+
+
                                                     <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-features-onlineexclusives" href='#'>
                                                                 Online Exclusives
                                                                 
                                                             </a>
                                                     </li>
+
+
+
+
 
                                                     <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-features-bestsellers" href='#'>
@@ -887,12 +1305,20 @@ if($view_file_name == 'home_view') { ?>
                                                             </a>
                                                     </li>
 
+
+
+
+
                                                     <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-features-rock" href='#'>
                                                                 Casual Rock
                                                                 
                                                             </a>
                                                     </li>
+
+
+
+
 
                                                 </ul>
 
@@ -910,15 +1336,27 @@ if($view_file_name == 'home_view') { ?>
                                                         <a data-catId="diesel-woman-highlights-eveningrock" href='#'>
                                                             Evening Rock
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-highlights-tartan" href='#'>
                                                             Tartan + Leather
                                                         </a>
-                                                    </li>                                                    <li class='cursor mobile-level-4'>
+                                                    </li>
+
+
+
+                                                    <li class='cursor mobile-level-4'>
                                                         <a data-catId="diesel-woman-highlights-industrialbag" href='#'>
                                                             Industrial Bag
                                                         </a>
                                                     </li>
+
+
+
+
 
                                                 </ul>
 
@@ -935,8 +1373,14 @@ if($view_file_name == 'home_view') { ?>
                     </div>
                 </div>
 
+               
+
                 <div id="mobile-category-content" class="display-none">
                     <div id="div_mobdiesel-kids">
+
+
+
+
 
                         <ul class='mobile-level-1'>
                             <li class='mobile-level-1 '>
@@ -961,7 +1405,11 @@ if($view_file_name == 'home_view') { ?>
                                                 <div class="mobile-level-3-text">INFANT &#40;3-36 MONTHS&#41;</div>
 
 
-                                                <ul class="mobile-level-4">                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                <ul class="mobile-level-4">
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
 
                                                         <a data-catId="diesel-kids-boys-baby-denim" href='#'>
                                                                         Denim
@@ -969,6 +1417,10 @@ if($view_file_name == 'home_view') { ?>
 
 
                                                     </li>
+
+
+
+
                                                     <li class='cursor mobile-level-4 empty-child'>
 
                                                         <a data-catId="diesel-kids-boys-baby-clothing" href='#'>
@@ -977,6 +1429,10 @@ if($view_file_name == 'home_view') { ?>
 
 
                                                     </li>
+
+
+
+
 
                                                     <li class='cursor mobile-level-4 empty-child'>
 
@@ -987,14 +1443,26 @@ if($view_file_name == 'home_view') { ?>
 
                                                     </li>
 
+
+
+
+
                                                 </ul>
 
-                                            </li>                                            <li class='cursor mobile-level-3 '>
+                                            </li>
+
+
+
+                                            <li class='cursor mobile-level-3 '>
 
                                                 <div class="mobile-level-3-text">JUNIOR &#40;4-16 YEARS&#41;</div>
 
 
-                                                <ul class="mobile-level-4">                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                <ul class="mobile-level-4">
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
 
                                                         <a data-catId="diesel-kids-boys-junior-denim" href='#'>
                                                                         Denim
@@ -1002,6 +1470,10 @@ if($view_file_name == 'home_view') { ?>
 
 
                                                     </li>
+
+
+
+
                                                     <li class='cursor mobile-level-4 empty-child'>
 
                                                         <a data-catId="diesel-kids-boys-junior-clothing" href='#'>
@@ -1010,6 +1482,10 @@ if($view_file_name == 'home_view') { ?>
 
 
                                                     </li>
+
+
+
+
 
                                                     <li class='cursor mobile-level-4 empty-child'>
 
@@ -1020,14 +1496,26 @@ if($view_file_name == 'home_view') { ?>
 
                                                     </li>
 
+
+
+
+
                                                 </ul>
 
-                                            </li>                                            <li class='cursor mobile-level-3 '>
+                                            </li>
+
+
+
+                                            <li class='cursor mobile-level-3 '>
 
                                                 <div class="mobile-level-3-text">highlights</div>
 
 
                                                 <ul class="mobile-level-4">
+
+
+
+
 
                                                     <li class='cursor mobile-level-4 empty-child'>
 
@@ -1036,9 +1524,17 @@ if($view_file_name == 'home_view') { ?>
                                                                     </a>
 
 
-                                                    </li>                                                </ul>
+                                                    </li>
+
+
+
+                                                </ul>
 
                                             </li>
+
+
+
+
 
                                         </ul>
 
@@ -1055,7 +1551,11 @@ if($view_file_name == 'home_view') { ?>
                                                 <div class="mobile-level-3-text">INFANT &#40;3-36 MONTHS&#41;</div>
 
 
-                                                <ul class="mobile-level-4">                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                <ul class="mobile-level-4">
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
 
                                                         <a data-catId="diesel-kids-girls-baby-denim" href='#'>
                                                                         Denim
@@ -1063,6 +1563,10 @@ if($view_file_name == 'home_view') { ?>
 
 
                                                     </li>
+
+
+
+
                                                     <li class='cursor mobile-level-4 empty-child'>
 
                                                         <a data-catId="diesel-kids-girls-baby-clothing" href='#'>
@@ -1071,6 +1575,10 @@ if($view_file_name == 'home_view') { ?>
 
 
                                                     </li>
+
+
+
+
 
                                                     <li class='cursor mobile-level-4 empty-child'>
 
@@ -1081,14 +1589,26 @@ if($view_file_name == 'home_view') { ?>
 
                                                     </li>
 
+
+
+
+
                                                 </ul>
 
-                                            </li>                                            <li class='cursor mobile-level-3 '>
+                                            </li>
+
+
+
+                                            <li class='cursor mobile-level-3 '>
 
                                                 <div class="mobile-level-3-text">JUNIOR &#40;4-16 YEARS&#41;</div>
 
 
-                                                <ul class="mobile-level-4">                                                    <li class='cursor mobile-level-4 empty-child'>
+                                                <ul class="mobile-level-4">
+
+
+
+                                                    <li class='cursor mobile-level-4 empty-child'>
 
                                                         <a data-catId="diesel-kids-girls-junior-denim" href='#'>
                                                                         Denim
@@ -1096,6 +1616,10 @@ if($view_file_name == 'home_view') { ?>
 
 
                                                     </li>
+
+
+
+
                                                     <li class='cursor mobile-level-4 empty-child'>
 
                                                         <a data-catId="diesel-kids-girls-junior-clothing" href='#'>
@@ -1104,6 +1628,10 @@ if($view_file_name == 'home_view') { ?>
 
 
                                                     </li>
+
+
+
+
 
                                                     <li class='cursor mobile-level-4 empty-child'>
 
@@ -1114,14 +1642,26 @@ if($view_file_name == 'home_view') { ?>
 
                                                     </li>
 
+
+
+
+
                                                 </ul>
 
-                                            </li>                                            <li class='cursor mobile-level-3 '>
+                                            </li>
+
+
+
+                                            <li class='cursor mobile-level-3 '>
 
                                                 <div class="mobile-level-3-text">highlights</div>
 
 
                                                 <ul class="mobile-level-4">
+
+
+
+
 
                                                     <li class='cursor mobile-level-4 empty-child'>
 
@@ -1130,9 +1670,17 @@ if($view_file_name == 'home_view') { ?>
                                                                     </a>
 
 
-                                                    </li>                                                </ul>
+                                                    </li>
+
+
+
+                                                </ul>
 
                                             </li>
+
+
+
+
 
                                         </ul>
 
@@ -1150,13 +1698,25 @@ if($view_file_name == 'home_view') { ?>
                 <div id="mobile-category-content" class="display-none">
                     <div id="div_mobdiesel-stories">
 
+
+
+
+
                     </div>
                 </div>
 
+
+
                 <div id="footer-content-wrapper">
                     <div id="footer-burger" role="contentinfo clearfix" class="burger-footer">
+
+
+
+
+
                         <div class="content-asset">
                             <!-- dwMarker="content" dwContentID="bc6c2iaaiM1ZAaaadnFlVrDMYt" -->
+
                             <footer>
                                 <div id="footer-over">
                                     <div id="footer-overlay">
@@ -1337,29 +1897,25 @@ if($view_file_name == 'home_view') { ?>
                                                         <div class="col-lg-1 col-lg-offset-4 ">
                                                             <div class="col-md-offset-2 col-md-1"><a target="_blank" href="https://www.facebook.com/Diesel" class="facebook">Facebook</a>
                                                             </div>
-                                                            <div class="col-md-1">
-                                                            	<a href="https://twitter.com/diesel" target="_blank" class="twitter">Twitter</a>
+                                                            <div class="col-md-1"><a target="_blank" href="https://twitter.com/diesel" target="_blank" class="twitter">Twitter</a>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-1 ">
                                                             <div class="col-md-1"><a target="_blank" href="https://plus.google.com/+Diesel/posts" class="google">Google</a>
                                                             </div>
-                                                            <div class="col-md-1">
-                                                            	<a href="http://instagram.com/diesel" target="_blank" class="instagram">Instagram</a>
+                                                            <div class="col-md-1"><a target="_blank" href="http://instagram.com/diesel" target="_blank" class="instagram">Instagram</a>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-1 ">
                                                             <div class="col-md-1"><a target="_blank" href="http://www.youtube.com/user/DieselPlanet" class="youtube">Youtube</a>
                                                             </div>
-                                                            <div class="col-md-1">
-                                                            	<a href="http://www.pinterest.com/diesel/" target="_blank" class="pinterest">Pinterest</a>
+                                                            <div class="col-md-1"><a target="_blank" href="http://www.pinterest.com/diesel/" target="_blank" class="pinterest">Pinterest</a>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-1 ">
                                                             <div class="col-md-1"><a target="_blank" href="http://dieselreboot.tumblr.com/" class="socialIcon">Social Icon</a>
                                                             </div>
-                                                            <div class="col-md-1">
-                                                            	<a href="http://dieselreboot.tumblr.com/" target="_blank" class="tumbler">Tumbler</a>
+                                                            <div class="col-md-1"><a target="_blank" href="http://dieselreboot.tumblr.com/" target="_blank" class="tumbler">Tumbler</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1440,9 +1996,13 @@ if($view_file_name == 'home_view') { ?>
    </span>
                                     </div>
                                 </div>
-                            </footer>
                         </div>
                         <!-- End content-asset -->
+
+
+
+
+
                     </div>
                 </div>
             </div>
@@ -1451,11 +2011,12 @@ if($view_file_name == 'home_view') { ?>
         </div>
     </div>
 
-    <?php if($view_file_name == 'home_view') { ?>
     <div id="wrapper" class="pt_storefront pageName " data-pagename="Homepage">
-    <?php } else { ?>
-    <div id="wrapper" class="pt_product-search-result plp-redesign horizontal-filter">
-    <?php } ?>
+
+
+
+
+
         <div class="landscape-body">
             <div class="landscape-container">
                 <div class="close-div">
@@ -1467,7 +2028,6 @@ if($view_file_name == 'home_view') { ?>
                 </div>
             </div>
         </div>
-        
         <div id="header" class="new-header clearfix" role="banner">
             <!--[if lte IE 8]>
 <div class="ie8-ux-message">The site is not optimized for IE8. Please upgrade your browser to enhance your shopping experience and enjoy full features/functionality of the site.</div>
@@ -1496,10 +2056,18 @@ Store Locator
                         <div class="slider" id="marketing_message">
                             <div>
 
+
+
+
+
                                 <div data-slotid="header-marketing-banner-1" class="html-slot-container">
 
 
-                                    <div>                                        <div class="pannel" data-desc="Free Ground Shipping on All Orders. The promotion will be applied automatically at check out." data-title="FREE GROUND SHIPPING ON ALL ORDERS!">
+                                    <div>
+
+
+
+                                        <div class="pannel" data-desc="Free Ground Shipping on All Orders. The promotion will be applied automatically at check out." data-title="FREE GROUND SHIPPING ON ALL ORDERS!">
                                             <h7>FREE GROUND SHIPPING ON ALL ORDERS!</h7>
                                         </div>
 
@@ -1509,10 +2077,18 @@ Store Locator
                             </div>
                             <div>
 
+
+
+
+
                                 <div data-slotid="header-marketing-banner-2" class="html-slot-container">
 
 
-                                    <div>                                        <div class="pannel" data-desc="Free Returns on all orders. &lt;a href=&quot;#&quot&gt;CLICK HERE&lt;/a&gt; to get more details" data-title="EASY &amp; FREE RETURNS!">
+                                    <div>
+
+
+
+                                        <div class="pannel" data-desc="Free Returns on all orders. &lt;a href=&quot;#&quot&gt;CLICK HERE&lt;/a&gt; to get more details" data-title="EASY &amp; FREE RETURNS!">
                                             <h7>EASY &amp; FREE RETURNS</h7>
                                         </div>
 
@@ -1522,10 +2098,18 @@ Store Locator
                             </div>
                             <div>
 
+
+
+
+
                                 <div data-slotid="header-marketing-banner-3" class="html-slot-container">
 
 
-                                    <div>                                        <div class="pannel" data-desc="Create an account at shop.diesel.com. Enjoy 15% off your first online order. &lt;a href=&quot;<?=base_url();?>member/register&quot&gt;REGISTER HERE&lt;/a&gt;, you'll get your coupon code via email." data-title="REGISTER FOR EXCLUSIVE BENEFITS">
+                                    <div>
+
+
+
+                                        <div class="pannel" data-desc="Create an account at shop.diesel.com. Enjoy 15% off your first online order. &lt;a href=&quot;<?=base_url();?>member/register&quot&gt;REGISTER HERE&lt;/a&gt;, you'll get your coupon code via email." data-title="REGISTER FOR EXCLUSIVE BENEFITS">
                                             <h7>REGISTER FOR EXCLUSIVE BENEFITS</h7>
                                         </div>
 
@@ -1549,6 +2133,10 @@ Store Locator
                     </div>
                     <div class="menu-utility-user-wrap col-lg-4 col-md-4">
                         <ul class="menu-utility-user">
+
+
+
+
                             <input type="hidden" id="isUserLogin" value="false" />
                             <?php if(isset($this->session->userdata['s_uid'])) { ?>
                                 <li class="myacc-login">
@@ -1588,6 +2176,10 @@ Help
                     </div>
                 </div>
                 <div class="store-ship" style="height:0px ;overflow:hidden; float:left; width: 100%;">
+
+
+
+
 
                     <div class="content-asset">
                         <!-- dwMarker="content" dwContentID="bcoNIiaaiMuvAaaadnQlZrDMYt" -->
@@ -1697,6 +2289,10 @@ Help
 
                         </div>
 
+
+
+
+
                         <div class="mobile-reg">
                             <h1>SHIP TO</h1>
                             <div class="current-cou">Your current ship to country is :</div>
@@ -1799,6 +2395,10 @@ Help
                     </div>
                     <!-- End content-asset -->
 
+
+
+
+
                 </div>
                 <div class="floating-nav-wrapper">
                     <div class="floating-nav-topcontainer">
@@ -1820,12 +2420,24 @@ Help
                                 </a>
                             </div>
                             <div class="rgt-content-wrap col-lg-3 col-md-2 col-sm-5">
-                                <div class="rgt-content">                                    <div class="elements mini-cart-holder" id="cartpage">
+                                <div class="rgt-content">
+
+
+
+                                    <div class="elements mini-cart-holder" id="cartpage">
+
+
+
+
 
                                         <!-- Report any requested source code -->
 
 
-                                        <!-- Report the active source code -->                                        <div class="bag-holder">
+                                        <!-- Report the active source code -->
+
+
+
+                                        <div class="bag-holder">
                                             
                                             <a href="<?php echo base_url();?>Cart/ajax_cart" class="ajax-url"></a>
                                             
@@ -1834,17 +2446,37 @@ Help
 
                                                 <span id="mini-cart-icon-empty" class='header-mini-cart empty-black-bag'>Empty Bag</span>
 
+
+
+
+
                                                 <span class="empty-bag-count">Bag Count</span>
+
+
+
+
                                             </a>
 
-                                            <div class="minicart-tool-tip">                                            </div>
+                                            <div class="minicart-tool-tip">
 
-                                        </div>                                        
+
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                        
                                         <div class="mini-bag-content container-fluid  pageName" data-pagename="Mini Cart" >
                                             <div class="row">
                                                 <!--<div class="col-lg-8 col-md-6 mini-cart-products empty-cart-wrapper">
                                                     <div class="left-text-block">
                                                         <h2 class="heading-txt">Feed me I'm hungry </h2>
+
+
+
+
 
                                                     </div>
 
@@ -1877,7 +2509,15 @@ Help
                                             </div>
                                         </div>
 
-                                        <div class="rtaminicart" data-rtaCart="" data-rtaCartSku="" data-rtaCartAmounts="" data-rtaCartQuantities="" data-rtaSpecial="" data-rtaTags=""></div>                                    </div>
+
+
+
+
+                                        <div class="rtaminicart" data-rtaCart="" data-rtaCartSku="" data-rtaCartAmounts="" data-rtaCartQuantities="" data-rtaSpecial="" data-rtaTags=""></div>
+
+
+
+                                    </div>
 
                                     <div class="elements header-search active-search" style="cursor: pointer;">
                                         <h4 class="search-btn" title="Search">Search</h4>
@@ -1917,43 +2557,83 @@ Help
                                                             <a href="#">
                                         timeframe
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         watches
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         jogg jeans
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         denim
                                     </a>
-                                                        </li>                                                        <li class='columnbreak' style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li class='columnbreak' style="display:none;">
                                                             <a href="#">
                                         shoes
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         kids
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         man
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         woman
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         sale
                                     </a>
-                                                        </li>                                                        <li class='columnbreak' style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li class='columnbreak' style="display:none;">
                                                             <a href="#">
                                         boys
                                     </a>
-                                                        </li>                                                        <li style="display:none;">
+                                                        </li>
+
+
+
+                                                        <li style="display:none;">
                                                             <a href="#">
                                         girls
                                     </a>
@@ -1982,6 +2662,10 @@ Help
                                     <h2 class="visually-hidden navigation-header">Catalog Navigation</h2>
                                     <div class="header-menus">
 
+
+
+
+
                                         <ul class="menu-category level-1 desktop-only">
 
                                             <li id="diesel-denim" class='first <?=( (!empty($category)) && $category == 'denim') ? 'selected'  : '' ;?>'>
@@ -1994,21 +2678,21 @@ Help
                                                             <div class="sub-menus row">
                                                                 <div class="white-bg col-md-12 col-lg-8">
                                                                     <h2>MEN</h2>
-                                                                    <? $denim_arr = $this->config->item('denim_array');?>
+                                                                    <?$denim_arr = $this->config->item('denim_array');?>
                                                                     <div class="level-3 clearfix">
                                                                         <ul class="level-3">
                                                                             <li class="s-catflytemp2 col-md-6">
                                                                                 <a class="unclickable">SHOP BY FIT</a>
                                                                                 <div class='level-4 '>
                                                                                     <ul class="level-4">
-                                                                                        <? foreach($denim_arr['MEN']['shop by fit'] as $key =>$curr_category):
+                                                                                        <?foreach($denim_arr['MEN']['shop by fit'] as $key =>$curr_category):
                                                                                             // display the first 6 elements
                                                                                             if($key <= 4):
                                                                                         ?>
                                                                                             <li>
                                                                                                 <a data-catId="diesel-man-features-denimguide-fits-skinny" href="<?=base_url().'product/mens/denimguide/'.strtolower($key)?>"><?=$curr_category?></a>
                                                                                             </li>
-                                                                                        <? endif; endforeach;?>
+                                                                                        <?endif;endforeach;?>
                                                                                         <li class="see-all-link">
                                                                                             <p><a href="#">SHOP ALL</a>
                                                                                             </p>
@@ -2021,7 +2705,7 @@ Help
                                                                                 <a class="unclickable">SHOP BY WASH</a>
                                                                                 <div class='level-4 '>
                                                                                     <ul class="level-4">
-                                                                                        <? foreach($denim_arr['MEN']['shop by wash'] as $key =>$curr_category):
+                                                                                        <?foreach($denim_arr['MEN']['shop by wash'] as $key =>$curr_category):
                                                                                             // display the first 6 elements
                                                                                             if($key <= 4):
                                                                                         ?>
@@ -2047,13 +2731,13 @@ Help
                                                                         <li class="s-catflytemp2">
                                                                             <a class="unclickable">SHOP BY</a>
                                                                             <ul>
-                                                                                <? foreach($denim_arr['MEN']['shop by'] as $key =>$curr_category):?>
+                                                                                <?foreach($denim_arr['MEN']['shop by'] as $key =>$curr_category):?>
                                                                                 <li>
                                                                                     <a data-catId="diesel-denim-man-features-NA" href='#'>
                                                                                         <span><?=$curr_category?></span>
                                                                                     </a>
                                                                                 </li>
-                                                                                <? endforeach;?>
+                                                                                <?endforeach;?>
                                                                             </ul>
                                                                         </li>
                                                                     </ul>
@@ -2072,14 +2756,14 @@ Help
                                                                                 <a class="unclickable">SHOP BY FIT</a>
                                                                                 <div class='level-4 '>
                                                                                     <ul class="level-4">
-                                                                                        <? foreach($denim_arr['WOMEN']['shop by fit'] as $key =>$curr_category):
+                                                                                        <?foreach($denim_arr['WOMEN']['shop by fit'] as $key =>$curr_category):
                                                                                             // display the first 6 elements
                                                                                             if($key <= 4):
                                                                                         ?>
                                                                                             <li>
                                                                                                 <a data-catId="diesel-woman-features-denimguide-fits-jegging" href="#"><?=$curr_category?></a>
                                                                                             </li>
-                                                                                        <? endif; endforeach;?>
+                                                                                        <?endif;endforeach;?>
                                                                                         <li class="see-all-link">
                                                                                             <p><a href="#">SHOP ALL</a>
                                                                                             </p>
@@ -2093,14 +2777,14 @@ Help
                                                                                 <a class="unclickable">SHOP BY WASH</a>
                                                                                 <div class='level-4 '>
                                                                                     <ul class="level-4">
-                                                                                        <? foreach($denim_arr['WOMEN']['shop by wash'] as $key =>$curr_category):
+                                                                                        <?foreach($denim_arr['WOMEN']['shop by wash'] as $key =>$curr_category):
                                                                                             // display the first 6 elements
                                                                                             if($key <= 4):
                                                                                         ?>
                                                                                             <li>
                                                                                                 <a data-catId="diesel-woman-features-denimguide-washstories-clean" href="#"><?=$curr_category?></a>
                                                                                             </li>
-                                                                                        <? endif; endforeach;?>
+                                                                                        <?endif;endforeach;?>
                                                                                         <li class="see-all-link">
                                                                                             <p><a href="#">SHOP ALL</a>
                                                                                             </p>
@@ -2120,13 +2804,13 @@ Help
                                                                         <li class="s-catflytemp2">
                                                                             <a class="unclickable">SHOP BY</a>
                                                                             <ul>
-                                                                                <? foreach($denim_arr['WOMEN']['shop by'] as $key =>$curr_category):?>
+                                                                                <?foreach($denim_arr['WOMEN']['shop by'] as $key =>$curr_category):?>
                                                                                 <li>
                                                                                     <a data-catId="diesel-denim-man-features-NA" href='#'>
                                                                                         <span><?=$curr_category?></span>
                                                                                     </a>
                                                                                 </li>
-                                                                                <? endforeach;?>
+                                                                                <?endforeach;?>
                                                                             </ul>
                                                                         </li>
                                                                     </ul>
@@ -2138,6 +2822,10 @@ Help
 
                                                     <ul class="highlights-category row">
 
+
+
+
+
                                                         <li class="category-higlight col-md-6">
                                                             <ul class="desktop-only bottom-section">
 
@@ -2145,6 +2833,10 @@ Help
                                                                     <div class="img-container ">
 
                                                                         <a data-catId="diesel-man-denim-highlights-newstyle" href='#'>
+
+
+
+
 
                                                                             <img alt="New Style: Taylhor" src='<?=base_url();?>images/01_STIKKER.jpg' />
 
@@ -2163,6 +2855,10 @@ New Style: Taylhor</isprint></a>
 
                                                                         <a data-catId="diesel-man-denim-highlights-joggjeans" href='#'>
 
+
+
+
+
                                                                             <img alt="JoggJeans" src='<?=base_url();?>images/02_JOOGJEANS.jpg' />
 
                                                                         </a>
@@ -2179,6 +2875,10 @@ JoggJeans</isprint></a>
                                                                     <div class="img-container ">
 
                                                                         <a data-catId="diesel-man-denim-highlights-newdenim" href='#'>
+
+
+
+
 
                                                                             <img alt="New Denim FW15" src='<?=base_url();?>images/03_DENIM-MALE.jpg' />
 
@@ -2225,6 +2925,10 @@ New Denim FW15</isprint></a>
 
                                                                         <a data-catId="diesel-man-denim-highlights-newstyle" href='#'>
 
+
+
+
+
                                                                             <img class="primary-image2 " src="<?=base_url();?>images/01_STIKKER.jpg" alt="New Style: Taylhor" />
 
                                                                         </a>
@@ -2233,6 +2937,10 @@ New Denim FW15</isprint></a>
                                                                     <div class="img-container">
 
                                                                         <a data-catId="diesel-man-denim-highlights-joggjeans" href='#'>
+
+
+
+
 
                                                                             <img class="primary-image2 " src="<?=base_url();?>images/02_JOOGJEANS.jpg" alt="JoggJeans" />
 
@@ -2243,6 +2951,10 @@ New Denim FW15</isprint></a>
 
                                                                         <a data-catId="diesel-man-denim-highlights-newdenim" href='#'>
 
+
+
+
+
                                                                             <img class="primary-image2 " src="<?=base_url();?>images/02_JOOGJEANS.jpg" alt="New Denim FW15" />
 
                                                                         </a>
@@ -2252,6 +2964,10 @@ New Denim FW15</isprint></a>
                                                             </div>
                                                         </li>
 
+
+
+
+
                                                         <li class="category-higlight col-md-6">
                                                             <ul class="desktop-only bottom-section">
 
@@ -2259,6 +2975,10 @@ New Denim FW15</isprint></a>
                                                                     <div class="img-container ">
 
                                                                         <a data-catId="diesel-woman-denim-highlights-newstyle" href='#'>
+
+
+
+
 
                                                                             <img alt="New Style: Actyvista" src='<?=base_url();?>images/04_ACTYVISTA.jpg' />
 
@@ -2277,6 +2997,10 @@ New Style: Actyvista</isprint></a>
 
                                                                         <a data-catId="diesel-woman-denim-highlights-joggjeans" href='#'>
 
+
+
+
+
                                                                             <img alt="JoggJeans" src='<?=base_url();?>images/05_JOGGJEANS.jpg' />
 
                                                                         </a>
@@ -2293,6 +3017,10 @@ JoggJeans</isprint></a>
                                                                     <div class="img-container ">
 
                                                                         <a data-catId="diesel-woman-denim-highlights-newdenim" href='#'>
+
+
+
+
 
                                                                             <img alt="New Denim FW15" src='<?=base_url();?>images/03_DENIM-MALE.jpg' />
 
@@ -2339,6 +3067,10 @@ New Denim FW15</isprint></a>
 
                                                                         <a data-catId="diesel-woman-denim-highlights-newstyle" href='#'>
 
+
+
+
+
                                                                             <img class="primary-image2 " src="<?=base_url();?>images/04_ACTYVISTA.jpg" alt="New Style: Actyvista" />
 
                                                                         </a>
@@ -2347,6 +3079,10 @@ New Denim FW15</isprint></a>
                                                                     <div class="img-container">
 
                                                                         <a data-catId="diesel-woman-denim-highlights-joggjeans" href='#'>
+
+
+
+
 
                                                                             <img class="primary-image2 " src="<?=base_url();?>images/05_JOGGJEANS.jpg" alt="JoggJeans" />
 
@@ -2357,6 +3093,10 @@ New Denim FW15</isprint></a>
 
                                                                         <a data-catId="diesel-woman-denim-highlights-newdenim" href='#'>
 
+
+
+
+
                                                                             <img class="primary-image2 " src="<?=base_url();?>images/06_DENIM-FEMALE.jpg" alt="New Denim FW15" />
 
                                                                         </a>
@@ -2365,6 +3105,10 @@ New Denim FW15</isprint></a>
                                                                 </div>
                                                             </div>
                                                         </li>
+
+
+
+
 
                                                     </ul>
 
@@ -2393,7 +3137,7 @@ New Denim FW15</isprint></a>
                                                                         <h2><a href="" class="level-2 unclickable">DENIM &amp; CLOTHING</a></h2>
                                                                         <div class="level-3">
                                                                             <ul class="level-3 col-lg-6 col-md-6">
-                                                                                <? foreach($men_arr['denim & clothing'] as $key =>$curr_category):
+                                                                                <?foreach($men_arr['denim & clothing'] as $key =>$curr_category):
                                                                                   // display the first 6 elements
                                                                                     if($i <= 5):
                                                                                         $i++;
@@ -2411,11 +3155,11 @@ New Denim FW15</isprint></a>
                                                                                         <a data-catId ="diesel-man-denimandclothing-denim" href="<?=$url;?>"><?=$curr_category;?></a>
                                                                                     </h6>
                                                                                 </li>
-                                                                                <? endif;?>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key =>$curr_category) ?>
+                                                                                <?endif;?>
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key =>$curr_category) ?>
                                                                             </ul>
                                                                             <ul class="level-3 col-lg-6 col-md-6 second">
-                                                                                <? // loop again in same array and display rest of the elements
+                                                                                <?// loop again in same array and display rest of the elements
                                                                                 
                                                                                 foreach(array_slice($men_arr['denim & clothing'],6) as $key=> $curr_category):
                                                                                     $url = get_url($key,'mens');
@@ -2425,7 +3169,7 @@ New Denim FW15</isprint></a>
                                                                                         <a data-catId ="diesel-man-denimandclothing-denim" href="<?=$url;?>"><?=$curr_category;?></a>
                                                                                     </h6>
                                                                                 </li>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>                                                     
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>                                                     
                                                                             </ul>
                                                                         </div> <!-- end of level 3 -->
 
@@ -2449,11 +3193,11 @@ New Denim FW15</isprint></a>
                                                                                         <a data-catId ="diesel-man-denimandclothing-denim" href="<?=base_url().'product/mens/'.strtolower($key)?>"><?=$curr_category;?></a>
                                                                                     </h6>
                                                                                 </li>
-                                                                                <? endif;?>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key =>$curr_category) ?>  
+                                                                                <?endif;?>
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key =>$curr_category) ?>  
                                                                             </ul>
                                                                             <ul class="level-3 col-lg-6 col-md-6 second">
-                                                                                <? // loop again in same array and display rest of the elements
+                                                                                <?// loop again in same array and display rest of the elements
                                                                                 foreach(array_slice($men_arr['shoes & accessories'],6) as $key=> $curr_category):
                                                                                     
                                                                                 ?>
@@ -2462,7 +3206,7 @@ New Denim FW15</isprint></a>
                                                                                         <a data-catId ="diesel-man-denimandclothing-denim" href="<?=base_url().'product/mens/'.strtolower($key)?>"><?=$curr_category;?></a>
                                                                                     </h6>
                                                                                 </li>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>
                                                                             </ul>
                                                                         </div>
 
@@ -2482,14 +3226,14 @@ New Denim FW15</isprint></a>
                                                                 </div>
                                                                 <div class="you-enjoy-list">
                                                                     <ul>
-                                                                        <? foreach($men_arr['shop by'] as $curr_category):?>
+                                                                        <?foreach($men_arr['shop by'] as $curr_category):?>
                                                                         <li>
                                                                             <h6><a data-catId="diesel-man-features-latestarrivals" href='#'>
                                                                                 <span><?=$curr_category?></span>
                                                                                 </a>
                                                                             </h6>
                                                                         </li>
-                                                                        <? endforeach;?>
+                                                                        <?endforeach;?>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -2499,7 +3243,7 @@ New Denim FW15</isprint></a>
                                                                     <ul class="horizantal-slider" id="">
                                                                         <li class="col-lg-12">
                                                                             <h2 class="highlights">Highlights</h2>
-                                                                            <? foreach($men_arr['highlights'] as $key=>$curr_category):?>
+                                                                            <?foreach($men_arr['highlights'] as $key=>$curr_category):?>
                                                                             <div class='image-sec col-lg-2 col-md-6'>
                                                                                 <a data-catId="" href='#'>
                                                                                 <img alt="<?=$curr_category['link_name']?>" src='<?=base_url()."images/nav/".$curr_category['link_image_name'].".jpg";?>' />
@@ -2511,7 +3255,7 @@ New Denim FW15</isprint></a>
                                                                                     <a data-catId="diesel-man-highlights-eveningrock" href='<?=$curr_category['link_url']?>'><?=$curr_category['link_name']?></a></span>
                                                                                 </h6>
                                                                             </div>
-                                                                            <? endforeach;?>
+                                                                            <?endforeach;?>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -2523,7 +3267,7 @@ New Denim FW15</isprint></a>
                                                                 <ul class="horizantal-slider" id="">
                                                                     <li class="col-lg-12">
                                                                         <h2 class="highlights">Highlight</h2>
-                                                                        <? foreach($men_arr['highlights'] as $curr_category):?>
+                                                                        <?foreach($men_arr['highlights'] as $curr_category):?>
                                                                             <div class='image-sec col-lg-2 col-md-6 '>
                                                                                 <a data-catId="" href='#'>
                                                                                     <img alt="<?=$curr_category['link_name']?>" src='<?=base_url()."images/nav/".$curr_category['link_image_name'].".jpg";?>' />
@@ -2536,7 +3280,7 @@ New Denim FW15</isprint></a>
                                                                                     </a></span>
                                                                                 </h6>
                                                                             </div>
-                                                                        <? endforeach;?>
+                                                                        <?endforeach;?>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -2570,7 +3314,7 @@ New Denim FW15</isprint></a>
                                                                         <h2><a href="" class="level-2 unclickable">DENIM &amp; CLOTHING</a></h2>
                                                                         <div class="level-3">
                                                                             <ul class="level-3 col-lg-6 col-md-6">
-                                                                                <? foreach($women_arr['denim & clothing'] as $key =>$curr_category):
+                                                                                <?foreach($women_arr['denim & clothing'] as $key =>$curr_category):
                                                                                   // display the first 6 elements
                                                                                     if($i <= 5):
                                                                                         $i++;
@@ -2579,11 +3323,11 @@ New Denim FW15</isprint></a>
                                                                                     <li>
                                                                                         <h6><a data-catId ="diesel-woman-denimandclothing-denim" href="<?=$url;?>"><?=$curr_category;?></a></h6>
                                                                                     </li>
-                                                                                <? endif;?>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key =>$curr_category) ?>
+                                                                                <?endif;?>
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key =>$curr_category) ?>
                                                                             </ul>
                                                                             <ul class="level-3 col-lg-6 col-md-6 second">
-                                                                                <? // loop again in same array and display rest of the elements
+                                                                                <?// loop again in same array and display rest of the elements
                                                                                 foreach(array_slice($women_arr['denim & clothing'],6) as $key=> $curr_category):
                                                                                     $url = get_url($key,'womens');
                                                                                 ?>
@@ -2591,7 +3335,7 @@ New Denim FW15</isprint></a>
                                                                                         <h6><a data-catId ="diesel-woman-denimandclothing-shirts" href="<?=$url;?>"><?=$curr_category;?></a>
                                                                                         </h6>
                                                                                     </li>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>
                                                                             </ul>
                                                                             <ul class="level-3 last">
                                                                                 <li>
@@ -2619,17 +3363,17 @@ New Denim FW15</isprint></a>
                                                                                         <h6><a data-catId ="diesel-woman-footwearandaccessories-footwear" href="<?=base_url().'product/womens/'.strtolower($key)?>"><?=$curr_category;?>
                                                                                         </a></h6>
                                                                                     </li>
-                                                                                <? endif;?>
-                                                                                <? endforeach;?> 
+                                                                                <?endif;?>
+                                                                                <?endforeach;?> 
                                                                             </ul>
                                                                             <ul class="level-3 col-lg-6 col-md-6 second">
-                                                                                <? // loop again in same array and display rest of the elements
+                                                                                <?// loop again in same array and display rest of the elements
                                                                                 foreach(array_slice($women_arr['shoes & accessories'],6) as $key=> $curr_category):
                                                                                 ?>
                                                                                     <li>
                                                                                         <h6><a data-catId ="diesel-woman-footwearandaccessories-timeframes" href="<?=base_url().'product/womens/'.strtolower($key)?>"><?=$curr_category;?></a></h6>
                                                                                     </li>
-                                                                                <? endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>
+                                                                                <?endforeach; // foreach($men_arr['denim & clothing'] as $key=> $curr_category) ?>
                                                                             </ul>
                                                                         </div>
 
@@ -2648,12 +3392,12 @@ New Denim FW15</isprint></a>
                                                                 </div>
                                                                 <div class="you-enjoy-list">
                                                                     <ul>
-                                                                        <? foreach($women_arr['shop by'] as $curr_category):?>
+                                                                        <?foreach($women_arr['shop by'] as $curr_category):?>
                                                                         <li>
                                                                             <h6><a data-catId="diesel-woman-features-latestarrivals" href='#'><span><?=$curr_category?></span></a>
                                                                             </h6>
                                                                         </li>
-                                                                        <? endforeach;?>
+                                                                        <?endforeach;?>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -2662,7 +3406,7 @@ New Denim FW15</isprint></a>
                                                                     <ul class="horizantal-slider" id="">
                                                                         <li class="col-lg-12">
                                                                             <h2 class="highlights">Highlights</h2>
-                                                                            <? foreach($women_arr['highlights'] as $key=>$curr_category):?>
+                                                                            <?foreach($women_arr['highlights'] as $key=>$curr_category):?>
                                                                                 <div class='image-sec col-lg-2 col-md-6 <?=($key == 0 ? 'first-element': '')?>'>
                                                                                     <a data-catId="diesel-woman-highlights-eveningrock" href='#'>
                                                                                         <img alt="Evening Rock" src='<?=base_url();?>images/10_EVENINGROCK.jpg' />
@@ -2674,17 +3418,21 @@ New Denim FW15</isprint></a>
                                                                                         <a data-catId="diesel-woman-highlights-eveningrock" href='#'><?=$curr_category?></a></span>
                                                                                     </h6>
                                                                                 </div>
-                                                                            <? endforeach;?>
+                                                                            <?endforeach;?>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
-                                                        </div>                                                        <div class="custom horizantal-custom col-lg-12 col-md-6" id="horizantal-custom-diesel-woman">
+                                                        </div>
+
+
+
+                                                        <div class="custom horizantal-custom col-lg-12 col-md-6" id="horizantal-custom-diesel-woman">
                                                             <div>
                                                                 <ul class="horizantal-slider" id="">
                                                                     <li class="col-lg-12">
                                                                         <h2 class="highlights">Highlights</h2>
-                                                                        <? foreach($women_arr['highlights'] as $curr_category):?>
+                                                                        <?foreach($women_arr['highlights'] as $curr_category):?>
                                                                         <div class='image-sec col-lg-2 col-md-6'>
                                                                             <a data-catId="diesel-woman-highlights-eveningrock" href='#'>
                                                                                 <img alt="Evening Rock" src='<?=base_url();?>images/10_EVENINGROCK.jpg' />
@@ -2693,7 +3441,7 @@ New Denim FW15</isprint></a>
                                                                         <div class='content-wrapper col-lg-2 col-md-6'>
                                                                             <h6><span class="display-text"><a data-catId="diesel-woman-highlights-eveningrock" href='#'><?=$curr_category?></a></span></h6>
                                                                         </div>
-                                                                        <? endforeach;?>
+                                                                        <?endforeach;?>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -2879,6 +3627,10 @@ New Denim FW15</isprint></a>
 <div class="s-diesel-stories main-nav-arr"></div>
 </a></h4>
 
+
+
+
+
                                             </li>
 
                                         </ul>
@@ -2891,25 +3643,88 @@ New Denim FW15</isprint></a>
                 </div>
             </header>
             
-            <div class="myaccount-mobile-child" id="myaccount-mobile-content" style="display:none;">
+                    <div class="myaccount-mobile-child" id="myaccount-mobile-content" style="display:none;">
+
+
+
+
                 <div class="signin-mobile-nav">
+
+
+
+
+
                     <div class="login-box login-account">
+
                         <h2 class="section-header">SIGN IN</h2>
+
                         <div class="login-box-content returning-customers clearfix">
+
+
                             <form action="<?=base_url();?>member/login_popup" method="post" class="clearfix" id="dwfrm_login">
+
                                 <fieldset>
+
+
+
+
+
                                     <div class="form-row   required " data-required-text="Please enter your email address">
+
+
+
+
+
                                         <label for="dwfrm_login_username_d0qcmvezdvqp">
-                                            <span>email address*</span>
+
+
+                                            <span>
+                email address*
+                </span>
+
                                         </label>
+
+
+
+
+
                                         <input autocomplete="off" class="input-text email-input email required" id="dwfrm_login_username_d0qcmvezdvqp" type="email" name="dwfrm_login_username_d0qcmvezdvqp" value="" maxlength="2147483647" />
+
+
+
+
+
                                     </div>
 
+
+
+
+
                                     <div class="form-row   required " data-required-text="Please enter your password">
+
+
+
+
+
                                         <label for="dwfrm_login_password">
-                                            <span>Password*</span>
+
+
+                                            <span>
+                Password*
+                </span>
+
                                         </label>
+
+
+
+
+
                                         <input autocomplete="off" class="input-text-pw password-input required" id="dwfrm_login_password" type="password" name="dwfrm_login_password" value="" maxlength="2147483647" />
+
+
+
+
+
                                     </div>
                                     <div class="forgot-password-overlay-remove">
                                         <a id="password-reset-mobile" href="/account-passwordReset" title="Forgot Password?" data-dlg-action='{"test":100}' data-target="#myaccount-mobile-content" data-dlg-options='{"width":590,"height":"auto","dialogClass":"dialog-forgot-password"}'>
@@ -2922,9 +3737,16 @@ New Denim FW15</isprint></a>
                                         </button>
 
                                     </div>
+
+
+
+
                                     <input type="hidden" name="dwfrm_login_securekey" value="632676247" />
+
                                 </fieldset>
+
                             </form>
+
                         </div>
 
                         <div class="col-2">
@@ -2950,41 +3772,92 @@ New Denim FW15</isprint></a>
                     </div>
                 </div>
 
+
+
+
+
             </div>
         </div>
+        
+        
     
         <div class="footer-banner footer-banner-mobile-only">
             <div class="marketing_message_footer" class="slider">
                 <div>
+
+
+
+
+
                     <div data-slotid="footer-marketing-banner-1" class="html-slot-container">
-                        <div>                            
-                        	<div class="pannel" data-desc="Free Ground Shipping on All Orders. The promotion will be applied automatically at check out." data-title="FREE GROUND SHIPPING ON ALL ORDERS!">
+
+
+                        <div>
+
+
+
+                            <div class="pannel" data-desc="Free Ground Shipping on All Orders. The promotion will be applied automatically at check out." data-title="FREE GROUND SHIPPING ON ALL ORDERS!">
                                 <h7>FREE GROUND SHIPPING ON ALL ORDERS!</h7>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
                 <div>
+
+
+
+
+
                     <div data-slotid="footer-marketing-banner-2" class="html-slot-container">
-                        <div>                            
-                        	<div class="pannel" data-desc="Free Returns on all orders. &lt;a href=&quot;#&quot&gt;CLICK HERE&lt;/a&gt; to get more details" data-title="EASY &amp; FREE RETURNS!">
+
+
+                        <div>
+
+
+
+                            <div class="pannel" data-desc="Free Returns on all orders. &lt;a href=&quot;#&quot&gt;CLICK HERE&lt;/a&gt; to get more details" data-title="EASY &amp; FREE RETURNS!">
                                 <h7>EASY &amp; FREE RETURNS</h7>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
                 <div>
+
+
+
+
+
                     <div data-slotid="footer-marketing-banner-3" class="html-slot-container">
-                        <div>                            
-                        	<div class="pannel" data-desc="Create an account at shop.diesel.com. Enjoy 15% off your first online order. &lt;a href=&quot;<?=base_url();?>member/register&quot&gt;REGISTER HERE&lt;/a&gt;, you'll get your coupon code via email." data-title="REGISTER FOR EXCLUSIVE BENEFITS">
+
+
+                        <div>
+
+
+
+                            <div class="pannel" data-desc="Create an account at shop.diesel.com. Enjoy 15% off your first online order. &lt;a href=&quot;<?=base_url();?>member/register&quot&gt;REGISTER HERE&lt;/a&gt;, you'll get your coupon code via email." data-title="REGISTER FOR EXCLUSIVE BENEFITS">
                                 <h7>REGISTER FOR EXCLUSIVE BENEFITS</h7>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+
+
+                </div>
+                <div>
+
+
+                </div>
+                <div>
+
+
+                </div>
             </div>
             <span class="cross_icon"></span>
             <div class="description-section"></div>
@@ -2992,5 +3865,3 @@ New Denim FW15</isprint></a>
         <div class="fake-content">
             <img id="loader-img" alt="" src="http://demandware.edgesuite.net/aapk_prd/on/demandware.static/Sites-DieselUS-Site/-/default/dwdf84dfc4/images/bx_loader.gif" width="32" height="32" align="center" />
         </div>
-        
-        <input type="hidden" name="TotalProductCountOnLoad" value="225" id="TotalProductCountOnLoad">

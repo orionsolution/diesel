@@ -18,6 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://dharmesh-pc/diesel/';
+//$config['base_url'] = 'http://localhost/diesel/';
 
 /*
 |--------------------------------------------------------------------------

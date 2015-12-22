@@ -15,8 +15,17 @@ class Member_model extends CI_Model {
     	$this->db->where('email',$data['email']);
     	$this->db->where('password',$data['password']);
     	$query = $this->db->get('register');
-    	if($query->num_rows()){
-    		return $query->row();
+       
+    	if($query->num_rows() > 0){ 
+    		$result = $query->row();
+            $data = array(
+                's_uid'=>$result->user_id,
+                's_fname'=>$result->fname,
+                's_lname'=>$result->lname,
+                's_email'=>$result->email
+            );          
+            $this->session->set_userdata($data);
+            return $result;
     	} else {
     		return false;
     	}

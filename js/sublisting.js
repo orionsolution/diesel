@@ -41,20 +41,63 @@ $( document ).ready(function() {
 	});
 	
 /*--------------------- For adding filters ---------------------*/
-	$('.refinement-item li').on('click', function(e) {
-      $(this).toggleClass("selected");
-	  //$('.refinements .filter-bxSlider-plp').toggle();
-	  if ($('.refinement-item li').hasClass("selected")) {
-		$('.refinements .filter-bxSlider-plp').css('display', 'block');
-		$(".remove-trans").append("<span class='breadcrumb-refinement-value' value='"+$(this).find('a').text()+"'>"+$(this).find('a').text()+"<a class='breadcrumb-relax' href='#'><img class='plp-filter-cross' src='http://dharmesh-pc/diesel/images/refine_filter.svg' alt='REMOVE'></a></span>");
-		$(".breadcrumb-refinement-value").on("click", function(){
-			$(this).remove();
-		});
-	  } else {
-		$('.refinements .filter-bxSlider-plp').css('display', 'none');  
-	  }
-      e.preventDefault();
-    });
+	/*$('.refinement-item li').on('click', function(e) {
+		  $(this).toggleClass("selected");
+		  //$('.refinements .filter-bxSlider-plp').toggle();
+		  if ($(this).hasClass("selected")) {
+			$('.refinements .filter-bxSlider-plp').css('display', 'block');
+			if($('.remove-trans').length == 0) {
+				$(".filter-slider-wrapper").append("<div class='filter-slider remove-trans'></div>");
+			}
+			$(".remove-trans").append("<span id='"+$(this).find('a').text()+"' class='breadcrumb-refinement-value' value='"+$(this).find('a').text()+"'>"+$(this).find('a').text()+"<a class='breadcrumb-relax' href='#'><img class='plp-filter-cross' src='http://dharmesh-pc/diesel/images/refine_filter.svg' alt='REMOVE'></a></span>");
+			
+			$(".breadcrumb-refinement-value").on("click", function(){
+				$(this).remove();
+			});
+		  } else {
+			//$('.refinements .filter-bxSlider-plp').css('display', 'none');
+			 console.log($
+						("#"+
+						  ($(this).find('a').text()
+													  )
+													  )
+													  ); 
+			$("#"+($(this).find('a').text())).parent().remove();
+		  }
+		  if(($('.remove-trans').length == 0) && ($('.refinement-item li:not(.selected)').length == $(".refinement-item li").length)) {
+				$('.refinements .filter-bxSlider-plp').css('display', 'none');
+		  }
+		  
+		  e.preventDefault();
+    });*/
+	
+	/*$('.refinement-item li').on('click', function(e) {
+		  $(this).toggleClass("selected");
+		  //$('.refinements .filter-bxSlider-plp').toggle();
+		  if ($(this).hasClass("selected")) {
+			$('.refinements .filter-bxSlider-plp').css('display', 'block');
+			
+			$(".filter-slider-wrapper").append("<div class='filter-slider remove-trans'><span id='"+$(this).find('a').text()+"' class='breadcrumb-refinement-value' value='"+$(this).find('a').text()+"'>"+$(this).find('a').text()+"<a class='breadcrumb-relax' href='#'><img class='plp-filter-cross' src='http://dharmesh-pc/diesel/images/refine_filter.svg' alt='REMOVE'></a></span></div>");
+			
+			$(".breadcrumb-refinement-value").on("click", function(){
+				$(this).remove();
+			});
+		  } else {
+			//$('.refinements .filter-bxSlider-plp').css('display', 'none');
+			 console.log($
+						("#"+
+						  ($(this).find('a').text()
+													  )
+													  )
+													  ); 
+			$("#"+($(this).find('a').text())).parent().remove();
+		  }
+		  if(($('.remove-trans').length == 0) && ($('.refinement-item li:not(.selected)').length == $(".refinement-item li").length)) {
+				$('.refinements .filter-bxSlider-plp').css('display', 'none');
+		  }
+		  
+		  e.preventDefault();
+    });*/
 	
 /*--------------------- Reset filters ---------------------*/
 	$('.filter-global-reset').on('click', function(e) {
@@ -92,5 +135,8 @@ $( document ).ready(function() {
 	});
 
 });*/
+
+/*--------------------- Listing page slides ---------------------*/
+
 	
 });
